@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('./assets/bdo-grotesk-font-family/BDOGrotesk-VF-BF648a657078401.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('./assets/bdo-grotesk-font-family/BDOGrotesk-Regular-BF648a656fd543a.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('./assets/bdo-grotesk-font-family/BDOGrotesk-Medium-BF648a656fc86b8.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('./assets/bdo-grotesk-font-family/BDOGrotesk-Bold-BF648a656f8559f.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('./assets/bdo-grotesk-font-family/BDOGrotesk-ExtraBold-BF648a656f91fd9.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('./assets/bdo-grotesk-font-family/BDOGrotesk-Black-BF648a656f81fe9.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================
+   Design System Tokens (Tailwind v4 @theme)
+   ============================================ */
+
+@theme {
+  /* Colors */
+  --color-bg-main: #F4F4F2;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-dark: #1C1C1E;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #7A7A7A;
+  --color-border: #E0E0E0;
+  --color-accent-primary: #FF5722;
+  --color-accent-secondary: #E5B25D;
+
+  /* Fonts */
+  --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-brand: 'BDO Grotesk', sans-serif;
+
+  /* Spacing */
+  --spacing-section: 64px;
+  --spacing-section-lg: 80px;
+  --spacing-container-padding: 80px;
+  --spacing-container-padding-mobile: 20px;
+
+  /* Border Radius */
+  --radius-card: 12px;
+  --radius-pill: 9999px;
+
+  /* Typography scale */
+  --text-brand: clamp(3.5rem, 11vw, 8.5rem);
+  --text-brand--line-height: 1.05;
+  --text-brand--letter-spacing: -0.02em;
+  --text-section-heading: 2.25rem;
+  --text-section-heading--line-height: 1.15;
+  --text-body: 0.875rem;
+  --text-body--line-height: 1.5;
+  --text-nav: 0.75rem;
+  --text-nav--letter-spacing: 0.05em;
+  --text-pill: 0.625rem;
+  --text-pill--letter-spacing: 0.1em;
+}
+
+/* ============================================
+   Component Utilities
+   ============================================ */
+
+.font-brand {
+  font-family: 'BDO Grotesk', sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans-ui {
+  font-family: var(--font-sans);
+}
+
+.tracking-tighter {
+  letter-spacing: -0.02em;
+}
+
+.tracking-tightest {
+  letter-spacing: -0.03em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: var(--spacing-container-padding);
+  padding-right: var(--spacing-container-padding);
+}
+
+@media (max-width: 1024px) {
+  .container-custom {
+    padding-left: var(--spacing-container-padding-mobile);
+    padding-right: var(--spacing-container-padding-mobile);
+  }
+}
+
+.section-padding {
+  padding-top: var(--spacing-section-lg);
+  padding-bottom: var(--spacing-section-lg);
+}
+
+.hairline-border {
+  border: 1px solid var(--color-border);
+}
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-pill);
+  font-weight: 600;
+  letter-spacing: var(--text-pill--letter-spacing);
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 1rem;
+}
+
+.pill-outline {
+  border: 1px solid var(--color-text-primary);
+  color: var(--color-text-primary);
+  background: transparent;
+}
+
+.pill-outline-white {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #FFFFFF;
+  background: transparent;
+}
+
+.btn-solid-charcoal {
+  background-color: var(--color-text-primary);
+  color: #FFFFFF;
+  border-radius: var(--radius-pill);
+  padding: 0.625rem 1.5rem;
+  font-size: var(--text-body);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn-solid-charcoal:hover {
+  opacity: 0.8;
+}
+
+.overlay-gradient-bottom {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+.text-body {
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
+}
+
+.text-nav {
+  font-size: var(--text-nav);
+  letter-spacing: var(--text-nav--letter-spacing);
+}
+
+.text-brand {
+  font-size: var(--text-brand);
+  line-height: var(--text-brand--line-height);
+  letter-spacing: var(--text-brand--letter-spacing);
+}
+
+.text-section-heading {
+  font-size: var(--text-section-heading);
+  line-height: var(--text-section-heading--line-height);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
