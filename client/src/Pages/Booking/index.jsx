@@ -88,9 +88,9 @@ export default function Booking({ onNavigate }) {
   };
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Events &amp; Production</span>
@@ -113,7 +113,7 @@ export default function Booking({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
           <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
             How Reservations Work
@@ -127,13 +127,13 @@ export default function Booking({ onNavigate }) {
       </section>
 
       {/* 3. MAIN BOOKING FORM & SUMMARY GRID */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
             {/* Left Form Column */}
             <div className="lg:col-span-8">
               {submitted ? (
-                <div className="space-y-8 border border-neutral-900 bg-amber-200 p-8 md:p-14">
+                <div className="space-y-8 border border-neutral-900 bg-amber-100 p-8 md:p-14">
                   <div className="inline-flex items-center gap-2 border border-neutral-900/30 px-3.5 py-1 text-[11px] tracking-[0.14em] text-neutral-900 uppercase">
                     <span>✓ Enquiry Received</span>
                   </div>
@@ -158,7 +158,7 @@ export default function Booking({ onNavigate }) {
                     your itemized KES quotation.
                   </p>
 
-                  <div className="space-y-3 border border-neutral-900/15 bg-amber-200 p-6 text-xs tracking-[0.06em] text-neutral-700">
+                  <div className="space-y-3 border border-neutral-900/15 bg-amber-100 p-6 text-xs tracking-[0.06em] text-neutral-700">
                     <div className="flex justify-between gap-4 border-b border-neutral-900/10 pb-2.5">
                       <span className="tracking-[0.12em] text-neutral-400 uppercase">
                         Event Sector:
@@ -223,7 +223,7 @@ export default function Booking({ onNavigate }) {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-12 border border-neutral-900/15 bg-amber-200 p-8 md:p-12"
+                  className="space-y-12 border border-neutral-900/15 bg-amber-100 p-8 md:p-12"
                 >
                   {/* Step 01: Client Contact Details */}
                   <div className="space-y-6">
@@ -248,7 +248,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.clientName}
                           onChange={handleChange}
                           placeholder="e.g. Brenda Akinyi / Apex Ltd"
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
@@ -263,7 +263,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="e.g. +254 712 345 678"
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
@@ -278,7 +278,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="e.g. brenda@example.com"
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
                     </div>
@@ -304,7 +304,7 @@ export default function Booking({ onNavigate }) {
                           name="eventSector"
                           value={formData.eventSector}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                         >
                           {eventSectors.map((sector) => (
                             <option key={sector} value={sector}>
@@ -324,7 +324,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.eventName}
                           onChange={handleChange}
                           placeholder="e.g. Annual AGM Gala / Wanjiku & Brian Wedding"
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
@@ -338,7 +338,7 @@ export default function Booking({ onNavigate }) {
                           required
                           value={formData.eventDate}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
@@ -351,7 +351,7 @@ export default function Booking({ onNavigate }) {
                           name="eventTime"
                           value={formData.eventTime}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
@@ -366,7 +366,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.location}
                           onChange={handleChange}
                           placeholder="e.g. KICC, Serena Hotel, Karen, Runda..."
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
@@ -378,7 +378,7 @@ export default function Booking({ onNavigate }) {
                           name="guestCount"
                           value={formData.guestCount}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                         >
                           <option>Up to 30 Guests</option>
                           <option>50 - 100 Guests</option>
@@ -410,7 +410,7 @@ export default function Booking({ onNavigate }) {
                           name="packageTier"
                           value={formData.packageTier}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                         >
                           {packageOptions.map((pkg) => (
                             <option key={pkg} value={pkg}>
@@ -428,7 +428,7 @@ export default function Booking({ onNavigate }) {
                           name="theme"
                           value={formData.theme}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                         >
                           {themeOptions.map((thm) => (
                             <option key={thm} value={thm}>
@@ -456,7 +456,7 @@ export default function Booking({ onNavigate }) {
                               className={`flex cursor-pointer items-center justify-between gap-3 border p-3.5 text-left transition-all ${
                                 checked
                                   ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8]'
-                                  : 'border-neutral-900/15 bg-amber-200 text-neutral-700 hover:border-neutral-900/40'
+                                  : 'border-neutral-900/15 bg-amber-100 text-neutral-700 hover:border-neutral-900/40'
                               }`}
                             >
                               <span className="text-xs font-medium leading-snug">
@@ -486,7 +486,7 @@ export default function Booking({ onNavigate }) {
                         value={formData.notes}
                         onChange={handleChange}
                         placeholder="Tell us about staging dimensions, power access, branding guidelines, dress code, or specific scheduling constraints..."
-                        className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -504,7 +504,7 @@ export default function Booking({ onNavigate }) {
             {/* Right Live Summary & Direct Contact Sidebar */}
             <div className="space-y-8 lg:sticky lg:top-28 lg:col-span-4">
               {/* Live Enquiry Summary Card */}
-              <div className="space-y-6 border border-neutral-900/15 bg-amber-200 p-8">
+              <div className="space-y-6 border border-neutral-900/15 bg-amber-100 p-8">
                 <div className="flex items-center justify-between border-b border-neutral-900/15 pb-4">
                   <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                     [ Live Summary ]
@@ -596,7 +596,7 @@ export default function Booking({ onNavigate }) {
                     href="https://wa.me/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full border border-[#f9f9f8] bg-amber-200 py-3.5 text-center text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
+                    className="block w-full border border-[#f9f9f8] bg-amber-100 py-3.5 text-center text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Chat on WhatsApp
                   </a>

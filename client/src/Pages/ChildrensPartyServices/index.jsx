@@ -122,9 +122,9 @@ export default function ChildrensPartyServices({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Hyper Kids Events</span>
@@ -147,7 +147,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL INTRO STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
           <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
             Mix, Match &amp; Customize
@@ -161,7 +161,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 3. ALTERNATING 12 SERVICES SHOWCASE */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] divide-y divide-neutral-900/15 px-6 md:px-10">
           {services.map((service, index) => {
             const isImageRight = index % 2 === 0;
@@ -253,7 +253,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Book Party Services &rarr;
             </a>

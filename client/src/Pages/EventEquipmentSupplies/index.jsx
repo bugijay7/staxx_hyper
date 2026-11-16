@@ -140,9 +140,9 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
   });
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -168,7 +168,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 2. SEARCH & CATEGORY FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div
           className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10"
           data-aos="fade-up"
@@ -180,7 +180,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
               placeholder="Search pianos, LED screens, amps, tents..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-xs tracking-[0.06em] text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+              className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-xs tracking-[0.06em] text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
             />
           </div>
 
@@ -209,7 +209,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 3. PRODUCT CATALOG GRID */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-8 flex items-center justify-between border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Showing {filteredInventory.length} Available Items</span>
@@ -222,7 +222,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                 key={item.id}
                 href="/products/sample-product"
                 onClick={(e) => handleSelectProduct(e, item)}
-                className="group flex flex-col justify-between border border-neutral-900/15 bg-amber-200 no-underline transition-colors duration-200 hover:border-neutral-900"
+                className="group flex flex-col justify-between border border-neutral-900/15 bg-amber-100 no-underline transition-colors duration-200 hover:border-neutral-900"
                 data-aos="fade-up"
                 data-aos-delay={(index % 3) * 100}
               >
@@ -268,7 +268,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                 </div>
 
                 {/* Card Footer Trigger */}
-                <div className="border-t border-neutral-900/15 bg-amber-200 px-6 py-4 md:px-8">
+                <div className="border-t border-neutral-900/15 bg-amber-100 px-6 py-4 md:px-8">
                   <span className="text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase transition-opacity group-hover:opacity-65">
                     View Specifications &amp; Book &rarr;
                   </span>
@@ -321,7 +321,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request Equipment Quotation &rarr;
             </a>

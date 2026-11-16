@@ -131,9 +131,9 @@ export default function Blog({ onNavigate }) {
       : blogPosts.filter((post) => post.category === selectedCategory);
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-300 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-300">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx-HyperKids Journal</span>
@@ -159,7 +159,7 @@ export default function Blog({ onNavigate }) {
       </section>
 
       {/* 2. CATEGORY FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-300">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
           <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
             Browse Topics ({filteredPosts.length})
@@ -195,14 +195,14 @@ export default function Blog({ onNavigate }) {
       </section>
 
       {/* 3. BLOG POSTS GRID */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-300">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
                 onClick={() => setActivePost(post)}
-                className="group flex cursor-pointer flex-col justify-between border border-neutral-900/15 bg-amber-200 transition-colors duration-200 hover:bg-amber-200"
+                className="group flex cursor-pointer flex-col justify-between border border-neutral-900/15 bg-amber-300 transition-colors duration-200 hover:bg-amber-300"
               >
                 <div>
                   {/* Top Index & Category Plate */}
@@ -241,7 +241,7 @@ export default function Blog({ onNavigate }) {
                 </div>
 
                 {/* Card Footer Trigger */}
-                <div className="border-t border-neutral-900/15 bg-amber-200 px-6 py-4 md:px-8">
+                <div className="border-t border-neutral-900/15 bg-amber-300 px-6 py-4 md:px-8">
                   <button
                     type="button"
                     onClick={(e) => {
@@ -270,10 +270,10 @@ export default function Blog({ onNavigate }) {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden border border-neutral-900/20 bg-amber-200 text-neutral-900"
+            className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden border border-neutral-900/20 bg-amber-300 text-neutral-900"
           >
             {/* Top Modal Bar */}
-            <div className="flex items-center justify-between border-b border-neutral-900/15 bg-amber-200 px-6 py-4 text-[11px] tracking-[0.14em] uppercase">
+            <div className="flex items-center justify-between border-b border-neutral-900/15 bg-amber-300 px-6 py-4 text-[11px] tracking-[0.14em] uppercase">
               <div className="flex flex-wrap items-center gap-2 text-neutral-500">
                 <strong className="font-medium text-neutral-900">
                   {activePost.category}
@@ -303,7 +303,7 @@ export default function Blog({ onNavigate }) {
                 />
               </div>
 
-              <div className="space-y-6 bg-amber-200 p-6 md:p-10">
+              <div className="space-y-6 bg-amber-300 p-6 md:p-10">
                 <h3 className="text-2xl font-normal tracking-[-0.02em] leading-snug text-neutral-900 md:text-3xl">
                   {activePost.title}
                 </h3>
@@ -317,7 +317,7 @@ export default function Blog({ onNavigate }) {
             </div>
 
             {/* Bottom Modal Action Bar */}
-            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-neutral-900/15 bg-amber-200 px-6 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-neutral-900/15 bg-amber-300 px-6 py-4">
               <a
                 href="/booking"
                 onClick={(e) => handleLinkClick(e, '/booking')}
@@ -328,7 +328,7 @@ export default function Blog({ onNavigate }) {
               <a
                 href="/event-equipment-supplies"
                 onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                className="border border-neutral-900/25 bg-amber-200 px-5 py-3 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
+                className="border border-neutral-900/25 bg-amber-300 px-5 py-3 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
               >
                 Browse Equipment Catalog
               </a>
@@ -358,7 +358,7 @@ export default function Blog({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-300 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request an Event Quote &rarr;
             </a>

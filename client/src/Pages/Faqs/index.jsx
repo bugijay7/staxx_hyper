@@ -89,9 +89,9 @@ export default function Faqs({ onNavigate }) {
   };
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Hyper Kids Events</span>
@@ -114,7 +114,7 @@ export default function Faqs({ onNavigate }) {
       </section>
 
       {/* 2. FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
           <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
             Filter by Topic ({filteredFaqs.length})
@@ -144,7 +144,7 @@ export default function Faqs({ onNavigate }) {
       </section>
 
       {/* 3. ACCORDION FAQ LIST & QUICK HELP SIDEBAR */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
             {/* Left Accordion Column */}
@@ -156,7 +156,7 @@ export default function Faqs({ onNavigate }) {
                   <div
                     key={faq.id}
                     className={`border-b border-neutral-900/15 transition-colors duration-200 ${
-                      isOpen ? 'bg-amber-200' : 'bg-amber-200 hover:bg-amber-200/60'
+                      isOpen ? 'bg-amber-100' : 'bg-amber-100 hover:bg-amber-100/60'
                     }`}
                   >
                     <button
@@ -206,7 +206,7 @@ export default function Faqs({ onNavigate }) {
             {/* Right Quick Support Sidebar */}
             <div className="space-y-8 lg:sticky lg:top-28 lg:col-span-4">
               {/* Quick Facts Card */}
-              <div className="space-y-6 border border-neutral-900/15 bg-amber-200 p-8">
+              <div className="space-y-6 border border-neutral-900/15 bg-amber-100 p-8">
                 <div className="border-b border-neutral-900/15 pb-4">
                   <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                     [ Quick Facts ]
@@ -261,7 +261,7 @@ export default function Faqs({ onNavigate }) {
                     href="https://wa.me/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full border border-[#f9f9f8] bg-amber-200 py-3.5 text-center text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
+                    className="block w-full border border-[#f9f9f8] bg-amber-100 py-3.5 text-center text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Chat on WhatsApp
                   </a>

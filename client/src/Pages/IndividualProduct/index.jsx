@@ -68,9 +68,9 @@ export default function IndividualProduct({ onNavigate, productData }) {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. BREADCRUMB & HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-12 md:px-10 md:pt-12 md:pb-16"
           data-aos="fade-down"
@@ -122,7 +122,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
 
             {/* Right: Product Info & Rental Configurator */}
             <div
-              className="flex flex-col justify-between border border-neutral-900/15 bg-amber-200 p-8 md:p-10"
+              className="flex flex-col justify-between border border-neutral-900/15 bg-amber-100 p-8 md:p-10"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -181,7 +181,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                           className={`cursor-pointer border px-4 py-2 text-xs tracking-[0.12em] uppercase transition-all ${
                             rentalDays === days
                               ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8]'
-                              : 'border-neutral-900/25 bg-amber-200 text-neutral-900 hover:border-neutral-900'
+                              : 'border-neutral-900/25 bg-amber-100 text-neutral-900 hover:border-neutral-900'
                           }`}
                         >
                           {days} {days === 1 ? 'Day' : 'Days'}
@@ -230,7 +230,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
       </section>
 
       {/* 2. RELATED ITEMS / CATALOG CROSS-SELL */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12 flex items-center justify-between border-b border-neutral-900/15 pb-6">
             <div>
@@ -270,7 +270,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
             ].map((rel, idx) => (
               <div
                 key={idx}
-                className="group border border-neutral-900/15 bg-amber-200 p-6 transition-colors duration-200 hover:border-neutral-900"
+                className="group border border-neutral-900/15 bg-amber-100 p-6 transition-colors duration-200 hover:border-neutral-900"
               >
                 <div className="mb-4 aspect-[16/10] w-full overflow-hidden bg-neutral-200">
                   <img
@@ -324,7 +324,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Proceed to Booking &rarr;
             </a>

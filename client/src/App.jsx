@@ -21,7 +21,7 @@ const pages = [
   { title: 'Home', path: '/' },
   { title: 'About Us', path: '/about' },
   { title: "Children's Party Services", path: '/childrens-party-services' },
-  { title: 'Party Packages', path: '/party-packages' },
+  { title: 'Party Packages', path: '/events' },
   { title: 'Party Themes', path: '/party-themes' },
   { title: 'Event Equipment & Supplies', path: '/event-equipment-supplies' },
   { title: 'Product Categories', path: '/products' },

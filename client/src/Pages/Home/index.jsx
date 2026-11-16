@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import heroImg from '../../assets/hero.jpg';
 import pastelImg from '../../assets/pastel.jpg';
 import confettiImg from '../../assets/confetti.jpg';
@@ -138,26 +139,40 @@ export default function Home({ onNavigate }) {
       : galleryImages.filter((item) => item.category === activeTab);
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-rose-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO SECTION */}
-      <section className="relative border-b border-neutral-900/15 bg-amber-200">
+      <section className="relative border-b border-neutral-900/15 bg-rose-200">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-12 md:px-10 md:pt-12 md:pb-16">
           {/* Top Metadata Strip */}
-          <div className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[8px] tracking-[0.14em] text-neutral-500 uppercase">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[8px] tracking-[0.14em] text-neutral-500 uppercase"
+          >
             <span>Staxx Events &amp; Production &bull; Commerce House, Nairobi</span>
             <span>AV Production &bull; Décor Styling &bull; Equipment Hire</span>
-          </div>
+          </motion.div>
 
           {/* Editorial Headline & Intro Grid */}
           <div className="grid grid-cols-1 items-end gap-10 pb-12 lg:grid-cols-[1.45fr_1fr]">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
                 Bringing experiences, <br />
                 <span className="text-neutral-500">to life.</span>
               </h1>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col justify-between gap-8 lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col justify-between gap-8 lg:border-l lg:border-neutral-900/15 lg:pl-10"
+            >
               <p className="text-xs md:text-sm leading-relaxed text-neutral-600 md:text-lg">
                 An integrated events and experiential production company combining
                 audiovisual and technical production, event d&eacute;cor and styling,
@@ -166,57 +181,82 @@ export default function Home({ onNavigate }) {
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
                   className="border border-neutral-900 bg-neutral-900 px-2 md:px-3 py-0.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
                 >
                   Request a Quote
-                </a>
-                <a
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   href="/event-equipment-supplies"
                   onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
                   className="border border-neutral-900/25 bg-transparent px-2 md:px-3 py-0.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
                 >
                   Equipments &amp; Supplies Catalog
-                </a>
+                </motion.a>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Full-Bleed Architectural Hero Photograph */}
-          <div className="relative aspect-[16/9] max-h-[640px] w-full overflow-hidden bg-neutral-200">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.5 }}
+            className="relative aspect-[16/9] max-h-[640px] w-full overflow-hidden bg-neutral-200"
+          >
             <img
               src={heroImg}
               alt="Staxx Events professional staging, audiovisual production and experiential setup in Nairobi"
               className="h-full w-full object-cover"
             />
-          </div>
+          </motion.div>
 
           {/* Bottom Trust / Spec Bar */}
-          <div className="mt-6 grid grid-cols-1 gap-3 border-t border-neutral-900/15 pt-5 text-xs tracking-[0.06em] text-neutral-600 sm:grid-cols-3">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="mt-6 grid grid-cols-1 gap-3 border-t border-neutral-900/15 pt-5 text-xs tracking-[0.06em] text-neutral-600 sm:grid-cols-3"
+          >
             <span>&bull; Commercial sound, LED screens &amp; stage rigging</span>
             <span className="sm:text-center">
               &bull; Serving Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
             </span>
             <span className="sm:text-right">&bull; Founder-led technical &amp; d&eacute;cor oversight</span>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* 2. ABOUT / EDITORIAL SECTION */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-rose-200">
         <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
               Integrated Capabilities
             </span>
             <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
               One accountable partner for AV, styling, and equipment hire.
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col justify-between gap-12 lg:border-l lg:border-neutral-900/15 lg:pl-12">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col justify-between gap-12 lg:border-l lg:border-neutral-900/15 lg:pl-12"
+          >
             <p className="text-base leading-relaxed text-neutral-600 md:text-lg">
               Organisers and brands often waste valuable time juggling separate
               suppliers for sound engineering, marquee tents, d&eacute;cor, and
@@ -255,73 +295,78 @@ export default function Home({ onNavigate }) {
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* 3. THREE-STEP PROCESS */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-rose-200">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-14 max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-14 max-w-2xl"
+          >
             <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
               Production Workflow
             </span>
             <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
               From concept brief to flawless live execution.
             </h2>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 gap-8 border-t border-neutral-900/15 pt-10 md:grid-cols-2 lg:grid-cols-4">
-            <div className="flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:border-b-0 md:pb-0">
-              <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                Step 01
-              </span>
-              <div>
-                <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-neutral-900">
-                  Consultation &amp; Brief
-                </h3>
-                <p className="text-sm leading-relaxed text-neutral-600">
-                  Share your venue specifications, audience size, and technical
-                  rider. We design a tailored production plan covering AV,
-                  d&eacute;cor, and equipment hire.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:border-b-0 md:border-l md:pb-0 md:pl-8">
-              <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                Step 02
-              </span>
-              <div>
-                <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-neutral-900">
-                  Transparent Proposal
-                </h3>
-                <p className="text-sm leading-relaxed text-neutral-600">
-                  Review itemized KES quotations with clear breakdowns for
-                  labor, transport, equipment rental, and technical setup across
-                  all counties served.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:border-b-0 lg:border-l lg:pb-0 lg:pl-8">
-              <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                Step 03
-              </span>
-              <div>
-                <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-neutral-900">
-                  Site Logistics &amp; Rigging
-                </h3>
-                <p className="text-sm leading-relaxed text-neutral-600">
-                  Our professional logistics crew and sound engineers handle
-                  rigging, power testing, spatial styling, and rehearsal checks
-                  ahead of guest arrival.
-                </p>
-              </div>
-            </div>
+            {[
+              {
+                step: 'Step 01',
+                title: 'Consultation & Brief',
+                desc: 'Share your venue specifications, audience size, and technical rider. We design a tailored production plan covering AV, d&eacute;cor, and equipment hire.',
+              },
+              {
+                step: 'Step 02',
+                title: 'Transparent Proposal',
+                desc: 'Review itemized KES quotations with clear breakdowns for labor, transport, equipment rental, and technical setup across all counties served.',
+              },
+              {
+                step: 'Step 03',
+                title: 'Site Logistics & Rigging',
+                desc: 'Our professional logistics crew and sound engineers handle rigging, power testing, spatial styling, and rehearsal checks ahead of guest arrival.',
+              },
+            ].map((s, idx) => (
+              <motion.div
+                key={s.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                className={`flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:border-b-0 md:pb-0 ${
+                  idx > 0 ? 'md:border-l md:border-neutral-900/15 md:pl-8' : ''
+                }`}
+              >
+                <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+                  {s.step}
+                </span>
+                <div>
+                  <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-neutral-900">
+                    {s.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-neutral-600">
+                    {s.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
 
             {/* Visual Quote Card */}
-            <div className="flex flex-col justify-between gap-4 md:border-l md:border-neutral-900/15 md:pl-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.45 }}
+              className="flex flex-col justify-between gap-4 md:border-l md:border-neutral-900/15 md:pl-8"
+            >
               <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-200">
                 <img
                   src={pastelImg}
@@ -341,15 +386,21 @@ export default function Home({ onNavigate }) {
                   Request a Quote
                 </a>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* 4. PACKAGES & PRODUCTION TIERS */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-rose-200">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end"
+          >
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Production Tiers
@@ -362,16 +413,20 @@ export default function Home({ onNavigate }) {
               Professional packages tailored for corporate functions, weddings,
               institutional events, and large-scale experiential gatherings.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {packages.map((pkg) => (
-              <div
+            {packages.map((pkg, idx) => (
+              <motion.div
                 key={pkg.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.15 }}
                 className={`flex flex-col justify-between border p-8 transition-colors duration-200 ${
                   pkg.featured
-                    ? 'border-neutral-900 bg-amber-200'
-                    : 'border-neutral-900/15 bg-amber-200'
+                    ? 'border-neutral-900 bg-rose-200'
+                    : 'border-neutral-900/15 bg-rose-200'
                 }`}
               >
                 <div>
@@ -410,7 +465,9 @@ export default function Home({ onNavigate }) {
                   </ul>
                 </div>
 
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.99 }}
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
                   className={`block w-full border py-3.5 text-center text-xs font-medium tracking-[0.14em] uppercase no-underline transition-colors duration-200 ${
@@ -420,8 +477,8 @@ export default function Home({ onNavigate }) {
                   }`}
                 >
                   Enquire About Package
-                </a>
-              </div>
+                </motion.a>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -430,7 +487,13 @@ export default function Home({ onNavigate }) {
       {/* 5. EQUIPMENT & SUPPLIES CATALOG PREVIEW */}
       <section className="border-b border-neutral-900/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 sm:flex-row sm:items-end">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 sm:flex-row sm:items-end"
+          >
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Rental Catalog
@@ -447,12 +510,16 @@ export default function Home({ onNavigate }) {
             >
               View Full Rental Inventory →
             </a>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {equipmentCategories.map((cat) => (
-              <a
+            {equipmentCategories.map((cat, idx) => (
+              <motion.a
                 key={cat.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
                 href={cat.path}
                 onClick={(e) => handleLinkClick(e, cat.path)}
                 className="group flex flex-col text-inherit no-underline"
@@ -470,7 +537,7 @@ export default function Home({ onNavigate }) {
                 <p className="text-xs leading-relaxed text-neutral-500">
                   {cat.detail}
                 </p>
-              </a>
+              </motion.a>
             ))}
           </div>
         </div>
@@ -479,7 +546,13 @@ export default function Home({ onNavigate }) {
       {/* 6. VISUAL PORTFOLIO & FILTERABLE GALLERY */}
       <section className="border-b border-neutral-900/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-12 flex flex-col justify-between gap-8 border-b border-neutral-900/15 pb-8 lg:flex-row lg:items-end">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 flex flex-col justify-between gap-8 border-b border-neutral-900/15 pb-8 lg:flex-row lg:items-end"
+          >
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Portfolio &amp; Productions
@@ -515,11 +588,22 @@ export default function Home({ onNavigate }) {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          <motion.div
+            layout
+            className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"
+          >
             {filteredGallery.map((item) => (
-              <div key={item.title} className="group">
+              <motion.div
+                layout
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                key={item.title}
+                className="group"
+              >
                 <div className="mb-4 aspect-[4/3] w-full overflow-hidden bg-neutral-100">
                   <img
                     src={item.url}
@@ -535,18 +619,20 @@ export default function Home({ onNavigate }) {
                     {item.tag}
                   </span>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           <div className="mt-16 border-t border-neutral-900/15 pt-8 text-right">
-            <a
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               href="/gallery"
               onClick={(e) => handleLinkClick(e, '/gallery')}
               className="inline-block border border-neutral-900 px-6 py-3 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-neutral-900 hover:text-[#f9f9f8]"
             >
               Explore Full Gallery →
-            </a>
+            </motion.a>
           </div>
         </div>
       </section>
@@ -554,17 +640,29 @@ export default function Home({ onNavigate }) {
       {/* 7. CLIENT TESTIMONIALS */}
       <section className="border-b border-neutral-900/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-14">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-14"
+          >
             <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-300 uppercase">
               Client Feedback
             </span>
             <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
               What corporate clients &amp; event planners say
             </h2>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 gap-12 border-t border-neutral-900/15 pt-12 md:grid-cols-2">
-            <blockquote className="flex flex-col justify-between gap-8">
+            <motion.blockquote
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col justify-between gap-8"
+            >
               <p className="text-lg font-normal leading-relaxed text-neutral-800 md:text-xl">
                 “Staxx-HyperKids managed our corporate annual gala at Serena
                 Hotel. Their sound engineering, LED screens, and stage lighting
@@ -579,9 +677,15 @@ export default function Home({ onNavigate }) {
                   Corporate Events Manager &bull; Nairobi Business Awards
                 </span>
               </footer>
-            </blockquote>
+            </motion.blockquote>
 
-            <blockquote className="flex flex-col justify-between gap-8 border-t border-neutral-900/15 pt-8 md:border-t-0 md:border-l md:pt-0 md:pl-12">
+            <motion.blockquote
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-col justify-between gap-8 border-t border-neutral-900/15 pt-8 md:border-t-0 md:border-l md:pt-0 md:pl-12"
+            >
               <p className="text-lg font-normal leading-relaxed text-neutral-800 md:text-xl">
                 “We hired clear-span marquees, flooring, and audiovisual gear for
                 our institution&rsquo;s graduation ceremony. Their technical crew
@@ -596,7 +700,7 @@ export default function Home({ onNavigate }) {
                   Institutional Registrar &bull; Nakuru County
                 </span>
               </footer>
-            </blockquote>
+            </motion.blockquote>
           </div>
         </div>
       </section>
@@ -619,20 +723,24 @@ export default function Home({ onNavigate }) {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <a
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-rose-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request an Event Quote
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
               className="border border-[#f9f9f8]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:border-[#f9f9f8]"
             >
               Contact Our Team
-            </a>
+            </motion.a>
           </div>
         </div>
       </section>

@@ -104,9 +104,9 @@ export default function Testimonials({ onNavigate }) {
       : testimonials.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -133,7 +133,7 @@ export default function Testimonials({ onNavigate }) {
       </section>
 
       {/* 2. STATS & FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         {/* Metrics Grid */}
         <div
           className="mx-auto max-w-[1440px] border-b border-neutral-900/15 px-6 md:px-10"
@@ -209,13 +209,13 @@ export default function Testimonials({ onNavigate }) {
       </section>
 
       {/* 3. TESTIMONIALS GRID WITH IMAGES */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 md:grid-cols-2 lg:grid-cols-3">
             {filteredTestimonials.map((item, index) => (
               <article
                 key={item.id}
-                className="flex flex-col justify-between border-r border-b border-neutral-900/15 bg-amber-200 p-8 transition-colors duration-200 hover:bg-amber-200 md:p-10"
+                className="flex flex-col justify-between border-r border-b border-neutral-900/15 bg-amber-100 p-8 transition-colors duration-200 hover:bg-amber-100 md:p-10"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
@@ -254,7 +254,7 @@ export default function Testimonials({ onNavigate }) {
                     </p>
                   </div>
 
-                  <span className="inline-block border border-neutral-900/15 bg-amber-200 px-3 py-1.5 text-[10px] font-medium tracking-[0.12em] text-neutral-600 uppercase">
+                  <span className="inline-block border border-neutral-900/15 bg-amber-100 px-3 py-1.5 text-[10px] font-medium tracking-[0.12em] text-neutral-600 uppercase">
                     {item.project}
                   </span>
                 </div>
@@ -288,7 +288,7 @@ export default function Testimonials({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request an Event Quote &rarr;
             </a>

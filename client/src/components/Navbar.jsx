@@ -7,7 +7,7 @@ const primaryNavPages = [
     title: 'Event Services',
     path: '/childrens-party-services',
     children: [
-      { title: 'Events Portfolio', path: '/party-packages' },
+      { title: 'Events Portfolio', path: '/events' },
       { title: 'Event Themes', path: '/party-themes' },
       { title: 'Event Gallery', path: '/gallery' },
       { title: 'Event Setup', path: '/booking' },
@@ -86,15 +86,10 @@ export default function Navbar({ currentPage, onNavigate }) {
           <img
             src={logo}
             alt="Staxx Hyper Events"
-            className="h-8 w-auto object-contain md:h-9"
+            className="h-20 w-auto object-contain md:h-9"
           />
           <div className="flex flex-col">
-            <span className="text-sm font-semibold tracking-[0.14em] leading-tight uppercase">
-              Staxx Hyper
-            </span>
-            <span className="text-[11px] tracking-[0.04em] text-neutral-500">
-              Kids Events &amp; Supplies
-            </span>
+            
           </div>
         </a>
 
@@ -129,7 +124,7 @@ export default function Navbar({ currentPage, onNavigate }) {
         }`}
       >
         {/* Drawer Top Bar */}
-        <div className="flex items-center justify-between border-b border-neutral-900/15 pb-4 md:pb-6">
+        <div className="flex items-center justify-between  border-b border-neutral-900/15 pb-4 md:pb-6">
           <a
             href="/"
             className="flex items-center gap-3.5 text-inherit no-underline"

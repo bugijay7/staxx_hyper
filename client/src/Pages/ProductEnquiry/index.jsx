@@ -114,9 +114,9 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
   };
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -142,13 +142,13 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
       </section>
 
       {/* 2. ENQUIRY FORM & TECHNICAL DESK SIDEBAR */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.5fr_1fr]">
             {/* Left: Interactive Enquiry Form */}
             <form
               onSubmit={handleSubmit}
-              className="border border-neutral-900/15 bg-amber-200 p-8 md:p-12"
+              className="border border-neutral-900/15 bg-amber-100 p-8 md:p-12"
               data-aos="fade-up"
             >
               <div className="mb-8 border-b border-neutral-900/15 pb-4">
@@ -169,7 +169,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="e.g. Wanjiku Kamau"
-                    className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
@@ -183,7 +183,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.organization}
                     onChange={handleChange}
                     placeholder="e.g. Safaricom PLC / Private Host"
-                    className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
@@ -198,7 +198,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="e.g. 0712 345 678"
-                    className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
@@ -212,7 +212,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="e.g. events@organization.co.ke"
-                    className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
@@ -226,7 +226,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     required
                     value={formData.eventDate}
                     onChange={handleChange}
-                    className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
@@ -238,7 +238,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     name="rentalDays"
                     value={formData.rentalDays}
                     onChange={handleChange}
-                    className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                   >
                     <option value="1">1 Day</option>
                     <option value="2">2 Days</option>
@@ -256,7 +256,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     name="county"
                     value={formData.county}
                     onChange={handleChange}
-                    className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                   >
                     {counties.map((county) => (
                       <option key={county} value={county}>
@@ -276,7 +276,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.venueLocation}
                     onChange={handleChange}
                     placeholder="e.g. KICC / Karen / Runda / Naivasha"
-                    className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
               </div>
@@ -289,7 +289,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                   name="eventType"
                   value={formData.eventType}
                   onChange={handleChange}
-                  className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                  className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                 >
                   {eventTypes.map((type) => (
                     <option key={type} value={type}>
@@ -315,7 +315,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                       className={`flex cursor-pointer items-center gap-3 border p-3.5 text-xs transition-colors ${
                         isChecked
                           ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8]'
-                          : 'border-neutral-900/20 bg-amber-200 text-neutral-800 hover:border-neutral-900'
+                          : 'border-neutral-900/20 bg-amber-100 text-neutral-800 hover:border-neutral-900'
                       }`}
                     >
                       <input
@@ -341,7 +341,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                   value={formData.equipmentNotes}
                   onChange={handleChange}
                   placeholder="Specify quantities (e.g., 200 Chiavari chairs, 6m x 3m LED wall), venue power access, or load-in times..."
-                  className="w-full border border-neutral-900/25 bg-amber-200 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                  className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                 />
               </div>
 
@@ -364,7 +364,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
               </div>
 
               {submitted && (
-                <div className="mt-6 border border-neutral-900 bg-amber-200 p-4 text-xs leading-relaxed text-neutral-900">
+                <div className="mt-6 border border-neutral-900 bg-amber-100 p-4 text-xs leading-relaxed text-neutral-900">
                   <strong>Enquiry Prepared:</strong> Your equipment list has been
                   formatted for our dispatch desk on WhatsApp (+254 702 443 418).
                   If a new tab did not open automatically,{' '}
@@ -384,7 +384,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
             {/* Right: Logistics & Dispatch Desk Info */}
             <aside className="space-y-8" data-aos="fade-up" data-aos-delay="150">
               {/* Visual Card */}
-              <div className="border border-neutral-900/15 bg-amber-200">
+              <div className="border border-neutral-900/15 bg-amber-100">
                 <div className="aspect-[16/10] w-full overflow-hidden border-b border-neutral-900/15 bg-neutral-200">
                   <img
                     src={Equipmentsetup}
@@ -429,7 +429,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
               </div>
 
               {/* Rental Terms Box */}
-              <div className="border border-neutral-900/15 bg-amber-200 p-8">
+              <div className="border border-neutral-900/15 bg-amber-100 p-8">
                 <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                   Standard Hire Terms
                 </span>

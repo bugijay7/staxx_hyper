@@ -121,10 +121,10 @@ export default function EventsWeDo({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
 
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -149,7 +149,7 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
 
           <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
@@ -165,7 +165,7 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 3. EVENT CATEGORIES */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
 
           <div className="mb-14 flex flex-col justify-between gap-8 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
@@ -227,7 +227,7 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 4. PRODUCTION CAPABILITIES */}
-      <section className="border-b border-neutral-900/15 bg-amber-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
 
           <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
@@ -251,7 +251,7 @@ export default function EventsWeDo({ onNavigate }) {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="border-r border-b border-neutral-900/15 bg-amber-200 p-6 md:p-8"
+                className="border-r border-b border-neutral-900/15 bg-amber-100 p-6 md:p-8"
               >
                 <h3 className="mb-3 text-lg font-normal text-neutral-900">
                   {service.title}
@@ -290,7 +290,7 @@ export default function EventsWeDo({ onNavigate }) {
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Plan Your Event &rarr;
             </a>
