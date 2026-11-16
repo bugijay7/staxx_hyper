@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import Audiovisual from '../../assets/audiovisual.jpeg';
 import Backdrops from '../../assets/backdrops.jpg';
 import Childrenparty from '../../assets/childrenparty.jpg';
-import ConferenceSetup from '../../assets/conferenceSetup.jpeg';
+import ConferenceSetup from '../../assets/conferencesetup.jpeg';
 import Equipmentsetup from '../../assets/equipmentsetup.jpeg';
 import Hero from '../../assets/hero.jpg';
 import Lighting from '../../assets/lighting.jpg';
