@@ -62,9 +62,9 @@ export default function Contact({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-teal-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Hyper Kids Events</span>
@@ -87,7 +87,7 @@ export default function Contact({ onNavigate }) {
       </section>
 
       {/* 2. CONTACT DETAILS BAR */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 md:px-10">
           <div className="grid grid-cols-1 divide-y divide-neutral-900/15 md:grid-cols-3 md:divide-x md:divide-y-0">
             <div className="py-10 md:pr-10">
@@ -136,7 +136,7 @@ export default function Contact({ onNavigate }) {
       </section>
 
       {/* 3. SOCIAL MEDIA CARDS GRID */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12">
             <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
@@ -147,7 +147,7 @@ export default function Contact({ onNavigate }) {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 bg-teal-100 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 bg-amber-200 sm:grid-cols-2 lg:grid-cols-4">
             {socialLinks.map((soc) => (
               <a
                 key={soc.platform}
@@ -182,13 +182,13 @@ export default function Contact({ onNavigate }) {
       </section>
 
       {/* 4. CONTACT FORM & LOCATION INFO SECTION */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
             {/* Left Form Column */}
             <div className="lg:col-span-8">
               {sent ? (
-                <div className="space-y-8 border border-neutral-900 bg-teal-100 p-8 md:p-14">
+                <div className="space-y-8 border border-neutral-900 bg-amber-200 p-8 md:p-14">
                   <div className="inline-flex items-center gap-2 border border-neutral-900/30 px-3.5 py-1 text-[11px] tracking-[0.14em] text-neutral-900 uppercase">
                     <span>✓ Message Sent Successfully</span>
                   </div>
@@ -220,7 +220,7 @@ export default function Contact({ onNavigate }) {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-8 border border-neutral-900/15 bg-teal-100 p-8 md:p-12"
+                  className="space-y-8 border border-neutral-900/15 bg-amber-200 p-8 md:p-12"
                 >
                   <div className="flex items-center justify-between border-b border-neutral-900/15 pb-4">
                     <h2 className="text-2xl font-normal tracking-[-0.015em] text-neutral-900 md:text-3xl">
@@ -243,7 +243,7 @@ export default function Contact({ onNavigate }) {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="e.g. Brenda Akinyi"
-                        className="w-full border border-neutral-900/20 bg-teal-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                       />
                     </div>
 
@@ -258,7 +258,7 @@ export default function Contact({ onNavigate }) {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="e.g. +254 712 345 678"
-                        className="w-full border border-neutral-900/20 bg-teal-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                       />
                     </div>
 
@@ -273,7 +273,7 @@ export default function Contact({ onNavigate }) {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="e.g. brenda@example.com"
-                        className="w-full border border-neutral-900/20 bg-teal-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                       />
                     </div>
 
@@ -285,7 +285,7 @@ export default function Contact({ onNavigate }) {
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full border border-neutral-900/20 bg-teal-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
                       >
                         <option>General Party Enquiry</option>
                         <option>Bouncy Castle &amp; Equipment Rental</option>
@@ -307,7 +307,7 @@ export default function Contact({ onNavigate }) {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell us about your event date, location in Nairobi, guest count, or equipment needs..."
-                      className="w-full border border-neutral-900/20 bg-teal-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                      className="w-full border border-neutral-900/20 bg-amber-200 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                     />
                   </div>
 
@@ -324,7 +324,7 @@ export default function Contact({ onNavigate }) {
             {/* Right Info & Quick Links Column */}
             <div className="space-y-8 lg:sticky lg:top-28 lg:col-span-4">
               {/* Service Zones Card */}
-              <div className="space-y-5 border border-neutral-900/15 bg-teal-100 p-8">
+              <div className="space-y-5 border border-neutral-900/15 bg-amber-200 p-8">
                 <div className="border-b border-neutral-900/15 pb-4">
                   <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                     [ Service Zones ]
@@ -368,7 +368,7 @@ export default function Contact({ onNavigate }) {
                     href="https://wa.me/254712345678"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full border border-[#f9f9f8] bg-teal-100 py-3.5 text-center text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
+                    className="block w-full border border-[#f9f9f8] bg-amber-200 py-3.5 text-center text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Open WhatsApp Chat
                   </a>

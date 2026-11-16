@@ -1,6 +1,16 @@
 
 import React from 'react';
 
+import Childrenparty from '../../assets/childrenparty.jpg';
+import Concerts from '../../assets/concerts.jpg';
+import Corporate from '../../assets/corporate.jpg';
+import Educationeevents from '../../assets/educationeevents.jpg';
+import Exhibition from '../../assets/exhibition.jpg';
+import Privateparties from '../../assets/privateparties.jpg';
+import Weddings from '../../assets/weddings.jpg';
+import Churchevents from '../../assets/churchevents.jpg';
+
+
 export default function EventsWeDo({ onNavigate }) {
   const handleLinkClick = (e, path) => {
     if (e.metaKey || e.ctrlKey || e.button === 1) return;
@@ -16,7 +26,7 @@ export default function EventsWeDo({ onNavigate }) {
         'Professional experiences that bring teams, clients and business communities together.',
       examples:
         'Conferences · AGMs · Product launches · Brand activations · Networking events · Gala dinners',
-      img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=85',
+      img: Corporate,
     },
     {
       id: '02',
@@ -25,7 +35,7 @@ export default function EventsWeDo({ onNavigate }) {
         'Thoughtfully produced celebrations for every chapter of your love story.',
       examples:
         'Traditional weddings · Ruracio · Wedding receptions · Engagements · Bridal showers',
-      img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85',
+      img: Weddings,
     },
     {
       id: '03',
@@ -34,7 +44,7 @@ export default function EventsWeDo({ onNavigate }) {
         'Personal celebrations styled around your people, your milestones and your vision.',
       examples:
         'Adult birthdays · Anniversaries · Baby showers · Graduations · Family celebrations',
-      img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=85',
+      img: Privateparties,
     },
     {
       id: '04',
@@ -43,7 +53,7 @@ export default function EventsWeDo({ onNavigate }) {
         'Playful, colourful experiences that make special days unforgettable for younger guests.',
       examples:
         "Kids' birthdays · Themed parties · School fun days · Family fun days · Children's entertainment",
-      img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=85',
+      img: Childrenparty,
     },
     {
       id: '05',
@@ -52,7 +62,7 @@ export default function EventsWeDo({ onNavigate }) {
         'High-energy productions that bring audiences together through music, culture and performance.',
       examples:
         'Gospel concerts · Music festivals · Live performances · Cultural shows · Fashion shows',
-      img: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=85',
+      img: Concerts,
     },
     {
       id: '06',
@@ -61,7 +71,7 @@ export default function EventsWeDo({ onNavigate }) {
         'Well-coordinated gatherings supported by dependable production and technical solutions.',
       examples:
         'Church conferences · Conventions · Crusades · Anniversaries · Fundraising events',
-      img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85',
+      img: Churchevents,
     },
     {
       id: '07',
@@ -70,7 +80,7 @@ export default function EventsWeDo({ onNavigate }) {
         'Organised events that celebrate achievement, bring communities together and mark important milestones.',
       examples:
         'Graduations · School functions · University events · Award ceremonies · Student celebrations',
-      img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=85',
+      img: Educationeevents,
     },
     {
       id: '08',
@@ -79,7 +89,7 @@ export default function EventsWeDo({ onNavigate }) {
         'Brand-focused environments designed to showcase products, engage audiences and create visibility.',
       examples:
         'Trade shows · Expos · Exhibitions · Product showcases · Brand experiences',
-      img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85',
+      img: Exhibition,
     },
   ];
 
@@ -111,10 +121,10 @@ export default function EventsWeDo({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-teal-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
 
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -139,7 +149,7 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
 
           <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
@@ -155,7 +165,7 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 3. EVENT CATEGORIES */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
 
           <div className="mb-14 flex flex-col justify-between gap-8 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
@@ -217,7 +227,7 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 4. PRODUCTION CAPABILITIES */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
 
           <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
@@ -241,7 +251,7 @@ export default function EventsWeDo({ onNavigate }) {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="border-r border-b border-neutral-900/15 bg-teal-100 p-6 md:p-8"
+                className="border-r border-b border-neutral-900/15 bg-amber-200 p-6 md:p-8"
               >
                 <h3 className="mb-3 text-lg font-normal text-neutral-900">
                   {service.title}
@@ -280,7 +290,7 @@ export default function EventsWeDo({ onNavigate }) {
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#f9f9f8] bg-teal-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Plan Your Event &rarr;
             </a>

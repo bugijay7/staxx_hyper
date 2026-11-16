@@ -122,7 +122,7 @@ export default function Navbar({ currentPage, onNavigate }) {
       <aside
         id="staxx-nav-drawer"
         aria-hidden={!isDrawerOpen}
-        className={`fixed inset-0 z-50 flex flex-col justify-between overflow-y-auto bg-teal-100 px-6 py-4 pb-12 font-sans text-neutral-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:px-10 md:py-6 md:pb-12 ${
+        className={`fixed inset-0 z-50 flex flex-col justify-between overflow-y-auto bg-amber-200 px-6 py-4 pb-12 font-sans text-neutral-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:px-10 md:py-6 md:pb-12 ${
           isDrawerOpen
             ? 'pointer-events-auto translate-y-0'
             : 'pointer-events-none -translate-y-full'

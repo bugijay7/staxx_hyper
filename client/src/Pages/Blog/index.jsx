@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
+import Childrenparty from '../../assets/childrenparty.jpg';
+import Concerts from '../../assets/concerts.jpg';
+import Corporategala from '../../assets/corporategala.jpg';
+import Exhibition from '../../assets/exhibition.jpg';
+import Ruracio from '../../assets/ruracio.jpg';
+import Tentsetup from '../../assets/tentsetup.jpg';
+
+
 export default function Blog({ onNavigate }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activePost, setActivePost] = useState(null);
@@ -33,86 +41,86 @@ export default function Blog({ onNavigate }) {
   const blogPosts = [
     {
       id: '01',
-      title: '10 Best Outdoor Kids’ Birthday Venues & Picnic Parks in Nairobi',
-      category: 'Venues & Spaces',
-      readTime: '5 Min Read',
+      title: 'Technical Production Checklist for Corporate Galas, AGMs & Product Launches in Nairobi',
+      category: 'Corporate & AV Production',
+      readTime: '6 Min Read',
       date: 'November 2026',
       excerpt:
-        'From Karura Forest picnic glades and Paradise Lost in Kiambu to Karen gardens and Arboretum lawns—where to host an unforgettable bouncy castle party.',
-      img: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80',
+        'From line-array audio coverage and P3 indoor LED walls to stage wash lighting and silent generator redundancy—what Kenyan corporate planners need on their technical rider.',
+      img: Corporategala,
       content: [
-        'Nairobi’s year-round mild weather makes outdoor garden and park birthdays a favorite for Kenyan parents. When choosing a venue, always check three essentials: flat lawn space for anchoring commercial bouncy castles, reliable power access (or space for a silent backup generator), and clean washroom proximity.',
-        'Top picks include Karura Forest (KFEET grounds) for nature-loving kids, Paradise Lost in Kiambu for boat rides and lakeside picnics, and private estate clubhouses in Karen, Runda, and Lavington where our Staxx setup crew can arrive early for full balloon and backdrop installation.',
+        'Whether you are hosting an Annual General Meeting at KICC, a hotel ballroom gala in Westlands, or an executive product launch in Kilimani, speech intelligibility and visual clarity determine how your brand is perceived. Always conduct a joint site survey with your AV provider at least seven days prior to load-in to verify ceiling rigging heights, ambient light levels, and three-phase power distribution.',
+        'At Staxx-HyperKids, we pair high-brightness LED display walls with distributed line-array speakers so delegates at the back of the hall hear every keynote clearly without front-row feedback. Always include an acoustic-canopy standby generator on your technical rider to protect live broadcasts and presentations from sudden grid fluctuations.',
       ],
     },
     {
       id: '02',
-      title: 'How to Plan a Stress-Free Birthday on a Realistic KES Budget',
-      category: 'Planning & Budgets',
-      readTime: '6 Min Read',
+      title: 'Planning Traditional Weddings, Ruracio & Garden Receptions Across Six Kenyan Counties',
+      category: 'Weddings & Cultural Styling',
+      readTime: '5 Min Read',
       date: 'October 2026',
       excerpt:
-        'Smart ways Kenyan parents allocate funds across decor, inflatables, kids’ bites (samosas, mini-burgers & bhajias), and party favors without overspending.',
-      img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80',
+        'How to coordinate clear-span marquee tents, cultural Kikuyu/Kenyan styling, bridal stage backdrops, and outdoor sound across Nairobi, Kiambu, Nakuru, Machakos, Murang’a, and Kajiado.',
+      img: Ruracio,
       content: [
-        'A memorable children’s birthday doesn’t require an unlimited budget—it requires smart prioritization. Kids remember active fun (bouncy castles, face painting, and piñatas) far more than elaborate adult centerpieces.',
-        'Allocate roughly 40% of your budget to entertainment and inflatables, 30% to kid-friendly Kenyan party favorites (crispy beef samosas, mini sausages, fries, cupcakes, and fresh passion juice), and 30% to one high-impact photo backdrop and balloon garland.',
+        'Traditional Ruracio ceremonies, dowry negotiations, and countryside garden receptions across Kiambu, Murang’a, Nakuru, Machakos, and Kajiado present unique logistical demands—from sloped homestead lawns to multi-hour outdoor seating schedules. Clear-span marquees and pagoda tents provide structured shade while keeping sightlines open to the main bridal and elders’ dais.',
+        'Integrating your spatial décor and audiovisual vendor under one roof eliminates cable clutter and mismatched aesthetics. Custom timber and floral backdrops should be built around speaker placement and stage lighting so photography remains clean from every angle.',
       ],
     },
     {
       id: '03',
-      title: 'Afro-Royal Safari Themes: Celebrating Heritage at Kids’ Parties',
-      category: 'Theme Inspiration',
+      title: 'Rainy Season Event Protection: March–May & November Contingency Planning in Kenya',
+      category: 'Logistics & Equipment Hire',
       readTime: '4 Min Read',
       date: 'October 2026',
       excerpt:
-        'Swap generic imported plastic decor for bold Kitenge runners, woven Maasai shields, djembe drumming circles, and savannah animal props.',
-      img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=900&q=80',
+        'Don’t let an afternoon downpour disrupt outdoor conventions, graduations, or private celebrations. Practical guides on waterproof marquees, raised flooring, and weatherproof AV.',
+      img: Tentsetup,
       content: [
-        'More Kenyan parents are embracing Afro-inspired celebrations that feel vibrant, authentic, and deeply personal. Rich ochre, emerald green, and golden yellow balloon garlands pair effortlessly with Kitenge fabric table runners and woven sisal baskets.',
-        'Add an interactive djembe drumming session where every child gets a mini drum, alongside lion and elephant face painting, for an energetic cultural celebration that photographs beautifully.',
+        'In Nairobi and the surrounding highland counties, clear mornings frequently give way to heavy afternoon rain during the long and short rainy seasons. For outdoor church conventions, university graduations, and garden parties, ground moisture and wind gusts are just as critical as overhead rain.',
+        'Specify heavy-duty PVC clear-span tents fitted with roll-down sidewalls, guttering channels between connected structures, and interlocking cassette flooring or carpeted sub-decks. On the technical side, ensure all outdoor line arrays, stage consoles, and power distribution boxes are housed under dedicated weather-rated FOH (Front of House) canopies.',
       ],
     },
     {
       id: '04',
-      title: 'Apartment Clubhouse Party Hacks for Kilimani, Kileleshwa & Westlands',
-      category: 'Venues & Spaces',
+      title: 'How to Plan a Stress-Free Children’s Party on a Realistic KES Budget',
+      category: 'Kiddie Parties & Family',
       readTime: '5 Min Read',
       date: 'September 2026',
       excerpt:
-        'Short on sprawling lawn space? Here is how to fit soft play arenas, magic shows, popcorn carts, and 3D backdrops into apartment rooftops and clubhouses.',
-      img: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=900&q=80',
+        'Smart ways Kenyan parents allocate funds across custom themes, sanitized inflatables, kids’ bites, and entertainment—whether in a Karen garden or a Kilimani clubhouse.',
+      img: Childrenparty,
       content: [
-        'Hosting in an apartment clubhouse or covered rooftop terrace doesn’t mean sacrificing the "wow" factor. Compact padded soft play zones, mini castle bouncers, and sailboard backdrops are engineered specifically for indoor and semi-covered urban spaces.',
-        'Remember to notify your estate management 48 hours ahead for delivery gate passes and confirm lift dimensions for backdrop panels—our Staxx logistics team handles the rest.',
+        'A memorable children’s birthday doesn’t require juggling four separate suppliers—it requires prioritizing active play and one cohesive visual focal point. Kids remember commercial bouncy castles, interactive game hosts, and custom piñatas far more than elaborate adult table settings.',
+        'For estate lawns in Karen or Runda, allocate roughly 40% of your budget to sanitized inflatables and entertainment, 30% to kid-friendly catering, and 30% to a custom backdrop and organic balloon garland. Hosting in an apartment clubhouse in Kilimani or Kileleshwa? Compact padded soft-play arenas and sailboard backdrops deliver maximum impact in tighter indoor footprints.',
       ],
     },
     {
       id: '05',
-      title: 'Rainy Season Backup Plans: Hosting During March–May & November Rains',
-      category: 'Planning & Budgets',
-      readTime: '4 Min Read',
+      title: 'Designing High-Traffic Exhibition Booths & Experiential Brand Activations',
+      category: 'Corporate & AV Production',
+      readTime: '6 Min Read',
       date: 'September 2026',
       excerpt:
-        'Don’t let an afternoon Nairobi downpour spoil the fun. Discover waterproof marquee tents, indoor silent discos, and flexible weather rescheduling.',
-      img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80',
+        'Standing out at trade expos, mall activations, and promotional showcases with custom modular trussing, interactive screens, and crowd-flow layouts.',
+      img: Exhibition,
       content: [
-        'In Nairobi and the highlands, bright sunny mornings can quickly turn into crisp afternoon showers during the long and short rains. Always pair outdoor lawn setups with clear-span waterproof marquee tents and carpeted flooring.',
-        'Even better, line up indoor-friendly entertainment like comedy magic shows, puppet theatre, cupcake decorating stations, and kids’ LED silent discos so the energy stays sky-high rain or shine.',
+        'At busy trade shows and retail mall activations, you have less than three seconds to capture attendee attention. Standard shell-scheme booths often blend into the background unless elevated with custom spatial fabrication, targeted spotlighting, and dynamic motion graphics on seamless LED panels.',
+        'When planning an activation, map out clear entry and exit zones for product sampling or live demos, integrate concealed storage for promotional stock, and calibrate directional audio so your MC engages booth visitors without violating venue decibel limits.',
       ],
     },
     {
       id: '06',
-      title: 'School Fun Days & Estate Family Carnivals: A Complete Checklist',
-      category: 'School & Estate Events',
+      title: 'Staging Concerts, Church Conventions & Institutional Fun Days Safely',
+      category: 'Logistics & Equipment Hire',
       readTime: '7 Min Read',
       date: 'August 2026',
       excerpt:
-        'Organizing a term-end school fun day or estate festival for 60 to 150 kids? Use our safety, generator, crowd-flow, and concession checklist.',
-      img: 'https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=900&q=80',
+        'Essential crowd-management, stage rigging, age-zoned recreation, and power redundancy guidelines for large-scale community and institutional gatherings.',
+      img: Concerts,
       content: [
-        'Large school and estate events succeed when kids are grouped by age: dedicated padded toddler zones for ages 1–4, medium bouncy castles for ages 5–8, and giant inflatable obstacle courses for ages 9–13.',
-        'Always include a silent standby generator for continuous blower power, dedicated safety attendants on every inflatable, and high-output popcorn and slush machines to keep queues moving fast.',
+        'Large-scale church crusades, gospel concerts, and school family fun days demand disciplined operational execution. Start with certified steel stage decking, proper truss load calculations for lighting and line arrays, and heavy-duty cable ramps across all pedestrian walkways.',
+        'For institutional family days where hundreds of children attend alongside adults, zone recreation areas strictly by age—separating toddler soft-play pits from giant inflatable obstacle courses—and assign trained safety attendants and dedicated power backup to every inflatable unit.',
       ],
     },
   ];
@@ -123,34 +131,35 @@ export default function Blog({ onNavigate }) {
       : blogPosts.filter((post) => post.category === selectedCategory);
 
   return (
-    <div className="bg-white pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-[#f9f9f8]">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-            <span>Staxx Events Journal</span>
+            <span>Staxx-HyperKids Journal</span>
             <span>
-              Nairobi Party Guides &bull; KES Budget Tips &bull; Local Venues
+              Event Production Guides &bull; AV &amp; Styling &bull; Kenya Venues
             </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
             <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
-              Blog &amp; Kenyan <br />
-              <span className="text-neutral-500">party ideas</span>
+              Production Insights <br />
+              <span className="text-neutral-500">&amp; Event Guides</span>
             </h1>
 
             <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
-              Practical party planning guides written for Kenyan parents, PTA
-              committees, and estate organizers&mdash;covering Nairobi venues,
-              rainy-season backups, Afro-inspired themes, and smart KES budgets.
+              Practical field notes from our AV engineers, spatial stylists, and
+              operations team&mdash;covering corporate technical riders,
+              weddings &amp; Ruracio logistics, rainy-season marquees, brand
+              activations, and children&apos;s parties across Kenya.
             </p>
           </div>
         </div>
       </section>
 
       {/* 2. CATEGORY FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
           <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
             Browse Topics ({filteredPosts.length})
@@ -159,10 +168,10 @@ export default function Blog({ onNavigate }) {
           <div className="flex flex-wrap gap-6 md:gap-8">
             {[
               'All',
-              'Venues & Spaces',
-              'Planning & Budgets',
-              'Theme Inspiration',
-              'School & Estate Events',
+              'Corporate & AV Production',
+              'Weddings & Cultural Styling',
+              'Logistics & Equipment Hire',
+              'Kiddie Parties & Family',
             ].map((cat) => {
               const isSelected = selectedCategory === cat;
               return (
@@ -186,22 +195,22 @@ export default function Blog({ onNavigate }) {
       </section>
 
       {/* 3. BLOG POSTS GRID */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
                 onClick={() => setActivePost(post)}
-                className="group flex cursor-pointer flex-col justify-between border border-neutral-900/15 bg-[#f9f9f8] transition-colors duration-200 hover:bg-white"
+                className="group flex cursor-pointer flex-col justify-between border border-neutral-900/15 bg-amber-200 transition-colors duration-200 hover:bg-amber-200"
               >
                 <div>
                   {/* Top Index & Category Plate */}
-                  <div className="flex items-center justify-between border-b border-neutral-900/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-neutral-900">
+                  <div className="flex items-center justify-between gap-3 border-b border-neutral-900/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
+                    <span className="shrink-0 font-medium text-neutral-900">
                       Issue {post.id}
                     </span>
-                    <span>{post.category}</span>
+                    <span className="truncate">{post.category}</span>
                   </div>
 
                   {/* Image Frame */}
@@ -232,7 +241,7 @@ export default function Blog({ onNavigate }) {
                 </div>
 
                 {/* Card Footer Trigger */}
-                <div className="border-t border-neutral-900/15 bg-white px-6 py-4 md:px-8">
+                <div className="border-t border-neutral-900/15 bg-amber-200 px-6 py-4 md:px-8">
                   <button
                     type="button"
                     onClick={(e) => {
@@ -261,10 +270,10 @@ export default function Blog({ onNavigate }) {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden border border-neutral-900/20 bg-[#f9f9f8] text-neutral-900"
+            className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden border border-neutral-900/20 bg-amber-200 text-neutral-900"
           >
             {/* Top Modal Bar */}
-            <div className="flex items-center justify-between border-b border-neutral-900/15 bg-white px-6 py-4 text-[11px] tracking-[0.14em] uppercase">
+            <div className="flex items-center justify-between border-b border-neutral-900/15 bg-amber-200 px-6 py-4 text-[11px] tracking-[0.14em] uppercase">
               <div className="flex flex-wrap items-center gap-2 text-neutral-500">
                 <strong className="font-medium text-neutral-900">
                   {activePost.category}
@@ -294,7 +303,7 @@ export default function Blog({ onNavigate }) {
                 />
               </div>
 
-              <div className="space-y-6 bg-white p-6 md:p-10">
+              <div className="space-y-6 bg-amber-200 p-6 md:p-10">
                 <h3 className="text-2xl font-normal tracking-[-0.02em] leading-snug text-neutral-900 md:text-3xl">
                   {activePost.title}
                 </h3>
@@ -308,20 +317,20 @@ export default function Blog({ onNavigate }) {
             </div>
 
             {/* Bottom Modal Action Bar */}
-            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-neutral-900/15 bg-[#f9f9f8] px-6 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-neutral-900/15 bg-amber-200 px-6 py-4">
               <a
                 href="/booking"
                 onClick={(e) => handleLinkClick(e, '/booking')}
                 className="border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
               >
-                Plan This Party With Staxx &rarr;
+                Plan This Event With Staxx &rarr;
               </a>
               <a
-                href="/party-packages"
-                onClick={(e) => handleLinkClick(e, '/party-packages')}
-                className="border border-neutral-900/25 bg-white px-5 py-3 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
+                href="/event-equipment-supplies"
+                onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
+                className="border border-neutral-900/25 bg-amber-200 px-5 py-3 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
               >
-                Compare KES Packages
+                Browse Equipment Catalog
               </a>
             </div>
           </div>
@@ -333,14 +342,15 @@ export default function Blog({ onNavigate }) {
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Need Local Advice?
+              Need Production Guidance?
             </span>
             <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
-              Not Sure Which Venue or Package Fits Best?
+              Planning a Corporate Event, Wedding, or Celebration?
             </h2>
             <p className="text-base leading-relaxed text-neutral-300">
-              Our Nairobi party planners know the exact layout, power rules, and
-              lawn dimensions of estates, parks, and clubhouses across the city.
+              Speak directly with our AV engineers and spatial stylists at
+              Commerce House, Nairobi for venue assessments, technical riders,
+              and itemized KES proposals across six Kenyan counties.
             </p>
           </div>
 
@@ -348,9 +358,9 @@ export default function Blog({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-[#f9f9f8] px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
-              Talk to a Party Planner &rarr;
+              Request an Event Quote &rarr;
             </a>
             <a
               href="https://wa.me/"

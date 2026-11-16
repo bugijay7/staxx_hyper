@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import Audiovisual from '../../assets/audiovisual.jpeg';
+import Backdrops from '../../assets/backdrops.jpg';
+import Childrenparty from '../../assets/childrenparty.jpg';
+import ConferenceSetup from '../../assets/conferenceSetup.jpeg';
+import Equipmentsetup from '../../assets/equipmentsetup.jpeg';
+import Hero from '../../assets/hero.jpg';
+import Lighting from '../../assets/lighting.jpg';
+import Logistics from '../../assets/logistics.jpeg';
+
 
 export default function About({ onNavigate }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic',
+    });
+  }, []);
+
   const handleLinkClick = (e, path) => {
     if (e.metaKey || e.ctrlKey || e.button === 1) return;
     if (onNavigate) {
@@ -14,25 +34,25 @@ export default function About({ onNavigate }) {
       no: '01',
       title: 'Technical Reliability & Hygiene',
       desc: 'Commercial-grade sound, LED screens, staging, and sanitized children’s play units inspected and tested prior to every dispatch.',
-      img: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80',
+      img: Audiovisual,
     },
     {
       no: '02',
       title: 'Coordinated Styling & Production',
       desc: 'Unified event design where spatial styling, thematic décor, and audiovisual engineering are planned together rather than in silos.',
-      img: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80',
+      img: Backdrops,
     },
     {
       no: '03',
       title: 'Dependable Site Logistics',
       desc: 'Strict load-in schedules, venue power assessments, and organized setup crews ensure every stage, tent, and backdrop is ready on time.',
-      img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80',
+      img: Logistics,
     },
     {
       no: '04',
       title: 'Transparent KES Quotations',
       desc: 'Clear, itemized proposals tailored to your brief, venue, and audience—with zero hidden transport or setup charges.',
-      img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80',
+      img: ConferenceSetup,
     },
   ];
 
@@ -41,19 +61,19 @@ export default function About({ onNavigate }) {
       no: '01 • Integrated Delivery',
       title: 'One Coordinated Team',
       desc: 'Creative styling, décor, kiddie party setups, and technical audiovisual production managed by a single accountable provider.',
-      img: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80',
+      img: Equipmentsetup,
     },
     {
       no: '02 • Founder-Led Specialisms',
       title: 'Complementary Leadership',
       desc: 'Direct oversight from co-founders specializing in AV/operations and event décor/children’s celebrations respectively.',
-      img: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80',
+      img: ConferenceSetup,
     },
     {
       no: '03 • Tailored Execution',
       title: 'Brief & Venue Specific',
       desc: 'Practical on-site production calibrated to your venue dimensions, audience size, and technical requirements across six counties.',
-      img: 'https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=800&q=80',
+      img: Logistics,
     },
   ];
 
@@ -62,13 +82,13 @@ export default function About({ onNavigate }) {
       name: 'Bryan Karanja',
       role: 'Co-Founder | AV & Operations',
       bio: 'Leads audiovisual systems, sound engineering, LED and visual solutions, staging, technical production, fleet logistics, and on-site operational execution.',
-      img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
+      img: Audiovisual,
     },
     {
       name: 'Dan Njuguna',
       role: 'Co-Founder | Décor & Kiddie Events',
       bio: 'Leads creative direction, spatial event décor, bespoke styling, children’s celebrations, party concepts, and interactive kiddie-event experiences.',
-      img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
+      img: Childrenparty,
     },
   ];
 
@@ -87,12 +107,18 @@ export default function About({ onNavigate }) {
       {/* 1. EDITORIAL HERO SECTION */}
       <section className="border-b border-neutral-900/15 bg-red-100">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div
+            className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase"
+            data-aos="fade-down"
+          >
             <span>Staxx-HyperKids &bull; Integrated Events &amp; Production</span>
             <span>Est. 2026 &bull; Commerce House, Nairobi, Kenya</span>
           </div>
 
-          <div className="mb-14 grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
+          <div
+            className="mb-14 grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]"
+            data-aos="fade-up"
+          >
             <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
               Audiovisual production, <br />
               <span className="text-neutral-500">event styling &amp; equipment hire.</span>
@@ -107,10 +133,14 @@ export default function About({ onNavigate }) {
           </div>
 
           {/* Hero Visual Grid */}
-          <div className="grid grid-cols-1 border border-neutral-900/15 bg-red-100 lg:grid-cols-[1.5fr_1fr]">
+          <div
+            className="grid grid-cols-1 border border-neutral-900/15 bg-red-100 lg:grid-cols-[1.5fr_1fr]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="relative overflow-hidden border-b border-neutral-900/15 bg-neutral-100 lg:border-r lg:border-b-0">
               <img
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80"
+                src={Hero}
                 alt="Staxx-HyperKids integrated audiovisual staging and event styling in Nairobi"
                 className="aspect-[16/10] h-full w-full object-cover"
               />
@@ -157,7 +187,10 @@ export default function About({ onNavigate }) {
       {/* 2. HISTORY & HOW IT STARTED */}
       <section className="border-b border-neutral-900/15 bg-red-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+          <div
+            className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16"
+            data-aos="fade-up"
+          >
             <div>
               <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                 History &amp; Origin &bull; Est. 2026
@@ -165,10 +198,9 @@ export default function About({ onNavigate }) {
               <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
                 Uniting technical production and event styling in Kenya
               </h2>
-              {/* Added Image Plate for Origin Story */}
               <div className="mt-8 aspect-[16/10] w-full overflow-hidden border border-neutral-900/15 bg-neutral-100">
                 <img
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
+                  src={Audiovisual}
                   alt="Staxx production team executing large scale event setup in Nairobi"
                   className="h-full w-full object-cover"
                 />
@@ -205,7 +237,10 @@ export default function About({ onNavigate }) {
       {/* 3. MISSION & VISION */}
       <section className="border-b border-neutral-900/15 bg-red-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="grid grid-cols-1 items-stretch border border-neutral-900/15 bg-red-100 lg:grid-cols-[1.2fr_1fr]">
+          <div
+            className="grid grid-cols-1 items-stretch border border-neutral-900/15 bg-red-100 lg:grid-cols-[1.2fr_1fr]"
+            data-aos="fade-up"
+          >
             <div className="flex flex-col justify-between divide-y divide-neutral-900/15 border-b border-neutral-900/15 lg:border-r lg:border-b-0">
               <div className="p-8 md:p-12">
                 <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
@@ -231,7 +266,7 @@ export default function About({ onNavigate }) {
 
             <div className="overflow-hidden bg-neutral-100">
               <img
-                src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80"
+                src={Lighting}
                 alt="Bespoke event styling, lighting and celebration setup"
                 className="h-full min-h-[320px] w-full object-cover"
               />
@@ -243,7 +278,7 @@ export default function About({ onNavigate }) {
       {/* 4. CORE PRINCIPLES */}
       <section className="border-b border-neutral-900/15 bg-red-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="mb-12">
+          <div className="mb-12" data-aos="fade-up">
             <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
               Operational Standards
             </span>
@@ -253,10 +288,12 @@ export default function About({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 sm:grid-cols-2 lg:grid-cols-4">
-            {coreValues.map((val) => (
+            {coreValues.map((val, index) => (
               <div
                 key={val.no}
                 className="flex flex-col justify-between border-r border-b border-neutral-900/15 bg-red-100 p-8"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
                 <div>
                   <span className="mb-6 block border-b border-neutral-900/15 pb-3 text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
@@ -269,7 +306,6 @@ export default function About({ onNavigate }) {
                     {val.desc}
                   </p>
                 </div>
-                {/* Added Card Thumbnail Image */}
                 <div className="aspect-[16/10] w-full overflow-hidden bg-neutral-200">
                   <img
                     src={val.img}
@@ -286,7 +322,10 @@ export default function About({ onNavigate }) {
       {/* 5. WHAT SETS US APART & WHO WE SERVE */}
       <section className="border-b border-neutral-900/15 bg-red-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div
+            className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
+            data-aos="fade-up"
+          >
             <div>
               <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                 Differentiation
@@ -297,11 +336,16 @@ export default function About({ onNavigate }) {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 bg-red-100 md:grid-cols-3">
-            {advantagePoints.map((point) => (
+          <div
+            className="grid grid-cols-1 border-t border-l border-neutral-900/15 bg-red-100 md:grid-cols-3"
+            data-aos="fade-up"
+          >
+            {advantagePoints.map((point, index) => (
               <div
                 key={point.no}
                 className="flex flex-col justify-between border-r border-b border-neutral-900/15 p-8 md:p-10"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
                 <div>
                   <span className="mb-4 block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
@@ -314,7 +358,6 @@ export default function About({ onNavigate }) {
                     {point.desc}
                   </p>
                 </div>
-                {/* Added Advantage Thumbnail Image */}
                 <div className="aspect-[16/10] w-full overflow-hidden bg-neutral-200">
                   <img
                     src={point.img}
@@ -327,7 +370,10 @@ export default function About({ onNavigate }) {
           </div>
 
           {/* Target Clients & Sectors Strip */}
-          <div className="mt-12 border border-neutral-900/15 p-8 md:p-10">
+          <div
+            className="mt-12 border border-neutral-900/15 p-8 md:p-10"
+            data-aos="fade-up"
+          >
             <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
               Clients &amp; Sectors We Serve
             </span>
@@ -348,7 +394,10 @@ export default function About({ onNavigate }) {
       {/* 6. CO-FOUNDERS */}
       <section className="border-b border-neutral-900/15 bg-red-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div
+            className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
+            data-aos="fade-up"
+          >
             <div>
               <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                 Founding Leadership
@@ -367,6 +416,8 @@ export default function About({ onNavigate }) {
               <article
                 key={founder.name}
                 className="group border border-neutral-900/15 bg-red-100"
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
               >
                 <div className="flex items-center justify-between border-b border-neutral-900/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
                   <span>0{index + 1}</span>
@@ -376,7 +427,7 @@ export default function About({ onNavigate }) {
                 <div className="aspect-[16/11] w-full overflow-hidden bg-neutral-200">
                   <img
                     src={founder.img}
-                    alt={`${founder.name} - ${founder.role} at Staxx-HyperKids`}
+                    alt={`${founder.name} ${founder.role} at Staxx-HyperKids`}
                     className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
                   />
                 </div>
@@ -400,7 +451,10 @@ export default function About({ onNavigate }) {
 
       {/* 7. BOTTOM CTA */}
       <section className="bg-neutral-900 text-[#f9f9f8]">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
+        <div
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
+          data-aos="fade-up"
+        >
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
               Start Planning

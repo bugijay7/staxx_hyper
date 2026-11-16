@@ -8,7 +8,8 @@ import ballonGarlandImg from '../../assets/ballonGarland.jpg';
 import concessionsImg from '../../assets/concessions.jpg';
 import inflatableImg from '../../assets/inflatable.jpg';
 import backdropsImg from '../../assets/backdrops.jpg';
-import canopiesImg from '../../assets/canopies.jpg';
+import canopiesImg from '../../assets/canopies.jpeg';
+import avImg from '../../assets/audioVisual.jpeg';
 
 export default function Home({ onNavigate }) {
   const [activeTab, setActiveTab] = useState('all');
@@ -24,114 +25,112 @@ export default function Home({ onNavigate }) {
   const galleryImages = [
     {
       url: pastelImg,
-      title: 'Pastel Garden Birthday',
-      category: 'parties',
-      tag: 'Full Setup',
+      title: 'Corporate Gala & Stage Production',
+      category: 'corporate',
+      tag: 'AV & Lighting',
     },
     {
       url: confettiImg,
-      title: 'Confetti & Color Smash',
-      category: 'parties',
-      tag: 'Custom Theme',
+      title: 'Brand Activation & Product Launch',
+      category: 'corporate',
+      tag: 'Experiential',
     },
     {
       url: castlesImg,
-      title: 'Commercial Inflatables & Castles',
+      title: 'Commercial Tents & Clear-Span Marquees',
       category: 'equipment',
       tag: 'Equipment Rental',
     },
     {
       url: cakeTableImg,
-      title: 'Custom Dessert & Cake Tables',
-      category: 'parties',
-      tag: 'Table Styling',
+      title: 'Weddings & Private Celebrations',
+      category: 'celebrations',
+      tag: 'Styling & Decor',
     },
     {
       url: ballonGarlandImg,
-      title: 'Organic Balloon Garlands',
-      category: 'supplies',
-      tag: 'Bespoke Decor',
+      title: 'Bespoke Floral & Balloon Installations',
+      category: 'celebrations',
+      tag: 'Spatial Decor',
     },
     {
       url: concessionsImg,
-      title: 'Popcorn & Concession Carts',
+      title: 'Concerts & Live Entertainment Rigging',
       category: 'equipment',
-      tag: 'Catering Gear',
+      tag: 'Sound & Staging',
     },
   ];
 
   const packages = [
     {
-      name: 'Essential Party Box',
-      price: '$199',
-      sub: 'Best for backyard or living room birthdays up to 10 kids',
+      name: 'Essential Corporate / Event Package',
+      price: 'KES 65,000',
+      sub: 'Ideal for board meetings, seminars, and intimate gatherings up to 50 guests',
       featured: false,
       features: [
-        'Up to 10 children',
-        '8ft balloon arch & custom backdrop',
-        'Themed plates, cups, napkins & table linens',
-        '1 party host for 90 minutes of games',
-        'Morning delivery and standard setup',
+        'Professional PA sound system & wireless mics',
+        'Basic stage wash & architectural lighting',
+        'Standard event coordination & on-site technician',
+        'Morning delivery, professional setup, and takedown',
+        'Custom layout planning & venue walkthrough',
       ],
     },
     {
-      name: 'Deluxe Backyard Setup',
-      price: '$399',
-      sub: 'Full theme styling plus active play equipment for up to 20 kids',
+      name: 'Hyper Deluxe Production',
+      price: 'KES 145,000',
+      sub: 'Full-service audiovisual staging and d&eacute;cor for up to 150 attendees',
       featured: true,
       features: [
-        'Up to 20 children',
-        'Layered 3D backdrop & 14ft organic balloon garland',
-        'Choice of mini bouncy castle or toddler soft-play zone',
-        '1 costumed character or interactive entertainer (2 hrs)',
-        'Organized relay games & take-home prize packs',
-        'Full delivery, anchoring, and evening takedown',
+        'Advanced line-array sound & digital mixing console',
+        'LED screen display or high-impact backdrop styling',
+        'Immersive lighting rig and atmospheric effects',
+        'Dedicated event producer & technical crew on standby',
+        'Comprehensive generator backup coordination',
+        'Full delivery, structural anchoring, and strike',
       ],
     },
     {
-      name: 'Full-Scale Celebration',
-      price: '$699',
-      sub: 'Large-group event production for milestone birthdays & school fairs',
+      name: 'Grand Carnival & Festival Suite',
+      price: 'KES 280,000+',
+      sub: 'Large-scale multi-zone production for concerts, church conventions & festivals',
       featured: false,
       features: [
-        '25+ children',
-        'Multi-zone custom theme installation',
-        'Commercial bouncy castle + warm popcorn machine',
-        '2 entertainers + face painter or balloon twister',
-        'Dedicated snack & drink station with attendant',
-        'On-site event coordinator from setup to pack-down',
+        'Heavy-duty stage platform, trussing, & professional lighting',
+        'Concert-grade line-array sound system and monitoring',
+        'Clear-span marquee tents, flooring, and climate control',
+        'Crowd control barriers, VIP seating, and lounge setups',
+        'Complete technical crew, sound engineers, and stage managers',
+        'End-to-end experiential production management across 6 counties',
       ],
     },
   ];
 
   const equipmentCategories = [
     {
-      title: 'Inflatables & Soft Play',
-      detail: 'Commercial-grade castles, slides & toddler pits',
-      img: inflatableImg,
+      title: 'Audiovisual & Staging',
+      detail: 'Line-array sound, LED screens, lighting rigs & stages',
+      img: avImg,
       path: '/event-equipment-supplies',
     },
     {
-      title: 'Backdrops & Balloon Decor',
-      detail: 'Custom arches, plinths & themed props',
+      title: 'Décor, Backdrops & Styling',
+      detail: 'Custom structural builds, themes, plinths & floral styling',
       img: backdropsImg,
       path: '/event-equipment-supplies',
     },
     {
-      title: 'Fun Food Concessions',
-      detail: 'Popcorn, cotton candy & slush machines',
-      img: concessionsImg,
-      path: '/event-equipment-supplies',
-    },
-    {
-      title: 'Tables, Seating & Canopies',
-      detail: 'Child-height tables, Chiavari chairs & shade tents',
+      title: 'Marquees, Tents & Canopies',
+      detail: 'Clear-span structures, luxury pagodas & flooring',
       img: canopiesImg,
       path: '/event-equipment-supplies',
     },
+    {
+      title: 'Event Supplies & Carts',
+      detail: 'Seating, tables, generators, and concession equipment',
+      img: concessionsImg,
+      path: '/event-equipment-supplies',
+    },
   ];
-
-  {/*bg-[#f9f9f8]*/}
 
   const filteredGallery =
     activeTab === 'all'
@@ -139,21 +138,19 @@ export default function Home({ onNavigate }) {
       : galleryImages.filter((item) => item.category === activeTab);
 
   return (
-    <div className="bg-teal-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO SECTION */}
-      <section className="relative border-b border-neutral-900/15 bg-teal-100">
-        {/* Architectural Split / Full-Bleed Image Frame */}
+      <section className="relative border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-12 md:px-10 md:pt-12 md:pb-16">
           {/* Top Metadata Strip */}
-          <div className="mb-8  flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[8px] tracking-[0.14em] text-neutral-500 uppercase">
-            <span>Staxx Hyper Events</span>
-            <span>Custom Kids Parties &bull; Event Equipments</span>
+          <div className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[8px] tracking-[0.14em] text-neutral-500 uppercase">
+            <span>Staxx Events &amp; Production &bull; Commerce House, Nairobi</span>
+            <span>AV Production &bull; Décor Styling &bull; Equipment Hire</span>
           </div>
 
           {/* Editorial Headline & Intro Grid */}
           <div className="grid grid-cols-1 items-end gap-10 pb-12 lg:grid-cols-[1.45fr_1fr]">
             <div>
-              
               <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
                 Bringing experiences, <br />
                 <span className="text-neutral-500">to life.</span>
@@ -162,8 +159,10 @@ export default function Home({ onNavigate }) {
 
             <div className="flex flex-col justify-between gap-8 lg:border-l lg:border-neutral-900/15 lg:pl-10">
               <p className="text-xs md:text-sm leading-relaxed text-neutral-600 md:text-lg">
-                An integrated events and experiential production company combining audiovisual and technical production, event décor and styling, children's parties and event equipment/supplies.
-
+                An integrated events and experiential production company combining
+                audiovisual and technical production, event d&eacute;cor and styling,
+                children&rsquo;s parties, and commercial event equipment supplies
+                across Kenya.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -172,7 +171,7 @@ export default function Home({ onNavigate }) {
                   onClick={(e) => handleLinkClick(e, '/booking')}
                   className="border border-neutral-900 bg-neutral-900 px-2 md:px-3 py-0.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
                 >
-                  Check Date Availability
+                  Request a Quote
                 </a>
                 <a
                   href="/event-equipment-supplies"
@@ -189,68 +188,70 @@ export default function Home({ onNavigate }) {
           <div className="relative aspect-[16/9] max-h-[640px] w-full overflow-hidden bg-neutral-200">
             <img
               src={heroImg}
-              alt="Outdoor children's birthday party setup with balloons and tables"
+              alt="Staxx Events professional staging, audiovisual production and experiential setup in Nairobi"
               className="h-full w-full object-cover"
             />
           </div>
 
           {/* Bottom Trust / Spec Bar */}
           <div className="mt-6 grid grid-cols-1 gap-3 border-t border-neutral-900/15 pt-5 text-xs tracking-[0.06em] text-neutral-600 sm:grid-cols-3">
-            <span>&bull; Sanitized, commercial-grade inflatables</span>
+            <span>&bull; Commercial sound, LED screens &amp; stage rigging</span>
             <span className="sm:text-center">
-              &bull; On-time morning setup &amp; evening pack-down
+              &bull; Serving Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
             </span>
-            <span className="sm:text-right">&bull; Fully insured event crew</span>
+            <span className="sm:text-right">&bull; Founder-led technical &amp; d&eacute;cor oversight</span>
           </div>
         </div>
       </section>
 
       {/* 2. ABOUT / EDITORIAL SECTION */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <div>
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-              How We Work
+              Integrated Capabilities
             </span>
             <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
-              One team for decor, entertainment, and rentals.
+              One accountable partner for AV, styling, and equipment hire.
             </h2>
           </div>
 
           <div className="flex flex-col justify-between gap-12 lg:border-l lg:border-neutral-900/15 lg:pl-12">
             <p className="text-base leading-relaxed text-neutral-600 md:text-lg">
-              Most parents end up juggling three different vendors just to pull
-              off a birthday party: a baker, a balloon decorator, and an
-              inflatable rental company. At Staxx Hyper Events, we handle the
-              entire physical setup under one roof. You choose the theme and
-              guest count, and our crew arrives early to build, anchor, style,
-              and clean up after the last guest leaves.
+              Organisers and brands often waste valuable time juggling separate
+              suppliers for sound engineering, marquee tents, d&eacute;cor, and
+              stage lighting. Founded by Bryan Karanja and Dan Njuguna,
+              Staxx-HyperKids combines technical audiovisual production with
+              bespoke spatial styling under one roof. Whether you are hosting an
+              executive corporate gala, a product launch, a wedding, or a large
+              festival, our in-house inventory and dedicated crews ensure
+              flawless execution from load-in to strike.
             </p>
 
             {/* Architectural Metric Strip */}
             <div className="grid grid-cols-1 gap-8 border-t border-neutral-900/15 pt-8 sm:grid-cols-3">
               <div>
                 <span className="block text-3xl font-normal tracking-[-0.03em] text-neutral-900 md:text-4xl">
-                  2 hrs
+                  6 Counties
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
-                  Average full-backyard setup time prior to guest arrival
+                  Active deployment across Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
                 </span>
               </div>
               <div className="sm:border-l sm:border-neutral-900/15 sm:pl-6">
                 <span className="block text-3xl font-normal tracking-[-0.03em] text-neutral-900 md:text-4xl">
-                  100%
+                  Unified
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
-                  Inflatables scrubbed and sanitized before every booking
+                  Technical AV production and spatial d&eacute;cor managed synchronously
                 </span>
               </div>
               <div className="sm:border-l sm:border-neutral-900/15 sm:pl-6">
                 <span className="block text-3xl font-normal tracking-[-0.03em] text-neutral-900 md:text-4xl">
-                  50+
+                  Full Stock
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
-                  Custom backdrop themes and commercial rental units in stock
+                  In-house inventory of sound, lighting, marquees, and event furniture
                 </span>
               </div>
             </div>
@@ -259,14 +260,14 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 3. THREE-STEP PROCESS */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 max-w-2xl">
             <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-              Booking Process
+              Production Workflow
             </span>
             <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
-              From blank yard to party-ready in three steps.
+              From concept brief to flawless live execution.
             </h2>
           </div>
 
@@ -277,12 +278,12 @@ export default function Home({ onNavigate }) {
               </span>
               <div>
                 <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-neutral-900">
-                  Pick a Package or Gear List
+                  Consultation &amp; Brief
                 </h3>
                 <p className="text-sm leading-relaxed text-neutral-600">
-                  Choose an all-inclusive birthday package or build an à la carte
-                  rental order of bouncy castles, kid-sized seating, and
-                  concession machines.
+                  Share your venue specifications, audience size, and technical
+                  rider. We design a tailored production plan covering AV,
+                  d&eacute;cor, and equipment hire.
                 </p>
               </div>
             </div>
@@ -293,11 +294,12 @@ export default function Home({ onNavigate }) {
               </span>
               <div>
                 <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-neutral-900">
-                  Lock In Your Date &amp; Space
+                  Transparent Proposal
                 </h3>
                 <p className="text-sm leading-relaxed text-neutral-600">
-                  Share your venue dimensions and theme colors. We confirm power
-                  access, surface type, and delivery windows ahead of party day.
+                  Review itemized KES quotations with clear breakdowns for
+                  labor, transport, equipment rental, and technical setup across
+                  all counties served.
                 </p>
               </div>
             </div>
@@ -308,12 +310,12 @@ export default function Home({ onNavigate }) {
               </span>
               <div>
                 <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-neutral-900">
-                  Host Without the Heavy Lifting
+                  Site Logistics &amp; Rigging
                 </h3>
                 <p className="text-sm leading-relaxed text-neutral-600">
-                  Our crew installs and safety-checks everything before guests
-                  arrive, runs the entertainment, and packs it all away when the
-                  party wraps.
+                  Our professional logistics crew and sound engineers handle
+                  rigging, power testing, spatial styling, and rehearsal checks
+                  ahead of guest arrival.
                 </p>
               </div>
             </div>
@@ -323,13 +325,13 @@ export default function Home({ onNavigate }) {
               <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-200">
                 <img
                   src={pastelImg}
-                  alt="Completed outdoor birthday table and balloon display"
+                  alt="Staxx Events technical production and stage setup in Nairobi"
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="flex items-center justify-between pt-2">
                 <span className="text-xs text-neutral-600">
-                  Planning a weekend date?
+                  Planning an upcoming event?
                 </span>
                 <a
                   href="/booking"
@@ -344,21 +346,21 @@ export default function Home({ onNavigate }) {
         </div>
       </section>
 
-      {/* 4. PARTY PACKAGES */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      {/* 4. PACKAGES & PRODUCTION TIERS */}
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                Party Packages
+                Production Tiers
               </span>
               <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
-                All-Inclusive Birthday Setups
+                Structured Event Packages
               </h2>
             </div>
             <p className="max-w-md text-sm leading-relaxed text-neutral-600">
-              Flat-rate packages include local delivery, installation, styling,
-              and takedown with no hidden cleaning fees.
+              Professional packages tailored for corporate functions, weddings,
+              institutional events, and large-scale experiential gatherings.
             </p>
           </div>
 
@@ -368,8 +370,8 @@ export default function Home({ onNavigate }) {
                 key={pkg.name}
                 className={`flex flex-col justify-between border p-8 transition-colors duration-200 ${
                   pkg.featured
-                    ? 'border-neutral-900 bg-teal-100'
-                    : 'border-neutral-900/15 bg-teal-100'
+                    ? 'border-neutral-900 bg-amber-200'
+                    : 'border-neutral-900/15 bg-amber-200'
                 }`}
               >
                 <div>
@@ -390,11 +392,11 @@ export default function Home({ onNavigate }) {
                   </div>
 
                   <div className="mb-8 flex items-baseline gap-2">
-                    <span className="text-4xl font-normal tracking-[-0.03em] text-neutral-900">
+                    <span className="text-3xl font-normal tracking-[-0.03em] text-neutral-900 md:text-4xl">
                       {pkg.price}
                     </span>
                     <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                      / flat rate
+                      / estimate
                     </span>
                   </div>
 
@@ -417,7 +419,7 @@ export default function Home({ onNavigate }) {
                       : 'border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-[#f9f9f8]'
                   }`}
                 >
-                  Reserve This Package
+                  Enquire About Package
                 </a>
               </div>
             ))}
@@ -431,7 +433,7 @@ export default function Home({ onNavigate }) {
           <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 sm:flex-row sm:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                À La Carte Rentals
+                Rental Catalog
               </span>
               <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
                 Event Equipment &amp; Supplies
@@ -480,20 +482,20 @@ export default function Home({ onNavigate }) {
           <div className="mb-12 flex flex-col justify-between gap-8 border-b border-neutral-900/15 pb-8 lg:flex-row lg:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                Recent Setups
+                Portfolio &amp; Productions
               </span>
               <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
-                Past Parties &amp; Installations
+                Recent Projects &amp; Installations
               </h2>
             </div>
 
             {/* Minimal Editorial Filter Tabs */}
             <div className="flex flex-wrap gap-6">
               {[
-                { id: 'all', label: 'All Setups' },
-                { id: 'parties', label: 'Full Parties' },
-                { id: 'equipment', label: 'Inflatables & Gear' },
-                { id: 'supplies', label: 'Balloon Decor' },
+                { id: 'all', label: 'All Projects' },
+                { id: 'corporate', label: 'Corporate & AV' },
+                { id: 'celebrations', label: 'Weddings & Styling' },
+                { id: 'equipment', label: 'Equipment & Tents' },
               ].map((tab) => {
                 const isSelected = activeTab === tab.id;
                 return (
@@ -543,53 +545,55 @@ export default function Home({ onNavigate }) {
               onClick={(e) => handleLinkClick(e, '/gallery')}
               className="inline-block border border-neutral-900 px-6 py-3 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-neutral-900 hover:text-[#f9f9f8]"
             >
-              See More Event Photos →
+              Explore Full Gallery →
             </a>
           </div>
         </div>
       </section>
 
-      {/* 7. PARENT FEEDBACK */}
+      {/* 7. CLIENT TESTIMONIALS */}
       <section className="border-b border-neutral-900/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14">
             <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-300 uppercase">
-              Host Notes
+              Client Feedback
             </span>
             <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
-              What local parents say after party day
+              What corporate clients &amp; event planners say
             </h2>
           </div>
 
           <div className="grid grid-cols-1 gap-12 border-t border-neutral-900/15 pt-12 md:grid-cols-2">
             <blockquote className="flex flex-col justify-between gap-8">
               <p className="text-lg font-normal leading-relaxed text-neutral-800 md:text-xl">
-                “They showed up at 8:30 AM, staked down the bouncy castle, built
-                the balloon arch around our patio pergola, and were back at 4:00
-                PM to pack every last piece away. I didn’t lift a finger.”
+                “Staxx-HyperKids managed our corporate annual gala at Serena
+                Hotel. Their sound engineering, LED screens, and stage lighting
+                were world-class. Having AV and d&eacute;cor handled by one
+                coordinated team eliminated all vendor stress.”
               </p>
               <footer className="text-xs tracking-[0.06em] text-neutral-500">
                 <strong className="block font-medium text-neutral-900 uppercase tracking-[0.12em]">
-                  Hannah &amp; David K.
+                  Brenda Akinyi
                 </strong>
                 <span className="mt-1 block">
-                  6th Birthday Party &bull; Deluxe Backyard Setup
+                  Corporate Events Manager &bull; Nairobi Business Awards
                 </span>
               </footer>
             </blockquote>
 
             <blockquote className="flex flex-col justify-between gap-8 border-t border-neutral-900/15 pt-8 md:border-t-0 md:border-l md:pt-0 md:pl-12">
               <p className="text-lg font-normal leading-relaxed text-neutral-800 md:text-xl">
-                “We rented two commercial inflatables and the popcorn cart for
-                our neighborhood block party. Everything arrived spotless and the
-                crew walked us through the blower safety checks in five minutes.”
+                “We hired clear-span marquees, flooring, and audiovisual gear for
+                our institution&rsquo;s graduation ceremony. Their technical crew
+                arrived on schedule, tested all power lines, and maintained
+                immaculate professional standards throughout the day.”
               </p>
               <footer className="text-xs tracking-[0.06em] text-neutral-500">
                 <strong className="block font-medium text-neutral-900 uppercase tracking-[0.12em]">
-                  Oakridge PTA Committee
+                  Dr. James Kiprop
                 </strong>
                 <span className="mt-1 block">
-                  Spring School Fair &bull; Equipment Rental
+                  Institutional Registrar &bull; Nakuru County
                 </span>
               </footer>
             </blockquote>
@@ -602,14 +606,15 @@ export default function Home({ onNavigate }) {
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Reserve Your Date
+              Start Planning
             </span>
             <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
-              Have a party date in mind?
+              Ready to plan your next event?
             </h2>
             <p className="text-base leading-relaxed text-neutral-300">
-              Send us your event date, rough headcount, and backyard or venue
-              details. We’ll reply with available themes and a clear quote.
+              Reach out to our team at Commerce House, Nairobi to check date
+              availability and request an itemized quotation for AV, d&eacute;cor,
+              kiddie celebrations, or equipment hire across Kenya.
             </p>
           </div>
 
@@ -617,16 +622,16 @@ export default function Home({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-teal-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
-              Book a Party Date
+              Request an Event Quote
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
               className="border border-[#f9f9f8]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:border-[#f9f9f8]"
             >
-              Ask a Question
+              Contact Our Team
             </a>
           </div>
         </div>

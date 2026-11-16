@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 
+import Childrenparty from '../../assets/childrenparty.jpg';
+import Corporategala from '../../assets/corporategala.jpg';
+import Gardenwedding from '../../assets/gardenwedding.jpg';
+import Ruracio from '../../assets/ruracio.jpg';
+
+
 export default function EventInspo({ onNavigate }) {
   const [selectedInspo, setSelectedInspo] = useState(null);
 
@@ -14,112 +20,111 @@ export default function EventInspo({ onNavigate }) {
   const inspoWorlds = [
     {
       id: '01',
-      title: 'Afro-Royal & Savannah Gala',
-      tagline: 'Vibrant Ankara installations, golden tones & cultural prestige',
-      ageRange: 'All Ages • Corporate & Social',
-      palette: ['#D97706', '#15803D', '#B91C1C', '#FACC15'],
-      img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1000&q=80',
+      title: 'Modern Ruracio & Traditional Dowry',
+      tagline: 'Warm terracotta, Kikuyu/Kalenjin/Luo cultural draping & family seating',
+      ageRange: 'Traditional Ceremonies • Family',
+      palette: ['#B91C1C', '#D97706', '#166534', '#FEF3C7'],
+      img: Ruracio,
       description:
-        'A magnificent, sophisticated celebration rooted in African heritage and majestic landscapes. Featuring rich Kitenge and Ankara draping, woven artisanal textures, custom brass and woodwork statement props, live acoustic and drumming showcases, and botanical floral installations.',
+        'An authentic yet polished celebration honoring Kenyan matrimonial traditions. Styled with rich African fabric accents, comfortable family tents, structured wooden dais for elders, clear-span marquees, and traditional cooking and reception gear tailored for homesteads across Kiambu, Murang’a, Nakuru, Machakos, and Kajiado.',
       highlights: [
-        'Kitenge & Ankara Fabric Draping & Executive Lounge Styling',
-        'Handcrafted Cultural Props & Artisanal Centerpiece Displays',
-        'Live Acoustic Performances & Traditional Drumming Showcases',
-        'Custom Art Installations & Curated Guest Photo Zones',
+        'Clear-Span Marquee Tents & Weatherproof Sidewalls',
+        'Elders’ Dais & Family Banquet Seating Arrangements',
+        'Traditional Kitenge/Ankara Table Runners & Floral Styling',
+        'Public Address Sound System for Speeches & MCs',
       ],
     },
     {
       id: '02',
-      title: 'Cinematic Red Carpet & Gala',
-      tagline: 'Dramatic lighting, velvet ropes & luxury brand showcases',
-      ageRange: 'Corporate & VIP Events',
-      palette: ['#DC2626', '#2563EB', '#FACC15', '#18181B'],
-      img: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=80',
+      title: 'Nairobi Corporate Gala & AGM',
+      tagline: 'Executive stage lighting, P3 LED screens & crystal-clear sound',
+      ageRange: 'Corporate, Banking & Enterprise',
+      palette: ['#18181B', '#2563EB', '#38BDF8', '#E4E4E7'],
+      img: Corporategala,
       description:
-        'Transform any venue into an exclusive Hollywood-style premiere or high-end corporate gala. Complete with dramatic architectural uplighting, branded sailboard press walls, luxury velvet stanchions, and bespoke cocktail reception setups.',
+        'Tailored for Annual General Meetings, corporate dinners, and product launches at KICC, Serena, Villa Rosa Kempinski, or office ballrooms. Features professional line-array sound systems, P3 indoor LED video walls, stage wash lighting, and branded media backdrops.',
       highlights: [
-        'Branded Sailboard Press Walls & Red Carpet Entrance',
-        'Custom Velvet Stanchions & Professional Lighting Rigs',
-        'Live Entertainment Coordination & MC Hosting',
-        'Premium Cocktail Bar Styling & Executive Seating Areas',
+        'P3 Indoor LED Video Walls & Live Presentation Switchers',
+        'Distributed Line-Array Speakers & Wireless Mic Packages',
+        'Modular Staging with Carpeting & Branded Lecterns',
+        'Standby Power Generator & Dedicated AV Engineers',
       ],
     },
     {
       id: '03',
-      title: 'Enchanted Botanical & Garden Banquet',
-      tagline: 'Dreamy floral arches, ambient lighting & ethereal dining',
-      ageRange: 'Weddings & Anniversaries',
-      palette: ['#F472B6', '#C084FC', '#FDE047', '#FFFFFF'],
-      img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=80',
+      title: 'Garden Wedding & Twilight Reception',
+      tagline: 'White Chiavari chairs, fairy-light canopies & romantic floral arches',
+      ageRange: 'Weddings & Anniversary Celebrations',
+      palette: ['#F472B6', '#FDE047', '#FFFFFF', '#15803D'],
+      img: Gardenwedding,
       description:
-        'An ethereal garden dream brought to life with cascading floral canopies, shimmering gold structural arches, intimate Chiavari dining setups draped in tulle, and romantic fairy-light ceiling installations for unforgettable evening receptions.',
+        'Designed for lush green lawns in Karen, Runda, Loresho, or Naivasha. Features golden structural arches, cascading floral canopies, white Chiavari chairs, round banquet tables with clean linen, and romantic fairy-light ceiling installations for evening romance.',
       highlights: [
-        'Golden Structural Arches & Cascading Floral Canopies',
-        'Executive Chiavari Seating & Fine Dining Table Scapes',
-        'Romantic Fairy-Light Canopies & Ambient Uplighting',
-        'Acoustic Live Music Stage & Twilight Reception Setup',
+        'Luxury Marquees & Transparent Roof Canopies',
+        'Gold & White Chiavari Chairs with Banquet Tables',
+        'Fairy-Light Ceiling Draping & Ambient Uplighting',
+        'Live Band Sound Rig & Acoustic Stage Setup',
       ],
     },
     {
       id: '04',
-      title: 'Galactic Neon & Cosmic Nightclub',
-      tagline: 'Immersive projection, ambient glows & futuristic staging',
-      ageRange: 'Product Launches & Private Parties',
-      palette: ['#09090B', '#38BDF8', '#A855F7', '#D8F253'],
-      img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80',
+      title: 'Estate Kids Birthday Party',
+      tagline: 'Sanitized bouncy castles, themed balloon garlands & sweet treat carts',
+      ageRange: 'Children’s Birthdays & Family Fun Days',
+      palette: ['#EC4899', '#3B82F6', '#10B981', '#F59E0B'],
+      img: Childrenparty,
       description:
-        'Step into the future with a high-impact cosmic aesthetic featuring programmable LED uplighting, metallic reflective backdrops, futuristic lounge furniture, state-of-the-art silent disco equipment, and immersive DJ booth setups.',
+        'A stress-free, vibrant celebration for children in estate gardens or clubhouse lawns. Includes commercial sanitized inflatables, organic balloon garlands, sailboard photo backdrops, face painting, and popcorn or cotton candy machines.',
       highlights: [
-        'LED Projection Mapping & Metallic Reflective Backdrops',
-        'Futuristic Lounge Seating & Modular Bar Installations',
-        'Silent Disco & Immersive Multi-Zone Audio Systems',
-        'Custom Neon Branding & Interactive LED Photo Stations',
+        'Sanitized Commercial Bouncy Castles & Soft Play Areas',
+        'Custom Sailboard Backdrops & Organic Balloon Garlands',
+        'Popcorn & Cotton Candy Concession Machines with Attendants',
+        'Child-Height Tables, Chairs & Interactive Party Hosts',
       ],
     },
   ];
 
   return (
-    <div className="bg-teal-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-            <span>Staxx Events &amp; Production</span>
-            <span>Immersive Worlds &bull; Custom Styling</span>
+            <span>Staxx-HyperKids &bull; Kenyan Event Themes</span>
+            <span>Ruracio &bull; Corporate Galas &bull; Weddings &bull; Kids Parties</span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
             <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
-              Signature Event <br />
-              <span className="text-neutral-500">Inspiration</span>
+              Relatable Kenyan <br />
+              <span className="text-neutral-500">Event Themes</span>
             </h1>
 
             <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
-              Explore our four signature event design directions—from vibrant
-              cultural galas and corporate red-carpet premieres to botanical
-              weddings and cosmic evening showcases—each custom-styled with
-              backdrops, staging, lighting, and full production.
+              Explore four practical, culturally resonant event setups designed
+              specifically for traditional Ruracios, Nairobi corporate AGMs,
+              garden weddings, and estate children&rsquo;s parties across Kenya.
             </p>
           </div>
         </div>
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
           <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
-            Tailored to Your Vision
+            Tailored to Your Venue &amp; Budget
           </span>
           <p className="max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-right">
-            Every concept can be paired with our professional production
-            packages, customized with your brand identity or personal theme, or
-            adapted into an entirely bespoke multi-day experience.
+            Every theme is backed by our full equipment hire and on-site setup
+            teams based in Nairobi, serving Kiambu, Nakuru, Machakos,
+            Murang&rsquo;a, and Kajiado.
           </p>
         </div>
       </section>
 
-      {/* 3. FOUR SIGNATURE INSPIRATION WORLDS SHOWCASE */}
-      <section className="border-b border-neutral-900/15 bg-teal-100">
+      {/* 3. FOUR KENYAN THEMES SHOWCASE */}
+      <section className="border-b border-neutral-900/15 bg-amber-200">
         <div className="mx-auto max-w-[1440px] divide-y divide-neutral-900/15 px-6 md:px-10">
           {inspoWorlds.map((inspo) => {
             const isTipOpen = selectedInspo === inspo.id;
@@ -129,13 +134,13 @@ export default function EventInspo({ onNavigate }) {
                 key={inspo.id}
                 className="group grid grid-cols-1 items-start gap-12 py-16 md:py-24 lg:grid-cols-[1.15fr_1fr] lg:gap-16"
               >
-                {/* Left Column: Editorial Spec, Highlights & Palette */}
+                {/* Left Column: Details, Highlights & Palette */}
                 <div className="flex flex-col justify-between">
                   <div>
                     <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] uppercase">
                       <span className="text-neutral-500">
                         <strong className="font-medium text-neutral-900">
-                          Concept {inspo.id}
+                          Theme {inspo.id}
                         </strong>
                       </span>
                       <span className="border border-neutral-900/20 px-2.5 py-0.5 text-[10px] text-neutral-700">
@@ -159,7 +164,7 @@ export default function EventInspo({ onNavigate }) {
                   {/* Signature Elements */}
                   <div className="mb-8 border-t border-neutral-900/15 pt-6">
                     <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
-                      Signature Production Elements
+                      What&rsquo;s Included in Setup
                     </span>
                     <ul className="grid grid-cols-1 gap-3 text-sm text-neutral-700 sm:grid-cols-2">
                       {inspo.highlights.map((item) => (
@@ -171,7 +176,7 @@ export default function EventInspo({ onNavigate }) {
                     </ul>
                   </div>
 
-                  {/* Architectural Material Palette & Actions */}
+                  {/* Palette & Actions */}
                   <div className="flex flex-col justify-between gap-6 border-t border-neutral-900/15 pt-6 sm:flex-row sm:items-center">
                     <div className="flex items-center gap-3">
                       <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -200,7 +205,7 @@ export default function EventInspo({ onNavigate }) {
                         aria-expanded={isTipOpen}
                         className="cursor-pointer border-b border-neutral-900/30 pb-0.5 text-xs tracking-[0.12em] text-neutral-600 uppercase transition-colors hover:border-neutral-900 hover:text-neutral-900"
                       >
-                        {isTipOpen ? 'Hide Styling Tip' : 'Styling Tip'}
+                        {isTipOpen ? 'Hide Planner Tip' : 'Planner Tip'}
                       </button>
 
                       <a
@@ -208,28 +213,26 @@ export default function EventInspo({ onNavigate }) {
                         onClick={(e) => handleLinkClick(e, '/booking')}
                         className="border border-neutral-900 bg-neutral-900 px-5 py-2.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
                       >
-                        Book This Concept &rarr;
+                        Book This Theme &rarr;
                       </a>
                     </div>
                   </div>
 
                   {/* Expandable Planner Note */}
                   {isTipOpen && (
-                    <div className="mt-6 border border-neutral-900/15 bg-teal-100 p-5 text-sm leading-relaxed text-neutral-700">
+                    <div className="mt-6 border border-neutral-900/15 bg-amber-200 p-5 text-sm leading-relaxed text-neutral-700">
                       <strong className="block mb-1 text-xs font-medium tracking-[0.08em] text-neutral-900 uppercase">
-                        Staxx Producer Note
+                        Staxx-HyperKids Setup Advice
                       </strong>
-                      Pair the <strong>{inspo.title}</strong> with our{' '}
-                      <em className="font-medium text-neutral-900 not-italic">
-                        Hyper Deluxe Experience (KES 62,000)
-                      </em>{' '}
-                      for full structural staging, custom branding accents, and
-                      professional lighting support.
+                      For the <strong>{inspo.title}</strong>, we recommend
+                      conducting a joint site survey at your venue or homestead
+                      at least 5 days prior to verify ground leveling, tent
+                      anchoring, and power access.
                     </div>
                   )}
                 </div>
 
-                {/* Right Column: Architectural Set Plate */}
+                {/* Right Column: Theme Plate */}
                 <div className="lg:border-l lg:border-neutral-900/15 lg:pl-14">
                   <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-100">
                     <img
@@ -239,7 +242,7 @@ export default function EventInspo({ onNavigate }) {
                     />
                   </div>
                   <div className="mt-3 flex items-center justify-between border-t border-neutral-900/15 pt-2.5 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span>Plate {inspo.id} / Custom Production Design</span>
+                    <span>Theme {inspo.id} / Kenyan Setup Showcase</span>
                     <span className="font-mono text-[10px] text-neutral-400">
                       {inspo.palette.join(' · ')}
                     </span>
@@ -251,20 +254,20 @@ export default function EventInspo({ onNavigate }) {
         </div>
       </section>
 
-      {/* 4. BOTTOM CUSTOM CONCEPT CTA */}
+      {/* 4. BOTTOM CUSTOM THEME CTA */}
       <section className="bg-neutral-900 text-[#f9f9f8]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Dreaming of Something Else?
+              Have a Custom Event Vision?
             </span>
             <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
-              We Build Custom Event Concepts From Scratch
+              We Tailor Every Setup to Your Specific Requirements
             </h2>
             <p className="text-base leading-relaxed text-neutral-300">
-              From corporate product launches and milestone anniversaries to gala
-              dinners and brand activations—tell us your vision and our production
-              studio will bring it to life.
+              Whether you are planning a countryside wedding in Kiambu, a church
+              convention in Machakos, or a corporate product launch in Nairobi—our
+              team handles the technical production, d&eacute;cor, and logistics.
             </p>
           </div>
 
@@ -272,9 +275,9 @@ export default function EventInspo({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-teal-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
-              Request a Custom Concept &rarr;
+              Request a Custom Quote &rarr;
             </a>
             <a
               href="/party-packages"
