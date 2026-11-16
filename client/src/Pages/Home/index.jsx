@@ -3,13 +3,13 @@ import heroImg from '../../assets/hero.jpg';
 import pastelImg from '../../assets/pastel.jpg';
 import confettiImg from '../../assets/confetti.jpg';
 import castlesImg from '../../assets/castles.jpg';
-import cakeTableImg from '../../assets/cakeTable.jpg';
-import ballonGarlandImg from '../../assets/ballonGarland.jpg';
+import cakeTableImg from '../../assets/caketable.jpg';
+import ballonGarlandImg from '../../assets/ballongarland.jpg';
 import concessionsImg from '../../assets/concessions.jpg';
 import inflatableImg from '../../assets/inflatable.jpg';
 import backdropsImg from '../../assets/backdrops.jpg';
 import canopiesImg from '../../assets/canopies.jpeg';
-import avImg from '../../assets/audioVisual.jpeg';
+import avImg from '../../assets/audiovisual.jpeg';
 
 export default function Home({ onNavigate }) {
   const [activeTab, setActiveTab] = useState('all');
