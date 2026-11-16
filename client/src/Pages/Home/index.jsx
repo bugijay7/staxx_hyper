@@ -139,9 +139,9 @@ export default function Home({ onNavigate }) {
       : galleryImages.filter((item) => item.category === activeTab);
 
   return (
-    <div className="bg-rose-200 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. HERO SECTION */}
-      <section className="relative border-b border-neutral-900/15 bg-rose-200">
+      <section className="relative border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-12 md:px-10 md:pt-12 md:pb-16">
           {/* Top Metadata Strip */}
           <motion.div
@@ -234,7 +234,7 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 2. ABOUT / EDITORIAL SECTION */}
-      <section className="border-b border-neutral-900/15 bg-rose-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -300,7 +300,7 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 3. THREE-STEP PROCESS */}
-      <section className="border-b border-neutral-900/15 bg-rose-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -392,7 +392,7 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 4. PACKAGES & PRODUCTION TIERS */}
-      <section className="border-b border-neutral-900/15 bg-rose-200">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -425,8 +425,8 @@ export default function Home({ onNavigate }) {
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
                 className={`flex flex-col justify-between border p-8 transition-colors duration-200 ${
                   pkg.featured
-                    ? 'border-neutral-900 bg-rose-200'
-                    : 'border-neutral-900/15 bg-rose-200'
+                    ? 'border-neutral-900 bg-amber-100'
+                    : 'border-neutral-900/15 bg-amber-100'
                 }`}
               >
                 <div>
@@ -728,7 +728,7 @@ export default function Home({ onNavigate }) {
               whileTap={{ scale: 0.98 }}
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-rose-200 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request an Event Quote
             </motion.a>
