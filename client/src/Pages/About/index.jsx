@@ -103,9 +103,9 @@ export default function About({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-red-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
       {/* 1. EDITORIAL HERO SECTION */}
-      <section className="border-b border-neutral-900/15 bg-red-100">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div
             className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase"
@@ -134,7 +134,7 @@ export default function About({ onNavigate }) {
 
           {/* Hero Visual Grid */}
           <div
-            className="grid grid-cols-1 border border-neutral-900/15 bg-red-100 lg:grid-cols-[1.5fr_1fr]"
+            className="grid grid-cols-1 border border-neutral-900/15 bg-amber-100 lg:grid-cols-[1.5fr_1fr]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -144,7 +144,7 @@ export default function About({ onNavigate }) {
                 alt="Staxx-HyperKids integrated audiovisual staging and event styling in Nairobi"
                 className="aspect-[16/10] h-full w-full object-cover"
               />
-              <div className="border-t border-neutral-900/15 bg-red-100 px-6 py-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+              <div className="border-t border-neutral-900/15 bg-amber-100 px-6 py-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Technical Production &amp; Spatial Styling &bull; Nairobi, Kenya
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 2. HISTORY & HOW IT STARTED */}
-      <section className="border-b border-neutral-900/15 bg-red-100">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16"
@@ -235,10 +235,10 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 3. MISSION & VISION */}
-      <section className="border-b border-neutral-900/15 bg-red-100">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
-            className="grid grid-cols-1 items-stretch border border-neutral-900/15 bg-red-100 lg:grid-cols-[1.2fr_1fr]"
+            className="grid grid-cols-1 items-stretch border border-neutral-900/15 bg-amber-100 lg:grid-cols-[1.2fr_1fr]"
             data-aos="fade-up"
           >
             <div className="flex flex-col justify-between divide-y divide-neutral-900/15 border-b border-neutral-900/15 lg:border-r lg:border-b-0">
@@ -276,7 +276,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 4. CORE PRINCIPLES */}
-      <section className="border-b border-neutral-900/15 bg-red-100">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12" data-aos="fade-up">
             <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
@@ -291,7 +291,7 @@ export default function About({ onNavigate }) {
             {coreValues.map((val, index) => (
               <div
                 key={val.no}
-                className="flex flex-col justify-between border-r border-b border-neutral-900/15 bg-red-100 p-8"
+                className="flex flex-col justify-between border-r border-b border-neutral-900/15 bg-amber-100 p-8"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
@@ -320,7 +320,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 5. WHAT SETS US APART & WHO WE SERVE */}
-      <section className="border-b border-neutral-900/15 bg-red-100">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
@@ -337,7 +337,7 @@ export default function About({ onNavigate }) {
           </div>
 
           <div
-            className="grid grid-cols-1 border-t border-l border-neutral-900/15 bg-red-100 md:grid-cols-3"
+            className="grid grid-cols-1 border-t border-l border-neutral-900/15 bg-amber-100 md:grid-cols-3"
             data-aos="fade-up"
           >
             {advantagePoints.map((point, index) => (
@@ -392,7 +392,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 6. CO-FOUNDERS */}
-      <section className="border-b border-neutral-900/15 bg-red-100">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
@@ -415,7 +415,7 @@ export default function About({ onNavigate }) {
             {founders.map((founder, index) => (
               <article
                 key={founder.name}
-                className="group border border-neutral-900/15 bg-red-100"
+                className="group border border-neutral-900/15 bg-amber-100"
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
@@ -432,7 +432,7 @@ export default function About({ onNavigate }) {
                   />
                 </div>
 
-                <div className="border-t border-neutral-900/15 bg-red-100 p-6 md:p-8">
+                <div className="border-t border-neutral-900/15 bg-amber-100 p-6 md:p-8">
                   <h3 className="text-2xl font-normal tracking-[-0.01em] text-neutral-900">
                     {founder.name}
                   </h3>
@@ -473,7 +473,7 @@ export default function About({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-red-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request an Event Quote &rarr;
             </a>
