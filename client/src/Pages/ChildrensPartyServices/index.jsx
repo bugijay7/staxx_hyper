@@ -9,7 +9,7 @@ import Facepainting from '../../assets/facepainting.jpg';
 import Inflatable from '../../assets/inflatable.jpg';
 import Kiddiepartysupply1 from '../../assets/kiddiepartysupply1.jpeg';
 import Kiddiepartysupply2 from '../../assets/kiddiepartysupply2.jpeg';
-import Kiddietable1 from '../../assets/kiddietable1.jpeg';
+import Kiddietable1 from '../../assets/canopies.jpg';
 import Pinhattas1 from '../../assets/pinhattas1.jpeg';
 
 
