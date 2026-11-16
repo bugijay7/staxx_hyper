@@ -99,7 +99,7 @@ export default function Footer({ onNavigate }) {
                   delivered on schedule.
                 </p>
               </div>
-
+client/pages/home/index.js
               
             </div>
 

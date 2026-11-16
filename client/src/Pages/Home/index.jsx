@@ -14,6 +14,7 @@ import avImg from '../../assets/audiovisual.jpeg';
 
 export default function Home({ onNavigate }) {
   const [activeTab, setActiveTab] = useState('all');
+  const [activeHeroSlide, setActiveHeroSlide] = useState(0);
 
   const handleLinkClick = (e, path) => {
     if (e.metaKey || e.ctrlKey || e.button === 1) return;
@@ -59,6 +60,33 @@ export default function Home({ onNavigate }) {
       title: 'Concerts & Live Entertainment Rigging',
       category: 'equipment',
       tag: 'Sound & Staging',
+    },
+  ];
+
+  const heroSlides = [
+    {
+      image: heroImg,
+      alt: 'Event staging and audiovisual production in Nairobi',
+      title: 'Event Production',
+      detail: 'Sound, lighting, LED screens, and staging',
+    },
+    {
+      image: inflatableImg,
+      alt: 'Inflatable bouncy castle for a children’s party',
+      title: 'Children’s Parties',
+      detail: 'Inflatables, party equipment, and activities',
+    },
+    {
+      image: cakeTableImg,
+      alt: 'Styled table setup for a wedding or private celebration',
+      title: 'Weddings & Celebrations',
+      detail: 'Event décor, styling, and custom details',
+    },
+    {
+      image: canopiesImg,
+      alt: 'Marquee tent and canopy setup for an event',
+      title: 'Event Equipment Hire',
+      detail: 'Marquees, tents, furniture, and supplies',
     },
   ];
 
@@ -144,16 +172,7 @@ export default function Home({ onNavigate }) {
       <section className="relative border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-12 md:px-10 md:pt-12 md:pb-16">
           {/* Top Metadata Strip */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[8px] tracking-[0.14em] text-neutral-500 uppercase"
-          >
-            <span>Staxx Events &amp; Production &bull; Commerce House, Nairobi</span>
-            <span>AV Production &bull; Décor Styling &bull; Equipment Hire</span>
-          </motion.div>
-
+          
           {/* Editorial Headline & Intro Grid */}
           <div className="grid grid-cols-1 items-end gap-10 pb-12 lg:grid-cols-[1.45fr_1fr]">
             <motion.div
@@ -162,8 +181,8 @@ export default function Home({ onNavigate }) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
-                Bringing experiences, <br />
-                <span className="text-neutral-500">to life.</span>
+                Event production <br />
+                <span className="text-neutral-500">&amp; equipment hire in Nairobi.</span>
               </h1>
             </motion.div>
 
@@ -174,10 +193,9 @@ export default function Home({ onNavigate }) {
               className="flex flex-col justify-between gap-8 lg:border-l lg:border-neutral-900/15 lg:pl-10"
             >
               <p className="text-xs md:text-sm leading-relaxed text-neutral-600 md:text-lg">
-                An integrated events and experiential production company combining
-                audiovisual and technical production, event d&eacute;cor and styling,
-                children&rsquo;s parties, and commercial event equipment supplies
-                across Kenya.
+                Staxx-HyperKids provides audiovisual production, event d&eacute;cor,
+                children&rsquo;s parties, and equipment hire in Nairobi and across
+                Kenya.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -203,18 +221,78 @@ export default function Home({ onNavigate }) {
             </motion.div>
           </div>
 
-          {/* Full-Bleed Architectural Hero Photograph */}
+          {/* Featured event image carousel */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.5 }}
-            className="relative aspect-[16/9] max-h-[640px] w-full overflow-hidden bg-neutral-200"
+            className="group relative aspect-[16/9] max-h-[640px] w-full overflow-hidden bg-neutral-200"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Staxx-HyperKids event services"
           >
-            <img
-              src={heroImg}
-              alt="Staxx Events professional staging, audiovisual production and experiential setup in Nairobi"
-              className="h-full w-full object-cover"
+            <motion.img
+              key={heroSlides[activeHeroSlide].image}
+              src={heroSlides[activeHeroSlide].image}
+              alt={heroSlides[activeHeroSlide].alt}
+              initial={{ opacity: 0, scale: 1.02 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.55 }}
+              className="absolute inset-0 h-full w-full object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/75 via-neutral-950/10 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 flex flex-col gap-5 p-5 text-[#f9f9f8] sm:flex-row sm:items-end sm:justify-between sm:p-8 md:p-10">
+              <div aria-live="polite" aria-atomic="true">
+                <span className="mb-2 block text-[10px] tracking-[0.18em] text-[#f9f9f8]/75 uppercase">
+                  {String(activeHeroSlide + 1).padStart(2, '0')} / {String(heroSlides.length).padStart(2, '0')}
+                </span>
+                <h2 className="text-2xl font-normal tracking-[-0.02em] sm:text-3xl md:text-4xl">
+                  {heroSlides[activeHeroSlide].title}
+                </h2>
+                <p className="mt-1 text-xs text-[#f9f9f8]/80 sm:text-sm">
+                  {heroSlides[activeHeroSlide].detail}
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2 self-end sm:self-auto">
+                {heroSlides.map((slide, index) => (
+                  <button
+                    key={slide.title}
+                    type="button"
+                    onClick={() => setActiveHeroSlide(index)}
+                    aria-label={`Show slide ${index + 1}: ${slide.title}`}
+                    aria-current={activeHeroSlide === index ? 'true' : undefined}
+                    className={`h-2.5 rounded-full transition-all ${
+                      activeHeroSlide === index
+                        ? 'w-7 bg-[#f9f9f8]'
+                        : 'w-2.5 bg-[#f9f9f8]/55 hover:bg-[#f9f9f8]'
+                    }`}
+                  />
+                ))}
+                <button
+                  type="button"
+                  onClick={() =>
+                    setActiveHeroSlide(
+                      (activeHeroSlide - 1 + heroSlides.length) % heroSlides.length,
+                    )
+                  }
+                  aria-label="Show previous image"
+                  className="ml-2 flex h-10 w-10 items-center justify-center border border-[#f9f9f8]/60 text-lg transition-colors hover:bg-[#f9f9f8] hover:text-neutral-900"
+                >
+                  &larr;
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setActiveHeroSlide((activeHeroSlide + 1) % heroSlides.length)
+                  }
+                  aria-label="Show next image"
+                  className="flex h-10 w-10 items-center justify-center border border-[#f9f9f8]/60 text-lg transition-colors hover:bg-[#f9f9f8] hover:text-neutral-900"
+                >
+                  &rarr;
+                </button>
+              </div>
+            </div>
           </motion.div>
 
           {/* Bottom Trust / Spec Bar */}
@@ -224,11 +302,11 @@ export default function Home({ onNavigate }) {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="mt-6 grid grid-cols-1 gap-3 border-t border-neutral-900/15 pt-5 text-xs tracking-[0.06em] text-neutral-600 sm:grid-cols-3"
           >
-            <span>&bull; Commercial sound, LED screens &amp; stage rigging</span>
+            <span>&bull; Sound, LED screens &amp; stage production</span>
             <span className="sm:text-center">
               &bull; Serving Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
             </span>
-            <span className="sm:text-right">&bull; Founder-led technical &amp; d&eacute;cor oversight</span>
+            <span className="sm:text-right">&bull; AV, styling &amp; equipment from one team</span>
           </motion.div>
         </div>
       </section>
@@ -246,7 +324,7 @@ export default function Home({ onNavigate }) {
               Integrated Capabilities
             </span>
             <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
-              One accountable partner for AV, styling, and equipment hire.
+              Event production, styling &amp; equipment hire—one team.
             </h2>
           </motion.div>
 
@@ -258,14 +336,10 @@ export default function Home({ onNavigate }) {
             className="flex flex-col justify-between gap-12 lg:border-l lg:border-neutral-900/15 lg:pl-12"
           >
             <p className="text-base leading-relaxed text-neutral-600 md:text-lg">
-              Organisers and brands often waste valuable time juggling separate
-              suppliers for sound engineering, marquee tents, d&eacute;cor, and
-              stage lighting. Founded by Bryan Karanja and Dan Njuguna,
-              Staxx-HyperKids combines technical audiovisual production with
-              bespoke spatial styling under one roof. Whether you are hosting an
-              executive corporate gala, a product launch, a wedding, or a large
-              festival, our in-house inventory and dedicated crews ensure
-              flawless execution from load-in to strike.
+              Founded by Bryan Karanja and Dan Njuguna, Staxx-HyperKids provides
+              audiovisual production, event styling, and equipment hire for
+              corporate events, product launches, weddings, and festivals. Our
+              Nairobi-based team handles planning, setup, and event-day production.
             </p>
 
             {/* Architectural Metric Strip */}
@@ -275,7 +349,7 @@ export default function Home({ onNavigate }) {
                   6 Counties
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
-                  Active deployment across Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
+                  Event services across six Kenyan counties
                 </span>
               </div>
               <div className="sm:border-l sm:border-neutral-900/15 sm:pl-6">
@@ -283,7 +357,7 @@ export default function Home({ onNavigate }) {
                   Unified
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
-                  Technical AV production and spatial d&eacute;cor managed synchronously
+                  AV production and event d&eacute;cor managed by one team
                 </span>
               </div>
               <div className="sm:border-l sm:border-neutral-900/15 sm:pl-6">
@@ -291,7 +365,7 @@ export default function Home({ onNavigate }) {
                   Full Stock
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
-                  In-house inventory of sound, lighting, marquees, and event furniture
+                  Sound, lighting, marquees, and event furniture
                 </span>
               </div>
             </div>
@@ -313,7 +387,7 @@ export default function Home({ onNavigate }) {
               Production Workflow
             </span>
             <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
-              From concept brief to flawless live execution.
+              From event plan to live production.
             </h2>
           </motion.div>
 
@@ -322,17 +396,17 @@ export default function Home({ onNavigate }) {
               {
                 step: 'Step 01',
                 title: 'Consultation & Brief',
-                desc: 'Share your venue specifications, audience size, and technical rider. We design a tailored production plan covering AV, d&eacute;cor, and equipment hire.',
+                desc: 'Share your venue, guest count, and event needs. We plan AV, d&eacute;cor, and equipment hire.',
               },
               {
                 step: 'Step 02',
                 title: 'Transparent Proposal',
-                desc: 'Review itemized KES quotations with clear breakdowns for labor, transport, equipment rental, and technical setup across all counties served.',
+                desc: 'Get an itemized KES quote for equipment, labor, delivery, and setup.',
               },
               {
                 step: 'Step 03',
                 title: 'Site Logistics & Rigging',
-                desc: 'Our professional logistics crew and sound engineers handle rigging, power testing, spatial styling, and rehearsal checks ahead of guest arrival.',
+                desc: 'Our crew handles delivery, installation, power tests, and styling before guests arrive.',
               },
             ].map((s, idx) => (
               <motion.div
@@ -410,8 +484,8 @@ export default function Home({ onNavigate }) {
               </h2>
             </div>
             <p className="max-w-md text-sm leading-relaxed text-neutral-600">
-              Professional packages tailored for corporate functions, weddings,
-              institutional events, and large-scale experiential gatherings.
+              Event production packages for corporate functions, weddings,
+              institutional events, and festivals.
             </p>
           </motion.div>
 
@@ -508,7 +582,7 @@ export default function Home({ onNavigate }) {
               onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
               className="self-start border-b border-neutral-900 pb-1 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-opacity hover:opacity-55 sm:self-auto"
             >
-              View Full Rental Inventory →
+              View Equipment Catalog →
             </a>
           </motion.div>
 
@@ -716,9 +790,8 @@ export default function Home({ onNavigate }) {
               Ready to plan your next event?
             </h2>
             <p className="text-base leading-relaxed text-neutral-300">
-              Reach out to our team at Commerce House, Nairobi to check date
-              availability and request an itemized quotation for AV, d&eacute;cor,
-              kiddie celebrations, or equipment hire across Kenya.
+              Contact our Nairobi team for availability and a quote for AV,
+              event d&eacute;cor, children&rsquo;s parties, or equipment hire in Kenya.
             </p>
           </div>
 
