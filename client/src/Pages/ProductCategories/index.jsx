@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Bandsetup from '../../assets/bandsetup.jpeg';
-import Kiddietable1 from '../../assets/kiddietable1.jpeg';
+import Kiddietable1 from '../../assets/childrenparty.jpg';
 import Stageplatforms from '../../assets/stageplatforms.jpg';
 import Tablearrangement1 from '../../assets/tablearrangement1.jpeg';
 import Tentsetup from '../../assets/tentsetup.jpg';
