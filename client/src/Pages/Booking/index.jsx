@@ -88,9 +88,9 @@ export default function Booking({ onNavigate }) {
   };
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Events &amp; Production</span>
@@ -98,12 +98,12 @@ export default function Booking({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Event Booking <br />
               <span className="text-neutral-500">&amp; Enquiry</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
               Lock in your event date across any occasion—from corporate galas
               and weddings to concerts, church conventions, and private
               celebrations. Our producers confirm availability within 24 hours.
@@ -113,12 +113,12 @@ export default function Booking({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
+          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase">
             How Reservations Work
           </span>
-          <p className="max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-right">
+          <p className="max-w-2xl text-sm leading-relaxed text-gray-900 md:text-right">
             No upfront payment required to submit an enquiry. Once we verify your
             date, venue logistics, and technical requirements, a 40% deposit
             secures your production slot.
@@ -127,43 +127,43 @@ export default function Booking({ onNavigate }) {
       </section>
 
       {/* 3. MAIN BOOKING FORM & SUMMARY GRID */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
             {/* Left Form Column */}
             <div className="lg:col-span-8">
               {submitted ? (
-                <div className="space-y-8 border border-neutral-900 bg-amber-100 p-8 md:p-14">
-                  <div className="inline-flex items-center gap-2 border border-neutral-900/30 px-3.5 py-1 text-[11px] tracking-[0.14em] text-neutral-900 uppercase">
+                <div className="space-y-8 border border-neutral-900 bg-white p-8 md:p-14">
+                  <div className="inline-flex items-center gap-2 border border-neutral-900/30 px-3.5 py-1 text-[11px] tracking-[0.14em] text-teal-900 uppercase">
                     <span>✓ Enquiry Received</span>
                   </div>
 
-                  <h2 className="text-3xl font-normal tracking-[-0.02em] leading-tight text-neutral-900 md:text-4xl">
+                  <h2 className="text-3xl font-normal tracking-[-0.02em] leading-tight text-teal-900 md:text-4xl">
                     We&apos;ve Got Your Event Details,{' '}
                     <span className="text-neutral-500">
                       {formData.clientName || 'Valued Client'}!
                     </span>
                   </h2>
 
-                  <p className="text-base leading-relaxed text-neutral-600">
+                  <p className="text-base leading-relaxed text-gray-900">
                     Our lead event producer is reviewing availability for{' '}
-                    <strong className="font-medium text-neutral-900">
+                    <strong className="font-medium text-teal-900">
                       {formData.eventDate || 'your selected date'}
                     </strong>{' '}
                     at{' '}
-                    <strong className="font-medium text-neutral-900">
+                    <strong className="font-medium text-teal-900">
                       {formData.location || 'Nairobi'}
                     </strong>{' '}
                     and will reach out via WhatsApp or email within 24 hours with
                     your itemized KES quotation.
                   </p>
 
-                  <div className="space-y-3 border border-neutral-900/15 bg-amber-100 p-6 text-xs tracking-[0.06em] text-neutral-700">
+                  <div className="space-y-3 border border-neutral-900/15 bg-white p-6 text-xs tracking-[0.06em] text-neutral-700">
                     <div className="flex justify-between gap-4 border-b border-neutral-900/10 pb-2.5">
                       <span className="tracking-[0.12em] text-neutral-400 uppercase">
                         Event Sector:
                       </span>
-                      <span className="text-right font-medium text-neutral-900">
+                      <span className="text-right font-medium text-teal-900">
                         {formData.eventSector}
                       </span>
                     </div>
@@ -171,7 +171,7 @@ export default function Booking({ onNavigate }) {
                       <span className="tracking-[0.12em] text-neutral-400 uppercase">
                         Production Tier:
                       </span>
-                      <span className="text-right font-medium text-neutral-900">
+                      <span className="text-right font-medium text-teal-900">
                         {formData.packageTier}
                       </span>
                     </div>
@@ -179,7 +179,7 @@ export default function Booking({ onNavigate }) {
                       <span className="tracking-[0.12em] text-neutral-400 uppercase">
                         Design Concept:
                       </span>
-                      <span className="text-right font-medium text-neutral-900">
+                      <span className="text-right font-medium text-teal-900">
                         {formData.theme}
                       </span>
                     </div>
@@ -187,7 +187,7 @@ export default function Booking({ onNavigate }) {
                       <span className="tracking-[0.12em] text-neutral-400 uppercase">
                         Guest Attendance:
                       </span>
-                      <span className="text-right font-medium text-neutral-900">
+                      <span className="text-right font-medium text-teal-900">
                         {formData.guestCount}
                       </span>
                     </div>
@@ -196,7 +196,7 @@ export default function Booking({ onNavigate }) {
                         <span className="tracking-[0.12em] text-neutral-400 uppercase">
                           Add-Ons:
                         </span>
-                        <span className="text-right font-medium text-neutral-900">
+                        <span className="text-right font-medium text-teal-900">
                           {formData.addOns.join(', ')}
                         </span>
                       </div>
@@ -207,14 +207,14 @@ export default function Booking({ onNavigate }) {
                     <button
                       type="button"
                       onClick={() => setSubmitted(false)}
-                      className="cursor-pointer border border-neutral-900 px-6 py-3.5 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase transition-colors hover:bg-neutral-900 hover:text-[#f9f9f8]"
+                      className="cursor-pointer border border-neutral-900 px-6 py-3.5 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase transition-colors hover:bg-neutral-900 hover:text-[#f9f9f8]"
                     >
                       Modify Enquiry
                     </button>
                     <a
                       href="/"
                       onClick={(e) => handleLinkClick(e, '/')}
-                      className="border border-neutral-900 bg-neutral-900 px-6 py-3.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors hover:bg-transparent hover:text-neutral-900"
+                      className="border border-neutral-900 bg-neutral-900 px-6 py-3.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors hover:bg-transparent hover:text-teal-900"
                     >
                       Return Home &rarr;
                     </a>
@@ -223,12 +223,12 @@ export default function Booking({ onNavigate }) {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-12 border border-neutral-900/15 bg-amber-100 p-8 md:p-12"
+                  className="space-y-12 border border-neutral-900/15 bg-white p-8 md:p-12"
                 >
                   {/* Step 01: Client Contact Details */}
                   <div className="space-y-6">
                     <div className="flex items-center justify-between border-b border-neutral-900/15 pb-4">
-                      <h2 className="text-xl font-medium tracking-[-0.01em] text-neutral-900 md:text-2xl">
+                      <h2 className="text-xl font-medium tracking-[-0.01em] text-teal-900 md:text-2xl">
                         Client / Organization Contact Details
                       </h2>
                       <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -238,7 +238,7 @@ export default function Booking({ onNavigate }) {
 
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Contact Name / Organization *
                         </label>
                         <input
@@ -248,12 +248,12 @@ export default function Booking({ onNavigate }) {
                           value={formData.clientName}
                           onChange={handleChange}
                           placeholder="e.g. Brenda Akinyi / Apex Ltd"
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Phone / WhatsApp Number *
                         </label>
                         <input
@@ -263,12 +263,12 @@ export default function Booking({ onNavigate }) {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="e.g. +254 712 345 678"
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
                       <div className="space-y-2 md:col-span-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Email Address *
                         </label>
                         <input
@@ -278,7 +278,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="e.g. brenda@example.com"
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
                     </div>
@@ -287,7 +287,7 @@ export default function Booking({ onNavigate }) {
                   {/* Step 02: Event Logistics & Sector */}
                   <div className="space-y-6">
                     <div className="flex items-center justify-between border-b border-neutral-900/15 pb-4">
-                      <h2 className="text-xl font-medium tracking-[-0.01em] text-neutral-900 md:text-2xl">
+                      <h2 className="text-xl font-medium tracking-[-0.01em] text-teal-900 md:text-2xl">
                         Event Sector &amp; Logistics
                       </h2>
                       <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -297,14 +297,14 @@ export default function Booking({ onNavigate }) {
 
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Event Sector *
                         </label>
                         <select
                           name="eventSector"
                           value={formData.eventSector}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                         >
                           {eventSectors.map((sector) => (
                             <option key={sector} value={sector}>
@@ -315,7 +315,7 @@ export default function Booking({ onNavigate }) {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Event Title / Occasion
                         </label>
                         <input
@@ -324,12 +324,12 @@ export default function Booking({ onNavigate }) {
                           value={formData.eventName}
                           onChange={handleChange}
                           placeholder="e.g. Annual AGM Gala / Wanjiku & Brian Wedding"
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Preferred Event Date *
                         </label>
                         <input
@@ -338,12 +338,12 @@ export default function Booking({ onNavigate }) {
                           required
                           value={formData.eventDate}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Start Time
                         </label>
                         <input
@@ -351,12 +351,12 @@ export default function Booking({ onNavigate }) {
                           name="eventTime"
                           value={formData.eventTime}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Venue / Location *
                         </label>
                         <input
@@ -366,19 +366,19 @@ export default function Booking({ onNavigate }) {
                           value={formData.location}
                           onChange={handleChange}
                           placeholder="e.g. KICC, Serena Hotel, Karen, Runda..."
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Estimated Guest Attendance
                         </label>
                         <select
                           name="guestCount"
                           value={formData.guestCount}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                         >
                           <option>Up to 30 Guests</option>
                           <option>50 - 100 Guests</option>
@@ -393,7 +393,7 @@ export default function Booking({ onNavigate }) {
                   {/* Step 03: Package, Theme & Add-ons */}
                   <div className="space-y-6">
                     <div className="flex items-center justify-between border-b border-neutral-900/15 pb-4">
-                      <h2 className="text-xl font-medium tracking-[-0.01em] text-neutral-900 md:text-2xl">
+                      <h2 className="text-xl font-medium tracking-[-0.01em] text-teal-900 md:text-2xl">
                         Production Package, Concept &amp; Add-Ons
                       </h2>
                       <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -403,14 +403,14 @@ export default function Booking({ onNavigate }) {
 
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Select Production Package
                         </label>
                         <select
                           name="packageTier"
                           value={formData.packageTier}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                         >
                           {packageOptions.map((pkg) => (
                             <option key={pkg} value={pkg}>
@@ -421,14 +421,14 @@ export default function Booking({ onNavigate }) {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                        <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                           Select Design Concept
                         </label>
                         <select
                           name="theme"
                           value={formData.theme}
                           onChange={handleChange}
-                          className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                          className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                         >
                           {themeOptions.map((thm) => (
                             <option key={thm} value={thm}>
@@ -441,7 +441,7 @@ export default function Booking({ onNavigate }) {
 
                     {/* Optional Add-Ons Checkboxes */}
                     <div className="space-y-3 pt-2">
-                      <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                      <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                         Optional Production Add-Ons (Select Any)
                       </label>
                       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -456,7 +456,7 @@ export default function Booking({ onNavigate }) {
                               className={`flex cursor-pointer items-center justify-between gap-3 border p-3.5 text-left transition-all ${
                                 checked
                                   ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8]'
-                                  : 'border-neutral-900/15 bg-amber-100 text-neutral-700 hover:border-neutral-900/40'
+                                  : 'border-neutral-900/15 bg-white text-neutral-700 hover:border-neutral-900/40'
                               }`}
                             >
                               <span className="text-xs font-medium leading-snug">
@@ -477,7 +477,7 @@ export default function Booking({ onNavigate }) {
 
                     {/* Special Notes */}
                     <div className="space-y-2 pt-2">
-                      <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                      <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                         Special Requirements, Technical Rider or Venue Notes
                       </label>
                       <textarea
@@ -486,14 +486,14 @@ export default function Booking({ onNavigate }) {
                         value={formData.notes}
                         onChange={handleChange}
                         placeholder="Tell us about staging dimensions, power access, branding guidelines, dress code, or specific scheduling constraints..."
-                        className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                       />
                     </div>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full cursor-pointer border border-neutral-900 bg-neutral-900 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
+                    className="w-full cursor-pointer border border-neutral-900 bg-neutral-900 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
                   >
                     Submit Event Booking Enquiry &rarr;
                   </button>
@@ -504,7 +504,7 @@ export default function Booking({ onNavigate }) {
             {/* Right Live Summary & Direct Contact Sidebar */}
             <div className="space-y-8 lg:sticky lg:top-28 lg:col-span-4">
               {/* Live Enquiry Summary Card */}
-              <div className="space-y-6 border border-neutral-900/15 bg-amber-100 p-8">
+              <div className="space-y-6 border border-neutral-900/15 bg-white p-8">
                 <div className="flex items-center justify-between border-b border-neutral-900/15 pb-4">
                   <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                     [ Live Summary ]
@@ -519,7 +519,7 @@ export default function Booking({ onNavigate }) {
                     <span className="block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
                       Event Sector
                     </span>
-                    <p className="mt-0.5 font-medium text-neutral-900">
+                    <p className="mt-0.5 font-medium text-teal-900">
                       {formData.eventSector}
                     </p>
                   </div>
@@ -528,7 +528,7 @@ export default function Booking({ onNavigate }) {
                     <span className="block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
                       Selected Package
                     </span>
-                    <p className="mt-0.5 font-medium text-neutral-900">
+                    <p className="mt-0.5 font-medium text-teal-900">
                       {formData.packageTier}
                     </p>
                   </div>
@@ -596,7 +596,7 @@ export default function Booking({ onNavigate }) {
                     href="https://wa.me/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full border border-[#f9f9f8] bg-amber-100 py-3.5 text-center text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
+                    className="block w-full border border-[#f9f9f8] bg-white py-3.5 text-center text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Chat on WhatsApp
                   </a>

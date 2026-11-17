@@ -171,9 +171,9 @@ export default function Gallery({ onNavigate }) {
       : bokehGallery.filter((item) => item.category === activeFilter);
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Events &amp; Production</span>
@@ -181,12 +181,12 @@ export default function Gallery({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Events Done <br />
               <span className="text-neutral-500">&amp; Portfolio Archive</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
               Explore our full-spectrum event production archive across
               corporate conferences, traditional weddings &amp; Ruracio, private
               milestones, kids&apos; parties, concerts, church conventions,
@@ -197,7 +197,7 @@ export default function Gallery({ onNavigate }) {
       </section>
 
       {/* 2. FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:px-10 md:py-10">
           <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
             Filter by Event Sector ({filteredItems.length})
@@ -214,8 +214,8 @@ export default function Gallery({ onNavigate }) {
                   aria-pressed={isSelected}
                   className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-neutral-900 font-medium text-neutral-900'
-                      : 'border-transparent text-neutral-500 hover:text-neutral-900'
+                      ? 'border-neutral-900 font-medium text-teal-900'
+                      : 'border-transparent text-neutral-500 hover:text-teal-900'
                   }`}
                 >
                   {cat}
@@ -227,7 +227,7 @@ export default function Gallery({ onNavigate }) {
       </section>
 
       {/* 3. ARCHITECTURAL PORTFOLIO GRID */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {filteredItems.map((item) => (
@@ -238,7 +238,7 @@ export default function Gallery({ onNavigate }) {
               >
                 {/* Top Index Bar */}
                 <div className="mb-3 flex items-center justify-between gap-3 border-b border-neutral-900/15 pb-2 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                  <span className="shrink-0 font-medium text-neutral-900">
+                  <span className="shrink-0 font-medium text-teal-900">
                     Shot {item.id}
                   </span>
                   <span className="truncate">{item.category}</span>
@@ -259,14 +259,14 @@ export default function Gallery({ onNavigate }) {
                     <p className="mb-1 text-[11px] tracking-[0.12em] text-neutral-500 uppercase">
                       {item.location}
                     </p>
-                    <h3 className="text-base font-normal tracking-[-0.01em] text-neutral-900 transition-opacity duration-200 group-hover:opacity-65">
+                    <h3 className="text-base font-normal tracking-[-0.01em] text-teal-900 transition-opacity duration-200 group-hover:opacity-65">
                       {item.title}
                     </h3>
                   </div>
 
                   <span
                     aria-hidden="true"
-                    className="flex h-7 w-7 shrink-0 items-center justify-center border border-neutral-900/20 text-sm font-light text-neutral-900 transition-colors duration-200 group-hover:border-neutral-900 group-hover:bg-neutral-900 group-hover:text-[#f9f9f8]"
+                    className="flex h-7 w-7 shrink-0 items-center justify-center border border-neutral-900/20 text-sm font-light text-teal-900 transition-colors duration-200 group-hover:border-neutral-900 group-hover:bg-neutral-900 group-hover:text-[#f9f9f8]"
                   >
                     +
                   </span>
@@ -288,12 +288,12 @@ export default function Gallery({ onNavigate }) {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden border border-neutral-900/20 bg-amber-100 text-neutral-900"
+            className="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden border border-neutral-900/20 bg-white text-teal-900"
           >
             {/* Top Modal Bar */}
             <div className="flex items-center justify-between border-b border-neutral-900/15 px-6 py-4 text-[11px] tracking-[0.14em] uppercase">
               <div className="flex flex-wrap items-center gap-2.5 text-neutral-500">
-                <strong className="font-medium text-neutral-900">
+                <strong className="font-medium text-teal-900">
                   Shot {lightboxItem.id}
                 </strong>
                 <span>&bull;</span>
@@ -305,7 +305,7 @@ export default function Gallery({ onNavigate }) {
               <button
                 type="button"
                 onClick={() => setLightboxItem(null)}
-                className="cursor-pointer bg-transparent py-1 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase transition-opacity hover:opacity-55"
+                className="cursor-pointer bg-transparent py-1 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase transition-opacity hover:opacity-55"
               >
                 Close
               </button>
@@ -321,15 +321,15 @@ export default function Gallery({ onNavigate }) {
             </div>
 
             {/* Bottom Title & Booking CTA */}
-            <div className="flex flex-col justify-between gap-4 border-t border-neutral-900/15 bg-amber-100 px-6 py-5 sm:flex-row sm:items-center">
-              <h3 className="text-lg font-normal tracking-[-0.01em] text-neutral-900 md:text-xl">
+            <div className="flex flex-col justify-between gap-4 border-t border-neutral-900/15 bg-white px-6 py-5 sm:flex-row sm:items-center">
+              <h3 className="text-lg font-normal tracking-[-0.01em] text-teal-900 md:text-xl">
                 {lightboxItem.title}
               </h3>
 
               <a
                 href="/booking"
                 onClick={(e) => handleLinkClick(e, '/booking')}
-                className="self-start border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900 sm:self-auto"
+                className="self-start border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900 sm:self-auto"
               >
                 Book Similar Setup &rarr;
               </a>
@@ -359,7 +359,7 @@ export default function Gallery({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Book Your Date &rarr;
             </a>

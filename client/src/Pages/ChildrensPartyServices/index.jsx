@@ -122,9 +122,9 @@ export default function ChildrensPartyServices({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Hyper Kids Events</span>
@@ -132,12 +132,12 @@ export default function ChildrensPartyServices({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Children&apos;s Party <br />
               <span className="text-neutral-500">Services</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
               From commercial bouncy castles and custom piñatas to face painting
               and full-scale themed decor, explore everything we bring to make
               your child&apos;s celebration effortless and unforgettable.
@@ -147,12 +147,12 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL INTRO STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
+          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase">
             Mix, Match &amp; Customize
           </span>
-          <p className="max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-right">
+          <p className="max-w-2xl text-sm leading-relaxed text-gray-900 md:text-right">
             Book any service standalone or bundle multiple attractions into a
             custom turnkey package—delivered, set up, staffed, and packed down
             by our crew.
@@ -161,7 +161,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 3. ALTERNATING 12 SERVICES SHOWCASE */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] divide-y divide-neutral-900/15 px-6 md:px-10">
           {services.map((service, index) => {
             const isImageRight = index % 2 === 0;
@@ -180,18 +180,18 @@ export default function ChildrensPartyServices({ onNavigate }) {
                   }`}
                 >
                   <div className="mb-6 flex items-center gap-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-neutral-900">
+                    <span className="font-medium text-teal-900">
                       {service.id}
                     </span>
                     <span>/</span>
                     <span>{service.category}</span>
                   </div>
 
-                  <h2 className="mb-5 text-2xl font-normal tracking-[-0.02em] leading-[1.18] text-neutral-900 sm:text-3xl md:text-4xl">
+                  <h2 className="mb-5 text-2xl font-normal tracking-[-0.02em] leading-[1.18] text-teal-900 sm:text-3xl md:text-4xl">
                     {service.title}
                   </h2>
 
-                  <p className="mb-8 max-w-xl text-base leading-relaxed text-neutral-600">
+                  <p className="mb-8 max-w-xl text-base leading-relaxed text-gray-900">
                     {service.description}
                   </p>
 
@@ -199,7 +199,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
                     <a
                       href="/booking"
                       onClick={(e) => handleLinkClick(e, '/booking')}
-                      className="inline-flex items-center gap-2 border-b border-neutral-900 pb-1 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-opacity duration-200 hover:opacity-55"
+                      className="inline-flex items-center gap-2 border-b border-neutral-900 pb-1 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-opacity duration-200 hover:opacity-55"
                     >
                       <span>Add to Party Plan</span>
                       <span aria-hidden="true">&rarr;</span>
@@ -253,7 +253,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Book Party Services &rarr;
             </a>

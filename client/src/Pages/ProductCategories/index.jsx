@@ -127,9 +127,9 @@ export default function ProductCategories({ onNavigate }) {
   )}`;
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -140,12 +140,12 @@ export default function ProductCategories({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Equipment &amp; <br />
               <span className="text-neutral-500">Product Categories</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
               Browse our six core rental and production divisions—from concert
               grand pianos, band backlines, and P3 LED walls to clear-span
               marquees, event furniture, and sanitized kiddie play units.
@@ -155,7 +155,7 @@ export default function ProductCategories({ onNavigate }) {
       </section>
 
       {/* 2. QUICK NAVIGATION STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div
           className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-4 px-6 py-6 md:px-10"
           data-aos="fade-up"
@@ -169,7 +169,7 @@ export default function ProductCategories({ onNavigate }) {
               <a
                 key={cat.id}
                 href={`#${cat.id}`}
-                className="border-b border-transparent pb-0.5 text-xs tracking-[0.12em] text-neutral-700 uppercase no-underline transition-colors hover:border-neutral-900 hover:text-neutral-900"
+                className="border-b border-transparent pb-0.5 text-xs tracking-[0.12em] text-neutral-700 uppercase no-underline transition-colors hover:border-neutral-900 hover:text-teal-900"
               >
                 {cat.name}
               </a>
@@ -179,24 +179,24 @@ export default function ProductCategories({ onNavigate }) {
       </section>
 
       {/* 3. CATEGORIES EDITORIAL GRID */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {categories.map((cat, index) => (
               <article
                 id={cat.id}
                 key={cat.id}
-                className="group flex flex-col justify-between border border-neutral-900/15 bg-amber-100 transition-colors duration-200 hover:border-neutral-900"
+                className="group flex flex-col justify-between border border-neutral-900/15 bg-white transition-colors duration-200 hover:border-neutral-900"
                 data-aos="fade-up"
                 data-aos-delay={(index % 2) * 100}
               >
                 <div>
                   {/* Top Metadata Bar */}
                   <div className="flex items-center justify-between border-b border-neutral-900/15 px-6 py-3.5 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-neutral-900">
+                    <span className="font-medium text-teal-900">
                       0{index + 1} &bull; {cat.count}
                     </span>
-                    <span className="font-semibold text-neutral-900">
+                    <span className="font-semibold text-teal-900">
                       {cat.startingPrice}
                     </span>
                   </div>
@@ -215,10 +215,10 @@ export default function ProductCategories({ onNavigate }) {
                     <span className="mb-2 block text-[11px] tracking-[0.12em] text-neutral-500 uppercase">
                       {cat.subtitle}
                     </span>
-                    <h2 className="mb-4 text-2xl font-normal tracking-[-0.02em] text-neutral-900 md:text-3xl">
+                    <h2 className="mb-4 text-2xl font-normal tracking-[-0.02em] text-teal-900 md:text-3xl">
                       {cat.name}
                     </h2>
-                    <p className="mb-8 text-sm leading-relaxed text-neutral-600 md:text-base">
+                    <p className="mb-8 text-sm leading-relaxed text-gray-900 md:text-base">
                       {cat.desc}
                     </p>
 
@@ -240,7 +240,7 @@ export default function ProductCategories({ onNavigate }) {
                 </div>
 
                 {/* Card Footer Links */}
-                <div className="flex flex-wrap items-center justify-between gap-4 border-t border-neutral-900/15 bg-amber-100 px-8 py-5">
+                <div className="flex flex-wrap items-center justify-between gap-4 border-t border-neutral-900/15 bg-white px-8 py-5">
                   <a
                     href="/event-equipment-supplies"
                     onClick={(e) =>
@@ -248,7 +248,7 @@ export default function ProductCategories({ onNavigate }) {
                         selectedCategory: cat.name,
                       })
                     }
-                    className="border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
+                    className="border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
                   >
                     Browse {cat.name} &rarr;
                   </a>
@@ -256,7 +256,7 @@ export default function ProductCategories({ onNavigate }) {
                   <a
                     href="/products/sample-product"
                     onClick={(e) => handleLinkClick(e, '/products/sample-product')}
-                    className="border-b border-neutral-900 pb-0.5 text-xs font-medium tracking-[0.12em] text-neutral-900 uppercase no-underline transition-opacity hover:opacity-60"
+                    className="border-b border-neutral-900 pb-0.5 text-xs font-medium tracking-[0.12em] text-teal-900 uppercase no-underline transition-opacity hover:opacity-60"
                   >
                     Featured Unit Specs
                   </a>
@@ -293,7 +293,7 @@ export default function ProductCategories({ onNavigate }) {
               href={whatsappBundleUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request Bundle Quote on WhatsApp &rarr;
             </a>

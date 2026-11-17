@@ -131,9 +131,9 @@ export default function Blog({ onNavigate }) {
       : blogPosts.filter((post) => post.category === selectedCategory);
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx-HyperKids Journal</span>
@@ -143,12 +143,12 @@ export default function Blog({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Production Insights <br />
               <span className="text-neutral-500">&amp; Event Guides</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
               Practical field notes from our AV engineers, spatial stylists, and
               operations team&mdash;covering corporate technical riders,
               weddings &amp; Ruracio logistics, rainy-season marquees, brand
@@ -159,7 +159,7 @@ export default function Blog({ onNavigate }) {
       </section>
 
       {/* 2. CATEGORY FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
           <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
             Browse Topics ({filteredPosts.length})
@@ -182,8 +182,8 @@ export default function Blog({ onNavigate }) {
                   aria-pressed={isSelected}
                   className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-neutral-900 font-medium text-neutral-900'
-                      : 'border-transparent text-neutral-400 hover:text-neutral-900'
+                      ? 'border-neutral-900 font-medium text-teal-900'
+                      : 'border-transparent text-neutral-400 hover:text-teal-900'
                   }`}
                 >
                   {cat}
@@ -195,19 +195,19 @@ export default function Blog({ onNavigate }) {
       </section>
 
       {/* 3. BLOG POSTS GRID */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
                 onClick={() => setActivePost(post)}
-                className="group flex cursor-pointer flex-col justify-between border border-neutral-900/15 bg-amber-100 transition-colors duration-200 hover:bg-amber-100"
+                className="group flex cursor-pointer flex-col justify-between border border-neutral-900/15 bg-white transition-colors duration-200 hover:bg-white"
               >
                 <div>
                   {/* Top Index & Category Plate */}
                   <div className="flex items-center justify-between gap-3 border-b border-neutral-900/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="shrink-0 font-medium text-neutral-900">
+                    <span className="shrink-0 font-medium text-teal-900">
                       Issue {post.id}
                     </span>
                     <span className="truncate">{post.category}</span>
@@ -230,25 +230,25 @@ export default function Blog({ onNavigate }) {
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h2 className="mb-3 text-xl font-normal tracking-[-0.015em] leading-snug text-neutral-900 transition-opacity duration-200 group-hover:opacity-70">
+                    <h2 className="mb-3 text-xl font-normal tracking-[-0.015em] leading-snug text-teal-900 transition-opacity duration-200 group-hover:opacity-70">
                       {post.title}
                     </h2>
 
-                    <p className="text-sm leading-relaxed text-neutral-600">
+                    <p className="text-sm leading-relaxed text-gray-900">
                       {post.excerpt}
                     </p>
                   </div>
                 </div>
 
                 {/* Card Footer Trigger */}
-                <div className="border-t border-neutral-900/15 bg-amber-100 px-6 py-4 md:px-8">
+                <div className="border-t border-neutral-900/15 bg-white px-6 py-4 md:px-8">
                   <button
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
                       setActivePost(post);
                     }}
-                    className="cursor-pointer bg-transparent text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase transition-opacity group-hover:opacity-65"
+                    className="cursor-pointer bg-transparent text-xs font-medium tracking-[0.14em] text-teal-900 uppercase transition-opacity group-hover:opacity-65"
                   >
                     Read Full Guide &rarr;
                   </button>
@@ -270,12 +270,12 @@ export default function Blog({ onNavigate }) {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden border border-neutral-900/20 bg-amber-100 text-neutral-900"
+            className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden border border-neutral-900/20 bg-white text-teal-900"
           >
             {/* Top Modal Bar */}
-            <div className="flex items-center justify-between border-b border-neutral-900/15 bg-amber-100 px-6 py-4 text-[11px] tracking-[0.14em] uppercase">
+            <div className="flex items-center justify-between border-b border-neutral-900/15 bg-white px-6 py-4 text-[11px] tracking-[0.14em] uppercase">
               <div className="flex flex-wrap items-center gap-2 text-neutral-500">
-                <strong className="font-medium text-neutral-900">
+                <strong className="font-medium text-teal-900">
                   {activePost.category}
                 </strong>
                 <span>&bull;</span>
@@ -287,7 +287,7 @@ export default function Blog({ onNavigate }) {
               <button
                 type="button"
                 onClick={() => setActivePost(null)}
-                className="cursor-pointer bg-transparent py-1 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase transition-opacity hover:opacity-55"
+                className="cursor-pointer bg-transparent py-1 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase transition-opacity hover:opacity-55"
               >
                 Close &times;
               </button>
@@ -303,12 +303,12 @@ export default function Blog({ onNavigate }) {
                 />
               </div>
 
-              <div className="space-y-6 bg-amber-100 p-6 md:p-10">
-                <h3 className="text-2xl font-normal tracking-[-0.02em] leading-snug text-neutral-900 md:text-3xl">
+              <div className="space-y-6 bg-white p-6 md:p-10">
+                <h3 className="text-2xl font-normal tracking-[-0.02em] leading-snug text-teal-900 md:text-3xl">
                   {activePost.title}
                 </h3>
 
-                <div className="space-y-4 text-base leading-relaxed text-neutral-600">
+                <div className="space-y-4 text-base leading-relaxed text-gray-900">
                   {activePost.content.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}
@@ -317,18 +317,18 @@ export default function Blog({ onNavigate }) {
             </div>
 
             {/* Bottom Modal Action Bar */}
-            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-neutral-900/15 bg-amber-100 px-6 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-neutral-900/15 bg-white px-6 py-4">
               <a
                 href="/booking"
                 onClick={(e) => handleLinkClick(e, '/booking')}
-                className="border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
+                className="border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
               >
                 Plan This Event With Staxx &rarr;
               </a>
               <a
                 href="/event-equipment-supplies"
                 onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                className="border border-neutral-900/25 bg-amber-100 px-5 py-3 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
+                className="border border-neutral-900/25 bg-white px-5 py-3 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
               >
                 Browse Equipment Catalog
               </a>
@@ -358,7 +358,7 @@ export default function Blog({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request an Event Quote &rarr;
             </a>

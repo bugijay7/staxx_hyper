@@ -140,9 +140,9 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
   });
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -153,12 +153,12 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Equipment &amp; <br />
               <span className="text-neutral-500">Supplies Catalog</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
               Explore our professional rental inventory including grand
               pianos, band gear, indoor LED video walls, moving head lighting, stages,
               clear-span marquees, and event furniture across six counties.
@@ -168,7 +168,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 2. SEARCH & CATEGORY FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div
           className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10"
           data-aos="fade-up"
@@ -180,7 +180,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
               placeholder="Search pianos, LED screens, amps, tents..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-xs tracking-[0.06em] text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+              className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-xs tracking-[0.06em] text-teal-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
             />
           </div>
 
@@ -196,8 +196,8 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                   aria-pressed={isSelected}
                   className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-neutral-900 font-medium text-neutral-900'
-                      : 'border-transparent text-neutral-400 hover:text-neutral-900'
+                      ? 'border-neutral-900 font-medium text-teal-900'
+                      : 'border-transparent text-neutral-400 hover:text-teal-900'
                   }`}
                 >
                   {cat}
@@ -209,7 +209,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 3. PRODUCT CATALOG GRID */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-8 flex items-center justify-between border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Showing {filteredInventory.length} Available Items</span>
@@ -222,17 +222,17 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                 key={item.id}
                 href="/products/sample-product"
                 onClick={(e) => handleSelectProduct(e, item)}
-                className="group flex flex-col justify-between border border-neutral-900/15 bg-amber-100 no-underline transition-colors duration-200 hover:border-neutral-900"
+                className="group flex flex-col justify-between border border-neutral-900/15 bg-white no-underline transition-colors duration-200 hover:border-neutral-900"
                 data-aos="fade-up"
                 data-aos-delay={(index % 3) * 100}
               >
                 <div>
                   {/* Category & Price Plate */}
                   <div className="flex items-center justify-between border-b border-neutral-900/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-neutral-900">
+                    <span className="font-medium text-teal-900">
                       {item.category}
                     </span>
-                    <span className="font-semibold text-neutral-900">
+                    <span className="font-semibold text-teal-900">
                       {item.price}
                     </span>
                   </div>
@@ -248,11 +248,11 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
 
                   {/* Content Body */}
                   <div className="p-6 md:p-8">
-                    <h2 className="mb-3 text-xl font-normal tracking-[-0.015em] leading-snug text-neutral-900 transition-opacity duration-200 group-hover:opacity-70">
+                    <h2 className="mb-3 text-xl font-normal tracking-[-0.015em] leading-snug text-teal-900 transition-opacity duration-200 group-hover:opacity-70">
                       {item.title}
                     </h2>
 
-                    <p className="mb-6 text-sm leading-relaxed text-neutral-600">
+                    <p className="mb-6 text-sm leading-relaxed text-gray-900">
                       {item.desc}
                     </p>
 
@@ -268,8 +268,8 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                 </div>
 
                 {/* Card Footer Trigger */}
-                <div className="border-t border-neutral-900/15 bg-amber-100 px-6 py-4 md:px-8">
-                  <span className="text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase transition-opacity group-hover:opacity-65">
+                <div className="border-t border-neutral-900/15 bg-white px-6 py-4 md:px-8">
+                  <span className="text-xs font-medium tracking-[0.14em] text-teal-900 uppercase transition-opacity group-hover:opacity-65">
                     View Specifications &amp; Book &rarr;
                   </span>
                 </div>
@@ -279,7 +279,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
 
           {filteredInventory.length === 0 && (
             <div className="py-20 text-center">
-              <p className="text-base text-neutral-600">
+              <p className="text-base text-gray-900">
                 No equipment found matching &ldquo;{searchQuery}&rdquo;.
               </p>
               <button
@@ -321,7 +321,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request Equipment Quotation &rarr;
             </a>

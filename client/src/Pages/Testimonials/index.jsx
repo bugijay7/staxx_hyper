@@ -104,9 +104,9 @@ export default function Testimonials({ onNavigate }) {
       : testimonials.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -117,12 +117,12 @@ export default function Testimonials({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Client Feedback <br />
               <span className="text-neutral-500">&amp; Success Stories</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
               Read feedback from corporate leaders, wedding planners, school
               administrators, estate committees, and families who trusted
               Staxx-HyperKids with their AV production, d&eacute;cor, and event
@@ -133,7 +133,7 @@ export default function Testimonials({ onNavigate }) {
       </section>
 
       {/* 2. STATS & FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         {/* Metrics Grid */}
         <div
           className="mx-auto max-w-[1440px] border-b border-neutral-900/15 px-6 md:px-10"
@@ -141,7 +141,7 @@ export default function Testimonials({ onNavigate }) {
         >
           <div className="grid grid-cols-1 divide-y divide-neutral-900/15 md:grid-cols-3 md:divide-x md:divide-y-0">
             <div className="py-10 md:pr-10">
-              <span className="block text-4xl font-normal tracking-[-0.03em] text-neutral-900 md:text-5xl">
+              <span className="block text-4xl font-normal tracking-[-0.03em] text-teal-900 md:text-5xl">
                 +600
               </span>
               <span className="mt-2 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -150,7 +150,7 @@ export default function Testimonials({ onNavigate }) {
             </div>
 
             <div className="py-10 md:px-10">
-              <span className="block text-4xl font-normal tracking-[-0.03em] text-neutral-900 md:text-5xl">
+              <span className="block text-4xl font-normal tracking-[-0.03em] text-teal-900 md:text-5xl">
                 98%
               </span>
               <span className="mt-2 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -159,7 +159,7 @@ export default function Testimonials({ onNavigate }) {
             </div>
 
             <div className="py-10 md:pl-10">
-              <span className="block text-4xl font-normal tracking-[-0.03em] text-neutral-900 md:text-5xl">
+              <span className="block text-4xl font-normal tracking-[-0.03em] text-teal-900 md:text-5xl">
                 6 Counties
               </span>
               <span className="mt-2 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -196,8 +196,8 @@ export default function Testimonials({ onNavigate }) {
                   aria-pressed={isSelected}
                   className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-neutral-900 font-medium text-neutral-900'
-                      : 'border-transparent text-neutral-400 hover:text-neutral-900'
+                      ? 'border-neutral-900 font-medium text-teal-900'
+                      : 'border-transparent text-neutral-400 hover:text-teal-900'
                   }`}
                 >
                   {cat}
@@ -209,20 +209,20 @@ export default function Testimonials({ onNavigate }) {
       </section>
 
       {/* 3. TESTIMONIALS GRID WITH IMAGES */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 md:grid-cols-2 lg:grid-cols-3">
             {filteredTestimonials.map((item, index) => (
               <article
                 key={item.id}
-                className="flex flex-col justify-between border-r border-b border-neutral-900/15 bg-amber-100 p-8 transition-colors duration-200 hover:bg-amber-100 md:p-10"
+                className="flex flex-col justify-between border-r border-b border-neutral-900/15 bg-white p-8 transition-colors duration-200 hover:bg-white md:p-10"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 <div>
                   {/* Top Index & Category Plate */}
                   <div className="mb-6 flex items-center justify-between border-b border-neutral-900/15 pb-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-neutral-900">
+                    <span className="font-medium text-teal-900">
                       [ {item.id} ] &bull; {'★'.repeat(item.rating)}
                     </span>
                     <span>{item.category}</span>
@@ -246,7 +246,7 @@ export default function Testimonials({ onNavigate }) {
                 {/* Author & Project Tag */}
                 <div className="space-y-4 border-t border-neutral-900/15 pt-6">
                   <div>
-                    <h2 className="text-lg font-medium tracking-[-0.01em] text-neutral-900">
+                    <h2 className="text-lg font-medium tracking-[-0.01em] text-teal-900">
                       {item.name}
                     </h2>
                     <p className="mt-0.5 text-xs tracking-[0.04em] text-neutral-500">
@@ -254,7 +254,7 @@ export default function Testimonials({ onNavigate }) {
                     </p>
                   </div>
 
-                  <span className="inline-block border border-neutral-900/15 bg-amber-100 px-3 py-1.5 text-[10px] font-medium tracking-[0.12em] text-neutral-600 uppercase">
+                  <span className="inline-block border border-neutral-900/15 bg-white px-3 py-1.5 text-[10px] font-medium tracking-[0.12em] text-gray-900 uppercase">
                     {item.project}
                   </span>
                 </div>
@@ -288,7 +288,7 @@ export default function Testimonials({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request an Event Quote &rarr;
             </a>

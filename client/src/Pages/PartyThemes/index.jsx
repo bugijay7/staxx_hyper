@@ -85,9 +85,9 @@ export default function EventInspo({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx-HyperKids &bull; Kenyan Event Themes</span>
@@ -95,12 +95,12 @@ export default function EventInspo({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Relatable Kenyan <br />
               <span className="text-neutral-500">Event Themes</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
               Explore four practical, culturally resonant event setups designed
               specifically for traditional Ruracios, Nairobi corporate AGMs,
               garden weddings, and estate children&rsquo;s parties across Kenya.
@@ -110,12 +110,12 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
+          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase">
             Tailored to Your Venue &amp; Budget
           </span>
-          <p className="max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-right">
+          <p className="max-w-2xl text-sm leading-relaxed text-gray-900 md:text-right">
             Every theme is backed by our full equipment hire and on-site setup
             teams based in Nairobi, serving Kiambu, Nakuru, Machakos,
             Murang&rsquo;a, and Kajiado.
@@ -124,7 +124,7 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 3. FOUR KENYAN THEMES SHOWCASE */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] divide-y divide-neutral-900/15 px-6 md:px-10">
           {inspoWorlds.map((inspo) => {
             const isTipOpen = selectedInspo === inspo.id;
@@ -139,7 +139,7 @@ export default function EventInspo({ onNavigate }) {
                   <div>
                     <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] uppercase">
                       <span className="text-neutral-500">
-                        <strong className="font-medium text-neutral-900">
+                        <strong className="font-medium text-teal-900">
                           Theme {inspo.id}
                         </strong>
                       </span>
@@ -148,7 +148,7 @@ export default function EventInspo({ onNavigate }) {
                       </span>
                     </div>
 
-                    <h2 className="mb-2 text-2xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 sm:text-3xl md:text-4xl">
+                    <h2 className="mb-2 text-2xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 sm:text-3xl md:text-4xl">
                       {inspo.title}
                     </h2>
 
@@ -156,14 +156,14 @@ export default function EventInspo({ onNavigate }) {
                       {inspo.tagline}
                     </p>
 
-                    <p className="mb-8 text-base leading-relaxed text-neutral-600">
+                    <p className="mb-8 text-base leading-relaxed text-gray-900">
                       {inspo.description}
                     </p>
                   </div>
 
                   {/* Signature Elements */}
                   <div className="mb-8 border-t border-neutral-900/15 pt-6">
-                    <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase">
+                    <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase">
                       What&rsquo;s Included in Setup
                     </span>
                     <ul className="grid grid-cols-1 gap-3 text-sm text-neutral-700 sm:grid-cols-2">
@@ -203,7 +203,7 @@ export default function EventInspo({ onNavigate }) {
                           setSelectedInspo(isTipOpen ? null : inspo.id)
                         }
                         aria-expanded={isTipOpen}
-                        className="cursor-pointer border-b border-neutral-900/30 pb-0.5 text-xs tracking-[0.12em] text-neutral-600 uppercase transition-colors hover:border-neutral-900 hover:text-neutral-900"
+                        className="cursor-pointer border-b border-neutral-900/30 pb-0.5 text-xs tracking-[0.12em] text-gray-900 uppercase transition-colors hover:border-neutral-900 hover:text-teal-900"
                       >
                         {isTipOpen ? 'Hide Planner Tip' : 'Planner Tip'}
                       </button>
@@ -211,7 +211,7 @@ export default function EventInspo({ onNavigate }) {
                       <a
                         href="/booking"
                         onClick={(e) => handleLinkClick(e, '/booking')}
-                        className="border border-neutral-900 bg-neutral-900 px-5 py-2.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
+                        className="border border-neutral-900 bg-neutral-900 px-5 py-2.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
                       >
                         Book This Theme &rarr;
                       </a>
@@ -220,8 +220,8 @@ export default function EventInspo({ onNavigate }) {
 
                   {/* Expandable Planner Note */}
                   {isTipOpen && (
-                    <div className="mt-6 border border-neutral-900/15 bg-amber-100 p-5 text-sm leading-relaxed text-neutral-700">
-                      <strong className="block mb-1 text-xs font-medium tracking-[0.08em] text-neutral-900 uppercase">
+                    <div className="mt-6 border border-neutral-900/15 bg-white p-5 text-sm leading-relaxed text-neutral-700">
+                      <strong className="block mb-1 text-xs font-medium tracking-[0.08em] text-teal-900 uppercase">
                         Staxx-HyperKids Setup Advice
                       </strong>
                       For the <strong>{inspo.title}</strong>, we recommend
@@ -275,7 +275,7 @@ export default function EventInspo({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request a Custom Quote &rarr;
             </a>

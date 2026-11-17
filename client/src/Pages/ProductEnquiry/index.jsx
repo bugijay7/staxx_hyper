@@ -114,9 +114,9 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
   };
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -127,12 +127,12 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Product &amp; Equipment <br />
               <span className="text-neutral-500">Hire Enquiry</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
               Select the instruments, screens, lighting rigs, marquees, or
               furniture you need. Submit your brief to check stock availability
               and receive a formal KES quotation across six counties.
@@ -142,13 +142,13 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
       </section>
 
       {/* 2. ENQUIRY FORM & TECHNICAL DESK SIDEBAR */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.5fr_1fr]">
             {/* Left: Interactive Enquiry Form */}
             <form
               onSubmit={handleSubmit}
-              className="border border-neutral-900/15 bg-amber-100 p-8 md:p-12"
+              className="border border-neutral-900/15 bg-white p-8 md:p-12"
               data-aos="fade-up"
             >
               <div className="mb-8 border-b border-neutral-900/15 pb-4">
@@ -159,7 +159,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
-                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                     Full Name *
                   </label>
                   <input
@@ -169,12 +169,12 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="e.g. Wanjiku Kamau"
-                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                     Company / School / Church (Optional)
                   </label>
                   <input
@@ -183,12 +183,12 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.organization}
                     onChange={handleChange}
                     placeholder="e.g. Safaricom PLC / Private Host"
-                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                     Phone / WhatsApp Number *
                   </label>
                   <input
@@ -198,12 +198,12 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="e.g. 0712 345 678"
-                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                     Email Address (For Formal PDF Quote)
                   </label>
                   <input
@@ -212,12 +212,12 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="e.g. events@organization.co.ke"
-                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                     Event Date *
                   </label>
                   <input
@@ -226,19 +226,19 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     required
                     value={formData.eventDate}
                     onChange={handleChange}
-                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                     Rental Duration (Days)
                   </label>
                   <select
                     name="rentalDays"
                     value={formData.rentalDays}
                     onChange={handleChange}
-                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                   >
                     <option value="1">1 Day</option>
                     <option value="2">2 Days</option>
@@ -249,14 +249,14 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                     County *
                   </label>
                   <select
                     name="county"
                     value={formData.county}
                     onChange={handleChange}
-                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                   >
                     {counties.map((county) => (
                       <option key={county} value={county}>
@@ -267,7 +267,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                  <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                     Venue / Estate / Hotel Name
                   </label>
                   <input
@@ -276,20 +276,20 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.venueLocation}
                     onChange={handleChange}
                     placeholder="e.g. KICC / Karen / Runda / Naivasha"
-                    className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                    className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                   />
                 </div>
               </div>
 
               <div className="mt-6">
-                <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                   Event Category
                 </label>
                 <select
                   name="eventType"
                   value={formData.eventType}
                   onChange={handleChange}
-                  className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                  className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                 >
                   {eventTypes.map((type) => (
                     <option key={type} value={type}>
@@ -315,7 +315,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                       className={`flex cursor-pointer items-center gap-3 border p-3.5 text-xs transition-colors ${
                         isChecked
                           ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8]'
-                          : 'border-neutral-900/20 bg-amber-100 text-neutral-800 hover:border-neutral-900'
+                          : 'border-neutral-900/20 bg-white text-neutral-800 hover:border-neutral-900'
                       }`}
                     >
                       <input
@@ -332,7 +332,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
 
               {/* Step 03: Technical Specifications & Notes */}
               <div className="mt-8">
-                <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                <label className="mb-2 block text-[11px] font-medium tracking-[0.12em] text-teal-900 uppercase">
                   Technical Rider, Dimensions &amp; Custom Notes
                 </label>
                 <textarea
@@ -341,7 +341,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                   value={formData.equipmentNotes}
                   onChange={handleChange}
                   placeholder="Specify quantities (e.g., 200 Chiavari chairs, 6m x 3m LED wall), venue power access, or load-in times..."
-                  className="w-full border border-neutral-900/25 bg-amber-100 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+                  className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-sm text-teal-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
                 />
               </div>
 
@@ -349,7 +349,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
               <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-neutral-900/15 pt-8">
                 <button
                   type="submit"
-                  className="cursor-pointer border border-neutral-900 bg-neutral-900 px-8 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
+                  className="cursor-pointer border border-neutral-900 bg-neutral-900 px-8 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
                 >
                   Send Enquiry via WhatsApp &rarr;
                 </button>
@@ -357,14 +357,14 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                 <a
                   href="/event-equipment-supplies"
                   onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                  className="border border-neutral-900/25 px-6 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors hover:border-neutral-900"
+                  className="border border-neutral-900/25 px-6 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:border-neutral-900"
                 >
                   Browse Full Catalog
                 </a>
               </div>
 
               {submitted && (
-                <div className="mt-6 border border-neutral-900 bg-amber-100 p-4 text-xs leading-relaxed text-neutral-900">
+                <div className="mt-6 border border-neutral-900 bg-white p-4 text-xs leading-relaxed text-teal-900">
                   <strong>Enquiry Prepared:</strong> Your equipment list has been
                   formatted for our dispatch desk on WhatsApp (+254 702 443 418).
                   If a new tab did not open automatically,{' '}
@@ -384,7 +384,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
             {/* Right: Logistics & Dispatch Desk Info */}
             <aside className="space-y-8" data-aos="fade-up" data-aos-delay="150">
               {/* Visual Card */}
-              <div className="border border-neutral-900/15 bg-amber-100">
+              <div className="border border-neutral-900/15 bg-white">
                 <div className="aspect-[16/10] w-full overflow-hidden border-b border-neutral-900/15 bg-neutral-200">
                   <img
                     src={Equipmentsetup}
@@ -396,10 +396,10 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                   <span className="mb-2 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                     Direct Dispatch Desk
                   </span>
-                  <h2 className="mb-4 text-2xl font-normal tracking-[-0.02em] text-neutral-900">
+                  <h2 className="mb-4 text-2xl font-normal tracking-[-0.02em] text-teal-900">
                     Fast Turnaround on Stock &amp; Pricing
                   </h2>
-                  <p className="mb-6 text-sm leading-relaxed text-neutral-600">
+                  <p className="mb-6 text-sm leading-relaxed text-gray-900">
                     Our equipment warehouse and operations team confirm unit
                     availability, transport logistics, and technician allocation
                     within 2 hours during business hours.
@@ -407,19 +407,19 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
 
                   <div className="space-y-3 border-t border-neutral-900/15 pt-6 text-xs text-neutral-700">
                     <p>
-                      <strong className="tracking-[0.1em] text-neutral-900 uppercase">
+                      <strong className="tracking-[0.1em] text-teal-900 uppercase">
                         Head Office:
                       </strong>{' '}
                       Commerce House, Nairobi, Kenya
                     </p>
                     <p>
-                      <strong className="tracking-[0.1em] text-neutral-900 uppercase">
+                      <strong className="tracking-[0.1em] text-teal-900 uppercase">
                         WhatsApp / Direct Line:
                       </strong>{' '}
                       0702 443 418
                     </p>
                     <p>
-                      <strong className="tracking-[0.1em] text-neutral-900 uppercase">
+                      <strong className="tracking-[0.1em] text-teal-900 uppercase">
                         Delivery Counties:
                       </strong>{' '}
                       Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
@@ -429,7 +429,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
               </div>
 
               {/* Rental Terms Box */}
-              <div className="border border-neutral-900/15 bg-amber-100 p-8">
+              <div className="border border-neutral-900/15 bg-white p-8">
                 <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                   Standard Hire Terms
                 </span>

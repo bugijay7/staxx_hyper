@@ -122,7 +122,7 @@ client/pages/home/index.js
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-sm text-white no-underline transition-colors duration-200 hover:text-neutral-900"
+                            className="inline-flex items-center gap-1.5 text-sm text-white no-underline transition-colors duration-200 hover:text-teal-900"
                           >
                             <span>{link.label}</span>
                             <span className="text-xs text-neutral-400">↗</span>
@@ -131,7 +131,7 @@ client/pages/home/index.js
                           <a
                             href={link.path}
                             onClick={(e) => handleLinkClick(e, link.path)}
-                            className="text-sm text-white no-underline transition-colors duration-200 hover:text-neutral-900"
+                            className="text-sm text-white no-underline transition-colors duration-200 hover:text-teal-900"
                           >
                             {link.label}
                           </a>
@@ -160,7 +160,7 @@ client/pages/home/index.js
           <button
             type="button"
             onClick={scrollToTop}
-            className="cursor-pointer border border-neutral-900/20 bg-white px-4 py-2 text-[11px] font-medium tracking-[0.14em] text-neutral-900 uppercase transition-colors duration-200 hover:border-neutral-900 hover:bg-neutral-900 hover:text-[#f9f9f8]"
+            className="cursor-pointer border border-neutral-900/20 bg-white px-4 py-2 text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase transition-colors duration-200 hover:border-neutral-900 hover:bg-neutral-900 hover:text-[#f9f9f8]"
           >
             Back to Top &uarr;
           </button>

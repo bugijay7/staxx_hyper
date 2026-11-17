@@ -68,9 +68,9 @@ export default function IndividualProduct({ onNavigate, productData }) {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. BREADCRUMB & HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-12 md:px-10 md:pt-12 md:pb-16"
           data-aos="fade-down"
@@ -80,7 +80,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
               <a
                 href="/event-equipment-supplies"
                 onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                className="underline hover:text-neutral-900"
+                className="underline hover:text-teal-900"
               >
                 &larr; Back to Equipment Catalog
               </a>
@@ -122,7 +122,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
 
             {/* Right: Product Info & Rental Configurator */}
             <div
-              className="flex flex-col justify-between border border-neutral-900/15 bg-amber-100 p-8 md:p-10"
+              className="flex flex-col justify-between border border-neutral-900/15 bg-white p-8 md:p-10"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -130,12 +130,12 @@ export default function IndividualProduct({ onNavigate, productData }) {
                 <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                   Professional Equipment Hire
                 </span>
-                <h1 className="mb-4 text-3xl font-normal tracking-[-0.02em] leading-tight text-neutral-900 md:text-4xl">
+                <h1 className="mb-4 text-3xl font-normal tracking-[-0.02em] leading-tight text-teal-900 md:text-4xl">
                   {product.title}
                 </h1>
 
                 <div className="mb-6 flex items-baseline gap-3 border-b border-neutral-900/15 pb-6">
-                  <span className="text-3xl font-normal tracking-[-0.03em] text-neutral-900">
+                  <span className="text-3xl font-normal tracking-[-0.03em] text-teal-900">
                     {product.price || `KES ${basePrice.toLocaleString()} / day`}
                   </span>
                   <span className="text-xs tracking-[0.1em] text-neutral-500 uppercase">
@@ -149,7 +149,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
 
                 {/* Specs List */}
                 <div className="mb-8 space-y-3 border-t border-neutral-900/15 pt-6">
-                  <h3 className="text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase">
+                  <h3 className="text-xs font-medium tracking-[0.14em] text-teal-900 uppercase">
                     Technical Specifications:
                   </h3>
                   <ul className="space-y-2 text-sm text-neutral-700">
@@ -169,7 +169,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                 {/* Interactive Configurator */}
                 <div className="space-y-6 border-t border-neutral-900/15 pt-6">
                   <div>
-                    <label className="mb-2 block text-xs font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                    <label className="mb-2 block text-xs font-medium tracking-[0.12em] text-teal-900 uppercase">
                       Rental Duration (Days):
                     </label>
                     <div className="flex items-center gap-4">
@@ -181,7 +181,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                           className={`cursor-pointer border px-4 py-2 text-xs tracking-[0.12em] uppercase transition-all ${
                             rentalDays === days
                               ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8]'
-                              : 'border-neutral-900/25 bg-amber-100 text-neutral-900 hover:border-neutral-900'
+                              : 'border-neutral-900/25 bg-white text-teal-900 hover:border-neutral-900'
                           }`}
                         >
                           {days} {days === 1 ? 'Day' : 'Days'}
@@ -191,7 +191,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                   </div>
 
                   <div className="flex items-center justify-between border-t border-neutral-900/15 pt-4">
-                    <span className="text-xs font-medium tracking-[0.12em] text-neutral-900 uppercase">
+                    <span className="text-xs font-medium tracking-[0.12em] text-teal-900 uppercase">
                       Dedicated On-Site Technician / Sound Engineer
                     </span>
                     <input
@@ -210,7 +210,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                   <span className="text-xs font-medium tracking-[0.14em] text-neutral-500 uppercase">
                     Estimated Total ({rentalDays} {rentalDays === 1 ? 'Day' : 'Days'}):
                   </span>
-                  <span className="text-2xl font-normal tracking-[-0.02em] text-neutral-900">
+                  <span className="text-2xl font-normal tracking-[-0.02em] text-teal-900">
                     KES {totalPrice.toLocaleString()}
                   </span>
                 </div>
@@ -219,7 +219,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full border border-neutral-900 bg-neutral-900 py-4 text-center text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
+                  className="block w-full border border-neutral-900 bg-neutral-900 py-4 text-center text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
                 >
                   Book This Equipment on WhatsApp &rarr;
                 </a>
@@ -230,21 +230,21 @@ export default function IndividualProduct({ onNavigate, productData }) {
       </section>
 
       {/* 2. RELATED ITEMS / CATALOG CROSS-SELL */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12 flex items-center justify-between border-b border-neutral-900/15 pb-6">
             <div>
               <span className="mb-2 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Complementary Gear
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] text-neutral-900">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] text-teal-900">
                 Frequently Rented Together
               </h2>
             </div>
             <a
               href="/event-equipment-supplies"
               onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-              className="text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase underline hover:opacity-65"
+              className="text-xs font-medium tracking-[0.14em] text-teal-900 uppercase underline hover:opacity-65"
             >
               View All Catalog &rarr;
             </a>
@@ -270,7 +270,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
             ].map((rel, idx) => (
               <div
                 key={idx}
-                className="group border border-neutral-900/15 bg-amber-100 p-6 transition-colors duration-200 hover:border-neutral-900"
+                className="group border border-neutral-900/15 bg-white p-6 transition-colors duration-200 hover:border-neutral-900"
               >
                 <div className="mb-4 aspect-[16/10] w-full overflow-hidden bg-neutral-200">
                   <img
@@ -279,17 +279,17 @@ export default function IndividualProduct({ onNavigate, productData }) {
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mb-2 text-lg font-normal text-neutral-900">
+                <h3 className="mb-2 text-lg font-normal text-teal-900">
                   {rel.title}
                 </h3>
                 <div className="flex items-center justify-between border-t border-neutral-900/15 pt-4">
-                  <span className="text-xs font-medium tracking-[0.1em] text-neutral-900">
+                  <span className="text-xs font-medium tracking-[0.1em] text-teal-900">
                     {rel.price}
                   </span>
                   <a
                     href="/event-equipment-supplies"
                     onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                    className="text-[10px] tracking-[0.14em] text-neutral-600 uppercase underline hover:text-neutral-900"
+                    className="text-[10px] tracking-[0.14em] text-gray-900 uppercase underline hover:text-teal-900"
                   >
                     View Details
                   </a>
@@ -324,7 +324,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Proceed to Booking &rarr;
             </a>

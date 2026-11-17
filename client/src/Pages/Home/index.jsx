@@ -1,5 +1,5 @@
+
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import heroImg from '../../assets/hero.jpg';
 import pastelImg from '../../assets/pastel.jpg';
 import confettiImg from '../../assets/confetti.jpg';
@@ -167,77 +167,58 @@ export default function Home({ onNavigate }) {
       : galleryImages.filter((item) => item.category === activeTab);
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO SECTION */}
-      <section className="relative border-b border-neutral-900/15 bg-amber-100">
+      <section className="relative border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-12 md:px-10 md:pt-12 md:pb-16">
           {/* Top Metadata Strip */}
-          
+
           {/* Editorial Headline & Intro Grid */}
           <div className="grid grid-cols-1 items-end gap-10 pb-12 lg:grid-cols-[1.45fr_1fr]">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <div>
+              <h1 className="pt-8 md:pt-1  text-2xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
                 Event production <br />
                 <span className="text-neutral-500">&amp; equipment hire in Nairobi.</span>
               </h1>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col justify-between gap-8 lg:border-l lg:border-neutral-900/15 lg:pl-10"
-            >
-              <p className="text-xs md:text-sm leading-relaxed text-neutral-600 md:text-lg">
+            <div className="flex flex-col justify-between gap-8 lg:border-l lg:border-neutral-900/15 lg:pl-10">
+              <p className="text-xs md:text-sm leading-relaxed text-gray-900 md:text-sm">
                 Staxx-HyperKids provides audiovisual production, event d&eacute;cor,
                 children&rsquo;s parties, and equipment hire in Nairobi and across
                 Kenya.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
-                <motion.a
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
-                  className="border border-neutral-900 bg-neutral-900 px-2 md:px-3 py-0.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
+                  className="border border-neutral-900 bg-neutral-900 px-2 md:px-3 py-0.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
                 >
                   Request a Quote
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                </a>
+                <a
                   href="/event-equipment-supplies"
                   onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                  className="border border-neutral-900/25 bg-transparent px-2 md:px-3 py-0.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
+                  className="border border-neutral-900/25 bg-transparent px-2 md:px-3 py-0.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
                 >
                   Equipments &amp; Supplies Catalog
-                </motion.a>
+                </a>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Featured event image carousel */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.5 }}
-            className="group relative aspect-[16/9] max-h-[640px] w-full overflow-hidden bg-neutral-200"
+          <div
+            className="group relative aspect-[16/9] max-h-[240px] md:max-h-[300px] w-full overflow-hidden bg-neutral-200"
             role="region"
             aria-roledescription="carousel"
             aria-label="Staxx-HyperKids event services"
           >
-            <motion.img
+            <img
               key={heroSlides[activeHeroSlide].image}
               src={heroSlides[activeHeroSlide].image}
               alt={heroSlides[activeHeroSlide].alt}
-              initial={{ opacity: 0, scale: 1.02 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.55 }}
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/75 via-neutral-950/10 to-transparent" />
@@ -277,7 +258,7 @@ export default function Home({ onNavigate }) {
                     )
                   }
                   aria-label="Show previous image"
-                  className="ml-2 flex h-10 w-10 items-center justify-center border border-[#f9f9f8]/60 text-lg transition-colors hover:bg-[#f9f9f8] hover:text-neutral-900"
+                  className="ml-2 flex h-10 w-10 items-center justify-center border border-[#f9f9f8]/60 text-lg transition-colors hover:bg-[#f9f9f8] hover:text-teal-900"
                 >
                   &larr;
                 </button>
@@ -287,55 +268,61 @@ export default function Home({ onNavigate }) {
                     setActiveHeroSlide((activeHeroSlide + 1) % heroSlides.length)
                   }
                   aria-label="Show next image"
-                  className="flex h-10 w-10 items-center justify-center border border-[#f9f9f8]/60 text-lg transition-colors hover:bg-[#f9f9f8] hover:text-neutral-900"
+                  className="flex h-10 w-10 items-center justify-center border border-[#f9f9f8]/60 text-lg transition-colors hover:bg-[#f9f9f8] hover:text-teal-900"
                 >
                   &rarr;
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Bottom Trust / Spec Bar */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-6 grid grid-cols-1 gap-3 border-t border-neutral-900/15 pt-5 text-xs tracking-[0.06em] text-neutral-600 sm:grid-cols-3"
-          >
-            <span>&bull; Sound, LED screens &amp; stage production</span>
-            <span className="sm:text-center">
-              &bull; Serving Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
-            </span>
-            <span className="sm:text-right">&bull; AV, styling &amp; equipment from one team</span>
-          </motion.div>
+          {/* Bottom Trust / Spec Bar */}
+<div className="mt-6 overflow-hidden bg-teal-900 py-3.5 text-xs tracking-[0.06em] text-white">
+  <style>{`
+    @keyframes marqueeLtr {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
+    }
+  `}</style>
+
+  <div className="flex w-max animate-[marqueeLtr_25s_linear_infinite] hover:[animation-play-state:paused]">
+    {/* First Copy */}
+    <div className="flex shrink-0 items-center gap-12 pr-12">
+      <span>&bull; Sound, LED screens &amp; stage production</span>
+      <span>
+        &bull; Serving Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
+      </span>
+      <span>&bull; AV, styling &amp; equipment from one team</span>
+    </div>
+
+    {/* Duplicate Copy for Seamless Loop */}
+    <div className="flex shrink-0 items-center gap-12 pr-12" aria-hidden="true">
+      <span>&bull; Sound, LED screens &amp; stage production</span>
+      <span>
+        &bull; Serving Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
+      </span>
+      <span>&bull; AV, styling &amp; equipment from one team</span>
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
       {/* 2. ABOUT / EDITORIAL SECTION */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
               Integrated Capabilities
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
+            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
               Event production, styling &amp; equipment hire—one team.
             </h2>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col justify-between gap-12 lg:border-l lg:border-neutral-900/15 lg:pl-12"
-          >
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg">
+          <div className="flex flex-col justify-between gap-12 lg:border-l lg:border-neutral-900/15 lg:pl-12">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm">
               Founded by Bryan Karanja and Dan Njuguna, Staxx-HyperKids provides
               audiovisual production, event styling, and equipment hire for
               corporate events, product launches, weddings, and festivals. Our
@@ -345,7 +332,7 @@ export default function Home({ onNavigate }) {
             {/* Architectural Metric Strip */}
             <div className="grid grid-cols-1 gap-8 border-t border-neutral-900/15 pt-8 sm:grid-cols-3">
               <div>
-                <span className="block text-3xl font-normal tracking-[-0.03em] text-neutral-900 md:text-4xl">
+                <span className="block text-3xl font-normal tracking-[-0.03em] text-teal-900 md:text-4xl">
                   6 Counties
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
@@ -353,7 +340,7 @@ export default function Home({ onNavigate }) {
                 </span>
               </div>
               <div className="sm:border-l sm:border-neutral-900/15 sm:pl-6">
-                <span className="block text-3xl font-normal tracking-[-0.03em] text-neutral-900 md:text-4xl">
+                <span className="block text-3xl font-normal tracking-[-0.03em] text-teal-900 md:text-4xl">
                   Unified
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
@@ -361,7 +348,7 @@ export default function Home({ onNavigate }) {
                 </span>
               </div>
               <div className="sm:border-l sm:border-neutral-900/15 sm:pl-6">
-                <span className="block text-3xl font-normal tracking-[-0.03em] text-neutral-900 md:text-4xl">
+                <span className="block text-3xl font-normal tracking-[-0.03em] text-teal-900 md:text-4xl">
                   Full Stock
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
@@ -369,27 +356,21 @@ export default function Home({ onNavigate }) {
                 </span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* 3. THREE-STEP PROCESS */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-14 max-w-2xl"
-          >
+          <div className="mb-14 max-w-2xl">
             <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
               Production Workflow
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
+            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
               From event plan to live production.
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 gap-8 border-t border-neutral-900/15 pt-10 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -409,12 +390,8 @@ export default function Home({ onNavigate }) {
                 desc: 'Our crew handles delivery, installation, power tests, and styling before guests arrive.',
               },
             ].map((s, idx) => (
-              <motion.div
+              <div
                 key={s.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.15 }}
                 className={`flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:border-b-0 md:pb-0 ${
                   idx > 0 ? 'md:border-l md:border-neutral-900/15 md:pl-8' : ''
                 }`}
@@ -423,24 +400,18 @@ export default function Home({ onNavigate }) {
                   {s.step}
                 </span>
                 <div>
-                  <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-neutral-900">
+                  <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-teal-900">
                     {s.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-neutral-600">
+                  <p className="text-sm leading-relaxed text-gray-900">
                     {s.desc}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
 
             {/* Visual Quote Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-              className="flex flex-col justify-between gap-4 md:border-l md:border-neutral-900/15 md:pl-8"
-            >
+            <div className="flex flex-col justify-between gap-4 md:border-l md:border-neutral-900/15 md:pl-8">
               <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-200">
                 <img
                   src={pastelImg}
@@ -449,68 +420,58 @@ export default function Home({ onNavigate }) {
                 />
               </div>
               <div className="flex items-center justify-between pt-2">
-                <span className="text-xs text-neutral-600">
+                <span className="text-xs text-gray-900">
                   Planning an upcoming event?
                 </span>
                 <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
-                  className="border-b border-neutral-900 pb-0.5 text-xs font-medium tracking-[0.12em] text-neutral-900 uppercase no-underline transition-opacity hover:opacity-55"
+                  className="border-b border-neutral-900 pb-0.5 text-xs font-medium tracking-[0.12em] text-teal-900 uppercase no-underline transition-opacity hover:opacity-55"
                 >
                   Request a Quote
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 4. PACKAGES & PRODUCTION TIERS */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end"
-          >
+          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Production Tiers
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
                 Structured Event Packages
               </h2>
             </div>
-            <p className="max-w-md text-sm leading-relaxed text-neutral-600">
+            <p className="max-w-md text-sm leading-relaxed text-gray-900">
               Event production packages for corporate functions, weddings,
               institutional events, and festivals.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {packages.map((pkg, idx) => (
-              <motion.div
+              <div
                 key={pkg.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.15 }}
                 className={`flex flex-col justify-between border p-8 transition-colors duration-200 ${
                   pkg.featured
-                    ? 'border-neutral-900 bg-amber-100'
-                    : 'border-neutral-900/15 bg-amber-100'
+                    ? 'border-neutral-900 bg-white'
+                    : 'border-neutral-900/15 bg-white'
                 }`}
               >
                 <div>
                   <div className="mb-6 border-b border-neutral-900/15 pb-6">
                     <div className="mb-2 flex items-center justify-between gap-3">
-                      <h3 className="text-xl font-medium tracking-[-0.01em] text-neutral-900">
+                      <h3 className="text-xl font-medium tracking-[-0.01em] text-teal-900">
                         {pkg.name}
                       </h3>
                       {pkg.featured && (
-                        <span className="border border-neutral-900 px-2.5 py-0.5 text-[10px] tracking-[0.14em] text-neutral-900 uppercase">
+                        <span className="border border-neutral-900 px-2.5 py-0.5 text-[10px] tracking-[0.14em] text-teal-900 uppercase">
                           Most Booked
                         </span>
                       )}
@@ -521,7 +482,7 @@ export default function Home({ onNavigate }) {
                   </div>
 
                   <div className="mb-8 flex items-baseline gap-2">
-                    <span className="text-3xl font-normal tracking-[-0.03em] text-neutral-900 md:text-4xl">
+                    <span className="text-3xl font-normal tracking-[-0.03em] text-teal-900 md:text-4xl">
                       {pkg.price}
                     </span>
                     <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -539,20 +500,18 @@ export default function Home({ onNavigate }) {
                   </ul>
                 </div>
 
-                <motion.a
-                  whileHover={{ scale: 1.01 }}
-                  whileTap={{ scale: 0.99 }}
+                <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
                   className={`block w-full border py-3.5 text-center text-xs font-medium tracking-[0.14em] uppercase no-underline transition-colors duration-200 ${
                     pkg.featured
-                      ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8] hover:bg-transparent hover:text-neutral-900'
-                      : 'border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-[#f9f9f8]'
+                      ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8] hover:bg-transparent hover:text-teal-900'
+                      : 'border-neutral-900 text-teal-900 hover:bg-neutral-900 hover:text-[#f9f9f8]'
                   }`}
                 >
                   Enquire About Package
-                </motion.a>
-              </motion.div>
+                </a>
+              </div>
             ))}
           </div>
         </div>
@@ -561,18 +520,12 @@ export default function Home({ onNavigate }) {
       {/* 5. EQUIPMENT & SUPPLIES CATALOG PREVIEW */}
       <section className="border-b border-neutral-900/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 sm:flex-row sm:items-end"
-          >
+          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 sm:flex-row sm:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Rental Catalog
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
                 Event Equipment &amp; Supplies
               </h2>
             </div>
@@ -580,20 +533,16 @@ export default function Home({ onNavigate }) {
             <a
               href="/event-equipment-supplies"
               onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-              className="self-start border-b border-neutral-900 pb-1 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-opacity hover:opacity-55 sm:self-auto"
+              className="self-start border-b border-neutral-900 pb-1 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-opacity hover:opacity-55 sm:self-auto"
             >
               View Equipment Catalog →
             </a>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {equipmentCategories.map((cat, idx) => (
-              <motion.a
+              <a
                 key={cat.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
                 href={cat.path}
                 onClick={(e) => handleLinkClick(e, cat.path)}
                 className="group flex flex-col text-inherit no-underline"
@@ -605,13 +554,13 @@ export default function Home({ onNavigate }) {
                     className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mb-1.5 text-base font-medium tracking-[-0.01em] text-neutral-900 transition-opacity group-hover:opacity-65">
+                <h3 className="mb-1.5 text-base font-medium tracking-[-0.01em] text-teal-900 transition-opacity group-hover:opacity-65">
                   {cat.title}
                 </h3>
                 <p className="text-xs leading-relaxed text-neutral-500">
                   {cat.detail}
                 </p>
-              </motion.a>
+              </a>
             ))}
           </div>
         </div>
@@ -620,18 +569,12 @@ export default function Home({ onNavigate }) {
       {/* 6. VISUAL PORTFOLIO & FILTERABLE GALLERY */}
       <section className="border-b border-neutral-900/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-12 flex flex-col justify-between gap-8 border-b border-neutral-900/15 pb-8 lg:flex-row lg:items-end"
-          >
+          <div className="mb-12 flex flex-col justify-between gap-8 border-b border-neutral-900/15 pb-8 lg:flex-row lg:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Portfolio &amp; Productions
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
                 Recent Projects &amp; Installations
               </h2>
             </div>
@@ -653,8 +596,8 @@ export default function Home({ onNavigate }) {
                     aria-pressed={isSelected}
                     className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
                       isSelected
-                        ? 'border-neutral-900 font-medium text-neutral-900'
-                        : 'border-transparent text-neutral-400 hover:text-neutral-900'
+                        ? 'border-neutral-900 font-medium text-teal-900'
+                        : 'border-transparent text-neutral-400 hover:text-teal-900'
                     }`}
                   >
                     {tab.label}
@@ -662,19 +605,11 @@ export default function Home({ onNavigate }) {
                 );
               })}
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            layout
-            className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"
-          >
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {filteredGallery.map((item) => (
-              <motion.div
-                layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
+              <div
                 key={item.title}
                 className="group"
               >
@@ -686,27 +621,25 @@ export default function Home({ onNavigate }) {
                   />
                 </div>
                 <div className="flex items-baseline justify-between gap-4 border-t border-neutral-900/15 pt-3">
-                  <h3 className="text-base font-normal text-neutral-900">
+                  <h3 className="text-base font-normal text-teal-900">
                     {item.title}
                   </h3>
                   <span className="shrink-0 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
                     {item.tag}
                   </span>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
           <div className="mt-16 border-t border-neutral-900/15 pt-8 text-right">
-            <motion.a
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <a
               href="/gallery"
               onClick={(e) => handleLinkClick(e, '/gallery')}
-              className="inline-block border border-neutral-900 px-6 py-3 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-neutral-900 hover:text-[#f9f9f8]"
+              className="inline-block border border-neutral-900 px-6 py-3 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-neutral-900 hover:text-[#f9f9f8]"
             >
               Explore Full Gallery →
-            </motion.a>
+            </a>
           </div>
         </div>
       </section>
@@ -714,29 +647,17 @@ export default function Home({ onNavigate }) {
       {/* 7. CLIENT TESTIMONIALS */}
       <section className="border-b border-neutral-900/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-14"
-          >
+          <div className="mb-14">
             <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-300 uppercase">
               Client Feedback
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
+            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
               What corporate clients &amp; event planners say
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 gap-12 border-t border-neutral-900/15 pt-12 md:grid-cols-2">
-            <motion.blockquote
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col justify-between gap-8"
-            >
+            <blockquote className="flex flex-col justify-between gap-8">
               <p className="text-lg font-normal leading-relaxed text-neutral-800 md:text-xl">
                 “Staxx-HyperKids managed our corporate annual gala at Serena
                 Hotel. Their sound engineering, LED screens, and stage lighting
@@ -744,22 +665,16 @@ export default function Home({ onNavigate }) {
                 coordinated team eliminated all vendor stress.”
               </p>
               <footer className="text-xs tracking-[0.06em] text-neutral-500">
-                <strong className="block font-medium text-neutral-900 uppercase tracking-[0.12em]">
+                <strong className="block font-medium text-teal-900 uppercase tracking-[0.12em]">
                   Brenda Akinyi
                 </strong>
                 <span className="mt-1 block">
                   Corporate Events Manager &bull; Nairobi Business Awards
                 </span>
               </footer>
-            </motion.blockquote>
+            </blockquote>
 
-            <motion.blockquote
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-col justify-between gap-8 border-t border-neutral-900/15 pt-8 md:border-t-0 md:border-l md:pt-0 md:pl-12"
-            >
+            <blockquote className="flex flex-col justify-between gap-8 border-t border-neutral-900/15 pt-8 md:border-t-0 md:border-l md:pt-0 md:pl-12">
               <p className="text-lg font-normal leading-relaxed text-neutral-800 md:text-xl">
                 “We hired clear-span marquees, flooring, and audiovisual gear for
                 our institution&rsquo;s graduation ceremony. Their technical crew
@@ -767,14 +682,14 @@ export default function Home({ onNavigate }) {
                 immaculate professional standards throughout the day.”
               </p>
               <footer className="text-xs tracking-[0.06em] text-neutral-500">
-                <strong className="block font-medium text-neutral-900 uppercase tracking-[0.12em]">
+                <strong className="block font-medium text-teal-900 uppercase tracking-[0.12em]">
                   Dr. James Kiprop
                 </strong>
                 <span className="mt-1 block">
                   Institutional Registrar &bull; Nakuru County
                 </span>
               </footer>
-            </motion.blockquote>
+            </blockquote>
           </div>
         </div>
       </section>
@@ -796,24 +711,20 @@ export default function Home({ onNavigate }) {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <motion.a
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-amber-100 px-7 py-4 text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
             >
               Request an Event Quote
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            </a>
+            <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
               className="border border-[#f9f9f8]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:border-[#f9f9f8]"
             >
               Contact Our Team
-            </motion.a>
+            </a>
           </div>
         </div>
       </section>

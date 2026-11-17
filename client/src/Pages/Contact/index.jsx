@@ -62,9 +62,9 @@ export default function Contact({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-amber-100 pt-20 font-sans text-neutral-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Hyper Kids Events</span>
@@ -72,12 +72,12 @@ export default function Contact({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-neutral-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
               Get in Touch <br />
               <span className="text-neutral-500">With Staxx</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-600 md:text-lg lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
               Whether you&apos;re planning a birthday in Karen, renting
               equipment in Runda, or organizing a school fun day&mdash;our
               Nairobi event planners are ready to chat.
@@ -87,7 +87,7 @@ export default function Contact({ onNavigate }) {
       </section>
 
       {/* 2. CONTACT DETAILS BAR */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 md:px-10">
           <div className="grid grid-cols-1 divide-y divide-neutral-900/15 md:grid-cols-3 md:divide-x md:divide-y-0">
             <div className="py-10 md:pr-10">
@@ -96,7 +96,7 @@ export default function Contact({ onNavigate }) {
               </span>
               <a
                 href="mailto:info@staxx.events"
-                className="block text-xl font-normal tracking-[-0.015em] text-neutral-900 no-underline transition-opacity hover:opacity-65 md:text-2xl"
+                className="block text-xl font-normal tracking-[-0.015em] text-teal-900 no-underline transition-opacity hover:opacity-65 md:text-2xl"
               >
                 info@staxx.events
               </a>
@@ -111,7 +111,7 @@ export default function Contact({ onNavigate }) {
               </span>
               <a
                 href="tel:+254712345678"
-                className="block text-xl font-normal tracking-[-0.015em] text-neutral-900 no-underline transition-opacity hover:opacity-65 md:text-2xl"
+                className="block text-xl font-normal tracking-[-0.015em] text-teal-900 no-underline transition-opacity hover:opacity-65 md:text-2xl"
               >
                 +254 (0) 712 345 678
               </a>
@@ -124,7 +124,7 @@ export default function Contact({ onNavigate }) {
               <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                 [ Headquarters &amp; Warehouse ]
               </span>
-              <p className="text-xl font-normal tracking-[-0.015em] text-neutral-900 md:text-2xl">
+              <p className="text-xl font-normal tracking-[-0.015em] text-teal-900 md:text-2xl">
                 Karen &amp; Westlands, Nairobi
               </p>
               <span className="mt-2 block text-xs tracking-[0.06em] text-neutral-500">
@@ -136,18 +136,18 @@ export default function Contact({ onNavigate }) {
       </section>
 
       {/* 3. SOCIAL MEDIA CARDS GRID */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12">
             <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
               [ Social Channels ]
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-neutral-900 md:text-4xl">
+            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
               Connect With Us Online
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 bg-amber-100 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 bg-white sm:grid-cols-2 lg:grid-cols-4">
             {socialLinks.map((soc) => (
               <a
                 key={soc.platform}
@@ -164,7 +164,7 @@ export default function Contact({ onNavigate }) {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-normal tracking-[-0.01em] text-neutral-900 group-hover:text-[#f9f9f8]">
+                  <h3 className="text-xl font-normal tracking-[-0.01em] text-teal-900 group-hover:text-[#f9f9f8]">
                     {soc.platform}
                   </h3>
                   <p className="mt-1 text-xs font-medium tracking-[0.06em] text-neutral-500 group-hover:text-neutral-300">
@@ -172,7 +172,7 @@ export default function Contact({ onNavigate }) {
                   </p>
                 </div>
 
-                <p className="mt-8 text-sm leading-relaxed text-neutral-600 group-hover:text-neutral-300">
+                <p className="mt-8 text-sm leading-relaxed text-gray-900 group-hover:text-neutral-300">
                   {soc.desc}
                 </p>
               </a>
@@ -182,25 +182,25 @@ export default function Contact({ onNavigate }) {
       </section>
 
       {/* 4. CONTACT FORM & LOCATION INFO SECTION */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
             {/* Left Form Column */}
             <div className="lg:col-span-8">
               {sent ? (
-                <div className="space-y-8 border border-neutral-900 bg-amber-100 p-8 md:p-14">
-                  <div className="inline-flex items-center gap-2 border border-neutral-900/30 px-3.5 py-1 text-[11px] tracking-[0.14em] text-neutral-900 uppercase">
+                <div className="space-y-8 border border-neutral-900 bg-white p-8 md:p-14">
+                  <div className="inline-flex items-center gap-2 border border-neutral-900/30 px-3.5 py-1 text-[11px] tracking-[0.14em] text-teal-900 uppercase">
                     <span>✓ Message Sent Successfully</span>
                   </div>
 
-                  <h2 className="text-3xl font-normal tracking-[-0.02em] leading-tight text-neutral-900 md:text-4xl">
+                  <h2 className="text-3xl font-normal tracking-[-0.02em] leading-tight text-teal-900 md:text-4xl">
                     Thanks for Reaching Out,{' '}
                     <span className="text-neutral-500">{formData.name}</span>!
                   </h2>
 
-                  <p className="text-base leading-relaxed text-neutral-600">
+                  <p className="text-base leading-relaxed text-gray-900">
                     We have received your inquiry regarding{' '}
-                    <strong className="font-medium text-neutral-900">
+                    <strong className="font-medium text-teal-900">
                       {formData.subject}
                     </strong>{' '}
                     and will get back to you via email or WhatsApp within 2
@@ -211,7 +211,7 @@ export default function Contact({ onNavigate }) {
                     <button
                       type="button"
                       onClick={() => setSent(false)}
-                      className="cursor-pointer border border-neutral-900 bg-neutral-900 px-6 py-3.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors hover:bg-transparent hover:text-neutral-900"
+                      className="cursor-pointer border border-neutral-900 bg-neutral-900 px-6 py-3.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors hover:bg-transparent hover:text-teal-900"
                     >
                       Send Another Message
                     </button>
@@ -220,10 +220,10 @@ export default function Contact({ onNavigate }) {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-8 border border-neutral-900/15 bg-amber-100 p-8 md:p-12"
+                  className="space-y-8 border border-neutral-900/15 bg-white p-8 md:p-12"
                 >
                   <div className="flex items-center justify-between border-b border-neutral-900/15 pb-4">
-                    <h2 className="text-2xl font-normal tracking-[-0.015em] text-neutral-900 md:text-3xl">
+                    <h2 className="text-2xl font-normal tracking-[-0.015em] text-teal-900 md:text-3xl">
                       Drop Us a Note
                     </h2>
                     <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -233,7 +233,7 @@ export default function Contact({ onNavigate }) {
 
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <div className="space-y-2">
-                      <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                      <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                         Your Name *
                       </label>
                       <input
@@ -243,12 +243,12 @@ export default function Contact({ onNavigate }) {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="e.g. Brenda Akinyi"
-                        className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                      <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                         Phone / WhatsApp *
                       </label>
                       <input
@@ -258,12 +258,12 @@ export default function Contact({ onNavigate }) {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="e.g. +254 712 345 678"
-                        className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                      <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                         Email Address *
                       </label>
                       <input
@@ -273,19 +273,19 @@ export default function Contact({ onNavigate }) {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="e.g. brenda@example.com"
-                        className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                      <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                         Subject
                       </label>
                       <select
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 focus:border-neutral-900 focus:outline-none"
+                        className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 focus:border-neutral-900 focus:outline-none"
                       >
                         <option>General Party Enquiry</option>
                         <option>Bouncy Castle &amp; Equipment Rental</option>
@@ -297,7 +297,7 @@ export default function Contact({ onNavigate }) {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="block text-[11px] font-medium tracking-[0.14em] text-neutral-600 uppercase">
+                    <label className="block text-[11px] font-medium tracking-[0.14em] text-gray-900 uppercase">
                       Your Message *
                     </label>
                     <textarea
@@ -307,13 +307,13 @@ export default function Contact({ onNavigate }) {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell us about your event date, location in Nairobi, guest count, or equipment needs..."
-                      className="w-full border border-neutral-900/20 bg-amber-100 px-4 py-3.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
+                      className="w-full border border-neutral-900/20 bg-white px-4 py-3.5 text-sm text-teal-900 placeholder-neutral-400 focus:border-neutral-900 focus:outline-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full cursor-pointer border border-neutral-900 bg-neutral-900 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors duration-200 hover:bg-transparent hover:text-neutral-900"
+                    className="w-full cursor-pointer border border-neutral-900 bg-neutral-900 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
                   >
                     Send Message &rarr;
                   </button>
@@ -324,18 +324,18 @@ export default function Contact({ onNavigate }) {
             {/* Right Info & Quick Links Column */}
             <div className="space-y-8 lg:sticky lg:top-28 lg:col-span-4">
               {/* Service Zones Card */}
-              <div className="space-y-5 border border-neutral-900/15 bg-amber-100 p-8">
+              <div className="space-y-5 border border-neutral-900/15 bg-white p-8">
                 <div className="border-b border-neutral-900/15 pb-4">
                   <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                     [ Service Zones ]
                   </span>
                 </div>
 
-                <h3 className="text-xl font-normal tracking-[-0.01em] text-neutral-900">
+                <h3 className="text-xl font-normal tracking-[-0.01em] text-teal-900">
                   Where We Operate
                 </h3>
 
-                <p className="text-sm leading-relaxed text-neutral-600">
+                <p className="text-sm leading-relaxed text-gray-900">
                   We provide full-service delivery, professional setup, and
                   post-party pack-down across Nairobi and neighboring counties.
                 </p>
@@ -368,7 +368,7 @@ export default function Contact({ onNavigate }) {
                     href="https://wa.me/254712345678"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full border border-[#f9f9f8] bg-amber-100 py-3.5 text-center text-xs font-medium tracking-[0.14em] text-neutral-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
+                    className="block w-full border border-[#f9f9f8] bg-white py-3.5 text-center text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Open WhatsApp Chat
                   </a>
