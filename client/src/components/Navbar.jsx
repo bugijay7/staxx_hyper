@@ -86,7 +86,7 @@ export default function Navbar({ currentPage, onNavigate }) {
           <img
             src={logo}
             alt="Staxx Hyper Events"
-            className="h-20 w-auto object-contain md:h-9"
+            className="h-10 w-auto object-contain md:h-9"
           />
           <div className="flex flex-col">
             
