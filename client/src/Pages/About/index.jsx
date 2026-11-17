@@ -103,7 +103,7 @@ export default function About({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
+    <div className="bg-white pt-10 font-sans text-teal-900 antialiased md:pt-18">
       {/* 1. EDITORIAL HERO SECTION */}
       <section className="border-b border-neutral-900/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-4 pb-16 md:px-10 md:pt-4 md:pb-24">
@@ -154,16 +154,16 @@ export default function About({ onNavigate }) {
                 </p>
               </div>
 
-              <div className="mt-10 space-y-3 bg-teal-900 border-t border-neutral-900/15 p-6 text-xs tracking-[0.06em] text-gray-900">
+              <div className="mt-5 md:mt-10space-y-3 bg-amber-600 border-t border-neutral-900/15 p-6 text-xs tracking-[0.06em] text-gray-900 font-bold">
                 <p className="mb-1 text-[8px]">
                   <strong className="font-medium tracking-[0.12em] text-white uppercase">
-                    Office Location:
+                    Office Location: <br/>
                   </strong>{' '}
                   Commerce House, Nairobi, Kenya
                 </p>
                 <p className="text-[8px]">
                   <strong className="font-medium tracking-[0.12em] text-white uppercase">
-                    Counties Served:
+                    Counties Served: <br/>
                   </strong>{' '}
                   Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
                 </p>
@@ -174,7 +174,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 2. HISTORY & HOW IT STARTED */}
-<section className="border-b border-neutral-900/15 bg-white">
+<section className="border-b border-neutral-900/15 bg-amber-100">
   <div className="mx-auto max-w-[1440px] px-4 py-12 md:px-10 md:py-24">
     <div
       className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.45fr] lg:gap-20"
@@ -189,7 +189,7 @@ export default function About({ onNavigate }) {
           </span>
         </div>
 
-        <h2 className="text-3xl font-light tracking-[-0.025em] leading-[1.12] text-neutral-900 md:text-5xl">
+        <h2 className="text-3xl font-light tracking-[-0.025em] leading-[1.12] text-black md:text-5xl">
           Technical production and{' '}
           <span className="font-normal italic text-teal-900">
             event styling
@@ -205,17 +205,17 @@ export default function About({ onNavigate }) {
               className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
-          <figcaption className="mt-3 flex items-center justify-between border-b border-neutral-900/10 pb-2 text-xs text-neutral-500">
+          <figcaption className="mt-3 flex items-center justify-between border-b border-neutral-900/10 pb-2 text-xs text-neutral-900">
             <span>On-site production &amp; spatial setup</span>
-            <span className="font-medium text-teal-900">Nairobi, KE</span>
+            <span className="font-medium text-teal-950">Nairobi, KE</span>
           </figcaption>
         </figure>
       </div>
 
       {/* Right Column: Article Body */}
-      <article className="space-y-7 p-4 text-xs md:text-sm leading-[1.8] text-neutral-700 lg:border-l lg:border-neutral-900/15 lg:pl-14">
+      <article className="space-y-7 p-4 text-xs md:text-sm leading-[1.8] text-black lg:border-l lg:border-neutral-900/15 lg:pl-14">
         {/* Lead Paragraph with Drop Cap */}
-        <p className="first-letter:float-left first-letter:mr-3.5 first-letter:mt-1  first-letter:text-6xl first-leter:italic first-letter:font-semibold first-letter:leading-none first-letter:text-teal-900">
+        <p className="first-letter:float-left first-letter:mr-3.5 first-letter:mt-1  first-letter:text-6xl first-letter:italic first-letter:font-semibold first-letter:leading-none first-letter:text-teal-900">
           Founded in 2026 by{' '}
           <strong className="font-semibold text-teal-900">
             Bryan Karanja
@@ -247,7 +247,7 @@ export default function About({ onNavigate }) {
         </p>
 
         {/* Editorial Pull-Quote */}
-        <blockquote className="my-8 border-l-2 border-teal-900 bg-teal-950/[0.03] py-2 pl-6 pr-4">
+        <blockquote className="my-8 border-l-2 border-teal-900 bg-white py-2 pl-6 pr-4 z-99 relative">
           <p className="text-base font-medium italic leading-relaxed text-teal-900 md:text-lg">
             &ldquo;One coordinated provider delivering seamless setup,
             consistent quality control, and practical on-site execution.&rdquo;
@@ -266,13 +266,13 @@ export default function About({ onNavigate }) {
         {/* Quick Editorial Footnote / Coverage Strip */}
         <div className="grid grid-cols-3 gap-4 border-t border-neutral-900/15 pt-6 text-sm">
           <div>
-            <span className="block text-xs uppercase tracking-wider text-neutral-400">
+            <span className="block text-xs uppercase tracking-wider text-black">
               Established
             </span>
             <span className="mt-1 block font-semibold text-teal-900">2024</span>
           </div>
           <div>
-            <span className="block text-xs uppercase tracking-wider text-neutral-400">
+            <span className="block text-xs uppercase tracking-wider text-black">
               Coverage
             </span>
             <span className="mt-1 block font-semibold text-teal-900">
@@ -280,7 +280,7 @@ export default function About({ onNavigate }) {
             </span>
           </div>
           <div>
-            <span className="block text-xs uppercase tracking-wider text-neutral-400">
+            <span className="block text-xs uppercase tracking-wider text-black">
               Focus
             </span>
             <span className="mt-1 block font-semibold text-teal-900">
@@ -305,7 +305,7 @@ export default function About({ onNavigate }) {
                 <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                   Our Mission
                 </span>
-                <h3 className="text-2xl font-normal tracking-[-0.015em] leading-[1.28] text-teal-900 md:text-3xl">
+                <h3 className="text-sm md:text-xl font-normal tracking-[-0.015em] leading-[1.28] text-teal-900 md:text-3xl">
                   To create memorable, well-executed events by combining
                   creative design, dependable technology, and attentive service.
                 </h3>
@@ -315,7 +315,7 @@ export default function About({ onNavigate }) {
                 <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                   Our Vision
                 </span>
-                <h3 className="text-2xl font-normal tracking-[-0.015em] leading-[1.28] text-teal-900 md:text-3xl">
+                <h3 className="text-sm md:text-xl font-normal tracking-[-0.015em] leading-[1.28] text-teal-900 md:text-3xl">
                   To become a trusted, multi-disciplinary events and
                   experiential solutions brand in Kenya, known for creativity,
                   technical reliability, and seamless delivery.
@@ -327,7 +327,7 @@ export default function About({ onNavigate }) {
               <img
                 src={Lighting}
                 alt="Bespoke event styling, lighting and celebration setup"
-                className="h-[320px] md:h-[550px] w-full object-cover"
+                className="h-[320px] md:h-[390px] w-full object-cover"
               />
             </div>
           </div>
@@ -335,13 +335,13 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 4. CORE PRINCIPLES */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-neutral-900/15 bg-teal-900">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12" data-aos="fade-up">
-            <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
+            <span className="mb-3 block text-[11px] font-bold tracking-[0.14em] text-amber-500 uppercase">
               Operational Standards
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-100 md:text-4xl">
               How We Work
             </h2>
           </div>
@@ -379,7 +379,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 5. WHAT SETS US APART & WHO WE SERVE */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
@@ -451,7 +451,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 6. CO-FOUNDERS */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-neutral-900/15 bg-amber-100">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
@@ -509,19 +509,19 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 7. BOTTOM CTA */}
-      <section className="bg-neutral-900 text-[#f9f9f8]">
+      <section className="bg-amber-600 text-[#f9f9f8]">
         <div
           className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
+            <span className="mb-4 block text-[11px] tracking-[0.14em] text-teal-900 uppercase font-bold">
               Start Planning
             </span>
             <h3 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
               Ready to plan your next event?
             </h3>
-            <p className="text-base leading-relaxed text-neutral-300">
+            <p className="text-base leading-relaxed text-teal-900">
               Reach out to our team at Commerce House, Nairobi to check date
               availability and request an itemized quote for AV, d&eacute;cor,
               kiddie parties, or equipment hire across Kenya.
