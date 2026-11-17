@@ -178,11 +178,11 @@ export default function Home({ onNavigate }) {
             <div>
               <h1 className="pt-8 md:pt-1  text-2xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
                 Event production <br />
-                <span className="text-neutral-500">&amp; equipment hire in Nairobi.</span>
+                <span className="text-neutral-500">&amp; equipment hire in<br/> Nairobi.</span>
               </h1>
             </div>
 
-            <div className="flex flex-col justify-between gap-8 lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <div className="flex flex-col justify-between gap-4 lg:border-l lg:border-neutral-900/15 lg:pl-10">
               <p className="text-xs md:text-sm leading-relaxed text-gray-900 md:text-sm">
                 Staxx-HyperKids provides audiovisual production, event d&eacute;cor,
                 children&rsquo;s parties, and equipment hire in Nairobi and across
@@ -193,16 +193,16 @@ export default function Home({ onNavigate }) {
                 <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
-                  className="border border-neutral-900 bg-neutral-900 px-2 md:px-3 py-0.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
+                  className="border border-amber-900 bg-amber-600 px-3 md:px-3 py-1.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
                 >
                   Request a Quote
                 </a>
                 <a
-                  href="/event-equipment-supplies"
-                  onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                  className="border border-neutral-900/25 bg-transparent px-2 md:px-3 py-0.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:border-neutral-900"
+                  href="/events"
+                  onClick={(e) => handleLinkClick(e, '/events')}
+                  className="border border-teal-900 bg-teal-600 px-3 md:px-3 py-1.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
                 >
-                  Equipments &amp; Supplies Catalog
+                  Supplies Catalog
                 </a>
               </div>
             </div>
