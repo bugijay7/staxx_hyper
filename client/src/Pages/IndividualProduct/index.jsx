@@ -93,11 +93,11 @@ export default function IndividualProduct({ onNavigate, productData }) {
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.4fr_1fr]">
             {/* Left: Image Gallery */}
             <div className="space-y-4" data-aos="fade-up">
-              <div className="aspect-[16/10] w-full overflow-hidden border border-neutral-900/15 bg-neutral-100">
+              <div className="aspect-[16/11] w-full overflow-hidden border border-neutral-900/15 bg-neutral-200">
                 <img
                   src={images[activeImage]}
                   alt={product.title}
-                  className="h-full w-full object-cover transition-all duration-500"
+                  className="h-full w-full object-cover grayscale transition-all duration-500"
                 />
               </div>
 
@@ -108,7 +108,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                     key={idx}
                     type="button"
                     onClick={() => setActiveImage(idx)}
-                    className={`aspect-[16/10] cursor-pointer overflow-hidden border transition-all ${
+                    className={`aspect-[16/11] cursor-pointer overflow-hidden border transition-all ${
                       activeImage === idx
                         ? 'border-neutral-900 opacity-100'
                         : 'border-neutral-900/25 opacity-60 hover:opacity-100'
@@ -219,7 +219,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full border border-neutral-900 bg-neutral-900 py-4 text-center text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
+                  className="block w-full border border-[#f9f9f8] bg-white py-4 text-center text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                 >
                   Book This Equipment on WhatsApp &rarr;
                 </a>
@@ -272,11 +272,11 @@ export default function IndividualProduct({ onNavigate, productData }) {
                 key={idx}
                 className="group border border-neutral-900/15 bg-white p-6 transition-colors duration-200 hover:border-neutral-900"
               >
-                <div className="mb-4 aspect-[16/10] w-full overflow-hidden bg-neutral-200">
+                <div className="mb-4 aspect-[16/11] w-full overflow-hidden bg-neutral-200">
                   <img
                     src={rel.img}
                     alt={rel.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
                   />
                 </div>
                 <h3 className="mb-2 text-lg font-normal text-teal-900">
@@ -301,7 +301,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
       </section>
 
       {/* 3. BOTTOM CTA */}
-      <section className="bg-neutral-900 text-[#f9f9f8]">
+      <section className="bg-teal-900 text-[#f9f9f8]">
         <div
           className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
           data-aos="fade-up"

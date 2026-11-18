@@ -211,7 +211,7 @@ export default function EventInspo({ onNavigate }) {
                       <a
                         href="/booking"
                         onClick={(e) => handleLinkClick(e, '/booking')}
-                        className="border border-neutral-900 bg-neutral-900 px-5 py-2.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
+                        className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
                       >
                         Book This Theme &rarr;
                       </a>
@@ -234,11 +234,11 @@ export default function EventInspo({ onNavigate }) {
 
                 {/* Right Column: Theme Plate */}
                 <div className="lg:border-l lg:border-neutral-900/15 lg:pl-14">
-                  <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-100">
+                  <div className="aspect-[16/11] w-full overflow-hidden bg-neutral-200">
                     <img
                       src={inspo.img}
                       alt={inspo.title}
-                      className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
                     />
                   </div>
                   <div className="mt-3 flex items-center justify-between border-t border-neutral-900/15 pt-2.5 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -255,7 +255,7 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CUSTOM THEME CTA */}
-      <section className="bg-neutral-900 text-[#f9f9f8]">
+      <section className="bg-teal-900 text-[#f9f9f8]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">

@@ -215,11 +215,11 @@ export default function ChildrensPartyServices({ onNavigate }) {
                       : 'lg:order-1 lg:pr-8'
                   }`}
                 >
-                  <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-100">
+                  <div className="aspect-[16/11] w-full overflow-hidden bg-neutral-200">
                     <img
                       src={service.img}
                       alt={service.title}
-                      className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
                     />
                   </div>
                   <div className="mt-3 flex items-center justify-between border-t border-neutral-900/15 pt-2.5 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -234,7 +234,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-neutral-900 text-[#f9f9f8]">
+      <section className="bg-teal-900 text-[#f9f9f8]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">

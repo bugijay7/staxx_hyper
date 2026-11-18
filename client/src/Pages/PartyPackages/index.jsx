@@ -267,7 +267,7 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 5. BOTTOM CTA */}
-      <section className="bg-neutral-900 text-[#f9f9f8]">
+      <section className="bg-teal-900 text-[#f9f9f8]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
 
           <div className="max-w-2xl">

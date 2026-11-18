@@ -349,7 +349,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
               <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-neutral-900/15 pt-8">
                 <button
                   type="submit"
-                  className="cursor-pointer border border-neutral-900 bg-neutral-900 px-8 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
+                  className="cursor-pointer border border-[#f9f9f8] bg-white px-8 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                 >
                   Send Enquiry via WhatsApp &rarr;
                 </button>
@@ -385,11 +385,11 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
             <aside className="space-y-8" data-aos="fade-up" data-aos-delay="150">
               {/* Visual Card */}
               <div className="border border-neutral-900/15 bg-white">
-                <div className="aspect-[16/10] w-full overflow-hidden border-b border-neutral-900/15 bg-neutral-200">
+                <div className="aspect-[16/11] w-full overflow-hidden border-b border-neutral-900/15 bg-neutral-200">
                   <img
                     src={Equipmentsetup}
                     alt="Staxx-HyperKids AV production and stage setup"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover grayscale transition-all duration-500"
                   />
                 </div>
                 <div className="p-8">

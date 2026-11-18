@@ -214,7 +214,7 @@ export default function Booking({ onNavigate }) {
                     <a
                       href="/"
                       onClick={(e) => handleLinkClick(e, '/')}
-                      className="border border-neutral-900 bg-neutral-900 px-6 py-3.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors hover:bg-transparent hover:text-teal-900"
+                      className="border border-[#f9f9f8] bg-white px-6 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                     >
                       Return Home &rarr;
                     </a>
@@ -493,7 +493,7 @@ export default function Booking({ onNavigate }) {
 
                   <button
                     type="submit"
-                    className="w-full cursor-pointer border border-neutral-900 bg-neutral-900 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
+                    className="w-full cursor-pointer border border-[#f9f9f8] bg-white py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Submit Event Booking Enquiry &rarr;
                   </button>
@@ -596,14 +596,14 @@ export default function Booking({ onNavigate }) {
                     href="https://wa.me/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full border border-[#f9f9f8] bg-white py-3.5 text-center text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
+                    className="block w-full border border-[#f9f9f8] bg-white py-4 text-center text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Chat on WhatsApp
                   </a>
                   <a
                     href="/party-packages"
                     onClick={(e) => handleLinkClick(e, '/party-packages')}
-                    className="block w-full border border-[#f9f9f8]/30 bg-transparent py-3 text-center text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors hover:border-[#f9f9f8]"
+                    className="block w-full border border-[#f9f9f8]/30 bg-transparent py-4 text-center text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors hover:border-[#f9f9f8]"
                   >
                     Compare All KES Packages
                   </a>

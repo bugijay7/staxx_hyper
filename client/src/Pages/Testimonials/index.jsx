@@ -229,11 +229,11 @@ export default function Testimonials({ onNavigate }) {
                   </div>
 
                   {/* Project Image Thumbnail */}
-                  <div className="mb-6 aspect-[16/10] w-full overflow-hidden bg-neutral-200">
+                  <div className="mb-6 aspect-[16/11] w-full overflow-hidden bg-neutral-200">
                     <img
                       src={item.img}
                       alt={item.project}
-                      className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
                     />
                   </div>
 
@@ -265,7 +265,7 @@ export default function Testimonials({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-neutral-900 text-[#f9f9f8]">
+      <section className="bg-teal-900 text-[#f9f9f8]">
         <div
           className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
           data-aos="fade-up"

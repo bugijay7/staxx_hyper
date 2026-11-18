@@ -248,7 +248,7 @@ export default function ProductCategories({ onNavigate }) {
                         selectedCategory: cat.name,
                       })
                     }
-                    className="border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
+                    className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Browse {cat.name} &rarr;
                   </a>
@@ -268,7 +268,7 @@ export default function ProductCategories({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-neutral-900 text-[#f9f9f8]">
+      <section className="bg-teal-900 text-[#f9f9f8]">
         <div
           className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
           data-aos="fade-up"

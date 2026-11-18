@@ -211,7 +211,7 @@ export default function Contact({ onNavigate }) {
                     <button
                       type="button"
                       onClick={() => setSent(false)}
-                      className="cursor-pointer border border-neutral-900 bg-neutral-900 px-6 py-3.5 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors hover:bg-transparent hover:text-teal-900"
+                      className="cursor-pointer border border-[#f9f9f8] bg-white px-6 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                     >
                       Send Another Message
                     </button>
@@ -313,7 +313,7 @@ export default function Contact({ onNavigate }) {
 
                   <button
                     type="submit"
-                    className="w-full cursor-pointer border border-neutral-900 bg-neutral-900 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
+                    className="w-full cursor-pointer border border-[#f9f9f8] bg-white py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Send Message &rarr;
                   </button>
@@ -368,14 +368,14 @@ export default function Contact({ onNavigate }) {
                     href="https://wa.me/254712345678"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full border border-[#f9f9f8] bg-white py-3.5 text-center text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
+                    className="block w-full border border-[#f9f9f8] bg-white py-4 text-center text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
                   >
                     Open WhatsApp Chat
                   </a>
                   <a
                     href="/booking"
                     onClick={(e) => handleLinkClick(e, '/booking')}
-                    className="block w-full border border-[#f9f9f8]/30 bg-transparent py-3 text-center text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors hover:border-[#f9f9f8]"
+                    className="block w-full border border-[#f9f9f8]/30 bg-transparent py-4 text-center text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors hover:border-[#f9f9f8]"
                   >
                     Submit Full Booking Enquiry &rarr;
                   </a>

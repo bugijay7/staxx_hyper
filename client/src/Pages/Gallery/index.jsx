@@ -245,11 +245,11 @@ export default function Gallery({ onNavigate }) {
                 </div>
 
                 {/* Image Plate */}
-                <div className="relative mb-4 aspect-[4/3] w-full overflow-hidden bg-neutral-100">
+                <div className="relative mb-4 aspect-[16/11] w-full overflow-hidden bg-neutral-200">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                    className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
                   />
                 </div>
 
@@ -329,7 +329,7 @@ export default function Gallery({ onNavigate }) {
               <a
                 href="/booking"
                 onClick={(e) => handleLinkClick(e, '/booking')}
-                className="self-start border border-neutral-900 bg-neutral-900 px-5 py-3 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900 sm:self-auto"
+                className="self-start border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8] sm:self-auto"
               >
                 Book Similar Setup &rarr;
               </a>
@@ -339,7 +339,7 @@ export default function Gallery({ onNavigate }) {
       )}
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-neutral-900 text-[#f9f9f8]">
+      <section className="bg-teal-900 text-[#f9f9f8]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
