@@ -93,13 +93,13 @@ export default function Footer({ onNavigate }) {
                     className="h-50 w-auto object-contain"
                   />
                 </a>
-                <p className="max-w-sm text-sm leading-relaxed text-neutral-300">
+                <p className="max-w-sm text-sm leading-relaxed text-white">
                   Full-service birthday production, custom 3D backdrops,
                   sanitized commercial inflatables, and kids&apos; entertainment
                   delivered on schedule.
                 </p>
               </div>
-client/pages/home/index.js
+
               
             </div>
 
