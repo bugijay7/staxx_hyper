@@ -63,9 +63,9 @@ export default function Footer({ onNavigate }) {
   ];
 
   return (
-    <footer className="border-t border-neutral-900/15 bg-teal-900 font-sans text-white antialiased">
+    <footer className="border-t border-[#16232A]/15 bg-[#075056] font-sans text-white antialiased">
       {/* 1. TOP ARCHITECTURAL DISPATCH BAR */}
-      <div className="border-b border-neutral-900/15">
+      <div className="border-b border-[#16232A]/15">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 md:flex-row md:items-center md:px-10 md:py-16">
           <div className="max-w-xl">
             
@@ -76,9 +76,9 @@ export default function Footer({ onNavigate }) {
       </div>
 
       {/* 2. MAIN NAVIGATION & HEADQUARTERS GRID */}
-      <div className="border-b border-neutral-900/15 bg-teal-900 text-white">
+      <div className="border-b border-[#16232A]/15 bg-[#075056] text-white">
         <div className="mx-auto max-w-[1440px] px-6 md:px-10">
-          <div className="grid grid-cols-1 divide-y divide-neutral-900/15 md:grid-cols-2 lg:grid-cols-12 lg:divide-x lg:divide-y-0">
+          <div className="grid grid-cols-1 divide-y divide-[#16232A]/15 md:grid-cols-2 lg:grid-cols-12 lg:divide-x lg:divide-y-0">
             {/* Brand & HQ Column */}
             <div className="flex flex-col justify-between py-2 lg:col-span-4 lg:py-16 lg:pr-12">
               <div className="space-y-1">
@@ -104,13 +104,13 @@ export default function Footer({ onNavigate }) {
             </div>
 
             {/* 3 Link Columns */}
-            <div className="grid grid-cols-1 divide-y divide-neutral-900/15 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:col-span-8">
+            <div className="grid grid-cols-1 divide-y divide-[#16232A]/15 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:col-span-8">
               {navColumns.map((col) => (
                 <div
                   key={col.heading}
                   className="py-12 sm:px-8 lg:py-16 lg:px-10"
                 >
-                  <span className="mb-6 block border-b border-neutral-900/15 pb-3 text-[11px] font-medium tracking-[0.14em] text-white uppercase">
+                  <span className="mb-6 block border-b border-[#16232A]/15 pb-3 text-[11px] font-medium tracking-[0.14em] text-white uppercase">
                     [ {col.heading} ]
                   </span>
 
@@ -122,7 +122,7 @@ export default function Footer({ onNavigate }) {
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-sm text-white no-underline transition-colors duration-200 hover:text-teal-900"
+                            className="inline-flex items-center gap-1.5 text-sm text-white no-underline transition-colors duration-200 hover:text-[#16232A]"
                           >
                             <span>{link.label}</span>
                             <span className="text-xs text-neutral-400">↗</span>
@@ -131,7 +131,7 @@ export default function Footer({ onNavigate }) {
                           <a
                             href={link.path}
                             onClick={(e) => handleLinkClick(e, link.path)}
-                            className="text-sm text-white no-underline transition-colors duration-200 hover:text-teal-900"
+                            className="text-sm text-white no-underline transition-colors duration-200 hover:text-[#16232A]"
                           >
                             {link.label}
                           </a>
@@ -147,7 +147,7 @@ export default function Footer({ onNavigate }) {
       </div>
 
       {/* 3. BOTTOM ARCHITECTURAL COLOPHON & BACK-TO-TOP */}
-      <div className="bg-[#f9f9f8]">
+      <div className="bg-[#E4EEF0]">
         <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-4 px-6 py-6 text-[11px] tracking-[0.14em] text-neutral-500 uppercase sm:flex-row sm:items-center md:px-10">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <span>&copy; 2026 Staxx Hyper Kids Events</span>
@@ -160,7 +160,7 @@ export default function Footer({ onNavigate }) {
           <button
             type="button"
             onClick={scrollToTop}
-            className="cursor-pointer border border-neutral-900/20 bg-white px-4 py-2 text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase transition-colors duration-200 hover:border-neutral-900 hover:bg-neutral-900 hover:text-[#f9f9f8]"
+            className="cursor-pointer border border-[#16232A]/20 bg-white px-4 py-2 text-[11px] font-medium tracking-[0.14em] text-[#16232A] uppercase transition-colors duration-200 hover:border-[#16232A] hover:bg-[#075056] hover:text-[#E4EEF0]"
           >
             Back to Top &uarr;
           </button>

@@ -177,14 +177,14 @@ export default function Contact({ onNavigate }) {
   ];
 
   return (
-    <div className="min-h-screen bg-teal-900 pt-24 font-sans text-[#f4f4f2] antialiased selection:bg-white selection:text-[#141414] md:pt-32">
+    <div className="min-h-screen bg-[#075056] pt-24 font-sans text-[#E4EEF0] antialiased selection:bg-white selection:text-[#16232A] md:pt-32">
       <div className="mx-auto max-w-[1360px] px-6 md:px-14">
         {/* 1. OVERSIZED EDITORIAL HERO HEADING */}
         <header className="mb-16 md:mb-24">
           <h1 className="text-[14vw] font-bold tracking-[-0.045em] leading-[0.92] text-white sm:text-7xl md:text-[7.5rem] lg:text-[9.5rem]">
             Contact us
           </h1>
-          <p className="mt-8 max-w-xl font-mono text-xs leading-relaxed text-teal-100 md:text-[13px]">
+          <p className="mt-8 max-w-xl font-mono text-xs leading-relaxed text-[#E4EEF0] md:text-[13px]">
             A unified events, audiovisual production,
             <br />
             décor and party-supplies brand.
@@ -203,7 +203,7 @@ export default function Contact({ onNavigate }) {
               >
                 staxxhyperkids@gmail.com
               </a>
-              <p className="text-[11px] text-teal-200/75">
+              <p className="text-[11px] text-[#E4EEF0]/75">
                 Replies within 2 hours
               </p>
             </div>
@@ -222,7 +222,7 @@ export default function Contact({ onNavigate }) {
               >
                 +254 (0) 722 580 012
               </a>
-              <p className="text-[11px] text-teal-200/75">
+              <p className="text-[11px] text-[#E4EEF0]/75">
                 Mon &ndash; Sun: 8:00 AM &ndash; 8:00 PM EAT
               </p>
             </div>
@@ -234,17 +234,17 @@ export default function Contact({ onNavigate }) {
                 <br />
                 Westlands, Nairobi
               </p>
-              <p className="text-[11px] text-teal-200/75">
+              <p className="text-[11px] text-[#E4EEF0]/75">
                 Equipment Showroom by Appointment
               </p>
             </div>
 
             {/* Instant Chat & Full Booking Links */}
             <div className="space-y-4 border-t border-white/15 pt-8">
-              <p className="text-[11px] font-semibold tracking-[0.08em] text-amber-400 uppercase">
+              <p className="text-[11px] font-semibold tracking-[0.08em] text-[#FF5B04] uppercase">
                 Prefer Instant Chat?
               </p>
-              <p className="max-w-xs text-[11px] leading-relaxed text-teal-100/90">
+              <p className="max-w-xs text-[11px] leading-relaxed text-[#E4EEF0]/90">
                 Skip the email forms and talk immediately with our Nairobi
                 dispatch team for same-day equipment check or weekend bookings.
               </p>
@@ -253,7 +253,7 @@ export default function Contact({ onNavigate }) {
                   href="https://wa.me/254722580012"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-white px-5 py-2.5 font-mono text-[11px] font-semibold tracking-[0.12em] text-[#141414] uppercase no-underline transition-opacity hover:opacity-85"
+                  className="inline-block bg-white px-5 py-2.5 font-mono text-[11px] font-semibold tracking-[0.12em] text-[#16232A] uppercase no-underline transition-opacity hover:opacity-85"
                 >
                   Open WhatsApp Chat
                 </a>
@@ -272,16 +272,16 @@ export default function Contact({ onNavigate }) {
           <div className="lg:col-span-7">
             {status === 'sent' ? (
               <div className="space-y-8 border-t border-white/20 pt-8">
-                <span className="inline-block font-mono text-xs tracking-[0.1em] text-amber-400 uppercase">
+                <span className="inline-block font-mono text-xs tracking-[0.1em] text-[#FF5B04] uppercase">
                   ✓ Message Sent Successfully
                 </span>
 
                 <h2 className="text-3xl font-bold tracking-[-0.03em] text-white md:text-4xl">
                   Thanks for reaching out,{' '}
-                  <span className="text-teal-200">{formData.name}</span>.
+                  <span className="text-[#E4EEF0]">{formData.name}</span>.
                 </h2>
 
-                <p className="font-mono text-xs leading-relaxed text-teal-100 md:text-sm">
+                <p className="font-mono text-xs leading-relaxed text-[#E4EEF0] md:text-sm">
                   We have received your note regarding{' '}
                   <strong className="font-semibold text-white">
                     {formData.subject}
@@ -297,7 +297,7 @@ export default function Contact({ onNavigate }) {
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="cursor-pointer bg-white px-7 py-3 font-mono text-[11px] font-semibold tracking-[0.14em] text-[#141414] uppercase transition-opacity hover:opacity-85"
+                    className="cursor-pointer bg-white px-7 py-3 font-mono text-[11px] font-semibold tracking-[0.14em] text-[#16232A] uppercase transition-opacity hover:opacity-85"
                   >
                     Send Another Message
                   </button>
@@ -309,7 +309,7 @@ export default function Contact({ onNavigate }) {
                   <h2 className="text-lg font-medium tracking-[-0.01em] text-white">
                     Drop Us a Note
                   </h2>
-                  <span className="font-mono text-[11px] text-teal-200/75">
+                  <span className="font-mono text-[11px] text-[#E4EEF0]/75">
                     Send a Direct Message
                   </span>
                 </div>
@@ -321,7 +321,7 @@ export default function Contact({ onNavigate }) {
                       htmlFor="contact-name"
                       className="mb-2 block font-mono text-xs text-white"
                     >
-                      Name <span className="text-amber-400">(required)</span>
+                      Name <span className="text-[#FF5B04]">(required)</span>
                     </label>
                     <input
                       id="contact-name"
@@ -351,7 +351,7 @@ export default function Contact({ onNavigate }) {
                       htmlFor="contact-email"
                       className="mb-2 block font-mono text-xs text-white"
                     >
-                      Email <span className="text-amber-400">(required)</span>
+                      Email <span className="text-[#FF5B04]">(required)</span>
                     </label>
                     <input
                       id="contact-email"
@@ -390,35 +390,35 @@ export default function Contact({ onNavigate }) {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full cursor-pointer border-b border-white/30 bg-teal-900 py-2.5 font-mono text-xs text-white transition-colors focus:border-white focus:outline-none"
+                    className="w-full cursor-pointer border-b border-white/30 bg-[#075056] py-2.5 font-mono text-xs text-white transition-colors focus:border-white focus:outline-none"
                   >
                     <option
                       value="General Party Enquiry"
-                      className="bg-teal-900 text-white"
+                      className="bg-[#075056] text-white"
                     >
                       General Party Enquiry
                     </option>
                     <option
                       value="Bouncy Castle & Equipment Rental"
-                      className="bg-teal-900 text-white"
+                      className="bg-[#075056] text-white"
                     >
                       Bouncy Castle &amp; Equipment Rental
                     </option>
                     <option
                       value="School & Estate Fun Day"
-                      className="bg-teal-900 text-white"
+                      className="bg-[#075056] text-white"
                     >
                       School &amp; Estate Fun Day
                     </option>
                     <option
                       value="Custom Theme Design"
-                      className="bg-teal-900 text-white"
+                      className="bg-[#075056] text-white"
                     >
                       Custom Theme Design
                     </option>
                     <option
                       value="Vendor & Partnership"
-                      className="bg-teal-900 text-white"
+                      className="bg-[#075056] text-white"
                     >
                       Vendor &amp; Partnership
                     </option>
@@ -432,13 +432,13 @@ export default function Contact({ onNavigate }) {
                       htmlFor="contact-message"
                       className="font-mono text-xs text-white"
                     >
-                      Message <span className="text-amber-400">(required)</span>
+                      Message <span className="text-[#FF5B04]">(required)</span>
                     </label>
                     <span
                       className={`font-mono text-[11px] ${
                         formData.message.length >= MAX_MESSAGE_LENGTH
-                          ? 'text-amber-400'
-                          : 'text-teal-200/70'
+                          ? 'text-[#FF5B04]'
+                          : 'text-[#E4EEF0]/70'
                       }`}
                     >
                       {formData.message.length}/{MAX_MESSAGE_LENGTH}
@@ -479,7 +479,7 @@ export default function Contact({ onNavigate }) {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="cursor-pointer bg-white px-8 py-3 font-mono text-[11px] font-semibold tracking-[0.14em] text-[#141414] uppercase transition-opacity hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="cursor-pointer bg-white px-8 py-3 font-mono text-[11px] font-semibold tracking-[0.14em] text-[#16232A] uppercase transition-opacity hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {status === 'submitting' ? 'SENDING...' : 'SUBMIT'}
                   </button>
@@ -494,10 +494,10 @@ export default function Contact({ onNavigate }) {
           <div className="grid grid-cols-1 gap-12 font-mono text-xs md:grid-cols-12">
             {/* Service Zones Column */}
             <div className="space-y-4 md:col-span-4">
-              <p className="text-[11px] font-extrabold tracking-[0.08em] text-amber-400 uppercase">
+              <p className="text-[11px] font-extrabold tracking-[0.08em] text-[#FF5B04] uppercase">
                 Where We Operate
               </p>
-              <p className="text-[11px] leading-relaxed text-teal-100/80">
+              <p className="text-[11px] leading-relaxed text-[#E4EEF0]/80">
                 Full-service delivery, professional setup, and post-party
                 pack-down across Nairobi and neighboring counties.
               </p>
@@ -510,7 +510,7 @@ export default function Contact({ onNavigate }) {
 
             {/* Social Channels Columns */}
             <div className="md:col-span-8">
-              <p className="mb-4 text-[11px] font-extrabold tracking-[0.08em] text-amber-400 uppercase">
+              <p className="mb-4 text-[11px] font-extrabold tracking-[0.08em] text-[#FF5B04] uppercase">
                 Connect With Us Online
               </p>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -522,7 +522,7 @@ export default function Contact({ onNavigate }) {
                     rel="noopener noreferrer"
                     className="group block border-t border-white/15 pt-4 no-underline transition-colors hover:border-white"
                   >
-                    <div className="flex items-center justify-between text-[10px] tracking-[0.08em] text-teal-200/80 group-hover:text-white">
+                    <div className="flex items-center justify-between text-[10px] tracking-[0.08em] text-[#E4EEF0]/80 group-hover:text-white">
                       <span>{soc.badge}</span>
                       <span className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                         ↗
@@ -531,10 +531,10 @@ export default function Contact({ onNavigate }) {
                     <h3 className="mt-2 font-sans text-base font-medium text-white">
                       {soc.platform}
                     </h3>
-                    <p className="mt-0.5 text-[11px] text-amber-400">
+                    <p className="mt-0.5 text-[11px] text-[#FF5B04]">
                       {soc.handle}
                     </p>
-                    <p className="mt-2 text-[11px] leading-relaxed text-teal-100/75 group-hover:text-white">
+                    <p className="mt-2 text-[11px] leading-relaxed text-[#E4EEF0]/75 group-hover:text-white">
                       {soc.desc}
                     </p>
                   </a>
@@ -567,7 +567,7 @@ export default function Contact({ onNavigate }) {
                 hyperkidsevents@gmail.com
               </a>
             </div>
-            <span className="text-amber-400">
+            <span className="text-[#FF5B04]">
               Nairobi, Kenya &bull; Staxx Hyper Kids Events
             </span>
           </div>

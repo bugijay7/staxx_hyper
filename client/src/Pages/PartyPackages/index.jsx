@@ -121,24 +121,24 @@ export default function EventsWeDo({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
 
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Hyper Events</span>
             <span>Events Across Kenya · Planning · Production · Experiences</span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
               Events <br />
               <span className="text-neutral-500">We Do</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
               From corporate conferences and product launches to weddings,
               concerts and private celebrations, we bring people together
               through creative planning, event styling and professional
@@ -149,14 +149,14 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
 
-          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase">
+          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-[#16232A] uppercase">
             One Partner. Every Occasion.
           </span>
 
-          <p className="max-w-2xl text-sm leading-relaxed text-gray-900 md:text-right">
+          <p className="max-w-2xl text-sm leading-relaxed text-[#16232A] md:text-right">
             Whatever the occasion, we help bring it to life with event
             coordination, audiovisual production, décor, entertainment and
             equipment solutions.
@@ -165,21 +165,21 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 3. EVENT CATEGORIES */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
 
-          <div className="mb-14 flex flex-col justify-between gap-8 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
+          <div className="mb-14 flex flex-col justify-between gap-8 border-b border-[#16232A]/15 pb-8 md:flex-row md:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 08 Event Categories
               </span>
 
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
                 What Are You Celebrating?
               </h2>
             </div>
 
-            <p className="max-w-md text-sm leading-relaxed text-gray-900 md:text-right">
+            <p className="max-w-md text-sm leading-relaxed text-[#16232A] md:text-right">
               Explore the occasions we cater for. Each event is shaped around
               your audience, objectives, style and requirements.
             </p>
@@ -189,9 +189,9 @@ export default function EventsWeDo({ onNavigate }) {
             {events.map((event) => (
               <article key={event.id} className="group flex flex-col">
 
-                <div className="mb-6 flex items-center justify-between border-b border-neutral-900/15 pb-3 text-[11px] tracking-[0.14em] uppercase">
+                <div className="mb-6 flex items-center justify-between border-b border-[#16232A]/15 pb-3 text-[11px] tracking-[0.14em] uppercase">
                   <span className="text-neutral-500">
-                    <strong className="font-medium text-teal-900">
+                    <strong className="font-medium text-[#16232A]">
                       {event.id}
                     </strong>{' '}
                     / Event Category
@@ -209,15 +209,15 @@ export default function EventsWeDo({ onNavigate }) {
                   />
                 </div>
 
-                <h3 className="mb-3 text-xl font-normal tracking-[-0.02em] text-teal-900 md:text-2xl">
+                <h3 className="mb-3 text-xl font-normal tracking-[-0.02em] text-[#16232A] md:text-2xl">
                   {event.name}
                 </h3>
 
-                <p className="mb-4 text-sm leading-relaxed text-gray-900">
+                <p className="mb-4 text-sm leading-relaxed text-[#16232A]">
                   {event.description}
                 </p>
 
-                <p className="mt-auto border-t border-neutral-900/15 pt-4 text-xs leading-relaxed text-neutral-500">
+                <p className="mt-auto border-t border-[#16232A]/15 pt-4 text-xs leading-relaxed text-neutral-500">
                   {event.examples}
                 </p>
               </article>
@@ -227,37 +227,37 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 4. PRODUCTION CAPABILITIES */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
 
-          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
+          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-[#16232A]/15 pb-8 md:flex-row md:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 From Concept to Execution
               </span>
 
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
                 Everything Your Event Needs
               </h2>
             </div>
 
-            <p className="max-w-md text-sm leading-relaxed text-gray-900">
+            <p className="max-w-md text-sm leading-relaxed text-[#16232A]">
               Our services work together to create a seamless event, from the
               first planning conversation to the final pack-down.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 border-t border-l border-[#16232A]/15 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="border-r border-b border-neutral-900/15 bg-white p-6 md:p-8"
+                className="border-r border-b border-[#16232A]/15 bg-white p-6 md:p-8"
               >
-                <h3 className="mb-3 text-lg font-normal text-teal-900">
+                <h3 className="mb-3 text-lg font-normal text-[#16232A]">
                   {service.title}
                 </h3>
 
-                <p className="text-sm leading-relaxed text-gray-900">
+                <p className="text-sm leading-relaxed text-[#16232A]">
                   {service.detail}
                 </p>
               </div>
@@ -267,7 +267,7 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 5. BOTTOM CTA */}
-      <section className="bg-teal-900 text-[#f9f9f8]">
+      <section className="bg-[#075056] text-[#E4EEF0]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
 
           <div className="max-w-2xl">
@@ -290,7 +290,7 @@ export default function EventsWeDo({ onNavigate }) {
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
             >
               Plan Your Event &rarr;
             </a>
@@ -299,7 +299,7 @@ export default function EventsWeDo({ onNavigate }) {
               href="https://wa.me/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#f9f9f8]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:border-[#f9f9f8]"
+              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
             >
               Chat on WhatsApp
             </a>

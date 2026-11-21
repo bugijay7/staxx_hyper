@@ -122,22 +122,22 @@ export default function ChildrensPartyServices({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Hyper Kids Events</span>
             <span>12 Signature Services</span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
               Children&apos;s Party <br />
               <span className="text-neutral-500">Services</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
               From commercial bouncy castles and custom piñatas to face painting
               and full-scale themed decor, explore everything we bring to make
               your child&apos;s celebration effortless and unforgettable.
@@ -147,12 +147,12 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL INTRO STRIP */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase">
+          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-[#16232A] uppercase">
             Mix, Match &amp; Customize
           </span>
-          <p className="max-w-2xl text-sm leading-relaxed text-gray-900 md:text-right">
+          <p className="max-w-2xl text-sm leading-relaxed text-[#16232A] md:text-right">
             Book any service standalone or bundle multiple attractions into a
             custom turnkey package—delivered, set up, staffed, and packed down
             by our crew.
@@ -161,8 +161,8 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 3. ALTERNATING 12 SERVICES SHOWCASE */}
-      <section className="border-b border-neutral-900/15 bg-white">
-        <div className="mx-auto max-w-[1440px] divide-y divide-neutral-900/15 px-6 md:px-10">
+      <section className="border-b border-[#16232A]/15 bg-white">
+        <div className="mx-auto max-w-[1440px] divide-y divide-[#16232A]/15 px-6 md:px-10">
           {services.map((service, index) => {
             const isImageRight = index % 2 === 0;
 
@@ -176,22 +176,22 @@ export default function ChildrensPartyServices({ onNavigate }) {
                   className={`flex flex-col justify-between ${
                     isImageRight
                       ? 'lg:order-1 lg:pr-8'
-                      : 'lg:order-2 lg:border-l lg:border-neutral-900/15 lg:pl-14'
+                      : 'lg:order-2 lg:border-l lg:border-[#16232A]/15 lg:pl-14'
                   }`}
                 >
                   <div className="mb-6 flex items-center gap-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-teal-900">
+                    <span className="font-medium text-[#16232A]">
                       {service.id}
                     </span>
                     <span>/</span>
                     <span>{service.category}</span>
                   </div>
 
-                  <h2 className="mb-5 text-2xl font-normal tracking-[-0.02em] leading-[1.18] text-teal-900 sm:text-3xl md:text-4xl">
+                  <h2 className="mb-5 text-2xl font-normal tracking-[-0.02em] leading-[1.18] text-[#16232A] sm:text-3xl md:text-4xl">
                     {service.title}
                   </h2>
 
-                  <p className="mb-8 max-w-xl text-base leading-relaxed text-gray-900">
+                  <p className="mb-8 max-w-xl text-base leading-relaxed text-[#16232A]">
                     {service.description}
                   </p>
 
@@ -199,7 +199,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
                     <a
                       href="/booking"
                       onClick={(e) => handleLinkClick(e, '/booking')}
-                      className="inline-flex items-center gap-2 border-b border-neutral-900 pb-1 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-opacity duration-200 hover:opacity-55"
+                      className="inline-flex items-center gap-2 border-b border-[#16232A] pb-1 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-opacity duration-200 hover:opacity-55"
                     >
                       <span>Add to Party Plan</span>
                       <span aria-hidden="true">&rarr;</span>
@@ -211,7 +211,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
                 <div
                   className={`${
                     isImageRight
-                      ? 'lg:order-2 lg:border-l lg:border-neutral-900/15 lg:pl-14'
+                      ? 'lg:order-2 lg:border-l lg:border-[#16232A]/15 lg:pl-14'
                       : 'lg:order-1 lg:pr-8'
                   }`}
                 >
@@ -222,7 +222,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
                       className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
                     />
                   </div>
-                  <div className="mt-3 flex items-center justify-between border-t border-neutral-900/15 pt-2.5 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
+                  <div className="mt-3 flex items-center justify-between border-t border-[#16232A]/15 pt-2.5 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
                     <span>Index {service.id}</span>
                     <span>{service.category}</span>
                   </div>
@@ -234,7 +234,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-teal-900 text-[#f9f9f8]">
+      <section className="bg-[#075056] text-[#E4EEF0]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
@@ -253,14 +253,14 @@ export default function ChildrensPartyServices({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
             >
               Book Party Services &rarr;
             </a>
             <a
               href="/party-packages"
               onClick={(e) => handleLinkClick(e, '/party-packages')}
-              className="border border-[#f9f9f8]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:border-[#f9f9f8]"
+              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
             >
               View All-In-One Packages
             </a>

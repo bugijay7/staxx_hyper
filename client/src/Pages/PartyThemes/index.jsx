@@ -85,22 +85,22 @@ export default function EventInspo({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx-HyperKids &bull; Kenyan Event Themes</span>
             <span>Ruracio &bull; Corporate Galas &bull; Weddings &bull; Kids Parties</span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
               Relatable Kenyan <br />
               <span className="text-neutral-500">Event Themes</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
               Explore four practical, culturally resonant event setups designed
               specifically for traditional Ruracios, Nairobi corporate AGMs,
               garden weddings, and estate children&rsquo;s parties across Kenya.
@@ -110,12 +110,12 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase">
+          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-[#16232A] uppercase">
             Tailored to Your Venue &amp; Budget
           </span>
-          <p className="max-w-2xl text-sm leading-relaxed text-gray-900 md:text-right">
+          <p className="max-w-2xl text-sm leading-relaxed text-[#16232A] md:text-right">
             Every theme is backed by our full equipment hire and on-site setup
             teams based in Nairobi, serving Kiambu, Nakuru, Machakos,
             Murang&rsquo;a, and Kajiado.
@@ -124,8 +124,8 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 3. FOUR KENYAN THEMES SHOWCASE */}
-      <section className="border-b border-neutral-900/15 bg-white">
-        <div className="mx-auto max-w-[1440px] divide-y divide-neutral-900/15 px-6 md:px-10">
+      <section className="border-b border-[#16232A]/15 bg-white">
+        <div className="mx-auto max-w-[1440px] divide-y divide-[#16232A]/15 px-6 md:px-10">
           {inspoWorlds.map((inspo) => {
             const isTipOpen = selectedInspo === inspo.id;
 
@@ -137,18 +137,18 @@ export default function EventInspo({ onNavigate }) {
                 {/* Left Column: Details, Highlights & Palette */}
                 <div className="flex flex-col justify-between">
                   <div>
-                    <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] uppercase">
+                    <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] uppercase">
                       <span className="text-neutral-500">
-                        <strong className="font-medium text-teal-900">
+                        <strong className="font-medium text-[#16232A]">
                           Theme {inspo.id}
                         </strong>
                       </span>
-                      <span className="border border-neutral-900/20 px-2.5 py-0.5 text-[10px] text-neutral-700">
+                      <span className="border border-[#16232A]/20 px-2.5 py-0.5 text-[10px] text-neutral-700">
                         {inspo.ageRange}
                       </span>
                     </div>
 
-                    <h2 className="mb-2 text-2xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 sm:text-3xl md:text-4xl">
+                    <h2 className="mb-2 text-2xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] sm:text-3xl md:text-4xl">
                       {inspo.title}
                     </h2>
 
@@ -156,20 +156,20 @@ export default function EventInspo({ onNavigate }) {
                       {inspo.tagline}
                     </p>
 
-                    <p className="mb-8 text-base leading-relaxed text-gray-900">
+                    <p className="mb-8 text-base leading-relaxed text-[#16232A]">
                       {inspo.description}
                     </p>
                   </div>
 
                   {/* Signature Elements */}
-                  <div className="mb-8 border-t border-neutral-900/15 pt-6">
-                    <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-teal-900 uppercase">
+                  <div className="mb-8 border-t border-[#16232A]/15 pt-6">
+                    <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-[#16232A] uppercase">
                       What&rsquo;s Included in Setup
                     </span>
                     <ul className="grid grid-cols-1 gap-3 text-sm text-neutral-700 sm:grid-cols-2">
                       {inspo.highlights.map((item) => (
                         <li key={item} className="flex items-start gap-2.5">
-                          <span className="mt-1.5 h-1 w-1 shrink-0 bg-neutral-900" />
+                          <span className="mt-1.5 h-1 w-1 shrink-0 bg-[#075056]" />
                           <span className="leading-snug">{item}</span>
                         </li>
                       ))}
@@ -177,7 +177,7 @@ export default function EventInspo({ onNavigate }) {
                   </div>
 
                   {/* Palette & Actions */}
-                  <div className="flex flex-col justify-between gap-6 border-t border-neutral-900/15 pt-6 sm:flex-row sm:items-center">
+                  <div className="flex flex-col justify-between gap-6 border-t border-[#16232A]/15 pt-6 sm:flex-row sm:items-center">
                     <div className="flex items-center gap-3">
                       <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                         Palette
@@ -188,7 +188,7 @@ export default function EventInspo({ onNavigate }) {
                             key={color}
                             title={color}
                             style={{ backgroundColor: color }}
-                            className="h-5 w-5 border border-neutral-900/25"
+                            className="h-5 w-5 border border-[#16232A]/25"
                           >
                             <span className="sr-only">{color}</span>
                           </span>
@@ -203,7 +203,7 @@ export default function EventInspo({ onNavigate }) {
                           setSelectedInspo(isTipOpen ? null : inspo.id)
                         }
                         aria-expanded={isTipOpen}
-                        className="cursor-pointer border-b border-neutral-900/30 pb-0.5 text-xs tracking-[0.12em] text-gray-900 uppercase transition-colors hover:border-neutral-900 hover:text-teal-900"
+                        className="cursor-pointer border-b border-[#16232A]/30 pb-0.5 text-xs tracking-[0.12em] text-[#16232A] uppercase transition-colors hover:border-[#16232A] hover:text-[#16232A]"
                       >
                         {isTipOpen ? 'Hide Planner Tip' : 'Planner Tip'}
                       </button>
@@ -211,7 +211,7 @@ export default function EventInspo({ onNavigate }) {
                       <a
                         href="/booking"
                         onClick={(e) => handleLinkClick(e, '/booking')}
-                        className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+                        className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
                       >
                         Book This Theme &rarr;
                       </a>
@@ -220,8 +220,8 @@ export default function EventInspo({ onNavigate }) {
 
                   {/* Expandable Planner Note */}
                   {isTipOpen && (
-                    <div className="mt-6 border border-neutral-900/15 bg-white p-5 text-sm leading-relaxed text-neutral-700">
-                      <strong className="block mb-1 text-xs font-medium tracking-[0.08em] text-teal-900 uppercase">
+                    <div className="mt-6 border border-[#16232A]/15 bg-white p-5 text-sm leading-relaxed text-neutral-700">
+                      <strong className="block mb-1 text-xs font-medium tracking-[0.08em] text-[#16232A] uppercase">
                         Staxx-HyperKids Setup Advice
                       </strong>
                       For the <strong>{inspo.title}</strong>, we recommend
@@ -233,7 +233,7 @@ export default function EventInspo({ onNavigate }) {
                 </div>
 
                 {/* Right Column: Theme Plate */}
-                <div className="lg:border-l lg:border-neutral-900/15 lg:pl-14">
+                <div className="lg:border-l lg:border-[#16232A]/15 lg:pl-14">
                   <div className="aspect-[16/11] w-full overflow-hidden bg-neutral-200">
                     <img
                       src={inspo.img}
@@ -241,7 +241,7 @@ export default function EventInspo({ onNavigate }) {
                       className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
                     />
                   </div>
-                  <div className="mt-3 flex items-center justify-between border-t border-neutral-900/15 pt-2.5 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
+                  <div className="mt-3 flex items-center justify-between border-t border-[#16232A]/15 pt-2.5 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
                     <span>Theme {inspo.id} / Kenyan Setup Showcase</span>
                     <span className="font-mono text-[10px] text-neutral-400">
                       {inspo.palette.join(' · ')}
@@ -255,7 +255,7 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CUSTOM THEME CTA */}
-      <section className="bg-teal-900 text-[#f9f9f8]">
+      <section className="bg-[#075056] text-[#E4EEF0]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
@@ -275,14 +275,14 @@ export default function EventInspo({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
             >
               Request a Custom Quote &rarr;
             </a>
             <a
               href="/party-packages"
               onClick={(e) => handleLinkClick(e, '/party-packages')}
-              className="border border-[#f9f9f8]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:border-[#f9f9f8]"
+              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
             >
               Explore KES Packages
             </a>

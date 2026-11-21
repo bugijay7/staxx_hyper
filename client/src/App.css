@@ -55,14 +55,14 @@
 
 @theme {
   /* Colors */
-  --color-bg-main: #F4F4F2;
+  --color-bg-main: #E4EEF0;
   --color-bg-secondary: #FFFFFF;
-  --color-bg-dark: #1C1C1E;
-  --color-text-primary: #1A1A1A;
+  --color-bg-dark: #075056;
+  --color-text-primary: #16232A;
   --color-text-secondary: #7A7A7A;
-  --color-border: #E0E0E0;
-  --color-accent-primary: #FF5722;
-  --color-accent-secondary: #E5B25D;
+  --color-border: #E4EEF0;
+  --color-accent-primary: #FF5B04;
+  --color-accent-secondary: #075056;
 
   /* Fonts */
   --font-sans: 'Inter', 'Helvetica Neue', sans-serif;

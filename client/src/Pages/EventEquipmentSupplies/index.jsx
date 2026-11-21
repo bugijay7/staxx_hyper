@@ -140,25 +140,25 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
   });
 
   return (
-    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
         >
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx-HyperKids Rental Inventory</span>
             <span>Commerce House, Nairobi &bull; Kenya-Wide Delivery</span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
               Equipment &amp; <br />
               <span className="text-neutral-500">Supplies Catalog</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
               Explore our professional rental inventory including grand
               pianos, band gear, indoor LED video walls, moving head lighting, stages,
               clear-span marquees, and event furniture across six counties.
@@ -168,7 +168,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 2. SEARCH & CATEGORY FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div
           className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10"
           data-aos="fade-up"
@@ -180,7 +180,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
               placeholder="Search pianos, LED screens, amps, tents..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full border border-neutral-900/25 bg-white px-4 py-3 text-xs tracking-[0.06em] text-teal-900 placeholder:text-neutral-500 focus:border-neutral-900 focus:outline-none"
+              className="w-full border border-[#16232A]/25 bg-white px-4 py-3 text-xs tracking-[0.06em] text-[#16232A] placeholder:text-neutral-500 focus:border-[#16232A] focus:outline-none"
             />
           </div>
 
@@ -196,8 +196,8 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                   aria-pressed={isSelected}
                   className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-neutral-900 font-medium text-teal-900'
-                      : 'border-transparent text-neutral-400 hover:text-teal-900'
+                      ? 'border-[#16232A] font-medium text-[#16232A]'
+                      : 'border-transparent text-neutral-400 hover:text-[#16232A]'
                   }`}
                 >
                   {cat}
@@ -209,9 +209,9 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 3. PRODUCT CATALOG GRID */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="mb-8 flex items-center justify-between border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-8 flex items-center justify-between border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Showing {filteredInventory.length} Available Items</span>
             <span>Click any item for full specs &amp; booking</span>
           </div>
@@ -222,23 +222,23 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                 key={item.id}
                 href="/products/sample-product"
                 onClick={(e) => handleSelectProduct(e, item)}
-                className="group flex flex-col justify-between border border-neutral-900/15 bg-white no-underline transition-colors duration-200 hover:border-neutral-900"
+                className="group flex flex-col justify-between border border-[#16232A]/15 bg-white no-underline transition-colors duration-200 hover:border-[#16232A]"
                 data-aos="fade-up"
                 data-aos-delay={(index % 3) * 100}
               >
                 <div>
                   {/* Category & Price Plate */}
-                  <div className="flex items-center justify-between border-b border-neutral-900/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-teal-900">
+                  <div className="flex items-center justify-between border-b border-[#16232A]/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
+                    <span className="font-medium text-[#16232A]">
                       {item.category}
                     </span>
-                    <span className="font-semibold text-teal-900">
+                    <span className="font-semibold text-[#16232A]">
                       {item.price}
                     </span>
                   </div>
 
                   {/* Image Frame */}
-                  <div className="aspect-[16/11] w-full overflow-hidden border-b border-neutral-900/15 bg-neutral-200">
+                  <div className="aspect-[16/11] w-full overflow-hidden border-b border-[#16232A]/15 bg-neutral-200">
                     <img
                       src={item.img}
                       alt={item.title}
@@ -248,18 +248,18 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
 
                   {/* Content Body */}
                   <div className="p-6 md:p-8">
-                    <h2 className="mb-3 text-xl font-normal tracking-[-0.015em] leading-snug text-teal-900 transition-opacity duration-200 group-hover:opacity-70">
+                    <h2 className="mb-3 text-xl font-normal tracking-[-0.015em] leading-snug text-[#16232A] transition-opacity duration-200 group-hover:opacity-70">
                       {item.title}
                     </h2>
 
-                    <p className="mb-6 text-sm leading-relaxed text-gray-900">
+                    <p className="mb-6 text-sm leading-relaxed text-[#16232A]">
                       {item.desc}
                     </p>
 
-                    <ul className="space-y-1.5 border-t border-neutral-900/15 pt-4 text-xs text-neutral-700">
+                    <ul className="space-y-1.5 border-t border-[#16232A]/15 pt-4 text-xs text-neutral-700">
                       {item.specs.map((spec, sIdx) => (
                         <li key={sIdx} className="flex items-center gap-2">
-                          <span className="h-1 w-1 bg-neutral-900" />
+                          <span className="h-1 w-1 bg-[#075056]" />
                           <span>{spec}</span>
                         </li>
                       ))}
@@ -268,8 +268,8 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                 </div>
 
                 {/* Card Footer Trigger */}
-                <div className="border-t border-neutral-900/15 bg-white px-6 py-4 md:px-8">
-                  <span className="text-xs font-medium tracking-[0.14em] text-teal-900 uppercase transition-opacity group-hover:opacity-65">
+                <div className="border-t border-[#16232A]/15 bg-white px-6 py-4 md:px-8">
+                  <span className="text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase transition-opacity group-hover:opacity-65">
                     View Specifications &amp; Book &rarr;
                   </span>
                 </div>
@@ -279,7 +279,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
 
           {filteredInventory.length === 0 && (
             <div className="py-20 text-center">
-              <p className="text-base text-gray-900">
+              <p className="text-base text-[#16232A]">
                 No equipment found matching &ldquo;{searchQuery}&rdquo;.
               </p>
               <button
@@ -288,7 +288,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                   setSearchQuery('');
                   setSelectedCategory('All');
                 }}
-                className="mt-4 border border-[#f9f9f8] bg-white px-6 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+                className="mt-4 border border-[#E4EEF0] bg-white px-6 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
               >
                 Reset Filters
               </button>
@@ -298,7 +298,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-teal-900 text-[#f9f9f8]">
+      <section className="bg-[#075056] text-[#E4EEF0]">
         <div
           className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
           data-aos="fade-up"
@@ -321,14 +321,14 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
             >
               Request Equipment Quotation &rarr;
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#f9f9f8]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:border-[#f9f9f8]"
+              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
             >
               Contact Our Engineers
             </a>

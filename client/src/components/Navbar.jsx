@@ -77,7 +77,7 @@ export default function Navbar({ currentPage, onNavigate }) {
   return (
     <>
       {/* Fixed Minimal Top Header */}
-      <header className="fixed top-0 left-0 z-40 flex w-full items-center justify-between border-b border-neutral-900/15 bg-red/85 px-6 py-4 font-sans text-teal-900 backdrop-blur-md md:px-10 md:py-6">
+      <header className="fixed top-0 left-0 z-40 flex w-full items-center justify-between border-b border-[#16232A]/15 bg-[#075056] px-6 py-4 font-sans text-[#E4EEF0] backdrop-blur-md md:px-10 md:py-6">
         <a
           href="/"
           className="flex items-center gap-3.5 text-inherit no-underline"
@@ -97,7 +97,7 @@ export default function Navbar({ currentPage, onNavigate }) {
           <a
             href="/booking"
             onClick={(e) => handleNavigation(e, '/booking')}
-            className="hidden border-b border-neutral-900 py-1 text-xs font-medium tracking-[0.14em] uppercase transition-opacity duration-200 hover:opacity-55 md:inline-block"
+            className="hidden border-b border-[#16232A] py-1 text-xs font-medium tracking-[0.14em] uppercase transition-opacity duration-200 hover:opacity-55 md:inline-block"
           >
             Book Now
           </a>
@@ -117,14 +117,14 @@ export default function Navbar({ currentPage, onNavigate }) {
       <aside
         id="staxx-nav-drawer"
         aria-hidden={!isDrawerOpen}
-        className={`fixed inset-0 z-50 flex flex-col justify-between overflow-y-auto bg-teal-900 px-6 py-4 pb-12 font-sans text-teal-900 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:px-10 md:py-6 md:pb-12 ${
+        className={`fixed inset-0 z-50 flex flex-col justify-between overflow-y-auto bg-[#075056] px-6 py-4 pb-12 font-sans text-[#16232A] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:px-10 md:py-6 md:pb-12 ${
           isDrawerOpen
             ? 'pointer-events-auto translate-y-0'
             : 'pointer-events-none -translate-y-full'
         }`}
       >
         {/* Drawer Top Bar */}
-        <div className="flex items-center justify-between  border-b border-neutral-900/15 pb-4 md:pb-6">
+        <div className="flex items-center justify-between  border-b border-[#16232A]/15 pb-4 md:pb-6">
           <a
             href="/"
             className="flex items-center gap-3.5 text-inherit no-underline"
@@ -185,7 +185,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                     >
                       <span>{page.title}</span>
                       {hasChildren && (
-                        <span className="text-xl font-light text-amber-500">
+                        <span className="text-xl font-light text-[#FF5B04]">
                           {isExpanded ? '−' : '+'}
                         </span>
                       )}
@@ -193,7 +193,7 @@ export default function Navbar({ currentPage, onNavigate }) {
 
                     {/* Mobile Inline Sub-links */}
                     {hasChildren && isExpanded && (
-                      <ul className="mt-2 flex flex-col gap-2 border-l border-neutral-900/15 py-2 pl-4 md:hidden">
+                      <ul className="mt-2 flex flex-col gap-2 border-l border-[#16232A]/15 py-2 pl-4 md:hidden">
                         {page.children.map((child) => (
                           <li key={child.path}>
                             <a
@@ -204,7 +204,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                                   : undefined
                               }
                               onClick={(e) => handleNavigation(e, child.path)}
-                              className="text-base text-amber-600 no-underline hover:text-white"
+                              className="text-base text-[#FF5B04] no-underline hover:text-white"
                             >
                               {child.title}
                             </a>
@@ -219,10 +219,10 @@ export default function Navbar({ currentPage, onNavigate }) {
           </nav>
 
           {/* Column 2: Active Category Sub-Links (Desktop) */}
-          <div className="hidden min-h-[220px] flex-col justify-end border-l border-neutral-900/15 pl-8 md:flex">
+          <div className="hidden min-h-[220px] flex-col justify-end border-l border-[#16232A]/15 pl-8 md:flex">
             {activeCategory && (
               <div>
-                <span className="mb-5 block text-[11px] tracking-[0.14em] text-amber-500 uppercase">
+                <span className="mb-5 block text-[11px] tracking-[0.14em] text-[#FF5B04] uppercase">
                   {activeCategory}
                 </span>
                 <ul className="m-0 flex list-none flex-col gap-2.5 p-0">
@@ -251,7 +251,7 @@ export default function Navbar({ currentPage, onNavigate }) {
           </div>
 
           {/* Column 3: Studio Info, Dispatch & Booking CTA */}
-          <div className="flex flex-col gap-6 border-t border-neutral-900/15 pt-6 text-sm md:border-t-0 md:border-l md:pt-0 md:pl-8">
+          <div className="flex flex-col gap-6 border-t border-[#16232A]/15 pt-6 text-sm md:border-t-0 md:border-l md:pt-0 md:pl-8">
             <span className="text-[11px] tracking-[0.14em] text-white uppercase">
               Nairobi &amp; Environs Dispatch
             </span>
@@ -259,25 +259,25 @@ export default function Navbar({ currentPage, onNavigate }) {
             <div className="flex flex-col gap-1.5">
               <a
                 href="mailto:staxxsounds@proton.me"
-                className="text-amber-600 no-underline transition-opacity duration-200 hover:opacity-60"
+                className="text-[#FF5B04] no-underline transition-opacity duration-200 hover:opacity-60"
               >
                staxxsounds@proton.me
               </a>
               <a
                 href="mailto:hyperkidsevents@gmail.com"
-                className="text-amber-600 no-underline transition-opacity duration-200 hover:opacity-60"
+                className="text-[#FF5B04] no-underline transition-opacity duration-200 hover:opacity-60"
               >
                 hyperkidsevents@gmail.com
               </a>
               <a
                 href="tel:+254780979777"
-                className="text-amber-600 no-underline transition-opacity duration-200 hover:opacity-60"
+                className="text-[#FF5B04] no-underline transition-opacity duration-200 hover:opacity-60"
               >
                 +254 (0) 780 979 777 -Staxx Deck
               </a>
                <a
                 href="tel:+254722548012"
-                className="text-amber-600 no-underline transition-opacity duration-200 hover:opacity-60"
+                className="text-[#FF5B04] no-underline transition-opacity duration-200 hover:opacity-60"
               >
                 +254 (0) 722 548 012 - Hyper Kids
               </a>
@@ -286,7 +286,7 @@ export default function Navbar({ currentPage, onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleNavigation(e, '/booking')}
-              className="self-start border border-neutral-900 px-5 py-3 text-xs tracking-[0.12em] text-amber-600 uppercase no-underline transition-colors duration-200 hover:bg-neutral-900 hover:text-[#f9f9f8]"
+              className="self-start border border-[#16232A] px-5 py-3 text-xs tracking-[0.12em] text-[#FF5B04] uppercase no-underline transition-colors duration-200 hover:bg-[#075056] hover:text-[#E4EEF0]"
             >
               Book an Event →
             </a>

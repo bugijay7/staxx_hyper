@@ -167,23 +167,23 @@ export default function Home({ onNavigate }) {
       : galleryImages.filter((item) => item.category === activeTab);
 
   return (
-    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
       {/* 1. HERO SECTION */}
-      <section className="relative border-b border-neutral-900/15 bg-white">
+      <section className="relative border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-12 md:px-10 md:pt-12 md:pb-16">
           {/* Top Metadata Strip */}
 
           {/* Editorial Headline & Intro Grid */}
           <div className="grid grid-cols-1 items-end gap-10 pb-12 lg:grid-cols-[1.45fr_1fr]">
             <div>
-              <h1 className="pt-8 md:pt-1  text-2xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
+              <h1 className="pt-8 md:pt-1  text-2xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
                 Event production <br />
                 <span className="text-neutral-500">&amp; equipment hire in<br/> Nairobi.</span>
               </h1>
             </div>
 
-            <div className="flex flex-col justify-between gap-4 lg:border-l lg:border-neutral-900/15 lg:pl-10">
-              <p className="text-xs md:text-sm leading-relaxed text-gray-900 md:text-sm">
+            <div className="flex flex-col justify-between gap-4 lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+              <p className="text-xs md:text-sm leading-relaxed text-[#16232A] md:text-sm">
                 Staxx-HyperKids provides audiovisual production, event d&eacute;cor,
                 children&rsquo;s parties, and equipment hire in Nairobi and across
                 Kenya.
@@ -193,14 +193,14 @@ export default function Home({ onNavigate }) {
                 <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
-                  className="border border-amber-900 bg-amber-600 px-3 md:px-3 py-1.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
+                  className="border border-[#FF5B04] bg-[#FF5B04] px-3 md:px-3 py-1.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#16232A]"
                 >
                   Request a Quote
                 </a>
                 <a
                   href="/events"
                   onClick={(e) => handleLinkClick(e, '/events')}
-                  className="border border-teal-900 bg-teal-600 px-3 md:px-3 py-1.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-teal-900"
+                  className="border border-[#16232A] bg-[#075056] px-3 md:px-3 py-1.5 md:py-1.5 text-[8px] md:text-[10px] font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#16232A]"
                 >
                   Supplies Catalog
                 </a>
@@ -222,15 +222,15 @@ export default function Home({ onNavigate }) {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/75 via-neutral-950/10 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 flex flex-col gap-5 p-5 text-[#f9f9f8] sm:flex-row sm:items-end sm:justify-between sm:p-8 md:p-10">
+            <div className="absolute inset-x-0 bottom-0 flex flex-col gap-5 p-5 text-[#E4EEF0] sm:flex-row sm:items-end sm:justify-between sm:p-8 md:p-10">
               <div aria-live="polite" aria-atomic="true">
-                <span className="mb-2 block text-[10px] tracking-[0.18em] text-[#f9f9f8]/75 uppercase">
+                <span className="mb-2 block text-[10px] tracking-[0.18em] text-[#E4EEF0]/75 uppercase">
                   {String(activeHeroSlide + 1).padStart(2, '0')} / {String(heroSlides.length).padStart(2, '0')}
                 </span>
                 <h2 className="text-2xl font-normal tracking-[-0.02em] sm:text-3xl md:text-4xl">
                   {heroSlides[activeHeroSlide].title}
                 </h2>
-                <p className="mt-1 text-xs text-[#f9f9f8]/80 sm:text-sm">
+                <p className="mt-1 text-xs text-[#E4EEF0]/80 sm:text-sm">
                   {heroSlides[activeHeroSlide].detail}
                 </p>
               </div>
@@ -245,8 +245,8 @@ export default function Home({ onNavigate }) {
                     aria-current={activeHeroSlide === index ? 'true' : undefined}
                     className={`h-2.5 rounded-full transition-all ${
                       activeHeroSlide === index
-                        ? 'w-7 bg-[#f9f9f8]'
-                        : 'w-2.5 bg-[#f9f9f8]/55 hover:bg-[#f9f9f8]'
+                        ? 'w-7 bg-[#E4EEF0]'
+                        : 'w-2.5 bg-[#E4EEF0]/55 hover:bg-[#E4EEF0]'
                     }`}
                   />
                 ))}
@@ -258,7 +258,7 @@ export default function Home({ onNavigate }) {
                     )
                   }
                   aria-label="Show previous image"
-                  className="ml-2 flex h-10 w-10 items-center justify-center border border-[#f9f9f8]/60 text-lg transition-colors hover:bg-[#f9f9f8] hover:text-teal-900"
+                  className="ml-2 flex h-10 w-10 items-center justify-center border border-[#E4EEF0]/60 text-lg transition-colors hover:bg-[#E4EEF0] hover:text-[#16232A]"
                 >
                   &larr;
                 </button>
@@ -268,7 +268,7 @@ export default function Home({ onNavigate }) {
                     setActiveHeroSlide((activeHeroSlide + 1) % heroSlides.length)
                   }
                   aria-label="Show next image"
-                  className="flex h-10 w-10 items-center justify-center border border-[#f9f9f8]/60 text-lg transition-colors hover:bg-[#f9f9f8] hover:text-teal-900"
+                  className="flex h-10 w-10 items-center justify-center border border-[#E4EEF0]/60 text-lg transition-colors hover:bg-[#E4EEF0] hover:text-[#16232A]"
                 >
                   &rarr;
                 </button>
@@ -278,7 +278,7 @@ export default function Home({ onNavigate }) {
 
           {/* Bottom Trust / Spec Bar */}
           {/* Bottom Trust / Spec Bar */}
-<div className="mt-6 overflow-hidden bg-teal-900 py-3.5 text-xs tracking-[0.06em] text-white">
+<div className="mt-6 overflow-hidden bg-[#075056] py-3.5 text-xs tracking-[0.06em] text-white">
   <style>{`
     @keyframes marqueeLtr {
       0% { transform: translateX(-50%); }
@@ -310,19 +310,19 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 2. ABOUT / EDITORIAL SECTION */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <div>
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
               Integrated Capabilities
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
               Event production, styling &amp; equipment hire—one team.
             </h2>
           </div>
 
-          <div className="flex flex-col justify-between gap-12 lg:border-l lg:border-neutral-900/15 lg:pl-12">
-            <p className="text-base leading-relaxed text-gray-900 md:text-sm">
+          <div className="flex flex-col justify-between gap-12 lg:border-l lg:border-[#16232A]/15 lg:pl-12">
+            <p className="text-base leading-relaxed text-[#16232A] md:text-sm">
               Founded by Bryan Karanja and Dan Njuguna, Staxx-HyperKids provides
               audiovisual production, event styling, and equipment hire for
               corporate events, product launches, weddings, and festivals. Our
@@ -330,25 +330,25 @@ export default function Home({ onNavigate }) {
             </p>
 
             {/* Architectural Metric Strip */}
-            <div className="grid grid-cols-1 gap-8 border-t border-neutral-900/15 pt-8 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 border-t border-[#16232A]/15 pt-8 sm:grid-cols-3">
               <div>
-                <span className="block text-3xl font-normal tracking-[-0.03em] text-teal-900 md:text-4xl">
+                <span className="block text-3xl font-normal tracking-[-0.03em] text-[#16232A] md:text-4xl">
                   6 Counties
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
                   Event services across six Kenyan counties
                 </span>
               </div>
-              <div className="sm:border-l sm:border-neutral-900/15 sm:pl-6">
-                <span className="block text-3xl font-normal tracking-[-0.03em] text-teal-900 md:text-4xl">
+              <div className="sm:border-l sm:border-[#16232A]/15 sm:pl-6">
+                <span className="block text-3xl font-normal tracking-[-0.03em] text-[#16232A] md:text-4xl">
                   Unified
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
                   AV production and event d&eacute;cor managed by one team
                 </span>
               </div>
-              <div className="sm:border-l sm:border-neutral-900/15 sm:pl-6">
-                <span className="block text-3xl font-normal tracking-[-0.03em] text-teal-900 md:text-4xl">
+              <div className="sm:border-l sm:border-[#16232A]/15 sm:pl-6">
+                <span className="block text-3xl font-normal tracking-[-0.03em] text-[#16232A] md:text-4xl">
                   Full Stock
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-neutral-500">
@@ -361,18 +361,18 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 3. THREE-STEP PROCESS */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 max-w-2xl">
             <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
               Production Workflow
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
               From event plan to live production.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 border-t border-neutral-900/15 pt-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 border-t border-[#16232A]/15 pt-10 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 step: 'Step 01',
@@ -392,18 +392,18 @@ export default function Home({ onNavigate }) {
             ].map((s, idx) => (
               <div
                 key={s.step}
-                className={`flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:border-b-0 md:pb-0 ${
-                  idx > 0 ? 'md:border-l md:border-neutral-900/15 md:pl-8' : ''
+                className={`flex flex-col justify-between gap-6 border-b border-[#16232A]/15 pb-8 md:border-b-0 md:pb-0 ${
+                  idx > 0 ? 'md:border-l md:border-[#16232A]/15 md:pl-8' : ''
                 }`}
               >
                 <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                   {s.step}
                 </span>
                 <div>
-                  <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-teal-900">
+                  <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-[#16232A]">
                     {s.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-gray-900">
+                  <p className="text-sm leading-relaxed text-[#16232A]">
                     {s.desc}
                   </p>
                 </div>
@@ -411,7 +411,7 @@ export default function Home({ onNavigate }) {
             ))}
 
             {/* Visual Quote Card */}
-            <div className="flex flex-col justify-between gap-4 md:border-l md:border-neutral-900/15 md:pl-8">
+            <div className="flex flex-col justify-between gap-4 md:border-l md:border-[#16232A]/15 md:pl-8">
               <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-200">
                 <img
                   src={pastelImg}
@@ -420,13 +420,13 @@ export default function Home({ onNavigate }) {
                 />
               </div>
               <div className="flex items-center justify-between pt-2">
-                <span className="text-xs text-gray-900">
+                <span className="text-xs text-[#16232A]">
                   Planning an upcoming event?
                 </span>
                 <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
-                  className="border-b border-neutral-900 pb-0.5 text-xs font-medium tracking-[0.12em] text-teal-900 uppercase no-underline transition-opacity hover:opacity-55"
+                  className="border-b border-[#16232A] pb-0.5 text-xs font-medium tracking-[0.12em] text-[#16232A] uppercase no-underline transition-opacity hover:opacity-55"
                 >
                   Request a Quote
                 </a>
@@ -437,18 +437,18 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 4. PACKAGES & PRODUCTION TIERS */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 md:flex-row md:items-end">
+          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-[#16232A]/15 pb-8 md:flex-row md:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Production Tiers
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
                 Structured Event Packages
               </h2>
             </div>
-            <p className="max-w-md text-sm leading-relaxed text-gray-900">
+            <p className="max-w-md text-sm leading-relaxed text-[#16232A]">
               Event production packages for corporate functions, weddings,
               institutional events, and festivals.
             </p>
@@ -460,18 +460,18 @@ export default function Home({ onNavigate }) {
                 key={pkg.name}
                 className={`flex flex-col justify-between border p-8 transition-colors duration-200 ${
                   pkg.featured
-                    ? 'border-neutral-900 bg-white'
-                    : 'border-neutral-900/15 bg-white'
+                    ? 'border-[#16232A] bg-white'
+                    : 'border-[#16232A]/15 bg-white'
                 }`}
               >
                 <div>
-                  <div className="mb-6 border-b border-neutral-900/15 pb-6">
+                  <div className="mb-6 border-b border-[#16232A]/15 pb-6">
                     <div className="mb-2 flex items-center justify-between gap-3">
-                      <h3 className="text-xl font-medium tracking-[-0.01em] text-teal-900">
+                      <h3 className="text-xl font-medium tracking-[-0.01em] text-[#16232A]">
                         {pkg.name}
                       </h3>
                       {pkg.featured && (
-                        <span className="border border-neutral-900 px-2.5 py-0.5 text-[10px] tracking-[0.14em] text-teal-900 uppercase">
+                        <span className="border border-[#16232A] px-2.5 py-0.5 text-[10px] tracking-[0.14em] text-[#16232A] uppercase">
                           Most Booked
                         </span>
                       )}
@@ -482,7 +482,7 @@ export default function Home({ onNavigate }) {
                   </div>
 
                   <div className="mb-8 flex items-baseline gap-2">
-                    <span className="text-3xl font-normal tracking-[-0.03em] text-teal-900 md:text-4xl">
+                    <span className="text-3xl font-normal tracking-[-0.03em] text-[#16232A] md:text-4xl">
                       {pkg.price}
                     </span>
                     <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -493,7 +493,7 @@ export default function Home({ onNavigate }) {
                   <ul className="mb-10 flex flex-col gap-3.5 text-sm text-neutral-700">
                     {pkg.features.map((feat) => (
                       <li key={feat} className="flex items-start gap-3">
-                        <span className="mt-1.5 h-1 w-1 shrink-0 bg-neutral-900" />
+                        <span className="mt-1.5 h-1 w-1 shrink-0 bg-[#075056]" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -505,8 +505,8 @@ export default function Home({ onNavigate }) {
                   onClick={(e) => handleLinkClick(e, '/booking')}
                   className={`block w-full border py-3.5 text-center text-xs font-medium tracking-[0.14em] uppercase no-underline transition-colors duration-200 ${
                     pkg.featured
-                      ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8] hover:bg-transparent hover:text-teal-900'
-                      : 'border-neutral-900 text-teal-900 hover:bg-neutral-900 hover:text-[#f9f9f8]'
+                      ? 'border-[#16232A] bg-[#075056] text-[#E4EEF0] hover:bg-transparent hover:text-[#16232A]'
+                      : 'border-[#16232A] text-[#16232A] hover:bg-[#075056] hover:text-[#E4EEF0]'
                   }`}
                 >
                   Enquire About Package
@@ -518,14 +518,14 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 5. EQUIPMENT & SUPPLIES CATALOG PREVIEW */}
-      <section className="border-b border-neutral-900/15">
+      <section className="border-b border-[#16232A]/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-neutral-900/15 pb-8 sm:flex-row sm:items-end">
+          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-[#16232A]/15 pb-8 sm:flex-row sm:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Rental Catalog
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
                 Event Equipment &amp; Supplies
               </h2>
             </div>
@@ -533,7 +533,7 @@ export default function Home({ onNavigate }) {
             <a
               href="/event-equipment-supplies"
               onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-              className="self-start border-b border-neutral-900 pb-1 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-opacity hover:opacity-55 sm:self-auto"
+              className="self-start border-b border-[#16232A] pb-1 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-opacity hover:opacity-55 sm:self-auto"
             >
               View Equipment Catalog →
             </a>
@@ -554,7 +554,7 @@ export default function Home({ onNavigate }) {
                     className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mb-1.5 text-base font-medium tracking-[-0.01em] text-teal-900 transition-opacity group-hover:opacity-65">
+                <h3 className="mb-1.5 text-base font-medium tracking-[-0.01em] text-[#16232A] transition-opacity group-hover:opacity-65">
                   {cat.title}
                 </h3>
                 <p className="text-xs leading-relaxed text-neutral-500">
@@ -567,14 +567,14 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 6. VISUAL PORTFOLIO & FILTERABLE GALLERY */}
-      <section className="border-b border-neutral-900/15">
+      <section className="border-b border-[#16232A]/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-12 flex flex-col justify-between gap-8 border-b border-neutral-900/15 pb-8 lg:flex-row lg:items-end">
+          <div className="mb-12 flex flex-col justify-between gap-8 border-b border-[#16232A]/15 pb-8 lg:flex-row lg:items-end">
             <div>
               <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Portfolio &amp; Productions
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
                 Recent Projects &amp; Installations
               </h2>
             </div>
@@ -596,8 +596,8 @@ export default function Home({ onNavigate }) {
                     aria-pressed={isSelected}
                     className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
                       isSelected
-                        ? 'border-neutral-900 font-medium text-teal-900'
-                        : 'border-transparent text-neutral-400 hover:text-teal-900'
+                        ? 'border-[#16232A] font-medium text-[#16232A]'
+                        : 'border-transparent text-neutral-400 hover:text-[#16232A]'
                     }`}
                   >
                     {tab.label}
@@ -620,8 +620,8 @@ export default function Home({ onNavigate }) {
                     className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                   />
                 </div>
-                <div className="flex items-baseline justify-between gap-4 border-t border-neutral-900/15 pt-3">
-                  <h3 className="text-base font-normal text-teal-900">
+                <div className="flex items-baseline justify-between gap-4 border-t border-[#16232A]/15 pt-3">
+                  <h3 className="text-base font-normal text-[#16232A]">
                     {item.title}
                   </h3>
                   <span className="shrink-0 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
@@ -632,11 +632,11 @@ export default function Home({ onNavigate }) {
             ))}
           </div>
 
-          <div className="mt-16 border-t border-neutral-900/15 pt-8 text-right">
+          <div className="mt-16 border-t border-[#16232A]/15 pt-8 text-right">
             <a
               href="/gallery"
               onClick={(e) => handleLinkClick(e, '/gallery')}
-              className="inline-block border border-neutral-900 px-6 py-3 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-neutral-900 hover:text-[#f9f9f8]"
+              className="inline-block border border-[#16232A] px-6 py-3 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-[#075056] hover:text-[#E4EEF0]"
             >
               Explore Full Gallery →
             </a>
@@ -645,27 +645,27 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 7. CLIENT TESTIMONIALS */}
-      <section className="border-b border-neutral-900/15">
+      <section className="border-b border-[#16232A]/15">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14">
             <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-300 uppercase">
               Client Feedback
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
               What corporate clients &amp; event planners say
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-12 border-t border-neutral-900/15 pt-12 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-12 border-t border-[#16232A]/15 pt-12 md:grid-cols-2">
             <blockquote className="flex flex-col justify-between gap-8">
-              <p className="text-lg font-normal leading-relaxed text-neutral-800 md:text-xl">
+              <p className="text-lg font-normal leading-relaxed text-[#16232A] md:text-xl">
                 “Staxx-HyperKids managed our corporate annual gala at Serena
                 Hotel. Their sound engineering, LED screens, and stage lighting
                 were world-class. Having AV and d&eacute;cor handled by one
                 coordinated team eliminated all vendor stress.”
               </p>
               <footer className="text-xs tracking-[0.06em] text-neutral-500">
-                <strong className="block font-medium text-teal-900 uppercase tracking-[0.12em]">
+                <strong className="block font-medium text-[#16232A] uppercase tracking-[0.12em]">
                   Brenda Akinyi
                 </strong>
                 <span className="mt-1 block">
@@ -674,15 +674,15 @@ export default function Home({ onNavigate }) {
               </footer>
             </blockquote>
 
-            <blockquote className="flex flex-col justify-between gap-8 border-t border-neutral-900/15 pt-8 md:border-t-0 md:border-l md:pt-0 md:pl-12">
-              <p className="text-lg font-normal leading-relaxed text-neutral-800 md:text-xl">
+            <blockquote className="flex flex-col justify-between gap-8 border-t border-[#16232A]/15 pt-8 md:border-t-0 md:border-l md:pt-0 md:pl-12">
+              <p className="text-lg font-normal leading-relaxed text-[#16232A] md:text-xl">
                 “We hired clear-span marquees, flooring, and audiovisual gear for
                 our institution&rsquo;s graduation ceremony. Their technical crew
                 arrived on schedule, tested all power lines, and maintained
                 immaculate professional standards throughout the day.”
               </p>
               <footer className="text-xs tracking-[0.06em] text-neutral-500">
-                <strong className="block font-medium text-teal-900 uppercase tracking-[0.12em]">
+                <strong className="block font-medium text-[#16232A] uppercase tracking-[0.12em]">
                   Dr. James Kiprop
                 </strong>
                 <span className="mt-1 block">
@@ -695,7 +695,7 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* 8. FINAL CALL TO ACTION */}
-      <section className="bg-teal-900 text-[#f9f9f8]">
+      <section className="bg-[#075056] text-[#E4EEF0]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
@@ -714,14 +714,14 @@ export default function Home({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
             >
               Request an Event Quote
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#f9f9f8]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:border-[#f9f9f8]"
+              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
             >
               Contact Our Team
             </a>

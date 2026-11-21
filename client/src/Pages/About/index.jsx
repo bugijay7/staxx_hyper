@@ -103,9 +103,9 @@ export default function About({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-white pt-10 font-sans text-teal-900 antialiased md:pt-18">
+    <div className="bg-white pt-10 font-sans text-[#16232A] antialiased md:pt-18">
       {/* 1. EDITORIAL HERO SECTION */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-4 pb-16 md:px-10 md:pt-4 md:pb-24">
           
 
@@ -113,7 +113,7 @@ export default function About({ onNavigate }) {
             className="mb-14 grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]"
             data-aos="fade-up"
           >
-            <h1 className="pt-10 md:pt-0 text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="pt-10 md:pt-0 text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
               AV production, <br />
               <span className="text-neutral-500">Event styling</span>
             </h1>
@@ -127,13 +127,13 @@ export default function About({ onNavigate }) {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div className="relative overflow-hidden border-b border-neutral-900/15 bg-neutral-100 lg:border-r lg:border-b-0">
+            <div className="relative overflow-hidden border-b border-[#16232A]/15 bg-neutral-100 lg:border-r lg:border-b-0">
               <img
                 src={Hero}
                 alt="Staxx-HyperKids integrated audiovisual staging and event styling in Nairobi"
                 className="aspect-[16/10] h-full w-full object-cover"
               />
-              <div className="border-t border-neutral-900/15 bg-white px-6 py-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+              <div className="border-t border-[#16232A]/15 bg-white px-6 py-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
                 Technical Production &amp; Spatial Styling &bull; Nairobi, Kenya
               </div>
             </div>
@@ -143,10 +143,10 @@ export default function About({ onNavigate }) {
                 <span className="block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                   Who We Are
                 </span>
-                <h2 className="text-xl md:text-xl font-normal tracking-[-0.02em] leading-[1.2] text-teal-900">
+                <h2 className="text-xl md:text-xl font-normal tracking-[-0.02em] leading-[1.2] text-[#16232A]">
                    Styling and technical production under one roof.
                 </h2>
-                <p className="text-xs md:text-sm leading-relaxed text-gray-900 md:text-base">
+                <p className="text-xs md:text-sm leading-relaxed text-[#16232A] md:text-base">
                   Based in Nairobi, Staxx-HyperKids delivers end-to-end event
                   infrastructure—from corporate sound, LED screens, and staging
                   to bespoke d&eacute;cor, themed children&rsquo;s parties, and
@@ -154,7 +154,7 @@ export default function About({ onNavigate }) {
                 </p>
               </div>
 
-              <div className="mt-5 md:mt-10space-y-3 bg-amber-600 border-t border-neutral-900/15 p-6 text-xs tracking-[0.06em] text-gray-900 font-bold">
+              <div className="mt-5 md:mt-10space-y-3 bg-[#FF5B04] border-t border-[#16232A]/15 p-6 text-xs tracking-[0.06em] text-[#16232A] font-bold">
                 <p className="mb-1 text-[8px]">
                   <strong className="font-medium tracking-[0.12em] text-white uppercase">
                     Office Location: <br/>
@@ -174,7 +174,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 2. HISTORY & HOW IT STARTED */}
-<section className="border-b border-neutral-900/15 bg-amber-100">
+<section className="border-b border-[#16232A]/15 bg-[#E4EEF0]">
   <div className="mx-auto max-w-[1440px] px-4 py-12 md:px-10 md:py-24">
     <div
       className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.45fr] lg:gap-20"
@@ -183,50 +183,50 @@ export default function About({ onNavigate }) {
       {/* Left Column: Editorial Header & Featured Image */}
       <div className="lg:sticky lg:top-24">
         <div className="mb-4 flex items-center gap-3">
-          <span className="h-px w-8 bg-teal-900" />
-          <span className="text-[11px] font-semibold tracking-[0.18em] text-teal-900 uppercase">
+          <span className="h-px w-8 bg-[#075056]" />
+          <span className="text-[11px] font-semibold tracking-[0.18em] text-[#16232A] uppercase">
             History &amp; Origin &bull; Est. 2026
           </span>
         </div>
 
         <h2 className="text-3xl font-light tracking-[-0.025em] leading-[1.12] text-black md:text-5xl">
           Technical production and{' '}
-          <span className="font-normal italic text-teal-900">
+          <span className="font-normal italic text-[#16232A]">
             event styling
           </span>{' '}
           in Kenya
         </h2>
 
         <figure className="mt-8">
-          <div className="aspect-[16/10] w-full overflow-hidden border border-neutral-900/15 bg-neutral-100">
+          <div className="aspect-[16/10] w-full overflow-hidden border border-[#16232A]/15 bg-neutral-100">
             <img
               src={Audiovisual}
               alt="Staxx production team executing large scale event setup in Nairobi"
               className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
-          <figcaption className="mt-3 flex items-center justify-between border-b border-neutral-900/10 pb-2 text-xs text-neutral-900">
+          <figcaption className="mt-3 flex items-center justify-between border-b border-[#16232A]/10 pb-2 text-xs text-[#16232A]">
             <span>On-site production &amp; spatial setup</span>
-            <span className="font-medium text-teal-950">Nairobi, KE</span>
+            <span className="font-medium text-[#16232A]">Nairobi, KE</span>
           </figcaption>
         </figure>
       </div>
 
       {/* Right Column: Article Body */}
-      <article className="space-y-7 p-4 text-xs md:text-sm leading-[1.8] text-black lg:border-l lg:border-neutral-900/15 lg:pl-14">
+      <article className="space-y-7 p-4 text-xs md:text-sm leading-[1.8] text-black lg:border-l lg:border-[#16232A]/15 lg:pl-14">
         {/* Lead Paragraph with Drop Cap */}
-        <p className="first-letter:float-left first-letter:mr-3.5 first-letter:mt-1  first-letter:text-6xl first-letter:italic first-letter:font-semibold first-letter:leading-none first-letter:text-teal-900">
+        <p className="first-letter:float-left first-letter:mr-3.5 first-letter:mt-1  first-letter:text-6xl first-letter:italic first-letter:font-semibold first-letter:leading-none first-letter:text-[#16232A]">
           Founded in 2026 by{' '}
-          <strong className="font-semibold text-teal-900">
+          <strong className="font-semibold text-[#16232A]">
             Bryan Karanja
           </strong>{' '}
           and{' '}
-          <strong className="font-semibold text-teal-900">
+          <strong className="font-semibold text-[#16232A]">
             Dan Njuguna
           </strong>
           , Staxx-HyperKids brings together complementary hands-on experience
           in{' '}
-          <span className="font-medium text-teal-900 underline decoration-teal-900/30 underline-offset-4">
+          <span className="font-medium text-[#16232A] underline decoration-[#16232A]/30 underline-offset-4">
             audiovisual operations
           </span>
           , event d&eacute;cor, and children&rsquo;s party production.
@@ -235,11 +235,11 @@ export default function About({ onNavigate }) {
         <p>
           The founders recognised that event hosts, corporates, and families
           frequently need both{' '}
-          <span className="font-medium text-teal-900">
+          <span className="font-medium text-[#16232A]">
             dependable technical production
           </span>{' '}
           and{' '}
-          <span className="font-medium text-teal-900">
+          <span className="font-medium text-[#16232A]">
             thoughtful spatial styling
           </span>
           &mdash;yet were forced to split budgets and logistics across
@@ -247,8 +247,8 @@ export default function About({ onNavigate }) {
         </p>
 
         {/* Editorial Pull-Quote */}
-        <blockquote className="my-8 border-l-2 border-teal-900 bg-white py-2 pl-6 pr-4 z-99 relative">
-          <p className="text-base font-medium italic leading-relaxed text-teal-900 md:text-lg">
+        <blockquote className="my-8 border-l-2 border-[#16232A] bg-white py-2 pl-6 pr-4 z-99 relative">
+          <p className="text-base font-medium italic leading-relaxed text-[#16232A] md:text-lg">
             &ldquo;One coordinated provider delivering seamless setup,
             consistent quality control, and practical on-site execution.&rdquo;
           </p>
@@ -257,25 +257,25 @@ export default function About({ onNavigate }) {
         <p>
           Staxx-HyperKids was formed to bring these disciplines together under
           one roof, serving events across{' '}
-          <span className="font-medium text-teal-900">
+          <span className="font-medium text-[#16232A]">
             Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a, and Kajiado
           </span>{' '}
           counties.
         </p>
 
         {/* Quick Editorial Footnote / Coverage Strip */}
-        <div className="grid grid-cols-3 gap-4 border-t border-neutral-900/15 pt-6 text-sm">
+        <div className="grid grid-cols-3 gap-4 border-t border-[#16232A]/15 pt-6 text-sm">
           <div>
             <span className="block text-xs uppercase tracking-wider text-black">
               Established
             </span>
-            <span className="mt-1 block font-semibold text-teal-900">2024</span>
+            <span className="mt-1 block font-semibold text-[#16232A]">2024</span>
           </div>
           <div>
             <span className="block text-xs uppercase tracking-wider text-black">
               Coverage
             </span>
-            <span className="mt-1 block font-semibold text-teal-900">
+            <span className="mt-1 block font-semibold text-[#16232A]">
               6 Counties
             </span>
           </div>
@@ -283,7 +283,7 @@ export default function About({ onNavigate }) {
             <span className="block text-xs uppercase tracking-wider text-black">
               Focus
             </span>
-            <span className="mt-1 block font-semibold text-teal-900">
+            <span className="mt-1 block font-semibold text-[#16232A]">
               AV &amp; Styling
             </span>
           </div>
@@ -294,18 +294,18 @@ export default function About({ onNavigate }) {
 </section>
 
       {/* 3. MISSION & VISION */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
-            className="grid grid-cols-1 items-stretch border border-neutral-900/15 bg-white lg:grid-cols-[1.2fr_1fr]"
+            className="grid grid-cols-1 items-stretch border border-[#16232A]/15 bg-white lg:grid-cols-[1.2fr_1fr]"
             data-aos="fade-up"
           >
-            <div className="flex flex-col justify-between divide-y divide-neutral-900/15 border-b border-neutral-900/15 lg:border-r lg:border-b-0">
+            <div className="flex flex-col justify-between divide-y divide-[#16232A]/15 border-b border-[#16232A]/15 lg:border-r lg:border-b-0">
               <div className="p-8 md:p-12">
                 <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                   Our Mission
                 </span>
-                <h3 className="text-sm md:text-xl font-normal tracking-[-0.015em] leading-[1.28] text-teal-900 md:text-3xl">
+                <h3 className="text-sm md:text-xl font-normal tracking-[-0.015em] leading-[1.28] text-[#16232A] md:text-3xl">
                   To create memorable, well-executed events by combining
                   creative design, dependable technology, and attentive service.
                 </h3>
@@ -315,7 +315,7 @@ export default function About({ onNavigate }) {
                 <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                   Our Vision
                 </span>
-                <h3 className="text-sm md:text-xl font-normal tracking-[-0.015em] leading-[1.28] text-teal-900 md:text-3xl">
+                <h3 className="text-sm md:text-xl font-normal tracking-[-0.015em] leading-[1.28] text-[#16232A] md:text-3xl">
                   To become a trusted, multi-disciplinary events and
                   experiential solutions brand in Kenya, known for creativity,
                   technical reliability, and seamless delivery.
@@ -335,33 +335,33 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 4. CORE PRINCIPLES */}
-      <section className="border-b border-neutral-900/15 bg-teal-900">
+      <section className="border-b border-[#16232A]/15 bg-[#075056]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12" data-aos="fade-up">
-            <span className="mb-3 block text-[11px] font-bold tracking-[0.14em] text-amber-500 uppercase">
+            <span className="mb-3 block text-[11px] font-bold tracking-[0.14em] text-[#FF5B04] uppercase">
               Operational Standards
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-100 md:text-4xl">
+            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#E4EEF0] md:text-4xl">
               How We Work
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 border-t border-l border-neutral-900/15 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 border-t border-l border-[#16232A]/15 sm:grid-cols-2 lg:grid-cols-4">
             {coreValues.map((val, index) => (
               <div
                 key={val.no}
-                className="flex flex-col justify-between border-r border-b border-neutral-900/15 bg-white p-8"
+                className="flex flex-col justify-between border-r border-b border-[#16232A]/15 bg-white p-8"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 <div>
-                  <span className="mb-6 block border-b border-neutral-900/15 pb-3 text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
+                  <span className="mb-6 block border-b border-[#16232A]/15 pb-3 text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                     [ {val.no} ]
                   </span>
-                  <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-teal-900">
+                  <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-[#16232A]">
                     {val.title}
                   </h3>
-                  <p className="mb-6 text-sm leading-relaxed text-gray-900">
+                  <p className="mb-6 text-sm leading-relaxed text-[#16232A]">
                     {val.desc}
                   </p>
                 </div>
@@ -379,7 +379,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 5. WHAT SETS US APART & WHO WE SERVE */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-[#16232A]/15 bg-[#E4EEF0]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
@@ -389,20 +389,20 @@ export default function About({ onNavigate }) {
               <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                 Differentiation
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
                 Why Clients Choose Staxx-HyperKids
               </h2>
             </div>
           </div>
 
           <div
-            className="grid grid-cols-1 border-t border-l border-neutral-900/15 bg-white md:grid-cols-3"
+            className="grid grid-cols-1 border-t border-l border-[#16232A]/15 bg-white md:grid-cols-3"
             data-aos="fade-up"
           >
             {advantagePoints.map((point, index) => (
               <div
                 key={point.no}
-                className="flex flex-col justify-between border-r border-b border-neutral-900/15 p-8 md:p-10"
+                className="flex flex-col justify-between border-r border-b border-[#16232A]/15 p-8 md:p-10"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
@@ -410,10 +410,10 @@ export default function About({ onNavigate }) {
                   <span className="mb-4 block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
                     {point.no}
                   </span>
-                  <h3 className="mb-3 text-xl font-normal tracking-[-0.01em] text-teal-900">
+                  <h3 className="mb-3 text-xl font-normal tracking-[-0.01em] text-[#16232A]">
                     {point.title}
                   </h3>
-                  <p className="mb-6 text-sm leading-relaxed text-gray-900">
+                  <p className="mb-6 text-sm leading-relaxed text-[#16232A]">
                     {point.desc}
                   </p>
                 </div>
@@ -430,7 +430,7 @@ export default function About({ onNavigate }) {
 
           {/* Target Clients & Sectors Strip */}
           <div
-            className="mt-12 border border-neutral-900/15 p-8 md:p-10"
+            className="mt-12 border border-[#16232A]/15 p-8 md:p-10"
             data-aos="fade-up"
           >
             <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
@@ -440,7 +440,7 @@ export default function About({ onNavigate }) {
               {clientSectors.map((sector) => (
                 <span
                   key={sector}
-                  className="border border-neutral-900/20 px-4 py-2 text-xs tracking-[0.06em] text-neutral-800"
+                  className="border border-[#16232A]/20 px-4 py-2 text-xs tracking-[0.06em] text-[#16232A]"
                 >
                   {sector}
                 </span>
@@ -451,7 +451,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 6. CO-FOUNDERS */}
-      <section className="border-b border-neutral-900/15 bg-amber-100">
+      <section className="border-b border-[#16232A]/15 bg-[#E4EEF0]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
@@ -461,7 +461,7 @@ export default function About({ onNavigate }) {
               <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                 Founding Leadership
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-teal-900 md:text-4xl">
+              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
                 Meet the Co-Founders
               </h2>
             </div>
@@ -474,11 +474,11 @@ export default function About({ onNavigate }) {
             {founders.map((founder, index) => (
               <article
                 key={founder.name}
-                className="group border border-neutral-900/15 bg-white"
+                className="group border border-[#16232A]/15 bg-white"
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
-                <div className="flex items-center justify-between border-b border-neutral-900/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
+                <div className="flex items-center justify-between border-b border-[#16232A]/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
                   <span>0{index + 1}</span>
                   <span>{founder.role}</span>
                 </div>
@@ -491,14 +491,14 @@ export default function About({ onNavigate }) {
                   />
                 </div>
 
-                <div className="border-t border-neutral-900/15 bg-white p-6 md:p-8">
-                  <h3 className="text-2xl font-normal tracking-[-0.01em] text-teal-900">
+                <div className="border-t border-[#16232A]/15 bg-white p-6 md:p-8">
+                  <h3 className="text-2xl font-normal tracking-[-0.01em] text-[#16232A]">
                     {founder.name}
                   </h3>
                   <p className="mt-1 mb-4 text-[11px] font-medium tracking-[0.12em] text-neutral-500 uppercase">
                     {founder.role}
                   </p>
-                  <p className="text-sm leading-relaxed text-gray-900 md:text-base">
+                  <p className="text-sm leading-relaxed text-[#16232A] md:text-base">
                     {founder.bio}
                   </p>
                 </div>
@@ -509,19 +509,19 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 7. BOTTOM CTA */}
-      <section className="bg-amber-600 text-[#f9f9f8]">
+      <section className="bg-[#FF5B04] text-[#E4EEF0]">
         <div
           className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-teal-900 uppercase font-bold">
+            <span className="mb-4 block text-[11px] tracking-[0.14em] text-[#16232A] uppercase font-bold">
               Start Planning
             </span>
             <h3 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
               Ready to plan your next event?
             </h3>
-            <p className="text-base leading-relaxed text-teal-900">
+            <p className="text-base leading-relaxed text-[#16232A]">
               Reach out to our team at Commerce House, Nairobi to check date
               availability and request an itemized quote for AV, d&eacute;cor,
               kiddie parties, or equipment hire across Kenya.
@@ -532,14 +532,14 @@ export default function About({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#f9f9f8] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#f9f9f8]"
+              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
             >
               Request an Event Quote &rarr;
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#f9f9f8]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors duration-200 hover:border-[#f9f9f8]"
+              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
             >
               Contact Our Team
             </a>

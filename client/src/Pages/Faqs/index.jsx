@@ -89,22 +89,22 @@ export default function Faqs({ onNavigate }) {
   };
 
   return (
-    <div className="bg-white pt-20 font-sans text-teal-900 antialiased md:pt-24">
+    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
       {/* 1. HERO HEADER */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
             <span>Staxx Hyper Kids Events</span>
             <span>Help Center &bull; Booking, Safety &amp; Logistics</span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-teal-900 sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
               Frequently Asked <br />
               <span className="text-neutral-500">Questions</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-gray-900 md:text-sm lg:border-l lg:border-neutral-900/15 lg:pl-10">
+            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
               Everything you need to know about booking kids&apos; party setups,
               hiring commercial inflatables, M-Pesa deposits, power backup, and
               rainy-day plans across Kenya.
@@ -114,7 +114,7 @@ export default function Faqs({ onNavigate }) {
       </section>
 
       {/* 2. FILTER STRIP */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
           <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
             Filter by Topic ({filteredFaqs.length})
@@ -131,8 +131,8 @@ export default function Faqs({ onNavigate }) {
                   aria-pressed={isSelected}
                   className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-neutral-900 font-medium text-teal-900'
-                      : 'border-transparent text-neutral-400 hover:text-teal-900'
+                      ? 'border-[#16232A] font-medium text-[#16232A]'
+                      : 'border-transparent text-neutral-400 hover:text-[#16232A]'
                   }`}
                 >
                   {cat}
@@ -144,18 +144,18 @@ export default function Faqs({ onNavigate }) {
       </section>
 
       {/* 3. ACCORDION FAQ LIST & QUICK HELP SIDEBAR */}
-      <section className="border-b border-neutral-900/15 bg-white">
+      <section className="border-b border-[#16232A]/15 bg-white">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
             {/* Left Accordion Column */}
-            <div className="border-t border-neutral-900/15 lg:col-span-8">
+            <div className="border-t border-[#16232A]/15 lg:col-span-8">
               {filteredFaqs.map((faq) => {
                 const isOpen = openFaqId === faq.id;
 
                 return (
                   <div
                     key={faq.id}
-                    className={`border-b border-neutral-900/15 transition-colors duration-200 ${
+                    className={`border-b border-[#16232A]/15 transition-colors duration-200 ${
                       isOpen ? 'bg-white' : 'bg-white hover:bg-white/60'
                     }`}
                   >
@@ -167,14 +167,14 @@ export default function Faqs({ onNavigate }) {
                     >
                       <div className="space-y-2.5">
                         <div className="flex flex-wrap items-center gap-2 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                          <span className="font-medium text-teal-900">
+                          <span className="font-medium text-[#16232A]">
                             [ {faq.id} ]
                           </span>
                           <span>&bull;</span>
                           <span>{faq.category}</span>
                         </div>
 
-                        <h2 className="text-lg font-normal tracking-[-0.015em] leading-snug text-teal-900 md:text-xl">
+                        <h2 className="text-lg font-normal tracking-[-0.015em] leading-snug text-[#16232A] md:text-xl">
                           {faq.question}
                         </h2>
                       </div>
@@ -183,8 +183,8 @@ export default function Faqs({ onNavigate }) {
                         aria-hidden="true"
                         className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center border text-xs transition-colors duration-200 ${
                           isOpen
-                            ? 'border-neutral-900 bg-neutral-900 text-[#f9f9f8]'
-                            : 'border-neutral-900/20 text-teal-900'
+                            ? 'border-[#16232A] bg-[#075056] text-[#E4EEF0]'
+                            : 'border-[#16232A]/20 text-[#16232A]'
                         }`}
                       >
                         {isOpen ? '↑' : '↓'}
@@ -193,7 +193,7 @@ export default function Faqs({ onNavigate }) {
 
                     {isOpen && (
                       <div className="px-6 pb-8 md:px-8">
-                        <div className="border-t border-neutral-900/10 pt-5 text-sm leading-relaxed text-gray-900 md:text-base">
+                        <div className="border-t border-[#16232A]/10 pt-5 text-sm leading-relaxed text-[#16232A] md:text-base">
                           {faq.answer}
                         </div>
                       </div>
@@ -206,19 +206,19 @@ export default function Faqs({ onNavigate }) {
             {/* Right Quick Support Sidebar */}
             <div className="space-y-8 lg:sticky lg:top-28 lg:col-span-4">
               {/* Quick Facts Card */}
-              <div className="space-y-6 border border-neutral-900/15 bg-white p-8">
-                <div className="border-b border-neutral-900/15 pb-4">
+              <div className="space-y-6 border border-[#16232A]/15 bg-white p-8">
+                <div className="border-b border-[#16232A]/15 pb-4">
                   <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
                     [ Quick Facts ]
                   </span>
                 </div>
 
-                <div className="divide-y divide-neutral-900/10 text-sm">
+                <div className="divide-y divide-[#16232A]/10 text-sm">
                   <div className="pb-4">
                     <span className="block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
                       Booking Deposit
                     </span>
-                    <p className="mt-1 font-medium text-teal-900">
+                    <p className="mt-1 font-medium text-[#16232A]">
                       40% via M-Pesa or Bank Transfer
                     </p>
                   </div>
@@ -227,7 +227,7 @@ export default function Faqs({ onNavigate }) {
                     <span className="block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
                       Setup Arrival Window
                     </span>
-                    <p className="mt-1 font-medium text-teal-900">
+                    <p className="mt-1 font-medium text-[#16232A]">
                       2 – 3 Hours Before Party Start
                     </p>
                   </div>
@@ -236,7 +236,7 @@ export default function Faqs({ onNavigate }) {
                     <span className="block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
                       Safety Guarantee
                     </span>
-                    <p className="mt-1 font-medium text-teal-900">
+                    <p className="mt-1 font-medium text-[#16232A]">
                       Sanitized Gear + On-Site Attendant
                     </p>
                   </div>
@@ -244,7 +244,7 @@ export default function Faqs({ onNavigate }) {
               </div>
 
               {/* Direct Support Card */}
-              <div className="space-y-5 border border-neutral-900 bg-neutral-900 p-8 text-[#f9f9f8]">
+              <div className="space-y-5 border border-[#16232A] bg-[#075056] p-8 text-[#E4EEF0]">
                 <span className="block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
                   [ Still Have a Question? ]
                 </span>
@@ -261,14 +261,14 @@ export default function Faqs({ onNavigate }) {
                     href="https://wa.me/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full border border-[#f9f9f8] bg-white py-4 text-center text-xs font-medium tracking-[0.14em] text-teal-900 uppercase no-underline transition-colors hover:bg-transparent hover:text-[#f9f9f8]"
+                    className="block w-full border border-[#E4EEF0] bg-white py-4 text-center text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors hover:bg-transparent hover:text-[#E4EEF0]"
                   >
                     Chat on WhatsApp
                   </a>
                   <a
                     href="/booking"
                     onClick={(e) => handleLinkClick(e, '/booking')}
-                    className="block w-full border border-[#f9f9f8]/30 bg-transparent py-3 text-center text-xs font-medium tracking-[0.14em] text-[#f9f9f8] uppercase no-underline transition-colors hover:border-[#f9f9f8]"
+                    className="block w-full border border-[#E4EEF0]/30 bg-transparent py-3 text-center text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors hover:border-[#E4EEF0]"
                   >
                     Submit Booking Enquiry &rarr;
                   </a>
