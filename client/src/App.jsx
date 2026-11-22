@@ -41,7 +41,7 @@ const pageComponents = {
   '/childrens-party-services': ChildrensPartyServices,
   '/party-packages': PartyPackages,
   '/party-themes': PartyThemes,
-  '/events': EventEquipmentSupplies,
+  '/event-equipment-supplies': EventEquipmentSupplies,
   '/products': ProductCategories,
   '/products/sample-product': IndividualProduct,
   '/gallery': Gallery,

@@ -214,8 +214,8 @@ export default function Home({ onNavigate }) {
                   </span>
                 </a>
                 <a
-                  href="/events"
-                  onClick={(e) => handleLinkClick(e, '/events')}
+                  href="/event-equipment-supplies"
+                  onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
                   className="group inline-flex items-center gap-3  border border-white/25 bg-transparent py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-white uppercase no-underline transition-colors duration-200 hover:border-white hover:bg-white/10 md:text-[11px]"
                 >
                   <span>event Supplies</span>
@@ -367,7 +367,7 @@ export default function Home({ onNavigate }) {
               </div>
               <div className="sm:border-l sm:border-white/15 sm:pl-6">
                 <span className="font-display-condensed block text-4xl font-normal text-white md:text-5xl">
-                  Full Stock
+                  Stock
                 </span>
                 <span className="mt-2 block text-xs leading-relaxed text-[#9E9A9F]">
                   Sound, lighting, marquees, and event furniture

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+const BOOKING_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzX968aP1-YC_FoCM7gny1ggE5OzP1Qb7_9c1-QI4M62e5e6c2bgONn7BgrBI5QM6yb/exec';
+
 export default function Booking({ onNavigate }) {
   const [formData, setFormData] = useState({
     clientName: '',
@@ -17,7 +19,7 @@ export default function Booking({ onNavigate }) {
     notes: '',
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'sent' | 'error'
 
   const handleLinkClick = (e, path) => {
     if (e.metaKey || e.ctrlKey || e.button === 1) return;
@@ -81,10 +83,46 @@ export default function Booking({ onNavigate }) {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setStatus('submitting');
+
+    try {
+      const response = await fetch(BOOKING_SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify({
+          clientName: formData.clientName.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim(),
+          eventName: formData.eventName.trim(),
+          eventSector: formData.eventSector,
+          eventDate: formData.eventDate,
+          eventTime: formData.eventTime,
+          location: formData.location.trim(),
+          guestCount: formData.guestCount,
+          packageTier: formData.packageTier,
+          theme: formData.theme,
+          addOns: formData.addOns,
+          notes: formData.notes.trim(),
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.status === 'success') {
+        setStatus('sent');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        console.error('Apps Script error:', result.message);
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Booking submission error:', error);
+      setStatus('error');
+    }
   };
 
   return (
@@ -114,7 +152,7 @@ export default function Booking({ onNavigate }) {
               <span className="text-white/65">&amp; Enquiry</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className="border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Lock in your event date across any occasion—from corporate galas
               and weddings to concerts, church conventions, and private
               celebrations. Our producers confirm availability within 24 hours.
@@ -143,9 +181,9 @@ export default function Booking({ onNavigate }) {
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
             {/* Left Form Column */}
             <div className="lg:col-span-8">
-              {submitted ? (
-                <div className="space-y-8  border border-[#F5D033]/60 bg-[#141016] p-8 md:p-14">
-                  <div className="inline-flex items-center gap-2  bg-[#F5D033] px-4 py-1 text-[11px] font-bold tracking-[0.14em] text-[#0D0A0E] uppercase">
+              {status === 'sent' ? (
+                <div className="space-y-8 border border-[#F5D033]/60 bg-[#141016] p-8 md:p-14">
+                  <div className="inline-flex items-center gap-2 bg-[#F5D033] px-4 py-1 text-[11px] font-bold tracking-[0.14em] text-[#0D0A0E] uppercase">
                     <span>✓ Enquiry Received</span>
                   </div>
 
@@ -169,7 +207,7 @@ export default function Booking({ onNavigate }) {
                     your itemized KES quotation.
                   </p>
 
-                  <div className="space-y-3  border border-white/10 bg-[#1A161D] p-6 text-xs tracking-[0.06em] text-[#D1CDD3]">
+                  <div className="space-y-3 border border-white/10 bg-[#1A161D] p-6 text-xs tracking-[0.06em] text-[#D1CDD3]">
                     <div className="flex justify-between gap-4 border-b border-white/10 pb-2.5">
                       <span className="tracking-[0.14em] text-[#9E9A9F] uppercase">
                         Event Sector:
@@ -217,18 +255,18 @@ export default function Booking({ onNavigate }) {
                   <div className="flex flex-wrap gap-4 pt-2">
                     <button
                       type="button"
-                      onClick={() => setSubmitted(false)}
-                      className="cursor-pointer  border border-white/25 bg-transparent px-6 py-3.5 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:bg-white/10"
+                      onClick={() => setStatus('idle')}
+                      className="cursor-pointer border border-white/25 bg-transparent px-6 py-3.5 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:bg-white/10"
                     >
                       Modify Enquiry
                     </button>
                     <a
                       href="/"
                       onClick={(e) => handleLinkClick(e, '/')}
-                      className="group inline-flex items-center gap-3  bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+                      className="group inline-flex items-center gap-3 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                     >
                       <span>Return Home &rarr;</span>
-                      <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
+                      <span className="flex h-6 w-6 items-center justify-center bg-[#0F2A2A] text-xs text-white">
                         &rarr;
                       </span>
                     </a>
@@ -237,7 +275,7 @@ export default function Booking({ onNavigate }) {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-12  border border-white/15 bg-[#141016] p-8 md:p-12"
+                  className="space-y-12 border border-white/15 bg-[#141016] p-8 md:p-12"
                 >
                   {/* Step 01: Client Contact Details */}
                   <div className="space-y-6">
@@ -245,7 +283,7 @@ export default function Booking({ onNavigate }) {
                       <h2 className="font-display-condensed text-2xl font-normal tracking-wide text-white md:text-3xl">
                         Client / Organization Contact Details
                       </h2>
-                      <span className=" border border-white/15 bg-[#1A161D] px-3 py-1 text-[10px] font-medium tracking-[0.16em] text-[#F5D033] uppercase">
+                      <span className="border border-white/15 bg-[#1A161D] px-3 py-1 text-[10px] font-medium tracking-[0.16em] text-[#F5D033] uppercase">
                         [ 01 / 03 ]
                       </span>
                     </div>
@@ -262,7 +300,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.clientName}
                           onChange={handleChange}
                           placeholder="e.g. Brenda Akinyi / Apex Ltd"
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                         />
                       </div>
 
@@ -277,7 +315,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="e.g. +254 712 345 678"
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                         />
                       </div>
 
@@ -292,7 +330,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="e.g. brenda@example.com"
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                         />
                       </div>
                     </div>
@@ -304,7 +342,7 @@ export default function Booking({ onNavigate }) {
                       <h2 className="font-display-condensed text-2xl font-normal tracking-wide text-white md:text-3xl">
                         Event Sector &amp; Logistics
                       </h2>
-                      <span className=" border border-white/15 bg-[#1A161D] px-3 py-1 text-[10px] font-medium tracking-[0.16em] text-[#F5D033] uppercase">
+                      <span className="border border-white/15 bg-[#1A161D] px-3 py-1 text-[10px] font-medium tracking-[0.16em] text-[#F5D033] uppercase">
                         [ 02 / 03 ]
                       </span>
                     </div>
@@ -318,7 +356,7 @@ export default function Booking({ onNavigate }) {
                           name="eventSector"
                           value={formData.eventSector}
                           onChange={handleChange}
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                         >
                           {eventSectors.map((sector) => (
                             <option key={sector} value={sector} className="bg-[#141016] text-white">
@@ -338,7 +376,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.eventName}
                           onChange={handleChange}
                           placeholder="e.g. Annual AGM Gala / Wanjiku & Brian Wedding"
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                         />
                       </div>
 
@@ -352,7 +390,7 @@ export default function Booking({ onNavigate }) {
                           required
                           value={formData.eventDate}
                           onChange={handleChange}
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                         />
                       </div>
 
@@ -365,7 +403,7 @@ export default function Booking({ onNavigate }) {
                           name="eventTime"
                           value={formData.eventTime}
                           onChange={handleChange}
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                         />
                       </div>
 
@@ -380,7 +418,7 @@ export default function Booking({ onNavigate }) {
                           value={formData.location}
                           onChange={handleChange}
                           placeholder="e.g. KICC, Serena Hotel, Karen, Runda..."
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                         />
                       </div>
 
@@ -392,7 +430,7 @@ export default function Booking({ onNavigate }) {
                           name="guestCount"
                           value={formData.guestCount}
                           onChange={handleChange}
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                         >
                           <option className="bg-[#141016] text-white">Up to 30 Guests</option>
                           <option className="bg-[#141016] text-white">50 - 100 Guests</option>
@@ -410,7 +448,7 @@ export default function Booking({ onNavigate }) {
                       <h2 className="font-display-condensed text-2xl font-normal tracking-wide text-white md:text-3xl">
                         Production Package, Concept &amp; Add-Ons
                       </h2>
-                      <span className=" border border-white/15 bg-[#1A161D] px-3 py-1 text-[10px] font-medium tracking-[0.16em] text-[#F5D033] uppercase">
+                      <span className="border border-white/15 bg-[#1A161D] px-3 py-1 text-[10px] font-medium tracking-[0.16em] text-[#F5D033] uppercase">
                         [ 03 / 03 ]
                       </span>
                     </div>
@@ -424,7 +462,7 @@ export default function Booking({ onNavigate }) {
                           name="packageTier"
                           value={formData.packageTier}
                           onChange={handleChange}
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                         >
                           {packageOptions.map((pkg) => (
                             <option key={pkg} value={pkg} className="bg-[#141016] text-white">
@@ -442,7 +480,7 @@ export default function Booking({ onNavigate }) {
                           name="theme"
                           value={formData.theme}
                           onChange={handleChange}
-                          className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                          className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                         >
                           {themeOptions.map((thm) => (
                             <option key={thm} value={thm} className="bg-[#141016] text-white">
@@ -467,7 +505,7 @@ export default function Booking({ onNavigate }) {
                               key={addon.label}
                               onClick={() => handleAddOnToggle(addon.label)}
                               aria-pressed={checked}
-                              className={`flex cursor-pointer items-center justify-between gap-3  border p-3.5 text-left transition-all ${
+                              className={`flex cursor-pointer items-center justify-between gap-3 border p-3.5 text-left transition-all ${
                                 checked
                                   ? 'border-[#F5D033] bg-[#F5D033] text-[#0D0A0E]'
                                   : 'border-white/15 bg-[#1A161D] text-[#D1CDD3] hover:border-white/35 hover:text-white'
@@ -477,7 +515,7 @@ export default function Booking({ onNavigate }) {
                                 {addon.label}
                               </span>
                               <span
-                                className={`shrink-0  px-2.5 py-0.5 text-[10px] font-bold tracking-[0.08em] uppercase ${
+                                className={`shrink-0 px-2.5 py-0.5 text-[10px] font-bold tracking-[0.08em] uppercase ${
                                   checked
                                     ? 'bg-[#0F2A2A] text-[#F5D033]'
                                     : 'bg-white/10 text-[#9E9A9F]'
@@ -502,17 +540,30 @@ export default function Booking({ onNavigate }) {
                         value={formData.notes}
                         onChange={handleChange}
                         placeholder="Tell us about staging dimensions, power access, branding guidelines, dress code, or specific scheduling constraints..."
-                        className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                        className="w-full border border-white/15 bg-[#1C1720] px-4 py-3.5 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                       />
                     </div>
                   </div>
 
+                  {status === 'error' && (
+                    <div className="border border-red-400/50 bg-red-950/40 p-4 text-xs leading-relaxed text-red-200">
+                      We couldn&apos;t submit your booking enquiry right now.
+                      Please try again or message our dispatch team directly on
+                      WhatsApp (+254 722 580 012).
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="group flex w-full cursor-pointer items-center justify-between  bg-white py-2.5 pr-2.5 pl-7 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.01] hover:bg-[#F5D033]"
+                    disabled={status === 'submitting'}
+                    className="group flex w-full cursor-pointer items-center justify-between bg-white py-2.5 pr-2.5 pl-7 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.01] hover:bg-[#F5D033] disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    <span>Submit Event Booking Enquiry &rarr;</span>
-                    <span className="flex h-8 w-8 items-center justify-center  bg-[#0F2A2A] text-sm text-white transition-transform duration-200 group-hover:translate-x-0.5">
+                    <span>
+                      {status === 'submitting'
+                        ? 'Submitting Enquiry...'
+                        : 'Submit Event Booking Enquiry →'}
+                    </span>
+                    <span className="flex h-8 w-8 items-center justify-center bg-[#0F2A2A] text-sm text-white transition-transform duration-200 group-hover:translate-x-0.5">
                       &rarr;
                     </span>
                   </button>
@@ -523,12 +574,12 @@ export default function Booking({ onNavigate }) {
             {/* Right Live Summary & Direct Contact Sidebar */}
             <div className="space-y-8 lg:sticky lg:top-28 lg:col-span-4">
               {/* Live Enquiry Summary Card */}
-              <div className="space-y-6  border border-white/15 bg-[#141016] p-8">
+              <div className="space-y-6 border border-white/15 bg-[#141016] p-8">
                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
                   <span className="text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
                     [ Live Summary ]
                   </span>
-                  <span className=" bg-white/10 px-2.5 py-0.5 text-[10px] font-semibold tracking-[0.12em] text-white uppercase">
+                  <span className="bg-white/10 px-2.5 py-0.5 text-[10px] font-semibold tracking-[0.12em] text-white uppercase">
                     KES
                   </span>
                 </div>
@@ -599,7 +650,7 @@ export default function Booking({ onNavigate }) {
               </div>
 
               {/* Instant WhatsApp & Direct Help Card (Light Editorial Banner Style) */}
-              <div className="space-y-5  bg-[#EDEDED] p-8 text-[#0D0A0E]">
+              <div className="space-y-5 bg-[#EDEDED] p-8 text-[#0D0A0E]">
                 <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
                   [ Need Fast Confirmation? ] <span className="text-[#D4A800]">&#10022;</span>
                 </span>
@@ -612,23 +663,23 @@ export default function Booking({ onNavigate }) {
                 </p>
                 <div className="space-y-3 pt-2">
                   <a
-                    href="https://wa.me/"
+                    href="https://wa.me/254722580012"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-between  bg-[#0F2A2A] py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform hover:scale-[1.02]"
+                    className="flex w-full items-center justify-between bg-[#0F2A2A] py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform hover:scale-[1.02]"
                   >
                     <span>Chat on WhatsApp</span>
-                    <span className="flex h-6 w-6 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
+                    <span className="flex h-6 w-6 items-center justify-center bg-white text-xs text-[#0D0A0E]">
                       &rarr;
                     </span>
                   </a>
                   <a
                     href="/party-packages"
                     onClick={(e) => handleLinkClick(e, '/party-packages')}
-                    className="flex w-full items-center justify-between  border border-[#0D0A0E]/25 bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors hover:border-[#0D0A0E]"
+                    className="flex w-full items-center justify-between border border-[#0D0A0E]/25 bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors hover:border-[#0D0A0E]"
                   >
                     <span>Compare All KES Packages</span>
-                    <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
+                    <span className="flex h-6 w-6 items-center justify-center bg-[#0F2A2A] text-xs text-white">
                       &rarr;
                     </span>
                   </a>
@@ -641,3 +692,56 @@ export default function Booking({ onNavigate }) {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
