@@ -7,7 +7,7 @@ const primaryNavPages = [
     title: 'Event Services',
     path: '/childrens-party-services',
     children: [
-      { title: 'Events Portfolio', path: '/events' },
+      { title: 'Events Portfolio', path: '/party-packages' },
       { title: 'Event Themes', path: '/party-themes' },
       { title: 'Event Gallery', path: '/gallery' },
       { title: 'Event Setup', path: '/booking' },
@@ -86,7 +86,7 @@ export default function Navbar({ currentPage, onNavigate }) {
       `}</style>
 
       {/* Fixed Minimal Top Header */}
-      <header className="fixed top-0 left-0 z-40 flex w-full items-center justify-between border-b border-white/10 bg-[#0D0A0E]/90 px-6 py-4 font-sans text-white backdrop-blur-md md:px-10 md:py-5">
+      <header className="fixed top-0 left-0 z-40 flex w-full items-center justify-between border-b border-white/10 bg-[#0F2A2A]/90 px-6 py-4 font-sans text-white backdrop-blur-md md:px-10 md:py-5">
         <a
           href="/"
           className="flex items-center gap-3.5 text-inherit no-underline"
@@ -106,10 +106,10 @@ export default function Navbar({ currentPage, onNavigate }) {
           <a
             href="/booking"
             onClick={(e) => handleNavigation(e, '/booking')}
-            className="group hidden items-center gap-2.5 rounded-full bg-white py-1.5 pr-1.5 pl-4 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033] md:inline-flex"
+            className="group hidden items-center gap-2.5  bg-white py-1.5 pr-1.5 pl-4 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033] md:inline-flex"
           >
             <span>Book Now</span>
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
+            <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
               &rarr;
             </span>
           </a>
@@ -118,7 +118,7 @@ export default function Navbar({ currentPage, onNavigate }) {
             aria-expanded={isDrawerOpen}
             aria-controls="staxx-nav-drawer"
             onClick={() => setIsDrawerOpen(true)}
-            className="cursor-pointer rounded-full border border-white/20 bg-[#141016] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors duration-200 hover:border-[#F5D033] hover:text-[#F5D033]"
+            className="cursor-pointer  border border-white/20 bg-[#141016] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors duration-200 hover:border-[#F5D033] hover:text-[#F5D033]"
           >
             Menu
           </button>
@@ -129,7 +129,7 @@ export default function Navbar({ currentPage, onNavigate }) {
       <aside
         id="staxx-nav-drawer"
         aria-hidden={!isDrawerOpen}
-        className={`fixed inset-0 z-50 flex flex-col justify-between overflow-y-auto bg-[#0D0A0E] px-6 py-4 pb-12 font-sans text-white transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:px-10 md:py-5 md:pb-12 ${
+        className={`fixed inset-0 z-50 flex flex-col justify-between overflow-y-auto bg-[#0F2A2A] px-6 py-4 pb-12 font-sans text-white transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:px-10 md:py-5 md:pb-12 ${
           isDrawerOpen
             ? 'pointer-events-auto translate-y-0'
             : 'pointer-events-none -translate-y-full'
@@ -156,7 +156,7 @@ export default function Navbar({ currentPage, onNavigate }) {
             type="button"
             aria-label="Close navigation"
             onClick={() => setIsDrawerOpen(false)}
-            className="cursor-pointer rounded-full border border-white/20 bg-[#141016] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors duration-200 hover:border-[#F5D033] hover:bg-[#F5D033] hover:text-[#0D0A0E]"
+            className="cursor-pointer  border border-white/20 bg-[#141016] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors duration-200 hover:border-[#F5D033] hover:bg-[#F5D033] hover:text-[#0D0A0E]"
           >
             Close &times;
           </button>
@@ -197,7 +197,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                     >
                       <span>{page.title}</span>
                       {hasChildren && (
-                        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-[#141016] text-sm font-bold text-[#F5D033]">
+                        <span className="inline-flex h-7 w-7 items-center justify-center  border border-white/20 bg-[#141016] text-sm font-bold text-[#F5D033]">
                           {isExpanded ? '−' : '+'}
                         </span>
                       )}
@@ -205,7 +205,7 @@ export default function Navbar({ currentPage, onNavigate }) {
 
                     {/* Mobile Inline Sub-links */}
                     {hasChildren && isExpanded && (
-                      <ul className="mt-3 flex flex-col gap-2.5 rounded-2xl border border-white/10 bg-[#141016] p-4 md:hidden">
+                      <ul className="mt-3 flex flex-col gap-2.5  border border-white/10 bg-[#141016] p-4 md:hidden">
                         {page.children.map((child) => (
                           <li key={child.path}>
                             <a
@@ -232,7 +232,7 @@ export default function Navbar({ currentPage, onNavigate }) {
           </nav>
 
           {/* Column 2: Active Category Sub-Links (Desktop) */}
-          <div className="hidden min-h-[240px] flex-col justify-end rounded-3xl border border-white/10 bg-[#141016] p-8 md:flex">
+          <div className="hidden min-h-[240px] flex-col justify-end  border border-white/10 bg-[#141016] p-8 md:flex">
             {activeCategory ? (
               <div>
                 <span className="mb-5 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
@@ -274,7 +274,7 @@ export default function Navbar({ currentPage, onNavigate }) {
           </div>
 
           {/* Column 3: Studio Info, Dispatch & Booking CTA */}
-          <div className="flex flex-col gap-6 rounded-3xl border border-white/15 bg-[#141016] p-7 text-sm md:p-8">
+          <div className="flex flex-col gap-6  border border-white/15 bg-[#141016] p-7 text-sm md:p-8">
             <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
               <span>&#10022;</span> Nairobi &amp; Environs Dispatch
             </span>
@@ -309,10 +309,10 @@ export default function Navbar({ currentPage, onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleNavigation(e, '/booking')}
-              className="group inline-flex items-center justify-between gap-3 rounded-full bg-white py-2.5 pr-2.5 pl-6 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+              className="group inline-flex items-center justify-between gap-3  bg-white py-2.5 pr-2.5 pl-6 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
             >
               <span>Book an Event →</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
+              <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
                 &rarr;
               </span>
             </a>

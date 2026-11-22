@@ -67,7 +67,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+    <div className="min-h-screen bg-[#0F2A2A] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .font-display-condensed {
@@ -78,7 +78,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
       `}</style>
 
       {/* 1. BREADCRUMB & HEADER */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-12 md:px-10 md:pt-12 md:pb-16"
           data-aos="fade-down"
@@ -95,7 +95,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
               <span className="text-white/30">&bull;</span>
               <span className="text-[#F5D033]">{product.category}</span>
             </div>
-            <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] text-white">
+            <span className=" bg-white/10 px-3 py-1 text-[10px] text-white">
               Item ID: {product.id || 'EQ-01'}
             </span>
           </div>
@@ -103,7 +103,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.4fr_1fr]">
             {/* Left: Image Gallery */}
             <div className="space-y-4" data-aos="fade-up">
-              <div className="aspect-[16/11] w-full overflow-hidden rounded-3xl border border-white/10 bg-[#1B171E]">
+              <div className="aspect-[16/11] w-full overflow-hidden  border border-white/10 bg-[#1B171E]">
                 <img
                   src={images[activeImage]}
                   alt={product.title}
@@ -118,7 +118,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                     key={idx}
                     type="button"
                     onClick={() => setActiveImage(idx)}
-                    className={`aspect-[16/11] cursor-pointer overflow-hidden rounded-2xl border-2 bg-[#1B171E] transition-all ${
+                    className={`aspect-[16/11] cursor-pointer overflow-hidden  border-2 bg-[#1B171E] transition-all ${
                       activeImage === idx
                         ? 'border-[#F5D033] opacity-100'
                         : 'border-white/10 opacity-55 hover:border-white/40 hover:opacity-100'
@@ -132,7 +132,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
 
             {/* Right: Product Info & Rental Configurator */}
             <div
-              className="flex flex-col justify-between rounded-3xl border border-white/15 bg-[#141016] p-8 md:p-10"
+              className="flex flex-col justify-between  border border-white/15 bg-[#141016] p-8 md:p-10"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -148,7 +148,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                   <span className="font-display-condensed text-3xl font-normal text-white md:text-4xl">
                     {product.price || `KES ${basePrice.toLocaleString()} / day`}
                   </span>
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-medium tracking-[0.12em] text-[#D1CDD3] uppercase">
+                  <span className=" bg-white/10 px-3 py-1 text-[10px] font-medium tracking-[0.12em] text-[#D1CDD3] uppercase">
                     Includes Delivery &amp; Setup in Nairobi
                   </span>
                 </div>
@@ -169,7 +169,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                       'Includes adjustable artist bench & on-site tuning',
                     ]).map((spec, sIdx) => (
                       <li key={sIdx} className="flex items-center gap-2.5">
-                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
+                        <span className="h-1.5 w-1.5 shrink-0  bg-[#F5D033]" />
                         <span>{spec}</span>
                       </li>
                     ))}
@@ -188,7 +188,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                           key={days}
                           type="button"
                           onClick={() => setRentalDays(days)}
-                          className={`cursor-pointer rounded-full px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all ${
+                          className={`cursor-pointer  px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all ${
                             rentalDays === days
                               ? 'bg-[#F5D033] text-[#0D0A0E]'
                               : 'border border-white/20 bg-[#1A161D] text-white hover:border-white'
@@ -200,7 +200,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[#1A161D] p-4">
+                  <div className="flex items-center justify-between gap-4  border border-white/10 bg-[#1A161D] p-4">
                     <span className="text-xs font-semibold tracking-[0.12em] text-white uppercase">
                       Dedicated On-Site Technician / Sound Engineer
                     </span>
@@ -229,10 +229,10 @@ export default function IndividualProduct({ onNavigate, productData }) {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex w-full items-center justify-between rounded-full bg-white py-2.5 pr-2.5 pl-6 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.01] hover:bg-[#F5D033]"
+                  className="group flex w-full items-center justify-between  bg-white py-2.5 pr-2.5 pl-6 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.01] hover:bg-[#F5D033]"
                 >
                   <span>Book This Equipment on WhatsApp &rarr;</span>
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
+                  <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
                     &rarr;
                   </span>
                 </a>
@@ -243,7 +243,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
       </section>
 
       {/* 2. RELATED ITEMS / CATALOG CROSS-SELL */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12 flex flex-col justify-between gap-6 border-b border-white/15 pb-6 sm:flex-row sm:items-end">
             <div>
@@ -257,10 +257,10 @@ export default function IndividualProduct({ onNavigate, productData }) {
             <a
               href="/event-equipment-supplies"
               onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-              className="group inline-flex items-center gap-3 self-start rounded-full bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform hover:scale-[1.02] hover:bg-[#F5D033] sm:self-auto"
+              className="group inline-flex items-center gap-3 self-start  bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform hover:scale-[1.02] hover:bg-[#F5D033] sm:self-auto"
             >
               <span>View All Catalog &rarr;</span>
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+              <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>
@@ -286,9 +286,9 @@ export default function IndividualProduct({ onNavigate, productData }) {
             ].map((rel, idx) => (
               <div
                 key={idx}
-                className="group rounded-3xl border border-white/15 bg-[#141016] p-5 transition-all duration-200 hover:border-[#F5D033]/70"
+                className="group  border border-white/15 bg-[#141016] p-5 transition-all duration-200 hover:border-[#F5D033]/70"
               >
-                <div className="mb-4 aspect-[16/11] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1B171E]">
+                <div className="mb-4 aspect-[16/11] w-full overflow-hidden  border border-white/10 bg-[#1B171E]">
                   <img
                     src={rel.img}
                     alt={rel.title}
@@ -305,7 +305,7 @@ export default function IndividualProduct({ onNavigate, productData }) {
                   <a
                     href="/event-equipment-supplies"
                     onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                    className="rounded-full border border-white/20 px-3.5 py-1 text-[10px] font-semibold tracking-[0.14em] text-white uppercase no-underline transition-colors hover:border-white hover:bg-white hover:text-[#0D0A0E]"
+                    className=" border border-white/20 px-3.5 py-1 text-[10px] font-semibold tracking-[0.14em] text-white uppercase no-underline transition-colors hover:border-white hover:bg-white hover:text-[#0D0A0E]"
                   >
                     View Details
                   </a>
@@ -317,9 +317,9 @@ export default function IndividualProduct({ onNavigate, productData }) {
       </section>
 
       {/* 3. BOTTOM CTA */}
-      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
+      <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
@@ -340,20 +340,20 @@ export default function IndividualProduct({ onNavigate, productData }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
               <span>Proceed to Booking &rarr;</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+              <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
                 &rarr;
               </span>
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
               <span>Speak with an Engineer</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+              <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>

@@ -170,7 +170,7 @@ export default function Gallery({ onNavigate }) {
       : bokehGallery.filter((item) => item.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+    <div className="min-h-screen bg-[#0F2A2A] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .font-display-condensed {
@@ -181,7 +181,7 @@ export default function Gallery({ onNavigate }) {
       `}</style>
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx Events &amp; Production</span>
@@ -196,7 +196,7 @@ export default function Gallery({ onNavigate }) {
               <span className="text-white/65">&amp; Portfolio Archive</span>
             </h1>
 
-            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Explore our full-spectrum event production archive across
               corporate conferences, traditional weddings &amp; Ruracio, private
               milestones, kids&apos; parties, concerts, church conventions,
@@ -207,7 +207,7 @@ export default function Gallery({ onNavigate }) {
       </section>
 
       {/* 2. FILTER STRIP */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:px-10 md:py-10">
           <span className="text-[11px] font-semibold tracking-[0.16em] text-[#9E9A9F] uppercase">
             Filter by Event Sector ({filteredItems.length})
@@ -222,7 +222,7 @@ export default function Gallery({ onNavigate }) {
                   type="button"
                   onClick={() => setActiveFilter(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer rounded-full px-4 py-1.5 text-xs font-medium tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer  px-4 py-1.5 text-xs font-medium tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
                       ? 'bg-white text-[#0D0A0E]'
                       : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white/40 hover:text-white'
@@ -237,14 +237,14 @@ export default function Gallery({ onNavigate }) {
       </section>
 
       {/* 3. ARCHITECTURAL PORTFOLIO GRID */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {filteredItems.map((item) => (
               <article
                 key={item.id}
                 onClick={() => setLightboxItem(item)}
-                className="group cursor-pointer rounded-3xl border border-white/15 bg-[#141016] p-4 transition-all duration-200 hover:border-[#F5D033]/70"
+                className="group cursor-pointer  border border-white/15 bg-[#141016] p-4 transition-all duration-200 hover:border-[#F5D033]/70"
               >
                 {/* Top Index Bar */}
                 <div className="mb-3 flex items-center justify-between gap-3 border-b border-white/10 pb-2.5 text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
@@ -255,7 +255,7 @@ export default function Gallery({ onNavigate }) {
                 </div>
 
                 {/* Image Plate */}
-                <div className="relative mb-4 aspect-[16/11] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1B171E]">
+                <div className="relative mb-4 aspect-[16/11] w-full overflow-hidden  border border-white/10 bg-[#1B171E]">
                   <img
                     src={item.img}
                     alt={item.title}
@@ -276,7 +276,7 @@ export default function Gallery({ onNavigate }) {
 
                   <span
                     aria-hidden="true"
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/25 bg-[#1C181F] text-sm font-medium text-white transition-colors duration-200 group-hover:border-white group-hover:bg-white group-hover:text-[#0D0A0E]"
+                    className="flex h-8 w-8 shrink-0 items-center justify-center  border border-white/25 bg-[#1C181F] text-sm font-medium text-white transition-colors duration-200 group-hover:border-white group-hover:bg-white group-hover:text-[#0D0A0E]"
                   >
                     +
                   </span>
@@ -294,11 +294,11 @@ export default function Gallery({ onNavigate }) {
           aria-modal="true"
           aria-label={lightboxItem.title}
           onClick={() => setLightboxItem(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[#0D0A0E]/90 p-4 backdrop-blur-xs md:p-10"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#0F2A2A]/90 p-4 backdrop-blur-xs md:p-10"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl border border-white/20 bg-[#141016] text-white shadow-2xl"
+            className="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden  border border-white/20 bg-[#141016] text-white shadow-2xl"
           >
             {/* Top Modal Bar */}
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-4 text-[11px] tracking-[0.16em] uppercase">
@@ -315,14 +315,14 @@ export default function Gallery({ onNavigate }) {
               <button
                 type="button"
                 onClick={() => setLightboxItem(null)}
-                className="cursor-pointer rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors hover:bg-white hover:text-[#0D0A0E]"
+                className="cursor-pointer  border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors hover:bg-white hover:text-[#0D0A0E]"
               >
                 Close
               </button>
             </div>
 
             {/* Image Frame */}
-            <div className="flex-1 overflow-hidden bg-[#0D0A0E]">
+            <div className="flex-1 overflow-hidden bg-[#0F2A2A]">
               <img
                 src={lightboxItem.img}
                 alt={lightboxItem.title}
@@ -339,10 +339,10 @@ export default function Gallery({ onNavigate }) {
               <a
                 href="/booking"
                 onClick={(e) => handleLinkClick(e, '/booking')}
-                className="group inline-flex items-center gap-3 self-start rounded-full bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033] sm:self-auto"
+                className="group inline-flex items-center gap-3 self-start  bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033] sm:self-auto"
               >
                 <span>Book Similar Setup &rarr;</span>
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                   &rarr;
                 </span>
               </a>
@@ -352,8 +352,8 @@ export default function Gallery({ onNavigate }) {
       )}
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
+      <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
               Planning an Event Across Any Sector? <span className="text-[#D4A800]">&#10022;</span>
@@ -372,20 +372,20 @@ export default function Gallery({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
               <span>Book Your Date &rarr;</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+              <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
                 &rarr;
               </span>
             </a>
             <a
               href="/party-packages"
               onClick={(e) => handleLinkClick(e, '/party-packages')}
-              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
               <span>View KES Packages</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+              <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>

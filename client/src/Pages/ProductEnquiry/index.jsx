@@ -113,7 +113,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
   };
 
   return (
-    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+    <div className="min-h-screen bg-[#0F2A2A] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .font-display-condensed {
@@ -124,7 +124,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
       `}</style>
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -142,7 +142,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
               <span className="text-white/65">Hire Enquiry</span>
             </h1>
 
-            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Select the instruments, screens, lighting rigs, marquees, or
               furniture you need. Submit your brief to check stock availability
               and receive a formal KES quotation across six counties.
@@ -152,13 +152,13 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
       </section>
 
       {/* 2. ENQUIRY FORM & TECHNICAL DESK SIDEBAR */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.5fr_1fr]">
             {/* Left: Interactive Enquiry Form */}
             <form
               onSubmit={handleSubmit}
-              className="rounded-3xl border border-white/15 bg-[#141016] p-8 md:p-12"
+              className=" border border-white/15 bg-[#141016] p-8 md:p-12"
               data-aos="fade-up"
             >
               <div className="mb-8 border-b border-white/15 pb-4">
@@ -179,7 +179,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="e.g. Wanjiku Kamau"
-                    className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                    className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                   />
                 </div>
 
@@ -193,7 +193,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.organization}
                     onChange={handleChange}
                     placeholder="e.g. Safaricom PLC / Private Host"
-                    className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                    className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                   />
                 </div>
 
@@ -208,7 +208,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="e.g. 0712 345 678"
-                    className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                    className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                   />
                 </div>
 
@@ -222,7 +222,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="e.g. events@organization.co.ke"
-                    className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                    className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                   />
                 </div>
 
@@ -236,7 +236,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     required
                     value={formData.eventDate}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                    className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                   />
                 </div>
 
@@ -248,7 +248,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     name="rentalDays"
                     value={formData.rentalDays}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                    className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                   >
                     <option value="1" className="bg-[#141016] text-white">1 Day</option>
                     <option value="2" className="bg-[#141016] text-white">2 Days</option>
@@ -266,7 +266,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     name="county"
                     value={formData.county}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                    className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                   >
                     {counties.map((county) => (
                       <option key={county} value={county} className="bg-[#141016] text-white">
@@ -286,7 +286,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     value={formData.venueLocation}
                     onChange={handleChange}
                     placeholder="e.g. KICC / Karen / Runda / Naivasha"
-                    className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                    className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                   />
                 </div>
               </div>
@@ -299,7 +299,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                   name="eventType"
                   value={formData.eventType}
                   onChange={handleChange}
-                  className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white focus:border-[#F5D033] focus:outline-none"
+                  className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white focus:border-[#F5D033] focus:outline-none"
                 >
                   {eventTypes.map((type) => (
                     <option key={type} value={type} className="bg-[#141016] text-white">
@@ -322,7 +322,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                   return (
                     <label
                       key={item}
-                      className={`flex cursor-pointer items-center gap-3 rounded-2xl border p-3.5 text-xs font-medium transition-all ${
+                      className={`flex cursor-pointer items-center gap-3  border p-3.5 text-xs font-medium transition-all ${
                         isChecked
                           ? 'border-[#F5D033] bg-[#F5D033] text-[#0D0A0E]'
                           : 'border-white/15 bg-[#1A161D] text-[#D1CDD3] hover:border-white/35 hover:text-white'
@@ -351,7 +351,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                   value={formData.equipmentNotes}
                   onChange={handleChange}
                   placeholder="Specify quantities (e.g., 200 Chiavari chairs, 6m x 3m LED wall), venue power access, or load-in times..."
-                  className="w-full rounded-xl border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+                  className="w-full  border border-white/15 bg-[#1C1720] px-4 py-3 text-sm text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
                 />
               </div>
 
@@ -359,10 +359,10 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
               <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-white/15 pt-8">
                 <button
                   type="submit"
-                  className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-white py-2.5 pr-2.5 pl-6 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+                  className="group inline-flex cursor-pointer items-center gap-3  bg-white py-2.5 pr-2.5 pl-6 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                 >
                   <span>Send Enquiry via WhatsApp &rarr;</span>
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
+                  <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
                     &rarr;
                   </span>
                 </button>
@@ -370,17 +370,17 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                 <a
                   href="/event-equipment-supplies"
                   onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                  className="group inline-flex items-center gap-3 rounded-full border border-white/25 bg-transparent py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-colors hover:border-white hover:bg-white/10"
+                  className="group inline-flex items-center gap-3  border border-white/25 bg-transparent py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-colors hover:border-white hover:bg-white/10"
                 >
                   <span>Browse Full Catalog</span>
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 text-xs text-white">
+                  <span className="flex h-7 w-7 items-center justify-center  bg-white/15 text-xs text-white">
                     &rarr;
                   </span>
                 </a>
               </div>
 
               {submitted && (
-                <div className="mt-6 rounded-2xl border border-[#F5D033]/50 bg-[#1A161D] p-5 text-xs leading-relaxed text-[#D1CDD3]">
+                <div className="mt-6  border border-[#F5D033]/50 bg-[#1A161D] p-5 text-xs leading-relaxed text-[#D1CDD3]">
                   <strong className="text-[#F5D033]">Enquiry Prepared:</strong> Your equipment list has been
                   formatted for our dispatch desk on WhatsApp (+254 702 443 418).
                   If a new tab did not open automatically,{' '}
@@ -400,7 +400,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
             {/* Right: Logistics & Dispatch Desk Info */}
             <aside className="space-y-8" data-aos="fade-up" data-aos-delay="150">
               {/* Visual Card */}
-              <div className="overflow-hidden rounded-3xl border border-white/15 bg-[#141016]">
+              <div className="overflow-hidden  border border-white/15 bg-[#141016]">
                 <div className="aspect-[16/11] w-full overflow-hidden border-b border-white/10 bg-[#1B171E]">
                   <img
                     src={Equipmentsetup}
@@ -445,13 +445,13 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
               </div>
 
               {/* Rental Terms Box */}
-              <div className="rounded-3xl border border-white/15 bg-[#141016] p-8">
+              <div className=" border border-white/15 bg-[#141016] p-8">
                 <span className="mb-4 block text-[11px] font-bold tracking-[0.16em] text-[#9E9A9F] uppercase">
                   Standard Hire Terms
                 </span>
                 <ul className="space-y-3.5 text-xs leading-relaxed text-[#D1CDD3]">
                   <li className="flex items-start gap-2.5">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0  bg-[#F5D033]" />
                     <span>
                       <strong className="text-white">Pre-Dispatch Testing:</strong> All pianos, amps,
                       LED walls, and generators undergo full bench testing prior
@@ -459,7 +459,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0  bg-[#F5D033]" />
                     <span>
                       <strong className="text-white">Crew &amp; Setup:</strong> Quotes include loading,
                       on-site rigging/tuning, and post-event strike by Staxx
@@ -467,7 +467,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0  bg-[#F5D033]" />
                     <span>
                       <strong className="text-white">Multi-Day Discounts:</strong> Custom tiered KES
                       rates apply for conferences, festivals, and multi-day

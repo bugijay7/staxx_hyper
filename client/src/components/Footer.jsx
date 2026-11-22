@@ -63,7 +63,7 @@ export default function Footer({ onNavigate }) {
   ];
 
   return (
-    <footer className="border-t border-white/15 bg-[#0D0A0E] font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E]">
+    <footer className="border-t border-white/15 bg-[#0F2A2A] font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E]">
       {/* 1. TOP ARCHITECTURAL DISPATCH BAR */}
       <div className="border-b border-white/10">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-8 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
@@ -72,7 +72,7 @@ export default function Footer({ onNavigate }) {
       </div>
 
       {/* 2. MAIN NAVIGATION & HEADQUARTERS GRID */}
-      <div className="border-b border-white/10 bg-[#0D0A0E] text-white">
+      <div className="border-b border-white/10 bg-[#0F2A2A] text-white">
         <div className="mx-auto max-w-[1440px] px-6 md:px-10">
           <div className="grid grid-cols-1 divide-y divide-white/10 md:grid-cols-2 lg:grid-cols-12 lg:divide-x lg:divide-y-0">
             {/* Brand & HQ Column */}
@@ -141,7 +141,7 @@ export default function Footer({ onNavigate }) {
       </div>
 
       {/* 3. BOTTOM ARCHITECTURAL COLOPHON & BACK-TO-TOP */}
-      <div className="bg-[#0D0A0E]">
+      <div className="bg-[#0F2A2A]">
         <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-4 px-6 py-6 text-[11px] tracking-[0.14em] text-[#9E9A9F] uppercase sm:flex-row sm:items-center md:px-10">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <span>&copy; 2026 Staxx Hyper Kids Events</span>
@@ -154,10 +154,10 @@ export default function Footer({ onNavigate }) {
           <button
             type="button"
             onClick={scrollToTop}
-            className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-white py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+            className="group inline-flex cursor-pointer items-center gap-3  bg-white py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
           >
             <span>Back to Top &uarr;</span>
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#0D0A0E] text-[10px] text-white">
+            <span className="flex h-5 w-5 items-center justify-center  bg-[#0F2A2A] text-[10px] text-white">
               &uarr;
             </span>
           </button>

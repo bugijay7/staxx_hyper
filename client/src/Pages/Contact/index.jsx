@@ -175,7 +175,7 @@ export default function Contact({ onNavigate }) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0D0A0E] pt-24 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-32">
+    <div className="min-h-screen bg-[#0F2A2A] pt-24 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-32">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .font-display-condensed {
@@ -253,7 +253,7 @@ export default function Contact({ onNavigate }) {
             </div>
 
             {/* Instant Chat & Full Booking Links */}
-            <div className="space-y-4 rounded-3xl border border-white/15 bg-[#141016] p-7">
+            <div className="space-y-4  border border-white/15 bg-[#141016] p-7">
               <p className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-[#F5D033] uppercase">
                 <span>&#10022;</span> Prefer Instant Chat?
               </p>
@@ -266,10 +266,10 @@ export default function Contact({ onNavigate }) {
                   href="https://wa.me/254722580012"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 rounded-full bg-white py-2 pr-2 pl-5 font-sans text-[11px] font-bold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+                  className="group inline-flex items-center gap-3  bg-white py-2 pr-2 pl-5 font-sans text-[11px] font-bold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                 >
                   <span>Open WhatsApp Chat</span>
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                  <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                     &rarr;
                   </span>
                 </a>
@@ -285,10 +285,10 @@ export default function Contact({ onNavigate }) {
           </div>
 
           {/* RIGHT COLUMN: Minimalist Bottom-Border Form with Validation */}
-          <div className="rounded-3xl border border-white/15 bg-[#141016] p-8 md:p-12 lg:col-span-7">
+          <div className=" border border-white/15 bg-[#141016] p-8 md:p-12 lg:col-span-7">
             {status === 'sent' ? (
               <div className="space-y-8 pt-2">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 font-mono text-xs tracking-[0.1em] text-[#F5D033] uppercase">
+                <span className="inline-flex items-center gap-2  bg-white/10 px-3.5 py-1 font-mono text-xs tracking-[0.1em] text-[#F5D033] uppercase">
                   ✓ Message Sent Successfully
                 </span>
 
@@ -313,10 +313,10 @@ export default function Contact({ onNavigate }) {
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-white py-2.5 pr-2.5 pl-6 font-sans text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+                    className="group inline-flex cursor-pointer items-center gap-3  bg-white py-2.5 pr-2.5 pl-6 font-sans text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                   >
                     <span>Send Another Message</span>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                    <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                       &rarr;
                     </span>
                   </button>
@@ -498,10 +498,10 @@ export default function Contact({ onNavigate }) {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-white py-2.5 pr-2.5 pl-7 font-sans text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033] disabled:cursor-not-allowed disabled:opacity-50"
+                    className="group inline-flex cursor-pointer items-center gap-3  bg-white py-2.5 pr-2.5 pl-7 font-sans text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033] disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     <span>{status === 'submitting' ? 'SENDING...' : 'SUBMIT'}</span>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
+                    <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
                       &rarr;
                     </span>
                   </button>
@@ -526,7 +526,7 @@ export default function Contact({ onNavigate }) {
               <ul className="space-y-2 pt-1 text-white">
                 {serviceZones.map((zone) => (
                   <li key={zone} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#F5D033]" />
+                    <span className="h-1.5 w-1.5  bg-[#F5D033]" />
                     <span>{zone}</span>
                   </li>
                 ))}
@@ -545,13 +545,13 @@ export default function Contact({ onNavigate }) {
                     href={soc.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block rounded-3xl border border-white/15 bg-[#141016] p-6 no-underline transition-all duration-200 hover:border-[#F5D033]/70"
+                    className="group block  border border-white/15 bg-[#141016] p-6 no-underline transition-all duration-200 hover:border-[#F5D033]/70"
                   >
                     <div className="flex items-center justify-between text-[10px] tracking-[0.14em] text-[#9E9A9F] uppercase group-hover:text-white">
-                      <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-white/85">
+                      <span className=" bg-white/10 px-2.5 py-0.5 text-white/85">
                         {soc.badge}
                       </span>
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:bg-[#F5D033]">
+                      <span className="flex h-6 w-6 items-center justify-center  bg-white text-xs text-[#0D0A0E] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:bg-[#F5D033]">
                         ↗
                       </span>
                     </div>

@@ -102,7 +102,7 @@ export default function About({ onNavigate }) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0D0A0E] pt-10 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-18">
+    <div className="min-h-screen bg-[#0F2A2A] pt-10 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-18">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .font-display-condensed {
@@ -113,7 +113,7 @@ export default function About({ onNavigate }) {
       `}</style>
 
       {/* 1. EDITORIAL HERO SECTION */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 pt-4 pb-16 md:px-10 md:pt-4 md:pb-24">
           <div
             className="mb-14 grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]"
@@ -131,7 +131,7 @@ export default function About({ onNavigate }) {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#141016]">
+            <div className="relative overflow-hidden  border border-white/10 bg-[#141016]">
               <img
                 src={Hero}
                 alt="Staxx-HyperKids integrated audiovisual staging and event styling in Nairobi"
@@ -142,7 +142,7 @@ export default function About({ onNavigate }) {
               </div>
             </div>
 
-            <div className="flex flex-col justify-between overflow-hidden rounded-3xl border border-white/15 bg-[#141016]">
+            <div className="flex flex-col justify-between overflow-hidden  border border-white/15 bg-[#141016]">
               <div className="space-y-4 p-8 md:p-10">
                 <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
                   <span>&#10022;</span> Who We Are
@@ -178,7 +178,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 2. HISTORY & HOW IT STARTED */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-4 py-16 md:px-10 md:py-24">
           <div
             className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.45fr] lg:gap-20"
@@ -199,7 +199,7 @@ export default function About({ onNavigate }) {
               </h2>
 
               <figure className="mt-8">
-                <div className="aspect-[16/10] w-full overflow-hidden rounded-3xl border border-white/10 bg-[#1A161C]">
+                <div className="aspect-[16/10] w-full overflow-hidden  border border-white/10 bg-[#1A161C]">
                   <img
                     src={Audiovisual}
                     alt="Staxx production team executing large scale event setup in Nairobi"
@@ -248,7 +248,7 @@ export default function About({ onNavigate }) {
               </p>
 
               {/* Editorial Pull-Quote */}
-              <blockquote className="relative z-10 my-8 rounded-2xl border-l-4 border-[#F5D033] bg-[#151117] py-4 pl-6 pr-5">
+              <blockquote className="relative z-10 my-8  border-l-4 border-[#F5D033] bg-transparentpy-4 pl-6 pr-5">
                 <p className="text-base font-medium italic leading-relaxed text-white md:text-lg">
                   &ldquo;One coordinated provider delivering seamless setup,
                   consistent quality control, and practical on-site execution.&rdquo;
@@ -297,10 +297,10 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 3. MISSION & VISION */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
-            className="grid grid-cols-1 items-stretch overflow-hidden rounded-3xl border border-white/15 bg-[#141016] lg:grid-cols-[1.2fr_1fr]"
+            className="grid grid-cols-1 items-stretch overflow-hidden  border border-white/15 bg-[#141016] lg:grid-cols-[1.2fr_1fr]"
             data-aos="fade-up"
           >
             <div className="flex flex-col justify-between divide-y divide-white/10 border-b border-white/10 lg:border-r lg:border-b-0">
@@ -338,7 +338,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 4. CORE PRINCIPLES */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12" data-aos="fade-up">
             <span className="mb-3 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
@@ -353,7 +353,7 @@ export default function About({ onNavigate }) {
             {coreValues.map((val, index) => (
               <div
                 key={val.no}
-                className="flex flex-col justify-between rounded-3xl border border-white/15 bg-[#141016] p-7 transition-colors duration-200 hover:border-[#F5D033]/60"
+                className="flex flex-col justify-between  border border-white/15 bg-[#141016] p-7 transition-colors duration-200 hover:border-[#F5D033]/60"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
@@ -368,7 +368,7 @@ export default function About({ onNavigate }) {
                     {val.desc}
                   </p>
                 </div>
-                <div className="aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1B171E]">
+                <div className="aspect-[16/10] w-full overflow-hidden  border border-white/10 bg-[#1B171E]">
                   <img
                     src={val.img}
                     alt={val.title}
@@ -382,7 +382,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 5. WHAT SETS US APART & WHO WE SERVE */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
@@ -405,12 +405,12 @@ export default function About({ onNavigate }) {
             {advantagePoints.map((point, index) => (
               <div
                 key={point.no}
-                className="flex flex-col justify-between rounded-3xl border border-white/15 bg-[#141016] p-8 transition-colors duration-200 hover:border-[#F5D033]/60 md:p-9"
+                className="flex flex-col justify-between  border border-white/15 bg-[#141016] p-8 transition-colors duration-200 hover:border-[#F5D033]/60 md:p-9"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 <div>
-                  <span className="mb-4 inline-block rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold tracking-[0.14em] text-[#F5D033] uppercase">
+                  <span className="mb-4 inline-block  bg-white/10 px-3 py-1 text-[10px] font-semibold tracking-[0.14em] text-[#F5D033] uppercase">
                     {point.no}
                   </span>
                   <h3 className="font-display-condensed mb-3 text-2xl font-normal tracking-wide text-white">
@@ -420,7 +420,7 @@ export default function About({ onNavigate }) {
                     {point.desc}
                   </p>
                 </div>
-                <div className="aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1B171E]">
+                <div className="aspect-[16/10] w-full overflow-hidden  border border-white/10 bg-[#1B171E]">
                   <img
                     src={point.img}
                     alt={point.title}
@@ -433,7 +433,7 @@ export default function About({ onNavigate }) {
 
           {/* Target Clients & Sectors Strip */}
           <div
-            className="mt-12 rounded-3xl border border-white/15 bg-[#141016] p-8 md:p-10"
+            className="mt-12  border border-white/15 bg-[#141016] p-8 md:p-10"
             data-aos="fade-up"
           >
             <span className="mb-5 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
@@ -443,7 +443,7 @@ export default function About({ onNavigate }) {
               {clientSectors.map((sector) => (
                 <span
                   key={sector}
-                  className="rounded-full border border-white/15 bg-[#1A161D] px-4 py-2 text-xs font-medium tracking-[0.06em] text-white/90"
+                  className=" border border-white/15 bg-[#1A161D] px-4 py-2 text-xs font-medium tracking-[0.06em] text-white/90"
                 >
                   {sector}
                 </span>
@@ -454,7 +454,7 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 6. CO-FOUNDERS */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
@@ -477,7 +477,7 @@ export default function About({ onNavigate }) {
             {founders.map((founder, index) => (
               <article
                 key={founder.name}
-                className="group overflow-hidden rounded-3xl border border-white/15 bg-[#141016] transition-all duration-200 hover:border-[#F5D033]/70"
+                className="group overflow-hidden  border border-white/15 bg-[#141016] transition-all duration-200 hover:border-[#F5D033]/70"
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
@@ -512,9 +512,9 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 7. BOTTOM CTA */}
-      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
+      <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
@@ -535,20 +535,20 @@ export default function About({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
               <span>Request an Event Quote &rarr;</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+              <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
                 &rarr;
               </span>
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
               <span>Contact Our Team</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+              <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>

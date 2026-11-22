@@ -89,7 +89,7 @@ export default function Faqs({ onNavigate }) {
   };
 
   return (
-    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+    <div className="min-h-screen bg-[#0F2A2A] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .font-display-condensed {
@@ -100,7 +100,7 @@ export default function Faqs({ onNavigate }) {
       `}</style>
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx Hyper Kids Events</span>
@@ -115,7 +115,7 @@ export default function Faqs({ onNavigate }) {
               <span className="text-white/65">Questions</span>
             </h1>
 
-            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Everything you need to know about booking kids&apos; party setups,
               hiring commercial inflatables, M-Pesa deposits, power backup, and
               rainy-day plans across Kenya.
@@ -140,7 +140,7 @@ export default function Faqs({ onNavigate }) {
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer rounded-full px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer  px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
                       ? 'bg-[#F5D033] text-[#0D0A0E]'
                       : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white hover:text-white'
@@ -155,7 +155,7 @@ export default function Faqs({ onNavigate }) {
       </section>
 
       {/* 3. ACCORDION FAQ LIST & QUICK HELP SIDEBAR */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
             {/* Left Accordion Column */}
@@ -166,7 +166,7 @@ export default function Faqs({ onNavigate }) {
                 return (
                   <div
                     key={faq.id}
-                    className={`overflow-hidden rounded-3xl border transition-all duration-200 ${
+                    className={`overflow-hidden  border transition-all duration-200 ${
                       isOpen
                         ? 'border-[#F5D033]/70 bg-[#141016]'
                         : 'border-white/15 bg-[#141016]/80 hover:border-white/35'
@@ -194,7 +194,7 @@ export default function Faqs({ onNavigate }) {
 
                       <span
                         aria-hidden="true"
-                        className={`mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-colors duration-200 ${
+                        className={`mt-1 flex h-9 w-9 shrink-0 items-center justify-center  text-xs font-bold transition-colors duration-200 ${
                           isOpen
                             ? 'bg-[#F5D033] text-[#0D0A0E]'
                             : 'border border-white/20 bg-[#1C1720] text-white'
@@ -219,7 +219,7 @@ export default function Faqs({ onNavigate }) {
             {/* Right Quick Support Sidebar */}
             <div className="space-y-8 lg:sticky lg:top-28 lg:col-span-4">
               {/* Quick Facts Card */}
-              <div className="space-y-6 rounded-3xl border border-white/15 bg-[#141016] p-8">
+              <div className="space-y-6  border border-white/15 bg-[#141016] p-8">
                 <div className="border-b border-white/10 pb-4">
                   <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
                     <span>&#10022;</span> [ Quick Facts ]
@@ -257,7 +257,7 @@ export default function Faqs({ onNavigate }) {
               </div>
 
               {/* Direct Support Card */}
-              <div className="space-y-5 rounded-3xl bg-[#EDEDED] p-8 text-[#0D0A0E]">
+              <div className="space-y-5  bg-[#EDEDED] p-8 text-[#0D0A0E]">
                 <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
                   [ Still Have a Question? ] <span className="text-[#D4A800]">&#10022;</span>
                 </span>
@@ -274,20 +274,20 @@ export default function Faqs({ onNavigate }) {
                     href="https://wa.me/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex w-full items-center justify-between rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.01]"
+                    className="group flex w-full items-center justify-between  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.01]"
                   >
                     <span>Chat on WhatsApp</span>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                    <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
                       &rarr;
                     </span>
                   </a>
                   <a
                     href="/booking"
                     onClick={(e) => handleLinkClick(e, '/booking')}
-                    className="group flex w-full items-center justify-between rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+                    className="group flex w-full items-center justify-between  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
                   >
                     <span>Submit Booking Enquiry &rarr;</span>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                    <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                       &rarr;
                     </span>
                   </a>

@@ -126,7 +126,7 @@ export default function ProductCategories({ onNavigate }) {
   )}`;
 
   return (
-    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+    <div className="min-h-screen bg-[#0F2A2A] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .font-display-condensed {
@@ -137,7 +137,7 @@ export default function ProductCategories({ onNavigate }) {
       `}</style>
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -155,7 +155,7 @@ export default function ProductCategories({ onNavigate }) {
               <span className="text-white/65">Product Categories</span>
             </h1>
 
-            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Browse our six core rental and production divisions—from concert
               grand pianos, band backlines, and P3 LED walls to clear-span
               marquees, event furniture, and sanitized kiddie play units.
@@ -179,7 +179,7 @@ export default function ProductCategories({ onNavigate }) {
               <a
                 key={cat.id}
                 href={`#${cat.id}`}
-                className="rounded-full border border-white/15 bg-transparent px-4 py-1.5 text-xs font-medium tracking-[0.14em] text-[#9E9A9F] uppercase no-underline transition-colors hover:border-white hover:bg-white hover:text-[#0D0A0E]"
+                className=" border border-white/15 bg-transparent px-4 py-1.5 text-xs font-medium tracking-[0.14em] text-[#9E9A9F] uppercase no-underline transition-colors hover:border-white hover:bg-white hover:text-[#0D0A0E]"
               >
                 {cat.name}
               </a>
@@ -189,14 +189,14 @@ export default function ProductCategories({ onNavigate }) {
       </section>
 
       {/* 3. CATEGORIES EDITORIAL GRID */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {categories.map((cat, index) => (
               <article
                 id={cat.id}
                 key={cat.id}
-                className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-white/15 bg-[#141016] transition-all duration-200 hover:border-[#F5D033]/70"
+                className="group flex flex-col justify-between overflow-hidden  border border-white/15 bg-[#141016] transition-all duration-200 hover:border-[#F5D033]/70"
                 data-aos="fade-up"
                 data-aos-delay={(index % 2) * 100}
               >
@@ -206,7 +206,7 @@ export default function ProductCategories({ onNavigate }) {
                     <span className="font-bold text-[#F5D033]">
                       0{index + 1} &bull; {cat.count}
                     </span>
-                    <span className="rounded-full bg-white/10 px-3 py-1 font-semibold text-white">
+                    <span className=" bg-white/10 px-3 py-1 font-semibold text-white">
                       {cat.startingPrice}
                     </span>
                   </div>
@@ -240,7 +240,7 @@ export default function ProductCategories({ onNavigate }) {
                       <ul className="grid grid-cols-1 gap-2.5 text-xs text-[#D1CDD3] sm:grid-cols-2">
                         {cat.highlights.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2.5">
-                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0  bg-[#F5D033]" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -258,10 +258,10 @@ export default function ProductCategories({ onNavigate }) {
                         selectedCategory: cat.name,
                       })
                     }
-                    className="group/btn inline-flex items-center gap-3 rounded-full bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+                    className="group/btn inline-flex items-center gap-3  bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                   >
                     <span>Browse {cat.name} &rarr;</span>
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5">
+                    <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5">
                       &rarr;
                     </span>
                   </a>
@@ -269,7 +269,7 @@ export default function ProductCategories({ onNavigate }) {
                   <a
                     href="/products/sample-product"
                     onClick={(e) => handleLinkClick(e, '/products/sample-product')}
-                    className="rounded-full border border-white/25 bg-transparent px-4 py-2 text-xs font-medium tracking-[0.14em] text-white uppercase no-underline transition-colors hover:border-white hover:bg-white/10"
+                    className=" border border-white/25 bg-transparent px-4 py-2 text-xs font-medium tracking-[0.14em] text-white uppercase no-underline transition-colors hover:border-white hover:bg-white/10"
                   >
                     Featured Unit Specs
                   </a>
@@ -281,9 +281,9 @@ export default function ProductCategories({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
+      <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
@@ -306,20 +306,20 @@ export default function ProductCategories({ onNavigate }) {
               href={whatsappBundleUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
               <span>Request Bundle Quote on WhatsApp &rarr;</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+              <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
                 &rarr;
               </span>
             </a>
             <a
               href="/event-equipment-supplies"
               onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
               <span>View Full Catalog</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+              <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>

@@ -140,7 +140,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
   });
 
   return (
-    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+    <div className="min-h-screen bg-[#0F2A2A] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .font-display-condensed {
@@ -151,7 +151,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       `}</style>
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
@@ -169,7 +169,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
               <span className="text-white/65">Supplies Catalog</span>
             </h1>
 
-            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Explore our professional rental inventory including grand
               pianos, band gear, indoor LED video walls, moving head lighting, stages,
               clear-span marquees, and event furniture across six counties.
@@ -191,7 +191,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
               placeholder="Search pianos, LED screens, amps, tents..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-full border border-white/15 bg-[#1C1720] px-5 py-3 text-xs tracking-[0.06em] text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
+              className="w-full  border border-white/15 bg-[#1C1720] px-5 py-3 text-xs tracking-[0.06em] text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
             />
           </div>
 
@@ -205,7 +205,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer rounded-full px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer  px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
                       ? 'bg-[#F5D033] text-[#0D0A0E]'
                       : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white hover:text-white'
@@ -220,7 +220,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 3. PRODUCT CATALOG GRID */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span className="inline-flex items-center gap-2">
@@ -235,7 +235,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                 key={item.id}
                 href="/products/sample-product"
                 onClick={(e) => handleSelectProduct(e, item)}
-                className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-white/15 bg-[#141016] no-underline transition-all duration-200 hover:border-[#F5D033]/70"
+                className="group flex flex-col justify-between overflow-hidden  border border-white/15 bg-[#141016] no-underline transition-all duration-200 hover:border-[#F5D033]/70"
                 data-aos="fade-up"
                 data-aos-delay={(index % 3) * 100}
               >
@@ -245,7 +245,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                     <span className="font-bold text-[#F5D033]">
                       {item.category}
                     </span>
-                    <span className="rounded-full bg-white/10 px-3 py-1 font-semibold text-white">
+                    <span className=" bg-white/10 px-3 py-1 font-semibold text-white">
                       {item.price}
                     </span>
                   </div>
@@ -272,7 +272,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                     <ul className="space-y-2 border-t border-white/10 pt-4 text-xs text-[#D1CDD3]">
                       {item.specs.map((spec, sIdx) => (
                         <li key={sIdx} className="flex items-center gap-2.5">
-                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
+                          <span className="h-1.5 w-1.5 shrink-0  bg-[#F5D033]" />
                           <span>{spec}</span>
                         </li>
                       ))}
@@ -285,7 +285,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                   <span className="text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors group-hover:text-[#F5D033]">
                     View Specifications &amp; Book &rarr;
                   </span>
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:bg-[#F5D033]">
+                  <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:bg-[#F5D033]">
                     &rarr;
                   </span>
                 </div>
@@ -294,7 +294,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
           </div>
 
           {filteredInventory.length === 0 && (
-            <div className="rounded-3xl border border-white/15 bg-[#141016] py-20 text-center">
+            <div className=" border border-white/15 bg-[#141016] py-20 text-center">
               <p className="text-base text-[#C7C3C9]">
                 No equipment found matching &ldquo;{searchQuery}&rdquo;.
               </p>
@@ -304,10 +304,10 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                   setSearchQuery('');
                   setSelectedCategory('All');
                 }}
-                className="mt-5 inline-flex cursor-pointer items-center gap-3 rounded-full bg-white py-2.5 pr-2.5 pl-6 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+                className="mt-5 inline-flex cursor-pointer items-center gap-3  bg-white py-2.5 pr-2.5 pl-6 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
               >
                 <span>Reset Filters</span>
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                   &rarr;
                 </span>
               </button>
@@ -317,9 +317,9 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
+      <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
@@ -340,20 +340,20 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
               <span>Request Equipment Quotation &rarr;</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+              <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
                 &rarr;
               </span>
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
               <span>Contact Our Engineers</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+              <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>

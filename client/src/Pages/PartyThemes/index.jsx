@@ -84,7 +84,7 @@ export default function EventInspo({ onNavigate }) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+    <div className="min-h-screen bg-[#0F2A2A] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
         .font-display-condensed {
@@ -95,7 +95,7 @@ export default function EventInspo({ onNavigate }) {
       `}</style>
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
           <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx-HyperKids &bull; Kenyan Event Themes</span>
@@ -110,7 +110,7 @@ export default function EventInspo({ onNavigate }) {
               <span className="text-white/65">Event Themes</span>
             </h1>
 
-            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Explore four practical, culturally resonant event setups designed
               specifically for traditional Ruracios, Nairobi corporate AGMs,
               garden weddings, and estate children&rsquo;s parties across Kenya.
@@ -134,7 +134,7 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 3. FOUR KENYAN THEMES SHOWCASE */}
-      <section className="border-b border-white/10 bg-[#0D0A0E]">
+      <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] divide-y divide-white/15 px-6 md:px-10">
           {inspoWorlds.map((inspo) => {
             const isTipOpen = selectedInspo === inspo.id;
@@ -153,7 +153,7 @@ export default function EventInspo({ onNavigate }) {
                           Theme {inspo.id}
                         </strong>
                       </span>
-                      <span className="rounded-full border border-white/15 bg-[#151117] px-3.5 py-1 text-[10px] font-medium text-white/90">
+                      <span className=" border border-white/15 bg-transparentpx-3.5 py-1 text-[10px] font-medium text-white/90">
                         {inspo.ageRange}
                       </span>
                     </div>
@@ -179,7 +179,7 @@ export default function EventInspo({ onNavigate }) {
                     <ul className="grid grid-cols-1 gap-3 text-sm text-[#D1CDD3] sm:grid-cols-2">
                       {inspo.highlights.map((item) => (
                         <li key={item} className="flex items-start gap-2.5">
-                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0  bg-[#F5D033]" />
                           <span className="leading-snug">{item}</span>
                         </li>
                       ))}
@@ -198,7 +198,7 @@ export default function EventInspo({ onNavigate }) {
                             key={color}
                             title={color}
                             style={{ backgroundColor: color }}
-                            className="h-5 w-5 rounded-full border border-white/30"
+                            className="h-5 w-5  border border-white/30"
                           >
                             <span className="sr-only">{color}</span>
                           </span>
@@ -213,7 +213,7 @@ export default function EventInspo({ onNavigate }) {
                           setSelectedInspo(isTipOpen ? null : inspo.id)
                         }
                         aria-expanded={isTipOpen}
-                        className="cursor-pointer rounded-full border border-white/25 bg-transparent px-4 py-2 text-xs font-medium tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:bg-white/10"
+                        className="cursor-pointer  border border-white/25 bg-transparent px-4 py-2 text-xs font-medium tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:bg-white/10"
                       >
                         {isTipOpen ? 'Hide Planner Tip' : 'Planner Tip'}
                       </button>
@@ -221,10 +221,10 @@ export default function EventInspo({ onNavigate }) {
                       <a
                         href="/booking"
                         onClick={(e) => handleLinkClick(e, '/booking')}
-                        className="group/btn inline-flex items-center gap-3 rounded-full bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+                        className="group/btn inline-flex items-center gap-3  bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                       >
                         <span>Book This Theme &rarr;</span>
-                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5">
+                        <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5">
                           &rarr;
                         </span>
                       </a>
@@ -233,7 +233,7 @@ export default function EventInspo({ onNavigate }) {
 
                   {/* Expandable Planner Note */}
                   {isTipOpen && (
-                    <div className="mt-6 rounded-2xl border border-[#F5D033]/40 bg-[#151117] p-5 text-sm leading-relaxed text-[#D1CDD3]">
+                    <div className="mt-6  border border-[#F5D033]/40 bg-transparentp-5 text-sm leading-relaxed text-[#D1CDD3]">
                       <strong className="mb-1.5 flex items-center gap-2 text-xs font-semibold tracking-[0.12em] text-[#F5D033] uppercase">
                         <span>&#10022;</span> Staxx-HyperKids Setup Advice
                       </strong>
@@ -247,7 +247,7 @@ export default function EventInspo({ onNavigate }) {
 
                 {/* Right Column: Theme Plate */}
                 <div className="lg:border-l lg:border-white/10 lg:pl-14">
-                  <div className="aspect-[16/11] w-full overflow-hidden rounded-3xl border border-white/10 bg-[#1A161C]">
+                  <div className="aspect-[16/11] w-full overflow-hidden  border border-white/10 bg-[#1A161C]">
                     <img
                       src={inspo.img}
                       alt={inspo.title}
@@ -268,8 +268,8 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CUSTOM THEME CTA */}
-      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
+      <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
               Have a Custom Event Vision? <span className="text-[#D4A800]">&#10022;</span>
@@ -288,20 +288,20 @@ export default function EventInspo({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
               <span>Request a Custom Quote &rarr;</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+              <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
                 &rarr;
               </span>
             </a>
             <a
               href="/party-packages"
               onClick={(e) => handleLinkClick(e, '/party-packages')}
-              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
               <span>Explore KES Packages</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+              <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>
