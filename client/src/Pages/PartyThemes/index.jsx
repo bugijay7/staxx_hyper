@@ -5,7 +5,6 @@ import Corporategala from '../../assets/corporategala.jpg';
 import Gardenwedding from '../../assets/gardenwedding.jpg';
 import Ruracio from '../../assets/ruracio.jpg';
 
-
 export default function EventInspo({ onNavigate }) {
   const [selectedInspo, setSelectedInspo] = useState(null);
 
@@ -85,22 +84,33 @@ export default function EventInspo({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
+    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
+
       {/* 1. HERO HEADER */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx-HyperKids &bull; Kenyan Event Themes</span>
-            <span>Ruracio &bull; Corporate Galas &bull; Weddings &bull; Kids Parties</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> Ruracio &bull; Corporate Galas &bull; Weddings &bull; Kids Parties
+            </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Relatable Kenyan <br />
-              <span className="text-neutral-500">Event Themes</span>
+              <span className="text-white/65">Event Themes</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Explore four practical, culturally resonant event setups designed
               specifically for traditional Ruracios, Nairobi corporate AGMs,
               garden weddings, and estate children&rsquo;s parties across Kenya.
@@ -110,12 +120,12 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-[#16232A]/15 bg-white">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-[#16232A] uppercase">
-            Tailored to Your Venue &amp; Budget
+      <section className="border-b border-white/15 bg-[#141016]">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8">
+          <span className="inline-flex shrink-0 items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+            <span>&#10022;</span> Tailored to Your Venue &amp; Budget
           </span>
-          <p className="max-w-2xl text-sm leading-relaxed text-[#16232A] md:text-right">
+          <p className="max-w-2xl text-xs leading-relaxed text-[#C7C3C9] md:text-right md:text-sm">
             Every theme is backed by our full equipment hire and on-site setup
             teams based in Nairobi, serving Kiambu, Nakuru, Machakos,
             Murang&rsquo;a, and Kajiado.
@@ -124,8 +134,8 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 3. FOUR KENYAN THEMES SHOWCASE */}
-      <section className="border-b border-[#16232A]/15 bg-white">
-        <div className="mx-auto max-w-[1440px] divide-y divide-[#16232A]/15 px-6 md:px-10">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
+        <div className="mx-auto max-w-[1440px] divide-y divide-white/15 px-6 md:px-10">
           {inspoWorlds.map((inspo) => {
             const isTipOpen = selectedInspo === inspo.id;
 
@@ -137,39 +147,39 @@ export default function EventInspo({ onNavigate }) {
                 {/* Left Column: Details, Highlights & Palette */}
                 <div className="flex flex-col justify-between">
                   <div>
-                    <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] uppercase">
-                      <span className="text-neutral-500">
-                        <strong className="font-medium text-[#16232A]">
+                    <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-white/15 pb-4 text-[11px] tracking-[0.16em] uppercase">
+                      <span className="text-[#9E9A9F]">
+                        <strong className="font-bold text-[#F5D033]">
                           Theme {inspo.id}
                         </strong>
                       </span>
-                      <span className="border border-[#16232A]/20 px-2.5 py-0.5 text-[10px] text-neutral-700">
+                      <span className="rounded-full border border-white/15 bg-[#151117] px-3.5 py-1 text-[10px] font-medium text-white/90">
                         {inspo.ageRange}
                       </span>
                     </div>
 
-                    <h2 className="mb-2 text-2xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] sm:text-3xl md:text-4xl">
+                    <h2 className="font-display-condensed mb-3 text-3xl font-normal leading-[0.98] text-white sm:text-4xl md:text-5xl">
                       {inspo.title}
                     </h2>
 
-                    <p className="mb-6 text-sm font-medium tracking-[-0.01em] text-neutral-500">
+                    <p className="mb-6 text-sm font-medium tracking-[-0.01em] text-[#F5D033]">
                       {inspo.tagline}
                     </p>
 
-                    <p className="mb-8 text-base leading-relaxed text-[#16232A]">
+                    <p className="mb-8 text-sm leading-relaxed text-[#C7C3C9] md:text-base">
                       {inspo.description}
                     </p>
                   </div>
 
                   {/* Signature Elements */}
-                  <div className="mb-8 border-t border-[#16232A]/15 pt-6">
-                    <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-[#16232A] uppercase">
+                  <div className="mb-8 border-t border-white/15 pt-6">
+                    <span className="mb-4 block text-[11px] font-semibold tracking-[0.16em] text-white uppercase">
                       What&rsquo;s Included in Setup
                     </span>
-                    <ul className="grid grid-cols-1 gap-3 text-sm text-neutral-700 sm:grid-cols-2">
+                    <ul className="grid grid-cols-1 gap-3 text-sm text-[#D1CDD3] sm:grid-cols-2">
                       {inspo.highlights.map((item) => (
                         <li key={item} className="flex items-start gap-2.5">
-                          <span className="mt-1.5 h-1 w-1 shrink-0 bg-[#075056]" />
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
                           <span className="leading-snug">{item}</span>
                         </li>
                       ))}
@@ -177,9 +187,9 @@ export default function EventInspo({ onNavigate }) {
                   </div>
 
                   {/* Palette & Actions */}
-                  <div className="flex flex-col justify-between gap-6 border-t border-[#16232A]/15 pt-6 sm:flex-row sm:items-center">
+                  <div className="flex flex-col justify-between gap-6 border-t border-white/15 pt-6 sm:flex-row sm:items-center">
                     <div className="flex items-center gap-3">
-                      <span className="text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+                      <span className="text-[11px] tracking-[0.16em] text-[#9E9A9F] uppercase">
                         Palette
                       </span>
                       <div className="flex items-center gap-2">
@@ -188,7 +198,7 @@ export default function EventInspo({ onNavigate }) {
                             key={color}
                             title={color}
                             style={{ backgroundColor: color }}
-                            className="h-5 w-5 border border-[#16232A]/25"
+                            className="h-5 w-5 rounded-full border border-white/30"
                           >
                             <span className="sr-only">{color}</span>
                           </span>
@@ -196,14 +206,14 @@ export default function EventInspo({ onNavigate }) {
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-5">
+                    <div className="flex flex-wrap items-center gap-4">
                       <button
                         type="button"
                         onClick={() =>
                           setSelectedInspo(isTipOpen ? null : inspo.id)
                         }
                         aria-expanded={isTipOpen}
-                        className="cursor-pointer border-b border-[#16232A]/30 pb-0.5 text-xs tracking-[0.12em] text-[#16232A] uppercase transition-colors hover:border-[#16232A] hover:text-[#16232A]"
+                        className="cursor-pointer rounded-full border border-white/25 bg-transparent px-4 py-2 text-xs font-medium tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:bg-white/10"
                       >
                         {isTipOpen ? 'Hide Planner Tip' : 'Planner Tip'}
                       </button>
@@ -211,20 +221,23 @@ export default function EventInspo({ onNavigate }) {
                       <a
                         href="/booking"
                         onClick={(e) => handleLinkClick(e, '/booking')}
-                        className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+                        className="group/btn inline-flex items-center gap-3 rounded-full bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                       >
-                        Book This Theme &rarr;
+                        <span>Book This Theme &rarr;</span>
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5">
+                          &rarr;
+                        </span>
                       </a>
                     </div>
                   </div>
 
                   {/* Expandable Planner Note */}
                   {isTipOpen && (
-                    <div className="mt-6 border border-[#16232A]/15 bg-white p-5 text-sm leading-relaxed text-neutral-700">
-                      <strong className="block mb-1 text-xs font-medium tracking-[0.08em] text-[#16232A] uppercase">
-                        Staxx-HyperKids Setup Advice
+                    <div className="mt-6 rounded-2xl border border-[#F5D033]/40 bg-[#151117] p-5 text-sm leading-relaxed text-[#D1CDD3]">
+                      <strong className="mb-1.5 flex items-center gap-2 text-xs font-semibold tracking-[0.12em] text-[#F5D033] uppercase">
+                        <span>&#10022;</span> Staxx-HyperKids Setup Advice
                       </strong>
-                      For the <strong>{inspo.title}</strong>, we recommend
+                      For the <strong className="text-white">{inspo.title}</strong>, we recommend
                       conducting a joint site survey at your venue or homestead
                       at least 5 days prior to verify ground leveling, tent
                       anchoring, and power access.
@@ -233,17 +246,17 @@ export default function EventInspo({ onNavigate }) {
                 </div>
 
                 {/* Right Column: Theme Plate */}
-                <div className="lg:border-l lg:border-[#16232A]/15 lg:pl-14">
-                  <div className="aspect-[16/11] w-full overflow-hidden bg-neutral-200">
+                <div className="lg:border-l lg:border-white/10 lg:pl-14">
+                  <div className="aspect-[16/11] w-full overflow-hidden rounded-3xl border border-white/10 bg-[#1A161C]">
                     <img
                       src={inspo.img}
                       alt={inspo.title}
-                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                     />
                   </div>
-                  <div className="mt-3 flex items-center justify-between border-t border-[#16232A]/15 pt-2.5 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
+                  <div className="mt-4 flex items-center justify-between border-t border-white/15 pt-3 text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
                     <span>Theme {inspo.id} / Kenyan Setup Showcase</span>
-                    <span className="font-mono text-[10px] text-neutral-400">
+                    <span className="font-mono text-[10px] text-white/60">
                       {inspo.palette.join(' · ')}
                     </span>
                   </div>
@@ -255,16 +268,16 @@ export default function EventInspo({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CUSTOM THEME CTA */}
-      <section className="bg-[#075056] text-[#E4EEF0]">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
+      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Have a Custom Event Vision?
+            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+              Have a Custom Event Vision? <span className="text-[#D4A800]">&#10022;</span>
             </span>
-            <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
+            <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               We Tailor Every Setup to Your Specific Requirements
             </h2>
-            <p className="text-base leading-relaxed text-neutral-300">
+            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               Whether you are planning a countryside wedding in Kiambu, a church
               convention in Machakos, or a corporate product launch in Nairobi—our
               team handles the technical production, d&eacute;cor, and logistics.
@@ -275,16 +288,22 @@ export default function EventInspo({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              Request a Custom Quote &rarr;
+              <span>Request a Custom Quote &rarr;</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                &rarr;
+              </span>
             </a>
             <a
               href="/party-packages"
               onClick={(e) => handleLinkClick(e, '/party-packages')}
-              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              Explore KES Packages
+              <span>Explore KES Packages</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                &rarr;
+              </span>
             </a>
           </div>
         </div>

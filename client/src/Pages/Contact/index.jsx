@@ -122,8 +122,6 @@ export default function Contact({ onNavigate }) {
     }
   };
 
-
-
   const handleReset = () => {
     setFormData({
       name: '',
@@ -177,14 +175,29 @@ export default function Contact({ onNavigate }) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#075056] pt-24 font-sans text-[#E4EEF0] antialiased selection:bg-white selection:text-[#16232A] md:pt-32">
+    <div className="min-h-screen bg-[#0D0A0E] pt-24 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-32">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
+
       <div className="mx-auto max-w-[1360px] px-6 md:px-14">
         {/* 1. OVERSIZED EDITORIAL HERO HEADING */}
-        <header className="mb-16 md:mb-24">
-          <h1 className="text-[14vw] font-bold tracking-[-0.045em] leading-[0.92] text-white sm:text-7xl md:text-[7.5rem] lg:text-[9.5rem]">
-            Contact us
+        <header className="mb-16 border-b border-white/10 pb-12 md:mb-24">
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
+            <span>Staxx Hyper Kids Events</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> Westlands, Nairobi &bull; Direct Enquiries
+            </span>
+          </div>
+          <h1 className="font-display-condensed text-[14vw] font-normal leading-[0.9] text-white sm:text-7xl md:text-[7.5rem] lg:text-[9.5rem]">
+            Contact us <span className="text-[#F5D033]">&#10022;</span>
           </h1>
-          <p className="mt-8 max-w-xl font-mono text-xs leading-relaxed text-[#E4EEF0] md:text-[13px]">
+          <p className="mt-8 max-w-xl font-mono text-xs leading-relaxed text-[#C7C3C9] md:text-[13px]">
             A unified events, audiovisual production,
             <br />
             décor and party-supplies brand.
@@ -194,16 +207,16 @@ export default function Contact({ onNavigate }) {
         {/* 2. MAIN TWO-COLUMN EDITORIAL SPLIT */}
         <section className="grid grid-cols-1 gap-16 pb-24 lg:grid-cols-12 lg:gap-12">
           {/* LEFT COLUMN: Monospaced Direct Contact Details & Quick Actions */}
-          <div className="space-y-10 font-mono text-xs leading-relaxed text-neutral-300 lg:col-span-5">
+          <div className="space-y-10 font-mono text-xs leading-relaxed text-[#C7C3C9] lg:col-span-5">
             {/* Email */}
             <div className="space-y-1">
               <a
                 href="mailto:staxxhyperkids@gmail.com"
-                className="block text-sm text-white no-underline transition-opacity hover:opacity-65"
+                className="block text-sm text-white no-underline transition-colors hover:text-[#F5D033]"
               >
                 staxxhyperkids@gmail.com
               </a>
-              <p className="text-[11px] text-[#E4EEF0]/75">
+              <p className="text-[11px] text-[#9E9A9F]">
                 Replies within 2 hours
               </p>
             </div>
@@ -212,17 +225,17 @@ export default function Contact({ onNavigate }) {
             <div className="space-y-1">
               <a
                 href="tel:+254780979777"
-                className="block text-sm text-white no-underline transition-opacity hover:opacity-65"
+                className="block text-sm text-white no-underline transition-colors hover:text-[#F5D033]"
               >
                 +254 (0) 780 979 777
               </a>
               <a
                 href="tel:+254722580012"
-                className="block text-sm text-white no-underline transition-opacity hover:opacity-65"
+                className="block text-sm text-white no-underline transition-colors hover:text-[#F5D033]"
               >
                 +254 (0) 722 580 012
               </a>
-              <p className="text-[11px] text-[#E4EEF0]/75">
+              <p className="text-[11px] text-[#9E9A9F]">
                 Mon &ndash; Sun: 8:00 AM &ndash; 8:00 PM EAT
               </p>
             </div>
@@ -234,17 +247,17 @@ export default function Contact({ onNavigate }) {
                 <br />
                 Westlands, Nairobi
               </p>
-              <p className="text-[11px] text-[#E4EEF0]/75">
+              <p className="text-[11px] text-[#9E9A9F]">
                 Equipment Showroom by Appointment
               </p>
             </div>
 
             {/* Instant Chat & Full Booking Links */}
-            <div className="space-y-4 border-t border-white/15 pt-8">
-              <p className="text-[11px] font-semibold tracking-[0.08em] text-[#FF5B04] uppercase">
-                Prefer Instant Chat?
+            <div className="space-y-4 rounded-3xl border border-white/15 bg-[#141016] p-7">
+              <p className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-[#F5D033] uppercase">
+                <span>&#10022;</span> Prefer Instant Chat?
               </p>
-              <p className="max-w-xs text-[11px] leading-relaxed text-[#E4EEF0]/90">
+              <p className="max-w-xs text-[11px] leading-relaxed text-[#C7C3C9]">
                 Skip the email forms and talk immediately with our Nairobi
                 dispatch team for same-day equipment check or weekend bookings.
               </p>
@@ -253,14 +266,17 @@ export default function Contact({ onNavigate }) {
                   href="https://wa.me/254722580012"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-white px-5 py-2.5 font-mono text-[11px] font-semibold tracking-[0.12em] text-[#16232A] uppercase no-underline transition-opacity hover:opacity-85"
+                  className="group inline-flex items-center gap-3 rounded-full bg-white py-2 pr-2 pl-5 font-sans text-[11px] font-bold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                 >
-                  Open WhatsApp Chat
+                  <span>Open WhatsApp Chat</span>
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                    &rarr;
+                  </span>
                 </a>
                 <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
-                  className="inline-block border-b border-white/40 pb-1 font-mono text-[11px] tracking-[0.06em] text-white no-underline transition-colors hover:border-white"
+                  className="inline-block border-b border-white/40 pb-1 font-mono text-[11px] tracking-[0.06em] text-white no-underline transition-colors hover:border-[#F5D033] hover:text-[#F5D033]"
                 >
                   Submit Full Booking Enquiry &rarr;
                 </a>
@@ -269,19 +285,19 @@ export default function Contact({ onNavigate }) {
           </div>
 
           {/* RIGHT COLUMN: Minimalist Bottom-Border Form with Validation */}
-          <div className="lg:col-span-7">
+          <div className="rounded-3xl border border-white/15 bg-[#141016] p-8 md:p-12 lg:col-span-7">
             {status === 'sent' ? (
-              <div className="space-y-8 border-t border-white/20 pt-8">
-                <span className="inline-block font-mono text-xs tracking-[0.1em] text-[#FF5B04] uppercase">
+              <div className="space-y-8 pt-2">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 font-mono text-xs tracking-[0.1em] text-[#F5D033] uppercase">
                   ✓ Message Sent Successfully
                 </span>
 
-                <h2 className="text-3xl font-bold tracking-[-0.03em] text-white md:text-4xl">
+                <h2 className="font-display-condensed text-4xl font-normal tracking-wide text-white md:text-5xl">
                   Thanks for reaching out,{' '}
-                  <span className="text-[#E4EEF0]">{formData.name}</span>.
+                  <span className="text-[#F5D033]">{formData.name}</span>.
                 </h2>
 
-                <p className="font-mono text-xs leading-relaxed text-[#E4EEF0] md:text-sm">
+                <p className="font-mono text-xs leading-relaxed text-[#C7C3C9] md:text-sm">
                   We have received your note regarding{' '}
                   <strong className="font-semibold text-white">
                     {formData.subject}
@@ -297,19 +313,22 @@ export default function Contact({ onNavigate }) {
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="cursor-pointer bg-white px-7 py-3 font-mono text-[11px] font-semibold tracking-[0.14em] text-[#16232A] uppercase transition-opacity hover:opacity-85"
+                    className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-white py-2.5 pr-2.5 pl-6 font-sans text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                   >
-                    Send Another Message
+                    <span>Send Another Message</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                      &rarr;
+                    </span>
                   </button>
                 </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate className="space-y-10">
-                <div className="flex items-baseline justify-between">
-                  <h2 className="text-lg font-medium tracking-[-0.01em] text-white">
+                <div className="flex items-baseline justify-between border-b border-white/15 pb-4">
+                  <h2 className="font-display-condensed text-2xl font-normal tracking-wide text-white md:text-3xl">
                     Drop Us a Note
                   </h2>
-                  <span className="font-mono text-[11px] text-[#E4EEF0]/75">
+                  <span className="font-mono text-[11px] text-[#9E9A9F]">
                     Send a Direct Message
                   </span>
                 </div>
@@ -321,7 +340,7 @@ export default function Contact({ onNavigate }) {
                       htmlFor="contact-name"
                       className="mb-2 block font-mono text-xs text-white"
                     >
-                      Name <span className="text-[#FF5B04]">(required)</span>
+                      Name <span className="text-[#F5D033]">(required)</span>
                     </label>
                     <input
                       id="contact-name"
@@ -333,14 +352,14 @@ export default function Contact({ onNavigate }) {
                       onBlur={handleBlur}
                       aria-invalid={Boolean(touched.name && errors.name)}
                       placeholder="e.g. Brenda Wairimu"
-                      className={`w-full border-b bg-transparent py-2.5 font-mono text-xs text-white placeholder:text-white/40 transition-colors focus:outline-none ${
+                      className={`w-full border-b bg-transparent py-2.5 font-mono text-xs text-white placeholder:text-white/35 transition-colors focus:outline-none ${
                         touched.name && errors.name
-                          ? 'border-red-300 focus:border-red-300'
-                          : 'border-white/30 focus:border-white'
+                          ? 'border-red-400 focus:border-red-400'
+                          : 'border-white/25 focus:border-[#F5D033]'
                       }`}
                     />
                     {touched.name && errors.name && (
-                      <p className="mt-1.5 font-mono text-[11px] text-red-300">
+                      <p className="mt-1.5 font-mono text-[11px] text-red-400">
                         {errors.name}
                       </p>
                     )}
@@ -351,7 +370,7 @@ export default function Contact({ onNavigate }) {
                       htmlFor="contact-email"
                       className="mb-2 block font-mono text-xs text-white"
                     >
-                      Email <span className="text-[#FF5B04]">(required)</span>
+                      Email <span className="text-[#F5D033]">(required)</span>
                     </label>
                     <input
                       id="contact-email"
@@ -363,14 +382,14 @@ export default function Contact({ onNavigate }) {
                       onBlur={handleBlur}
                       aria-invalid={Boolean(touched.email && errors.email)}
                       placeholder="e.g. brenda@example.com"
-                      className={`w-full border-b bg-transparent py-2.5 font-mono text-xs text-white placeholder:text-white/40 transition-colors focus:outline-none ${
+                      className={`w-full border-b bg-transparent py-2.5 font-mono text-xs text-white placeholder:text-white/35 transition-colors focus:outline-none ${
                         touched.email && errors.email
-                          ? 'border-red-300 focus:border-red-300'
-                          : 'border-white/30 focus:border-white'
+                          ? 'border-red-400 focus:border-red-400'
+                          : 'border-white/25 focus:border-[#F5D033]'
                       }`}
                     />
                     {touched.email && errors.email && (
-                      <p className="mt-1.5 font-mono text-[11px] text-red-300">
+                      <p className="mt-1.5 font-mono text-[11px] text-red-400">
                         {errors.email}
                       </p>
                     )}
@@ -390,35 +409,35 @@ export default function Contact({ onNavigate }) {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full cursor-pointer border-b border-white/30 bg-[#075056] py-2.5 font-mono text-xs text-white transition-colors focus:border-white focus:outline-none"
+                    className="w-full cursor-pointer border-b border-white/25 bg-[#141016] py-2.5 font-mono text-xs text-white transition-colors focus:border-[#F5D033] focus:outline-none"
                   >
                     <option
                       value="General Party Enquiry"
-                      className="bg-[#075056] text-white"
+                      className="bg-[#141016] text-white"
                     >
                       General Party Enquiry
                     </option>
                     <option
                       value="Bouncy Castle & Equipment Rental"
-                      className="bg-[#075056] text-white"
+                      className="bg-[#141016] text-white"
                     >
                       Bouncy Castle &amp; Equipment Rental
                     </option>
                     <option
                       value="School & Estate Fun Day"
-                      className="bg-[#075056] text-white"
+                      className="bg-[#141016] text-white"
                     >
                       School &amp; Estate Fun Day
                     </option>
                     <option
                       value="Custom Theme Design"
-                      className="bg-[#075056] text-white"
+                      className="bg-[#141016] text-white"
                     >
                       Custom Theme Design
                     </option>
                     <option
                       value="Vendor & Partnership"
-                      className="bg-[#075056] text-white"
+                      className="bg-[#141016] text-white"
                     >
                       Vendor &amp; Partnership
                     </option>
@@ -432,13 +451,13 @@ export default function Contact({ onNavigate }) {
                       htmlFor="contact-message"
                       className="font-mono text-xs text-white"
                     >
-                      Message <span className="text-[#FF5B04]">(required)</span>
+                      Message <span className="text-[#F5D033]">(required)</span>
                     </label>
                     <span
                       className={`font-mono text-[11px] ${
                         formData.message.length >= MAX_MESSAGE_LENGTH
-                          ? 'text-[#FF5B04]'
-                          : 'text-[#E4EEF0]/70'
+                          ? 'text-[#F5D033]'
+                          : 'text-[#9E9A9F]'
                       }`}
                     >
                       {formData.message.length}/{MAX_MESSAGE_LENGTH}
@@ -454,21 +473,21 @@ export default function Contact({ onNavigate }) {
                     onBlur={handleBlur}
                     aria-invalid={Boolean(touched.message && errors.message)}
                     placeholder="Tell us about your event date, location in Nairobi, guest count, or equipment needs..."
-                    className={`w-full resize-y border-b bg-transparent py-2.5 font-mono text-xs leading-relaxed text-white placeholder:text-white/40 transition-colors focus:outline-none ${
+                    className={`w-full resize-y border-b bg-transparent py-2.5 font-mono text-xs leading-relaxed text-white placeholder:text-white/35 transition-colors focus:outline-none ${
                       touched.message && errors.message
-                        ? 'border-red-300 focus:border-red-300'
-                        : 'border-white/30 focus:border-white'
+                        ? 'border-red-400 focus:border-red-400'
+                        : 'border-white/25 focus:border-[#F5D033]'
                     }`}
                   />
                   {touched.message && errors.message && (
-                    <p className="mt-1.5 font-mono text-[11px] text-red-300">
+                    <p className="mt-1.5 font-mono text-[11px] text-red-400">
                       {errors.message}
                     </p>
                   )}
                 </div>
 
                 {status === 'error' && (
-                  <p className="font-mono text-xs text-red-300">
+                  <p className="font-mono text-xs text-red-400">
                     Something went wrong sending your note. Please try again or
                     reach out via WhatsApp.
                   </p>
@@ -479,9 +498,12 @@ export default function Contact({ onNavigate }) {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="cursor-pointer bg-white px-8 py-3 font-mono text-[11px] font-semibold tracking-[0.14em] text-[#16232A] uppercase transition-opacity hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="group inline-flex cursor-pointer items-center gap-3 rounded-full bg-white py-2.5 pr-2.5 pl-7 font-sans text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033] disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    {status === 'submitting' ? 'SENDING...' : 'SUBMIT'}
+                    <span>{status === 'submitting' ? 'SENDING...' : 'SUBMIT'}</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
+                      &rarr;
+                    </span>
                   </button>
                 </div>
               </form>
@@ -494,47 +516,52 @@ export default function Contact({ onNavigate }) {
           <div className="grid grid-cols-1 gap-12 font-mono text-xs md:grid-cols-12">
             {/* Service Zones Column */}
             <div className="space-y-4 md:col-span-4">
-              <p className="text-[11px] font-extrabold tracking-[0.08em] text-[#FF5B04] uppercase">
-                Where We Operate
+              <p className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-[#F5D033] uppercase">
+                <span>&#10022;</span> Where We Operate
               </p>
-              <p className="text-[11px] leading-relaxed text-[#E4EEF0]/80">
+              <p className="text-[11px] leading-relaxed text-[#C7C3C9]">
                 Full-service delivery, professional setup, and post-party
                 pack-down across Nairobi and neighboring counties.
               </p>
-              <ul className="space-y-1.5 pt-1 text-white">
+              <ul className="space-y-2 pt-1 text-white">
                 {serviceZones.map((zone) => (
-                  <li key={zone}>&mdash; {zone}</li>
+                  <li key={zone} className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#F5D033]" />
+                    <span>{zone}</span>
+                  </li>
                 ))}
               </ul>
             </div>
 
             {/* Social Channels Columns */}
             <div className="md:col-span-8">
-              <p className="mb-4 text-[11px] font-extrabold tracking-[0.08em] text-[#FF5B04] uppercase">
-                Connect With Us Online
+              <p className="mb-6 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-[#F5D033] uppercase">
+                <span>&#10022;</span> Connect With Us Online
               </p>
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {socialLinks.map((soc) => (
                   <a
                     key={soc.platform}
                     href={soc.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block border-t border-white/15 pt-4 no-underline transition-colors hover:border-white"
+                    className="group block rounded-3xl border border-white/15 bg-[#141016] p-6 no-underline transition-all duration-200 hover:border-[#F5D033]/70"
                   >
-                    <div className="flex items-center justify-between text-[10px] tracking-[0.08em] text-[#E4EEF0]/80 group-hover:text-white">
-                      <span>{soc.badge}</span>
-                      <span className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <div className="flex items-center justify-between text-[10px] tracking-[0.14em] text-[#9E9A9F] uppercase group-hover:text-white">
+                      <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-white/85">
+                        {soc.badge}
+                      </span>
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:bg-[#F5D033]">
                         ↗
                       </span>
                     </div>
-                    <h3 className="mt-2 font-sans text-base font-medium text-white">
+                    <h3 className="font-display-condensed mt-4 text-2xl font-normal tracking-wide text-white">
                       {soc.platform}
                     </h3>
-                    <p className="mt-0.5 text-[11px] text-[#FF5B04]">
+                    <p className="mt-1 text-[11px] font-semibold text-[#F5D033]">
                       {soc.handle}
                     </p>
-                    <p className="mt-2 text-[11px] leading-relaxed text-[#E4EEF0]/75 group-hover:text-white">
+                    <p className="mt-2 text-[11px] leading-relaxed text-[#C7C3C9] group-hover:text-white">
                       {soc.desc}
                     </p>
                   </a>
@@ -547,27 +574,27 @@ export default function Contact({ onNavigate }) {
         {/* 4. BOLD BRAND WORDMARK FOOTER */}
         <footer className="border-t border-white/15 pt-12 pb-12">
           <div className="overflow-hidden">
-            <p className="text-[13.5vw] font-bold tracking-[-0.045em] leading-[0.9] text-white select-none sm:text-7xl md:text-[7rem] lg:text-[8.8rem]">
+            <p className="font-display-condensed text-[13.5vw] font-normal leading-[0.88] text-white select-none sm:text-7xl md:text-[7rem] lg:text-[9rem]">
               Staxx Hyper
             </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] text-neutral-400">
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] text-[#9E9A9F]">
             <div className="flex flex-wrap items-center gap-6">
               <a
                 href="mailto:staxxsounds@proton.me"
-                className="border-b border-white/30 pb-0.5 text-neutral-100 no-underline hover:border-white hover:text-white"
+                className="border-b border-white/30 pb-0.5 text-white no-underline transition-colors hover:border-[#F5D033] hover:text-[#F5D033]"
               >
                 staxxsounds@proton.me
               </a>
               <a
                 href="mailto:hyperkidsevents@gmail.com"
-                className="border-b border-white/30 pb-0.5 text-neutral-100 no-underline hover:border-white hover:text-white"
+                className="border-b border-white/30 pb-0.5 text-white no-underline transition-colors hover:border-[#F5D033] hover:text-[#F5D033]"
               >
                 hyperkidsevents@gmail.com
               </a>
             </div>
-            <span className="text-[#FF5B04]">
+            <span className="font-semibold text-[#F5D033]">
               Nairobi, Kenya &bull; Staxx Hyper Kids Events
             </span>
           </div>

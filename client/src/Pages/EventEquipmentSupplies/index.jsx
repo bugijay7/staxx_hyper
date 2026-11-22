@@ -140,25 +140,36 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
   });
 
   return (
-    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
+    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
+
       {/* 1. HERO HEADER */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
         >
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx-HyperKids Rental Inventory</span>
-            <span>Commerce House, Nairobi &bull; Kenya-Wide Delivery</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> Commerce House, Nairobi &bull; Kenya-Wide Delivery
+            </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Equipment &amp; <br />
-              <span className="text-neutral-500">Supplies Catalog</span>
+              <span className="text-white/65">Supplies Catalog</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Explore our professional rental inventory including grand
               pianos, band gear, indoor LED video walls, moving head lighting, stages,
               clear-span marquees, and event furniture across six counties.
@@ -168,9 +179,9 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 2. SEARCH & CATEGORY FILTER STRIP */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/15 bg-[#141016]">
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8"
           data-aos="fade-up"
         >
           {/* Search Bar */}
@@ -180,12 +191,12 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
               placeholder="Search pianos, LED screens, amps, tents..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full border border-[#16232A]/25 bg-white px-4 py-3 text-xs tracking-[0.06em] text-[#16232A] placeholder:text-neutral-500 focus:border-[#16232A] focus:outline-none"
+              className="w-full rounded-full border border-white/15 bg-[#1C1720] px-5 py-3 text-xs tracking-[0.06em] text-white placeholder-[#7C7780] focus:border-[#F5D033] focus:outline-none"
             />
           </div>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap gap-4 md:gap-6">
+          <div className="flex flex-wrap gap-2.5">
             {categories.map((cat) => {
               const isSelected = selectedCategory === cat;
               return (
@@ -194,10 +205,10 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer rounded-full px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-[#16232A] font-medium text-[#16232A]'
-                      : 'border-transparent text-neutral-400 hover:text-[#16232A]'
+                      ? 'bg-[#F5D033] text-[#0D0A0E]'
+                      : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white hover:text-white'
                   }`}
                 >
                   {cat}
@@ -209,57 +220,59 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 3. PRODUCT CATALOG GRID */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="mb-8 flex items-center justify-between border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-            <span>Showing {filteredInventory.length} Available Items</span>
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> Showing {filteredInventory.length} Available Items
+            </span>
             <span>Click any item for full specs &amp; booking</span>
           </div>
 
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
             {filteredInventory.map((item, index) => (
               <a
                 key={item.id}
                 href="/products/sample-product"
                 onClick={(e) => handleSelectProduct(e, item)}
-                className="group flex flex-col justify-between border border-[#16232A]/15 bg-white no-underline transition-colors duration-200 hover:border-[#16232A]"
+                className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-white/15 bg-[#141016] no-underline transition-all duration-200 hover:border-[#F5D033]/70"
                 data-aos="fade-up"
                 data-aos-delay={(index % 3) * 100}
               >
                 <div>
                   {/* Category & Price Plate */}
-                  <div className="flex items-center justify-between border-b border-[#16232A]/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-[#16232A]">
+                  <div className="flex items-center justify-between border-b border-white/10 px-6 py-4 text-[10px] tracking-[0.16em] uppercase">
+                    <span className="font-bold text-[#F5D033]">
                       {item.category}
                     </span>
-                    <span className="font-semibold text-[#16232A]">
+                    <span className="rounded-full bg-white/10 px-3 py-1 font-semibold text-white">
                       {item.price}
                     </span>
                   </div>
 
                   {/* Image Frame */}
-                  <div className="aspect-[16/11] w-full overflow-hidden border-b border-[#16232A]/15 bg-neutral-200">
+                  <div className="aspect-[16/11] w-full overflow-hidden border-b border-white/10 bg-[#1B171E]">
                     <img
                       src={item.img}
                       alt={item.title}
-                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                     />
                   </div>
 
                   {/* Content Body */}
                   <div className="p-6 md:p-8">
-                    <h2 className="mb-3 text-xl font-normal tracking-[-0.015em] leading-snug text-[#16232A] transition-opacity duration-200 group-hover:opacity-70">
+                    <h2 className="font-display-condensed mb-3 text-2xl font-normal leading-snug tracking-wide text-white transition-colors duration-200 group-hover:text-[#F5D033] md:text-3xl">
                       {item.title}
                     </h2>
 
-                    <p className="mb-6 text-sm leading-relaxed text-[#16232A]">
+                    <p className="mb-6 text-sm leading-relaxed text-[#C7C3C9]">
                       {item.desc}
                     </p>
 
-                    <ul className="space-y-1.5 border-t border-[#16232A]/15 pt-4 text-xs text-neutral-700">
+                    <ul className="space-y-2 border-t border-white/10 pt-4 text-xs text-[#D1CDD3]">
                       {item.specs.map((spec, sIdx) => (
-                        <li key={sIdx} className="flex items-center gap-2">
-                          <span className="h-1 w-1 bg-[#075056]" />
+                        <li key={sIdx} className="flex items-center gap-2.5">
+                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
                           <span>{spec}</span>
                         </li>
                       ))}
@@ -268,9 +281,12 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                 </div>
 
                 {/* Card Footer Trigger */}
-                <div className="border-t border-[#16232A]/15 bg-white px-6 py-4 md:px-8">
-                  <span className="text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase transition-opacity group-hover:opacity-65">
+                <div className="flex items-center justify-between border-t border-white/10 bg-[#18141B] px-6 py-4 md:px-8">
+                  <span className="text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors group-hover:text-[#F5D033]">
                     View Specifications &amp; Book &rarr;
+                  </span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:bg-[#F5D033]">
+                    &rarr;
                   </span>
                 </div>
               </a>
@@ -278,8 +294,8 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
           </div>
 
           {filteredInventory.length === 0 && (
-            <div className="py-20 text-center">
-              <p className="text-base text-[#16232A]">
+            <div className="rounded-3xl border border-white/15 bg-[#141016] py-20 text-center">
+              <p className="text-base text-[#C7C3C9]">
                 No equipment found matching &ldquo;{searchQuery}&rdquo;.
               </p>
               <button
@@ -288,9 +304,12 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                   setSearchQuery('');
                   setSelectedCategory('All');
                 }}
-                className="mt-4 border border-[#E4EEF0] bg-white px-6 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+                className="mt-5 inline-flex cursor-pointer items-center gap-3 rounded-full bg-white py-2.5 pr-2.5 pl-6 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
               >
-                Reset Filters
+                <span>Reset Filters</span>
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                  &rarr;
+                </span>
               </button>
             </div>
           )}
@@ -298,19 +317,19 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-[#075056] text-[#E4EEF0]">
+      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Custom Riders &amp; Packages
+            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+              Custom Riders &amp; Packages <span className="text-[#D4A800]">&#10022;</span>
             </span>
-            <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
+            <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Need a Custom Technical Rider or Multiple Equipment Bundles?
             </h2>
-            <p className="text-base leading-relaxed text-neutral-300">
+            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               Speak directly with our AV engineers and logistics coordinators at
               Commerce House, Nairobi. We provide full delivery, professional setup,
               and standby technicians across six Kenyan counties.
@@ -321,16 +340,22 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              Request Equipment Quotation &rarr;
+              <span>Request Equipment Quotation &rarr;</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                &rarr;
+              </span>
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              Contact Our Engineers
+              <span>Contact Our Engineers</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                &rarr;
+              </span>
             </a>
           </div>
         </div>

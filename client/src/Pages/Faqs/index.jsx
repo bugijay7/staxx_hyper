@@ -89,22 +89,33 @@ export default function Faqs({ onNavigate }) {
   };
 
   return (
-    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
+    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
+
       {/* 1. HERO HEADER */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx Hyper Kids Events</span>
-            <span>Help Center &bull; Booking, Safety &amp; Logistics</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> Help Center &bull; Booking, Safety &amp; Logistics
+            </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Frequently Asked <br />
-              <span className="text-neutral-500">Questions</span>
+              <span className="text-white/65">Questions</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Everything you need to know about booking kids&apos; party setups,
               hiring commercial inflatables, M-Pesa deposits, power backup, and
               rainy-day plans across Kenya.
@@ -114,13 +125,13 @@ export default function Faqs({ onNavigate }) {
       </section>
 
       {/* 2. FILTER STRIP */}
-      <section className="border-b border-[#16232A]/15 bg-white">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
-            Filter by Topic ({filteredFaqs.length})
+      <section className="border-b border-white/15 bg-[#141016]">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8">
+          <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+            <span>&#10022;</span> Filter by Topic ({filteredFaqs.length})
           </span>
 
-          <div className="flex flex-wrap gap-6 md:gap-8">
+          <div className="flex flex-wrap gap-2.5">
             {categories.map((cat) => {
               const isSelected = selectedCategory === cat;
               return (
@@ -129,10 +140,10 @@ export default function Faqs({ onNavigate }) {
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer rounded-full px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-[#16232A] font-medium text-[#16232A]'
-                      : 'border-transparent text-neutral-400 hover:text-[#16232A]'
+                      ? 'bg-[#F5D033] text-[#0D0A0E]'
+                      : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white hover:text-white'
                   }`}
                 >
                   {cat}
@@ -144,19 +155,21 @@ export default function Faqs({ onNavigate }) {
       </section>
 
       {/* 3. ACCORDION FAQ LIST & QUICK HELP SIDEBAR */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
             {/* Left Accordion Column */}
-            <div className="border-t border-[#16232A]/15 lg:col-span-8">
+            <div className="space-y-4 lg:col-span-8">
               {filteredFaqs.map((faq) => {
                 const isOpen = openFaqId === faq.id;
 
                 return (
                   <div
                     key={faq.id}
-                    className={`border-b border-[#16232A]/15 transition-colors duration-200 ${
-                      isOpen ? 'bg-white' : 'bg-white hover:bg-white/60'
+                    className={`overflow-hidden rounded-3xl border transition-all duration-200 ${
+                      isOpen
+                        ? 'border-[#F5D033]/70 bg-[#141016]'
+                        : 'border-white/15 bg-[#141016]/80 hover:border-white/35'
                     }`}
                   >
                     <button
@@ -166,25 +179,25 @@ export default function Faqs({ onNavigate }) {
                       className="flex w-full cursor-pointer items-start justify-between gap-6 px-6 py-7 text-left md:px-8"
                     >
                       <div className="space-y-2.5">
-                        <div className="flex flex-wrap items-center gap-2 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                          <span className="font-medium text-[#16232A]">
+                        <div className="flex flex-wrap items-center gap-2 text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
+                          <span className="font-bold text-[#F5D033]">
                             [ {faq.id} ]
                           </span>
-                          <span>&bull;</span>
-                          <span>{faq.category}</span>
+                          <span className="text-white/30">&bull;</span>
+                          <span className="text-white/80">{faq.category}</span>
                         </div>
 
-                        <h2 className="text-lg font-normal tracking-[-0.015em] leading-snug text-[#16232A] md:text-xl">
+                        <h2 className="text-lg font-medium tracking-[-0.015em] leading-snug text-white md:text-xl">
                           {faq.question}
                         </h2>
                       </div>
 
                       <span
                         aria-hidden="true"
-                        className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center border text-xs transition-colors duration-200 ${
+                        className={`mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-colors duration-200 ${
                           isOpen
-                            ? 'border-[#16232A] bg-[#075056] text-[#E4EEF0]'
-                            : 'border-[#16232A]/20 text-[#16232A]'
+                            ? 'bg-[#F5D033] text-[#0D0A0E]'
+                            : 'border border-white/20 bg-[#1C1720] text-white'
                         }`}
                       >
                         {isOpen ? '↑' : '↓'}
@@ -193,7 +206,7 @@ export default function Faqs({ onNavigate }) {
 
                     {isOpen && (
                       <div className="px-6 pb-8 md:px-8">
-                        <div className="border-t border-[#16232A]/10 pt-5 text-sm leading-relaxed text-[#16232A] md:text-base">
+                        <div className="border-t border-white/10 pt-5 text-sm leading-relaxed text-[#C7C3C9] md:text-base">
                           {faq.answer}
                         </div>
                       </div>
@@ -206,37 +219,37 @@ export default function Faqs({ onNavigate }) {
             {/* Right Quick Support Sidebar */}
             <div className="space-y-8 lg:sticky lg:top-28 lg:col-span-4">
               {/* Quick Facts Card */}
-              <div className="space-y-6 border border-[#16232A]/15 bg-white p-8">
-                <div className="border-b border-[#16232A]/15 pb-4">
-                  <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
-                    [ Quick Facts ]
+              <div className="space-y-6 rounded-3xl border border-white/15 bg-[#141016] p-8">
+                <div className="border-b border-white/10 pb-4">
+                  <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+                    <span>&#10022;</span> [ Quick Facts ]
                   </span>
                 </div>
 
-                <div className="divide-y divide-[#16232A]/10 text-sm">
+                <div className="divide-y divide-white/10 text-sm">
                   <div className="pb-4">
-                    <span className="block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
+                    <span className="block text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
                       Booking Deposit
                     </span>
-                    <p className="mt-1 font-medium text-[#16232A]">
+                    <p className="mt-1.5 font-medium text-white">
                       40% via M-Pesa or Bank Transfer
                     </p>
                   </div>
 
                   <div className="py-4">
-                    <span className="block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
+                    <span className="block text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
                       Setup Arrival Window
                     </span>
-                    <p className="mt-1 font-medium text-[#16232A]">
+                    <p className="mt-1.5 font-medium text-white">
                       2 – 3 Hours Before Party Start
                     </p>
                   </div>
 
                   <div className="pt-4">
-                    <span className="block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
+                    <span className="block text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
                       Safety Guarantee
                     </span>
-                    <p className="mt-1 font-medium text-[#16232A]">
+                    <p className="mt-1.5 font-medium text-white">
                       Sanitized Gear + On-Site Attendant
                     </p>
                   </div>
@@ -244,14 +257,14 @@ export default function Faqs({ onNavigate }) {
               </div>
 
               {/* Direct Support Card */}
-              <div className="space-y-5 border border-[#16232A] bg-[#075056] p-8 text-[#E4EEF0]">
-                <span className="block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-                  [ Still Have a Question? ]
+              <div className="space-y-5 rounded-3xl bg-[#EDEDED] p-8 text-[#0D0A0E]">
+                <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+                  [ Still Have a Question? ] <span className="text-[#D4A800]">&#10022;</span>
                 </span>
-                <h3 className="text-xl font-normal tracking-[-0.01em] leading-snug">
+                <h3 className="font-display-condensed text-3xl font-normal leading-[1.02] text-[#0D0A0E]">
                   Speak Directly With Our Nairobi Event Team
                 </h3>
-                <p className="text-xs leading-relaxed text-neutral-300">
+                <p className="text-xs leading-relaxed text-[#0D0A0E]/80 md:text-sm">
                   Need help measuring lawn space for a giant inflatable or
                   customizing a school fun-day quote? We reply within minutes on
                   WhatsApp.
@@ -261,16 +274,22 @@ export default function Faqs({ onNavigate }) {
                     href="https://wa.me/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full border border-[#E4EEF0] bg-white py-4 text-center text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors hover:bg-transparent hover:text-[#E4EEF0]"
+                    className="group flex w-full items-center justify-between rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.01]"
                   >
-                    Chat on WhatsApp
+                    <span>Chat on WhatsApp</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                      &rarr;
+                    </span>
                   </a>
                   <a
                     href="/booking"
                     onClick={(e) => handleLinkClick(e, '/booking')}
-                    className="block w-full border border-[#E4EEF0]/30 bg-transparent py-3 text-center text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors hover:border-[#E4EEF0]"
+                    className="group flex w-full items-center justify-between rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
                   >
-                    Submit Booking Enquiry &rarr;
+                    <span>Submit Booking Enquiry &rarr;</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                      &rarr;
+                    </span>
                   </a>
                 </div>
               </div>

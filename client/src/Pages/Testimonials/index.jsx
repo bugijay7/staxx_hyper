@@ -9,7 +9,6 @@ import Educationeevents from '../../assets/educationeevents.jpg';
 import Tentsetup from '../../assets/tentsetup.jpg';
 import Weddings from '../../assets/weddings.jpg';
 
-
 export default function Testimonials({ onNavigate }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -104,25 +103,36 @@ export default function Testimonials({ onNavigate }) {
       : testimonials.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
+    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
+
       {/* 1. HERO HEADER */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
         >
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx-HyperKids &bull; Client Reviews &amp; Testimonials</span>
-            <span>4.98 / 5 Average Rating &bull; Kenya-Wide Productions</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> 4.98 / 5 Average Rating &bull; Kenya-Wide Productions
+            </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Client Feedback <br />
-              <span className="text-neutral-500">&amp; Success Stories</span>
+              <span className="text-white/65">&amp; Success Stories</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Read feedback from corporate leaders, wedding planners, school
               administrators, estate committees, and families who trusted
               Staxx-HyperKids with their AV production, d&eacute;cor, and event
@@ -133,36 +143,36 @@ export default function Testimonials({ onNavigate }) {
       </section>
 
       {/* 2. STATS & FILTER STRIP */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/15 bg-[#141016]">
         {/* Metrics Grid */}
         <div
-          className="mx-auto max-w-[1440px] border-b border-[#16232A]/15 px-6 md:px-10"
+          className="mx-auto max-w-[1440px] border-b border-white/15 px-6 md:px-10"
           data-aos="fade-up"
         >
-          <div className="grid grid-cols-1 divide-y divide-[#16232A]/15 md:grid-cols-3 md:divide-x md:divide-y-0">
+          <div className="grid grid-cols-1 divide-y divide-white/15 md:grid-cols-3 md:divide-x md:divide-y-0">
             <div className="py-10 md:pr-10">
-              <span className="block text-4xl font-normal tracking-[-0.03em] text-[#16232A] md:text-5xl">
-                +600
+              <span className="font-display-condensed block text-5xl font-normal text-white md:text-6xl">
+                +600 <span className="text-[#F5D033]">&#10022;</span>
               </span>
-              <span className="mt-2 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+              <span className="mt-2 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
                 Corporate Events, Weddings &amp; Productions Completed
               </span>
             </div>
 
             <div className="py-10 md:px-10">
-              <span className="block text-4xl font-normal tracking-[-0.03em] text-[#16232A] md:text-5xl">
+              <span className="font-display-condensed block text-5xl font-normal text-[#F5D033] md:text-6xl">
                 98%
               </span>
-              <span className="mt-2 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+              <span className="mt-2 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
                 Repeat Corporate &amp; Private Clients Across Kenya
               </span>
             </div>
 
             <div className="py-10 md:pl-10">
-              <span className="block text-4xl font-normal tracking-[-0.03em] text-[#16232A] md:text-5xl">
+              <span className="font-display-condensed block text-5xl font-normal text-white md:text-6xl">
                 6 Counties
               </span>
-              <span className="mt-2 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+              <span className="mt-2 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
                 Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
               </span>
             </div>
@@ -171,14 +181,14 @@ export default function Testimonials({ onNavigate }) {
 
         {/* Filter Bar */}
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8"
           data-aos="fade-up"
         >
-          <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
-            Filter Reviews ({filteredTestimonials.length})
+          <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+            <span>&#10022;</span> Filter Reviews ({filteredTestimonials.length})
           </span>
 
-          <div className="flex flex-wrap gap-6 md:gap-8">
+          <div className="flex flex-wrap gap-2.5">
             {[
               'All',
               'Corporate & AV',
@@ -194,10 +204,10 @@ export default function Testimonials({ onNavigate }) {
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer rounded-full px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-[#16232A] font-medium text-[#16232A]'
-                      : 'border-transparent text-neutral-400 hover:text-[#16232A]'
+                      ? 'bg-[#F5D033] text-[#0D0A0E]'
+                      : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white hover:text-white'
                   }`}
                 >
                   {cat}
@@ -209,52 +219,54 @@ export default function Testimonials({ onNavigate }) {
       </section>
 
       {/* 3. TESTIMONIALS GRID WITH IMAGES */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="grid grid-cols-1 border-t border-l border-[#16232A]/15 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredTestimonials.map((item, index) => (
               <article
                 key={item.id}
-                className="flex flex-col justify-between border-r border-b border-[#16232A]/15 bg-white p-8 transition-colors duration-200 hover:bg-white md:p-10"
+                className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-white/15 bg-[#141016] p-7 transition-all duration-200 hover:border-[#F5D033]/70 md:p-8"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 <div>
                   {/* Top Index & Category Plate */}
-                  <div className="mb-6 flex items-center justify-between border-b border-[#16232A]/15 pb-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-[#16232A]">
+                  <div className="mb-6 flex items-center justify-between gap-2 border-b border-white/10 pb-3.5 text-[11px] tracking-[0.16em] uppercase">
+                    <span className="font-bold text-[#F5D033]">
                       [ {item.id} ] &bull; {'★'.repeat(item.rating)}
                     </span>
-                    <span>{item.category}</span>
+                    <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-medium text-white/85">
+                      {item.category}
+                    </span>
                   </div>
 
                   {/* Project Image Thumbnail */}
-                  <div className="mb-6 aspect-[16/11] w-full overflow-hidden bg-neutral-200">
+                  <div className="mb-6 aspect-[16/11] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1B171E]">
                     <img
                       src={item.img}
                       alt={item.project}
-                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                     />
                   </div>
 
                   {/* Quote */}
-                  <p className="mb-8 text-base leading-relaxed text-[#16232A]">
+                  <p className="mb-8 text-sm leading-relaxed text-[#C7C3C9] md:text-base">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                 </div>
 
                 {/* Author & Project Tag */}
-                <div className="space-y-4 border-t border-[#16232A]/15 pt-6">
+                <div className="space-y-4 border-t border-white/10 pt-6">
                   <div>
-                    <h2 className="text-lg font-medium tracking-[-0.01em] text-[#16232A]">
+                    <h2 className="font-display-condensed text-2xl font-normal tracking-wide text-white">
                       {item.name}
                     </h2>
-                    <p className="mt-0.5 text-xs tracking-[0.04em] text-neutral-500">
+                    <p className="mt-1 text-xs tracking-[0.04em] text-[#9E9A9F]">
                       {item.role}
                     </p>
                   </div>
 
-                  <span className="inline-block border border-[#16232A]/15 bg-white px-3 py-1.5 text-[10px] font-medium tracking-[0.12em] text-[#16232A] uppercase">
+                  <span className="inline-block rounded-full border border-white/15 bg-[#1A161D] px-3.5 py-1.5 text-[10px] font-semibold tracking-[0.14em] text-[#F5D033] uppercase">
                     {item.project}
                   </span>
                 </div>
@@ -265,19 +277,19 @@ export default function Testimonials({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-[#075056] text-[#E4EEF0]">
+      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Partner with Staxx-HyperKids
+            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+              Partner with Staxx-HyperKids <span className="text-[#D4A800]">&#10022;</span>
             </span>
-            <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
+            <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Ready to plan your next corporate event, wedding or celebration?
             </h2>
-            <p className="text-base leading-relaxed text-neutral-300">
+            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               Reach out to our team at Commerce House, Nairobi to check date
               availability and request an itemized quotation for AV, d&eacute;cor,
               kiddie celebrations, or equipment hire across Kenya.
@@ -288,16 +300,22 @@ export default function Testimonials({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              Request an Event Quote &rarr;
+              <span>Request an Event Quote &rarr;</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                &rarr;
+              </span>
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              Contact Our Team
+              <span>Contact Our Team</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                &rarr;
+              </span>
             </a>
           </div>
         </div>

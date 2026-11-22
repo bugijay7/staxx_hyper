@@ -12,7 +12,6 @@ import Kiddiepartysupply2 from '../../assets/kiddiepartysupply2.jpeg';
 import Kiddietable1 from '../../assets/canopies.jpg';
 import Pinhattas1 from '../../assets/pinhattas1.jpeg';
 
-
 export default function ChildrensPartyServices({ onNavigate }) {
   const handleLinkClick = (e, path) => {
     if (e.metaKey || e.ctrlKey || e.button === 1) return;
@@ -122,22 +121,33 @@ export default function ChildrensPartyServices({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
+    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
+
       {/* 1. HERO HEADER */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx Hyper Kids Events</span>
-            <span>12 Signature Services</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> 12 Signature Services
+            </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Children&apos;s Party <br />
-              <span className="text-neutral-500">Services</span>
+              <span className="text-white/65">Services</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               From commercial bouncy castles and custom piñatas to face painting
               and full-scale themed decor, explore everything we bring to make
               your child&apos;s celebration effortless and unforgettable.
@@ -147,12 +157,12 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL INTRO STRIP */}
-      <section className="border-b border-[#16232A]/15 bg-white">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-[#16232A] uppercase">
-            Mix, Match &amp; Customize
+      <section className="border-b border-white/15 bg-[#141016]">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8">
+          <span className="inline-flex shrink-0 items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+            <span>&#10022;</span> Mix, Match &amp; Customize
           </span>
-          <p className="max-w-2xl text-sm leading-relaxed text-[#16232A] md:text-right">
+          <p className="max-w-2xl text-xs leading-relaxed text-[#C7C3C9] md:text-right md:text-sm">
             Book any service standalone or bundle multiple attractions into a
             custom turnkey package—delivered, set up, staffed, and packed down
             by our crew.
@@ -161,8 +171,8 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 3. ALTERNATING 12 SERVICES SHOWCASE */}
-      <section className="border-b border-[#16232A]/15 bg-white">
-        <div className="mx-auto max-w-[1440px] divide-y divide-[#16232A]/15 px-6 md:px-10">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
+        <div className="mx-auto max-w-[1440px] divide-y divide-white/15 px-6 md:px-10">
           {services.map((service, index) => {
             const isImageRight = index % 2 === 0;
 
@@ -176,22 +186,24 @@ export default function ChildrensPartyServices({ onNavigate }) {
                   className={`flex flex-col justify-between ${
                     isImageRight
                       ? 'lg:order-1 lg:pr-8'
-                      : 'lg:order-2 lg:border-l lg:border-[#16232A]/15 lg:pl-14'
+                      : 'lg:order-2 lg:border-l lg:border-white/10 lg:pl-14'
                   }`}
                 >
-                  <div className="mb-6 flex items-center gap-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-[#16232A]">
+                  <div className="mb-6 flex items-center gap-3 text-[11px] tracking-[0.16em] text-[#9E9A9F] uppercase">
+                    <span className="rounded-full bg-white/10 px-3 py-1 font-bold text-[#F5D033]">
                       {service.id}
                     </span>
-                    <span>/</span>
-                    <span>{service.category}</span>
+                    <span className="text-white/30">/</span>
+                    <span className="font-medium text-white/85">
+                      {service.category}
+                    </span>
                   </div>
 
-                  <h2 className="mb-5 text-2xl font-normal tracking-[-0.02em] leading-[1.18] text-[#16232A] sm:text-3xl md:text-4xl">
+                  <h2 className="font-display-condensed mb-5 text-3xl font-normal leading-[0.98] text-white sm:text-4xl md:text-5xl">
                     {service.title}
                   </h2>
 
-                  <p className="mb-8 max-w-xl text-base leading-relaxed text-[#16232A]">
+                  <p className="mb-8 max-w-xl text-sm leading-relaxed text-[#C7C3C9] md:text-base">
                     {service.description}
                   </p>
 
@@ -199,10 +211,15 @@ export default function ChildrensPartyServices({ onNavigate }) {
                     <a
                       href="/booking"
                       onClick={(e) => handleLinkClick(e, '/booking')}
-                      className="inline-flex items-center gap-2 border-b border-[#16232A] pb-1 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-opacity duration-200 hover:opacity-55"
+                      className="group/btn inline-flex items-center gap-3 rounded-full bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                     >
                       <span>Add to Party Plan</span>
-                      <span aria-hidden="true">&rarr;</span>
+                      <span
+                        aria-hidden="true"
+                        className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5"
+                      >
+                        &rarr;
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -211,20 +228,20 @@ export default function ChildrensPartyServices({ onNavigate }) {
                 <div
                   className={`${
                     isImageRight
-                      ? 'lg:order-2 lg:border-l lg:border-[#16232A]/15 lg:pl-14'
+                      ? 'lg:order-2 lg:border-l lg:border-white/10 lg:pl-14'
                       : 'lg:order-1 lg:pr-8'
                   }`}
                 >
-                  <div className="aspect-[16/11] w-full overflow-hidden bg-neutral-200">
+                  <div className="aspect-[16/11] w-full overflow-hidden rounded-3xl border border-white/10 bg-[#1A161C]">
                     <img
                       src={service.img}
                       alt={service.title}
-                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                     />
                   </div>
-                  <div className="mt-3 flex items-center justify-between border-t border-[#16232A]/15 pt-2.5 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
+                  <div className="mt-4 flex items-center justify-between border-t border-white/15 pt-3 text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
                     <span>Index {service.id}</span>
-                    <span>{service.category}</span>
+                    <span className="text-white/70">{service.category}</span>
                   </div>
                 </div>
               </div>
@@ -234,16 +251,16 @@ export default function ChildrensPartyServices({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-[#075056] text-[#E4EEF0]">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
+      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Ready to Celebrate?
+            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+              Ready to Celebrate? <span className="text-[#D4A800]">&#10022;</span>
             </span>
-            <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
+            <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Build Your Custom Party Lineup
             </h2>
-            <p className="text-base leading-relaxed text-neutral-300">
+            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               Tell us your child&apos;s age, guest count, and favorite
               attractions—we&apos;ll send back a tailored quote within 24 hours.
             </p>
@@ -253,16 +270,22 @@ export default function ChildrensPartyServices({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              Book Party Services &rarr;
+              <span>Book Party Services &rarr;</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                &rarr;
+              </span>
             </a>
             <a
               href="/party-packages"
               onClick={(e) => handleLinkClick(e, '/party-packages')}
-              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              View All-In-One Packages
+              <span>View All-In-One Packages</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                &rarr;
+              </span>
             </a>
           </div>
         </div>

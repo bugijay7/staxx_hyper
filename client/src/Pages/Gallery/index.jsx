@@ -14,7 +14,6 @@ import Privateparties from '../../assets/privateparties.jpg';
 import Ruracio from '../../assets/ruracio.jpg';
 import Weddings from '../../assets/weddings.jpg';
 
-
 export default function Gallery({ onNavigate }) {
   const [activeFilter, setActiveFilter] = useState('All');
   const [lightboxItem, setLightboxItem] = useState(null);
@@ -171,22 +170,33 @@ export default function Gallery({ onNavigate }) {
       : bokehGallery.filter((item) => item.category === activeFilter);
 
   return (
-    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
+    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
+
       {/* 1. HERO HEADER */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx Events &amp; Production</span>
-            <span>8 Event Sectors &bull; Visual Archive</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> 8 Event Sectors &bull; Visual Archive
+            </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Events Done <br />
-              <span className="text-neutral-500">&amp; Portfolio Archive</span>
+              <span className="text-white/65">&amp; Portfolio Archive</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Explore our full-spectrum event production archive across
               corporate conferences, traditional weddings &amp; Ruracio, private
               milestones, kids&apos; parties, concerts, church conventions,
@@ -197,13 +207,13 @@ export default function Gallery({ onNavigate }) {
       </section>
 
       {/* 2. FILTER STRIP */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:px-10 md:py-10">
-          <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
+          <span className="text-[11px] font-semibold tracking-[0.16em] text-[#9E9A9F] uppercase">
             Filter by Event Sector ({filteredItems.length})
           </span>
 
-          <div className="flex flex-wrap gap-x-7 gap-y-4">
+          <div className="flex flex-wrap gap-2.5">
             {eventCategories.map((cat) => {
               const isSelected = activeFilter === cat;
               return (
@@ -212,10 +222,10 @@ export default function Gallery({ onNavigate }) {
                   type="button"
                   onClick={() => setActiveFilter(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer rounded-full px-4 py-1.5 text-xs font-medium tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-[#16232A] font-medium text-[#16232A]'
-                      : 'border-transparent text-neutral-500 hover:text-[#16232A]'
+                      ? 'bg-white text-[#0D0A0E]'
+                      : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white/40 hover:text-white'
                   }`}
                 >
                   {cat}
@@ -227,46 +237,46 @@ export default function Gallery({ onNavigate }) {
       </section>
 
       {/* 3. ARCHITECTURAL PORTFOLIO GRID */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {filteredItems.map((item) => (
               <article
                 key={item.id}
                 onClick={() => setLightboxItem(item)}
-                className="group cursor-pointer"
+                className="group cursor-pointer rounded-3xl border border-white/15 bg-[#141016] p-4 transition-all duration-200 hover:border-[#F5D033]/70"
               >
                 {/* Top Index Bar */}
-                <div className="mb-3 flex items-center justify-between gap-3 border-b border-[#16232A]/15 pb-2 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                  <span className="shrink-0 font-medium text-[#16232A]">
+                <div className="mb-3 flex items-center justify-between gap-3 border-b border-white/10 pb-2.5 text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
+                  <span className="shrink-0 font-bold text-[#F5D033]">
                     Shot {item.id}
                   </span>
                   <span className="truncate">{item.category}</span>
                 </div>
 
                 {/* Image Plate */}
-                <div className="relative mb-4 aspect-[16/11] w-full overflow-hidden bg-neutral-200">
+                <div className="relative mb-4 aspect-[16/11] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1B171E]">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
+                    className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                   />
                 </div>
 
                 {/* Bottom Caption & Expand Trigger */}
-                <div className="flex items-start justify-between gap-4 pt-1">
+                <div className="flex items-start justify-between gap-4 px-1 pt-1 pb-1">
                   <div>
-                    <p className="mb-1 text-[11px] tracking-[0.12em] text-neutral-500 uppercase">
+                    <p className="mb-1 text-[11px] tracking-[0.14em] text-[#9E9A9F] uppercase">
                       {item.location}
                     </p>
-                    <h3 className="text-base font-normal tracking-[-0.01em] text-[#16232A] transition-opacity duration-200 group-hover:opacity-65">
+                    <h3 className="text-base font-medium tracking-[-0.01em] text-white transition-colors duration-200 group-hover:text-[#F5D033]">
                       {item.title}
                     </h3>
                   </div>
 
                   <span
                     aria-hidden="true"
-                    className="flex h-7 w-7 shrink-0 items-center justify-center border border-[#16232A]/20 text-sm font-light text-[#16232A] transition-colors duration-200 group-hover:border-[#16232A] group-hover:bg-[#075056] group-hover:text-[#E4EEF0]"
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/25 bg-[#1C181F] text-sm font-medium text-white transition-colors duration-200 group-hover:border-white group-hover:bg-white group-hover:text-[#0D0A0E]"
                   >
                     +
                   </span>
@@ -284,16 +294,16 @@ export default function Gallery({ onNavigate }) {
           aria-modal="true"
           aria-label={lightboxItem.title}
           onClick={() => setLightboxItem(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[#075056]/85 p-4 backdrop-blur-xs md:p-10"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#0D0A0E]/90 p-4 backdrop-blur-xs md:p-10"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden border border-[#16232A]/20 bg-white text-[#16232A]"
+            className="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-3xl border border-white/20 bg-[#141016] text-white shadow-2xl"
           >
             {/* Top Modal Bar */}
-            <div className="flex items-center justify-between border-b border-[#16232A]/15 px-6 py-4 text-[11px] tracking-[0.14em] uppercase">
-              <div className="flex flex-wrap items-center gap-2.5 text-neutral-500">
-                <strong className="font-medium text-[#16232A]">
+            <div className="flex items-center justify-between border-b border-white/10 px-6 py-4 text-[11px] tracking-[0.16em] uppercase">
+              <div className="flex flex-wrap items-center gap-2.5 text-[#9E9A9F]">
+                <strong className="font-bold text-[#F5D033]">
                   Shot {lightboxItem.id}
                 </strong>
                 <span>&bull;</span>
@@ -305,14 +315,14 @@ export default function Gallery({ onNavigate }) {
               <button
                 type="button"
                 onClick={() => setLightboxItem(null)}
-                className="cursor-pointer bg-transparent py-1 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase transition-opacity hover:opacity-55"
+                className="cursor-pointer rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors hover:bg-white hover:text-[#0D0A0E]"
               >
                 Close
               </button>
             </div>
 
             {/* Image Frame */}
-            <div className="flex-1 overflow-hidden bg-neutral-200">
+            <div className="flex-1 overflow-hidden bg-[#0D0A0E]">
               <img
                 src={lightboxItem.img}
                 alt={lightboxItem.title}
@@ -321,17 +331,20 @@ export default function Gallery({ onNavigate }) {
             </div>
 
             {/* Bottom Title & Booking CTA */}
-            <div className="flex flex-col justify-between gap-4 border-t border-[#16232A]/15 bg-white px-6 py-5 sm:flex-row sm:items-center">
-              <h3 className="text-lg font-normal tracking-[-0.01em] text-[#16232A] md:text-xl">
+            <div className="flex flex-col justify-between gap-4 border-t border-white/10 bg-[#141016] px-6 py-5 sm:flex-row sm:items-center">
+              <h3 className="font-display-condensed text-2xl font-normal tracking-wide text-white md:text-3xl">
                 {lightboxItem.title}
               </h3>
 
               <a
                 href="/booking"
                 onClick={(e) => handleLinkClick(e, '/booking')}
-                className="self-start border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0] sm:self-auto"
+                className="group inline-flex items-center gap-3 self-start rounded-full bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033] sm:self-auto"
               >
-                Book Similar Setup &rarr;
+                <span>Book Similar Setup &rarr;</span>
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                  &rarr;
+                </span>
               </a>
             </div>
           </div>
@@ -339,16 +352,16 @@ export default function Gallery({ onNavigate }) {
       )}
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-[#075056] text-[#E4EEF0]">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
+      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Planning an Event Across Any Sector?
+            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+              Planning an Event Across Any Sector? <span className="text-[#D4A800]">&#10022;</span>
             </span>
-            <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
+            <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Let&apos;s Produce Your Next Landmark Occasion
             </h2>
-            <p className="text-base leading-relaxed text-neutral-300">
+            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               From corporate summits, weddings, and Ruracio ceremonies to
               concerts, church conventions, graduations, and exhibitions—share
               your vision and our team will handle full production.
@@ -359,16 +372,22 @@ export default function Gallery({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              Book Your Date &rarr;
+              <span>Book Your Date &rarr;</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                &rarr;
+              </span>
             </a>
             <a
               href="/party-packages"
               onClick={(e) => handleLinkClick(e, '/party-packages')}
-              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              View KES Packages
+              <span>View KES Packages</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                &rarr;
+              </span>
             </a>
           </div>
         </div>

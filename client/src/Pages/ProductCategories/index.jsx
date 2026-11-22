@@ -9,7 +9,6 @@ import Tablearrangement1 from '../../assets/tablearrangement1.jpeg';
 import Tentsetup from '../../assets/tentsetup.jpg';
 import Videowall from '../../assets/videowall.jpeg';
 
-
 export default function ProductCategories({ onNavigate }) {
   useEffect(() => {
     AOS.init({
@@ -127,25 +126,36 @@ export default function ProductCategories({ onNavigate }) {
   )}`;
 
   return (
-    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
+    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
+
       {/* 1. HERO HEADER */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
         >
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx-HyperKids Equipment Divisions</span>
-            <span>Commerce House, Nairobi &bull; Serving 6 Kenyan Counties</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> Commerce House, Nairobi &bull; Serving 6 Kenyan Counties
+            </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Equipment &amp; <br />
-              <span className="text-neutral-500">Product Categories</span>
+              <span className="text-white/65">Product Categories</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Browse our six core rental and production divisions—from concert
               grand pianos, band backlines, and P3 LED walls to clear-span
               marquees, event furniture, and sanitized kiddie play units.
@@ -155,21 +165,21 @@ export default function ProductCategories({ onNavigate }) {
       </section>
 
       {/* 2. QUICK NAVIGATION STRIP */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/15 bg-[#141016]">
         <div
           className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-4 px-6 py-6 md:px-10"
           data-aos="fade-up"
         >
-          <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
-            6 Core Inventory Divisions
+          <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+            <span>&#10022;</span> 6 Core Inventory Divisions
           </span>
 
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-2.5">
             {categories.map((cat) => (
               <a
                 key={cat.id}
                 href={`#${cat.id}`}
-                className="border-b border-transparent pb-0.5 text-xs tracking-[0.12em] text-neutral-700 uppercase no-underline transition-colors hover:border-[#16232A] hover:text-[#16232A]"
+                className="rounded-full border border-white/15 bg-transparent px-4 py-1.5 text-xs font-medium tracking-[0.14em] text-[#9E9A9F] uppercase no-underline transition-colors hover:border-white hover:bg-white hover:text-[#0D0A0E]"
               >
                 {cat.name}
               </a>
@@ -179,30 +189,30 @@ export default function ProductCategories({ onNavigate }) {
       </section>
 
       {/* 3. CATEGORIES EDITORIAL GRID */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {categories.map((cat, index) => (
               <article
                 id={cat.id}
                 key={cat.id}
-                className="group flex flex-col justify-between border border-[#16232A]/15 bg-white transition-colors duration-200 hover:border-[#16232A]"
+                className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-white/15 bg-[#141016] transition-all duration-200 hover:border-[#F5D033]/70"
                 data-aos="fade-up"
                 data-aos-delay={(index % 2) * 100}
               >
                 <div>
                   {/* Top Metadata Bar */}
-                  <div className="flex items-center justify-between border-b border-[#16232A]/15 px-6 py-3.5 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="font-medium text-[#16232A]">
+                  <div className="flex items-center justify-between border-b border-white/10 px-6 py-4 text-[11px] tracking-[0.16em] uppercase">
+                    <span className="font-bold text-[#F5D033]">
                       0{index + 1} &bull; {cat.count}
                     </span>
-                    <span className="font-semibold text-[#16232A]">
+                    <span className="rounded-full bg-white/10 px-3 py-1 font-semibold text-white">
                       {cat.startingPrice}
                     </span>
                   </div>
 
                   {/* Category Image */}
-                  <div className="aspect-[16/9] w-full overflow-hidden border-b border-[#16232A]/15 bg-neutral-200">
+                  <div className="aspect-[16/9] w-full overflow-hidden border-b border-white/10 bg-[#1B171E]">
                     <img
                       src={cat.img}
                       alt={cat.name}
@@ -212,25 +222,25 @@ export default function ProductCategories({ onNavigate }) {
 
                   {/* Category Body */}
                   <div className="p-8 md:p-10">
-                    <span className="mb-2 block text-[11px] tracking-[0.12em] text-neutral-500 uppercase">
+                    <span className="mb-2 block text-[11px] font-medium tracking-[0.14em] text-[#F5D033] uppercase">
                       {cat.subtitle}
                     </span>
-                    <h2 className="mb-4 text-2xl font-normal tracking-[-0.02em] text-[#16232A] md:text-3xl">
+                    <h2 className="font-display-condensed mb-4 text-3xl font-normal tracking-wide text-white md:text-4xl">
                       {cat.name}
                     </h2>
-                    <p className="mb-8 text-sm leading-relaxed text-[#16232A] md:text-base">
+                    <p className="mb-8 text-sm leading-relaxed text-[#C7C3C9] md:text-base">
                       {cat.desc}
                     </p>
 
                     {/* Key Equipment Highlights */}
-                    <div className="border-t border-[#16232A]/15 pt-6">
-                      <span className="mb-3 block text-[10px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
+                    <div className="border-t border-white/10 pt-6">
+                      <span className="mb-3 block text-[10px] font-semibold tracking-[0.16em] text-[#9E9A9F] uppercase">
                         Included Inventory Highlights
                       </span>
-                      <ul className="grid grid-cols-1 gap-2.5 text-xs text-[#16232A] sm:grid-cols-2">
+                      <ul className="grid grid-cols-1 gap-2.5 text-xs text-[#D1CDD3] sm:grid-cols-2">
                         {cat.highlights.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1 w-1 shrink-0 bg-[#075056]" />
+                          <li key={idx} className="flex items-start gap-2.5">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F5D033]" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -240,7 +250,7 @@ export default function ProductCategories({ onNavigate }) {
                 </div>
 
                 {/* Card Footer Links */}
-                <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#16232A]/15 bg-white px-8 py-5">
+                <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 bg-[#18141B] px-8 py-5">
                   <a
                     href="/event-equipment-supplies"
                     onClick={(e) =>
@@ -248,15 +258,18 @@ export default function ProductCategories({ onNavigate }) {
                         selectedCategory: cat.name,
                       })
                     }
-                    className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+                    className="group/btn inline-flex items-center gap-3 rounded-full bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                   >
-                    Browse {cat.name} &rarr;
+                    <span>Browse {cat.name} &rarr;</span>
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5">
+                      &rarr;
+                    </span>
                   </a>
 
                   <a
                     href="/products/sample-product"
                     onClick={(e) => handleLinkClick(e, '/products/sample-product')}
-                    className="border-b border-[#16232A] pb-0.5 text-xs font-medium tracking-[0.12em] text-[#16232A] uppercase no-underline transition-opacity hover:opacity-60"
+                    className="rounded-full border border-white/25 bg-transparent px-4 py-2 text-xs font-medium tracking-[0.14em] text-white uppercase no-underline transition-colors hover:border-white hover:bg-white/10"
                   >
                     Featured Unit Specs
                   </a>
@@ -268,19 +281,19 @@ export default function ProductCategories({ onNavigate }) {
       </section>
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-[#075056] text-[#E4EEF0]">
+      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Full-Service Production Bundles
+            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+              Full-Service Production Bundles <span className="text-[#D4A800]">&#10022;</span>
             </span>
-            <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
+            <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Combining Sound, Screens, Tents &amp; D&eacute;cor for One Event?
             </h2>
-            <p className="text-base leading-relaxed text-neutral-300">
+            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               Bundle multiple equipment categories into a single unified
               production package with discounted KES rates, synchronized truck
               logistics, and on-site engineering crew across Nairobi, Kiambu,
@@ -293,16 +306,22 @@ export default function ProductCategories({ onNavigate }) {
               href={whatsappBundleUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              Request Bundle Quote on WhatsApp &rarr;
+              <span>Request Bundle Quote on WhatsApp &rarr;</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                &rarr;
+              </span>
             </a>
             <a
               href="/event-equipment-supplies"
               onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              View Full Catalog
+              <span>View Full Catalog</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                &rarr;
+              </span>
             </a>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 import Childrenparty from '../../assets/childrenparty.jpg';
@@ -9,7 +8,6 @@ import Exhibition from '../../assets/exhibition.jpg';
 import Privateparties from '../../assets/privateparties.jpg';
 import Weddings from '../../assets/weddings.jpg';
 import Churchevents from '../../assets/churchevents.jpg';
-
 
 export default function EventsWeDo({ onNavigate }) {
   const handleLinkClick = (e, path) => {
@@ -121,24 +119,33 @@ export default function EventsWeDo({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
+    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
 
       {/* 1. HERO HEADER */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx Hyper Events</span>
-            <span>Events Across Kenya · Planning · Production · Experiences</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> Events Across Kenya · Planning · Production · Experiences
+            </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Events <br />
-              <span className="text-neutral-500">We Do</span>
+              <span className="text-white/65">We Do</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-[#16232A] md:text-sm lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               From corporate conferences and product launches to weddings,
               concerts and private celebrations, we bring people together
               through creative planning, event styling and professional
@@ -149,14 +156,13 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 2. EDITORIAL STRIP */}
-      <section className="border-b border-[#16232A]/15 bg-white">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-
-          <span className="shrink-0 text-[11px] font-medium tracking-[0.14em] text-[#16232A] uppercase">
-            One Partner. Every Occasion.
+      <section className="border-b border-white/15 bg-[#141016]">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8">
+          <span className="inline-flex shrink-0 items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+            <span>&#10022;</span> One Partner. Every Occasion.
           </span>
 
-          <p className="max-w-2xl text-sm leading-relaxed text-[#16232A] md:text-right">
+          <p className="max-w-2xl text-xs leading-relaxed text-[#C7C3C9] md:text-right md:text-sm">
             Whatever the occasion, we help bring it to life with event
             coordination, audiovisual production, décor, entertainment and
             equipment solutions.
@@ -165,21 +171,20 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 3. EVENT CATEGORIES */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-
-          <div className="mb-14 flex flex-col justify-between gap-8 border-b border-[#16232A]/15 pb-8 md:flex-row md:items-end">
+          <div className="mb-14 flex flex-col justify-between gap-8 border-b border-white/15 pb-8 md:flex-row md:items-end">
             <div>
-              <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+              <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
                 08 Event Categories
               </span>
 
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
-                What Are You Celebrating?
+              <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
+                What Are You Celebrating? <span className="text-[#F5D033]">&#10022;</span>
               </h2>
             </div>
 
-            <p className="max-w-md text-sm leading-relaxed text-[#16232A] md:text-right">
+            <p className="max-w-md text-sm leading-relaxed text-[#B5B0B8] md:text-right">
               Explore the occasions we cater for. Each event is shaped around
               your audience, objectives, style and requirements.
             </p>
@@ -187,20 +192,24 @@ export default function EventsWeDo({ onNavigate }) {
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
             {events.map((event) => (
-              <article key={event.id} className="group flex flex-col">
-
-                <div className="mb-6 flex items-center justify-between border-b border-[#16232A]/15 pb-3 text-[11px] tracking-[0.14em] uppercase">
-                  <span className="text-neutral-500">
-                    <strong className="font-medium text-[#16232A]">
+              <article
+                key={event.id}
+                className="group flex flex-col rounded-3xl border border-white/15 bg-[#141016] p-4 transition-all duration-200 hover:border-[#F5D033]/70"
+              >
+                <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3 text-[11px] tracking-[0.16em] uppercase">
+                  <span className="text-[#9E9A9F]">
+                    <strong className="font-bold text-[#F5D033]">
                       {event.id}
                     </strong>{' '}
                     / Event Category
                   </span>
 
-                  <span className="text-neutral-400">Kenya</span>
+                  <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-[10px] text-white/80">
+                    Kenya
+                  </span>
                 </div>
 
-                <div className="mb-6 aspect-[4/5] w-full overflow-hidden bg-neutral-200">
+                <div className="mb-5 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1B171E]">
                   <img
                     src={event.img}
                     alt={event.name}
@@ -209,15 +218,15 @@ export default function EventsWeDo({ onNavigate }) {
                   />
                 </div>
 
-                <h3 className="mb-3 text-xl font-normal tracking-[-0.02em] text-[#16232A] md:text-2xl">
+                <h3 className="font-display-condensed mb-3 text-2xl font-normal tracking-wide text-white transition-colors duration-200 group-hover:text-[#F5D033]">
                   {event.name}
                 </h3>
 
-                <p className="mb-4 text-sm leading-relaxed text-[#16232A]">
+                <p className="mb-4 text-sm leading-relaxed text-[#C7C3C9]">
                   {event.description}
                 </p>
 
-                <p className="mt-auto border-t border-[#16232A]/15 pt-4 text-xs leading-relaxed text-neutral-500">
+                <p className="mt-auto border-t border-white/10 pt-4 text-xs leading-relaxed text-[#9E9A9F]">
                   {event.examples}
                 </p>
               </article>
@@ -227,37 +236,39 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 4. PRODUCTION CAPABILITIES */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
-
-          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-[#16232A]/15 pb-8 md:flex-row md:items-end">
+          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-white/15 pb-8 md:flex-row md:items-end">
             <div>
-              <span className="mb-3 block text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+              <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
                 From Concept to Execution
               </span>
 
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
+              <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
                 Everything Your Event Needs
               </h2>
             </div>
 
-            <p className="max-w-md text-sm leading-relaxed text-[#16232A]">
+            <p className="max-w-md text-sm leading-relaxed text-[#B5B0B8]">
               Our services work together to create a seamless event, from the
               first planning conversation to the final pack-down.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 border-t border-l border-[#16232A]/15 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="border-r border-b border-[#16232A]/15 bg-white p-6 md:p-8"
+                className="rounded-3xl border border-white/15 bg-[#141016] p-7 transition-colors duration-200 hover:border-[#F5D033]/60 md:p-8"
               >
-                <h3 className="mb-3 text-lg font-normal text-[#16232A]">
+                <div className="mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-xs text-[#F5D033]">
+                  &#10022;
+                </div>
+                <h3 className="font-display-condensed mb-3 text-2xl font-normal tracking-wide text-white">
                   {service.title}
                 </h3>
 
-                <p className="text-sm leading-relaxed text-[#16232A]">
+                <p className="text-sm leading-relaxed text-[#B5B0B8]">
                   {service.detail}
                 </p>
               </div>
@@ -267,19 +278,18 @@ export default function EventsWeDo({ onNavigate }) {
       </section>
 
       {/* 5. BOTTOM CTA */}
-      <section className="bg-[#075056] text-[#E4EEF0]">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
-
+      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Let's Make It Happen
+            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+              Let's Make It Happen <span className="text-[#D4A800]">&#10022;</span>
             </span>
 
-            <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
+            <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Planning Something Special?
             </h2>
 
-            <p className="text-base leading-relaxed text-neutral-300">
+            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               Tell us what you have in mind. Whether it is a corporate
               gathering, wedding, concert or private celebration, we can help
               shape the right event solution for your needs and budget.
@@ -290,18 +300,24 @@ export default function EventsWeDo({ onNavigate }) {
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              Plan Your Event &rarr;
+              <span>Plan Your Event &rarr;</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                &rarr;
+              </span>
             </a>
 
             <a
               href="https://wa.me/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              Chat on WhatsApp
+              <span>Chat on WhatsApp</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                &rarr;
+              </span>
             </a>
           </div>
         </div>

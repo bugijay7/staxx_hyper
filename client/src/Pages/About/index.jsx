@@ -11,7 +11,6 @@ import Hero from '../../assets/corporategala.jpg';
 import Lighting from '../../assets/lighting.jpg';
 import Logistics from '../../assets/logistics.jpeg';
 
-
 export default function About({ onNavigate }) {
   useEffect(() => {
     AOS.init({
@@ -103,50 +102,55 @@ export default function About({ onNavigate }) {
   ];
 
   return (
-    <div className="bg-white pt-10 font-sans text-[#16232A] antialiased md:pt-18">
-      {/* 1. EDITORIAL HERO SECTION */}
-      <section className="border-b border-[#16232A]/15 bg-white">
-        <div className="mx-auto max-w-[1440px] px-6 pt-4 pb-16 md:px-10 md:pt-4 md:pb-24">
-          
+    <div className="min-h-screen bg-[#0D0A0E] pt-10 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-18">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
 
+      {/* 1. EDITORIAL HERO SECTION */}
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
+        <div className="mx-auto max-w-[1440px] px-6 pt-4 pb-16 md:px-10 md:pt-4 md:pb-24">
           <div
             className="mb-14 grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]"
             data-aos="fade-up"
           >
-            <h1 className="pt-10 md:pt-0 text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed pt-10 text-4xl font-normal leading-[0.94] text-white sm:text-6xl md:pt-0 lg:text-[5.25rem]">
               AV production, <br />
-              <span className="text-neutral-500">Event styling</span>
+              <span className="text-white/65">Event styling</span>
             </h1>
-
-           
           </div>
 
           {/* Hero Visual Grid */}
           <div
-            className="grid grid-cols-1  bg-white lg:grid-cols-[1.5fr_1fr]"
+            className="grid grid-cols-1 gap-8 lg:grid-cols-[1.5fr_1fr]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div className="relative overflow-hidden border-b border-[#16232A]/15 bg-neutral-100 lg:border-r lg:border-b-0">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#141016]">
               <img
                 src={Hero}
                 alt="Staxx-HyperKids integrated audiovisual staging and event styling in Nairobi"
                 className="aspect-[16/10] h-full w-full object-cover"
               />
-              <div className="border-t border-[#16232A]/15 bg-white px-6 py-3 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+              <div className="border-t border-white/10 bg-[#141016] px-6 py-3.5 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
                 Technical Production &amp; Spatial Styling &bull; Nairobi, Kenya
               </div>
             </div>
 
-            <div className="flex flex-col justify-between">
-              <div className="space-y-4  p-2 md:p-12">
-                <span className="block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
-                  Who We Are
+            <div className="flex flex-col justify-between overflow-hidden rounded-3xl border border-white/15 bg-[#141016]">
+              <div className="space-y-4 p-8 md:p-10">
+                <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+                  <span>&#10022;</span> Who We Are
                 </span>
-                <h2 className="text-xl md:text-xl font-normal tracking-[-0.02em] leading-[1.2] text-[#16232A]">
-                   Styling and technical production under one roof.
+                <h2 className="font-display-condensed text-2xl font-normal leading-[1.08] tracking-wide text-white md:text-3xl">
+                  Styling and technical production under one roof.
                 </h2>
-                <p className="text-xs md:text-sm leading-relaxed text-[#16232A] md:text-base">
+                <p className="text-xs leading-relaxed text-[#C7C3C9] md:text-sm">
                   Based in Nairobi, Staxx-HyperKids delivers end-to-end event
                   infrastructure—from corporate sound, LED screens, and staging
                   to bespoke d&eacute;cor, themed children&rsquo;s parties, and
@@ -154,16 +158,16 @@ export default function About({ onNavigate }) {
                 </p>
               </div>
 
-              <div className="mt-5 md:mt-10space-y-3 bg-[#FF5B04] border-t border-[#16232A]/15 p-6 text-xs tracking-[0.06em] text-[#16232A] font-bold">
-                <p className="mb-1 text-[8px]">
-                  <strong className="font-medium tracking-[0.12em] text-white uppercase">
-                    Office Location: <br/>
+              <div className="space-y-3 border-t border-white/10 bg-[#1A161D] p-6 text-xs font-medium tracking-[0.06em] text-white">
+                <p className="mb-1 text-[11px]">
+                  <strong className="font-bold tracking-[0.14em] text-[#F5D033] uppercase">
+                    Office Location: <br />
                   </strong>{' '}
                   Commerce House, Nairobi, Kenya
                 </p>
-                <p className="text-[8px]">
-                  <strong className="font-medium tracking-[0.12em] text-white uppercase">
-                    Counties Served: <br/>
+                <p className="text-[11px]">
+                  <strong className="font-bold tracking-[0.14em] text-[#F5D033] uppercase">
+                    Counties Served: <br />
                   </strong>{' '}
                   Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a &amp; Kajiado
                 </p>
@@ -174,148 +178,147 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 2. HISTORY & HOW IT STARTED */}
-<section className="border-b border-[#16232A]/15 bg-[#E4EEF0]">
-  <div className="mx-auto max-w-[1440px] px-4 py-12 md:px-10 md:py-24">
-    <div
-      className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.45fr] lg:gap-20"
-      data-aos="fade-up"
-    >
-      {/* Left Column: Editorial Header & Featured Image */}
-      <div className="lg:sticky lg:top-24">
-        <div className="mb-4 flex items-center gap-3">
-          <span className="h-px w-8 bg-[#075056]" />
-          <span className="text-[11px] font-semibold tracking-[0.18em] text-[#16232A] uppercase">
-            History &amp; Origin &bull; Est. 2026
-          </span>
-        </div>
-
-        <h2 className="text-3xl font-light tracking-[-0.025em] leading-[1.12] text-black md:text-5xl">
-          Technical production and{' '}
-          <span className="font-normal italic text-[#16232A]">
-            event styling
-          </span>{' '}
-          in Kenya
-        </h2>
-
-        <figure className="mt-8">
-          <div className="aspect-[16/10] w-full overflow-hidden border border-[#16232A]/15 bg-neutral-100">
-            <img
-              src={Audiovisual}
-              alt="Staxx production team executing large scale event setup in Nairobi"
-              className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </div>
-          <figcaption className="mt-3 flex items-center justify-between border-b border-[#16232A]/10 pb-2 text-xs text-[#16232A]">
-            <span>On-site production &amp; spatial setup</span>
-            <span className="font-medium text-[#16232A]">Nairobi, KE</span>
-          </figcaption>
-        </figure>
-      </div>
-
-      {/* Right Column: Article Body */}
-      <article className="space-y-7 p-4 text-xs md:text-sm leading-[1.8] text-black lg:border-l lg:border-[#16232A]/15 lg:pl-14">
-        {/* Lead Paragraph with Drop Cap */}
-        <p className="first-letter:float-left first-letter:mr-3.5 first-letter:mt-1  first-letter:text-6xl first-letter:italic first-letter:font-semibold first-letter:leading-none first-letter:text-[#16232A]">
-          Founded in 2026 by{' '}
-          <strong className="font-semibold text-[#16232A]">
-            Bryan Karanja
-          </strong>{' '}
-          and{' '}
-          <strong className="font-semibold text-[#16232A]">
-            Dan Njuguna
-          </strong>
-          , Staxx-HyperKids brings together complementary hands-on experience
-          in{' '}
-          <span className="font-medium text-[#16232A] underline decoration-[#16232A]/30 underline-offset-4">
-            audiovisual operations
-          </span>
-          , event d&eacute;cor, and children&rsquo;s party production.
-        </p>
-
-        <p>
-          The founders recognised that event hosts, corporates, and families
-          frequently need both{' '}
-          <span className="font-medium text-[#16232A]">
-            dependable technical production
-          </span>{' '}
-          and{' '}
-          <span className="font-medium text-[#16232A]">
-            thoughtful spatial styling
-          </span>
-          &mdash;yet were forced to split budgets and logistics across
-          disconnected sound suppliers, decorators, and equipment hire vendors.
-        </p>
-
-        {/* Editorial Pull-Quote */}
-        <blockquote className="my-8 border-l-2 border-[#16232A] bg-white py-2 pl-6 pr-4 z-99 relative">
-          <p className="text-base font-medium italic leading-relaxed text-[#16232A] md:text-lg">
-            &ldquo;One coordinated provider delivering seamless setup,
-            consistent quality control, and practical on-site execution.&rdquo;
-          </p>
-        </blockquote>
-
-        <p>
-          Staxx-HyperKids was formed to bring these disciplines together under
-          one roof, serving events across{' '}
-          <span className="font-medium text-[#16232A]">
-            Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a, and Kajiado
-          </span>{' '}
-          counties.
-        </p>
-
-        {/* Quick Editorial Footnote / Coverage Strip */}
-        <div className="grid grid-cols-3 gap-4 border-t border-[#16232A]/15 pt-6 text-sm">
-          <div>
-            <span className="block text-xs uppercase tracking-wider text-black">
-              Established
-            </span>
-            <span className="mt-1 block font-semibold text-[#16232A]">2024</span>
-          </div>
-          <div>
-            <span className="block text-xs uppercase tracking-wider text-black">
-              Coverage
-            </span>
-            <span className="mt-1 block font-semibold text-[#16232A]">
-              6 Counties
-            </span>
-          </div>
-          <div>
-            <span className="block text-xs uppercase tracking-wider text-black">
-              Focus
-            </span>
-            <span className="mt-1 block font-semibold text-[#16232A]">
-              AV &amp; Styling
-            </span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-      {/* 3. MISSION & VISION */}
-      <section className="border-b border-[#16232A]/15 bg-white">
-        <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
+        <div className="mx-auto max-w-[1440px] px-4 py-16 md:px-10 md:py-24">
           <div
-            className="grid grid-cols-1 items-stretch border border-[#16232A]/15 bg-white lg:grid-cols-[1.2fr_1fr]"
+            className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.45fr] lg:gap-20"
             data-aos="fade-up"
           >
-            <div className="flex flex-col justify-between divide-y divide-[#16232A]/15 border-b border-[#16232A]/15 lg:border-r lg:border-b-0">
-              <div className="p-8 md:p-12">
-                <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
-                  Our Mission
+            {/* Left Column: Editorial Header & Featured Image */}
+            <div className="lg:sticky lg:top-24">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="h-px w-8 bg-[#F5D033]" />
+                <span className="text-[11px] font-bold tracking-[0.18em] text-[#F5D033] uppercase">
+                  History &amp; Origin &bull; Est. 2026
                 </span>
-                <h3 className="text-sm md:text-xl font-normal tracking-[-0.015em] leading-[1.28] text-[#16232A] md:text-3xl">
+              </div>
+
+              <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
+                Technical production and{' '}
+                <span className="text-white/65">event styling</span> in Kenya
+              </h2>
+
+              <figure className="mt-8">
+                <div className="aspect-[16/10] w-full overflow-hidden rounded-3xl border border-white/10 bg-[#1A161C]">
+                  <img
+                    src={Audiovisual}
+                    alt="Staxx production team executing large scale event setup in Nairobi"
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+                <figcaption className="mt-3 flex items-center justify-between border-b border-white/15 pb-2.5 text-xs text-[#9E9A9F]">
+                  <span>On-site production &amp; spatial setup</span>
+                  <span className="font-semibold text-[#F5D033]">Nairobi, KE</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            {/* Right Column: Article Body */}
+            <article className="space-y-7 p-4 text-xs leading-[1.8] text-[#C7C3C9] md:text-sm lg:border-l lg:border-white/10 lg:pl-14">
+              {/* Lead Paragraph with Drop Cap */}
+              <p className="first-letter:float-left first-letter:mr-3.5 first-letter:mt-1 first-letter:text-6xl first-letter:font-bold first-letter:leading-none first-letter:text-[#F5D033]">
+                Founded in 2026 by{' '}
+                <strong className="font-semibold text-white">
+                  Bryan Karanja
+                </strong>{' '}
+                and{' '}
+                <strong className="font-semibold text-white">
+                  Dan Njuguna
+                </strong>
+                , Staxx-HyperKids brings together complementary hands-on experience
+                in{' '}
+                <span className="font-medium text-white underline decoration-[#F5D033]/60 underline-offset-4">
+                  audiovisual operations
+                </span>
+                , event d&eacute;cor, and children&rsquo;s party production.
+              </p>
+
+              <p>
+                The founders recognised that event hosts, corporates, and families
+                frequently need both{' '}
+                <span className="font-medium text-white">
+                  dependable technical production
+                </span>{' '}
+                and{' '}
+                <span className="font-medium text-white">
+                  thoughtful spatial styling
+                </span>
+                &mdash;yet were forced to split budgets and logistics across
+                disconnected sound suppliers, decorators, and equipment hire vendors.
+              </p>
+
+              {/* Editorial Pull-Quote */}
+              <blockquote className="relative z-10 my-8 rounded-2xl border-l-4 border-[#F5D033] bg-[#151117] py-4 pl-6 pr-5">
+                <p className="text-base font-medium italic leading-relaxed text-white md:text-lg">
+                  &ldquo;One coordinated provider delivering seamless setup,
+                  consistent quality control, and practical on-site execution.&rdquo;
+                </p>
+              </blockquote>
+
+              <p>
+                Staxx-HyperKids was formed to bring these disciplines together under
+                one roof, serving events across{' '}
+                <span className="font-medium text-white">
+                  Nairobi, Kiambu, Nakuru, Machakos, Murang&rsquo;a, and Kajiado
+                </span>{' '}
+                counties.
+              </p>
+
+              {/* Quick Editorial Footnote / Coverage Strip */}
+              <div className="grid grid-cols-3 gap-4 border-t border-white/15 pt-6 text-sm">
+                <div>
+                  <span className="block text-[10px] uppercase tracking-[0.14em] text-[#9E9A9F]">
+                    Established
+                  </span>
+                  <span className="font-display-condensed mt-1 block text-2xl font-normal text-white">
+                    2024
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-[10px] uppercase tracking-[0.14em] text-[#9E9A9F]">
+                    Coverage
+                  </span>
+                  <span className="font-display-condensed mt-1 block text-2xl font-normal text-white">
+                    6 Counties
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-[10px] uppercase tracking-[0.14em] text-[#9E9A9F]">
+                    Focus
+                  </span>
+                  <span className="font-display-condensed mt-1 block text-2xl font-normal text-[#F5D033]">
+                    AV &amp; Styling
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. MISSION & VISION */}
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
+        <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
+          <div
+            className="grid grid-cols-1 items-stretch overflow-hidden rounded-3xl border border-white/15 bg-[#141016] lg:grid-cols-[1.2fr_1fr]"
+            data-aos="fade-up"
+          >
+            <div className="flex flex-col justify-between divide-y divide-white/10 border-b border-white/10 lg:border-r lg:border-b-0">
+              <div className="p-8 md:p-12">
+                <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+                  <span>&#10022;</span> Our Mission
+                </span>
+                <h3 className="text-lg font-normal tracking-[-0.015em] leading-[1.35] text-white md:text-2xl">
                   To create memorable, well-executed events by combining
                   creative design, dependable technology, and attentive service.
                 </h3>
               </div>
 
               <div className="p-8 md:p-12">
-                <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
-                  Our Vision
+                <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+                  <span>&#10022;</span> Our Vision
                 </span>
-                <h3 className="text-sm md:text-xl font-normal tracking-[-0.015em] leading-[1.28] text-[#16232A] md:text-3xl">
+                <h3 className="text-lg font-normal tracking-[-0.015em] leading-[1.35] text-white md:text-2xl">
                   To become a trusted, multi-disciplinary events and
                   experiential solutions brand in Kenya, known for creativity,
                   technical reliability, and seamless delivery.
@@ -323,11 +326,11 @@ export default function About({ onNavigate }) {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-neutral-100">
+            <div className="overflow-hidden bg-[#1B171E]">
               <img
                 src={Lighting}
                 alt="Bespoke event styling, lighting and celebration setup"
-                className="h-[320px] md:h-[390px] w-full object-cover"
+                className="h-[320px] w-full object-cover md:h-full"
               />
             </div>
           </div>
@@ -335,37 +338,37 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 4. CORE PRINCIPLES */}
-      <section className="border-b border-[#16232A]/15 bg-[#075056]">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div className="mb-12" data-aos="fade-up">
-            <span className="mb-3 block text-[11px] font-bold tracking-[0.14em] text-[#FF5B04] uppercase">
-              Operational Standards
+            <span className="mb-3 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+              <span>&#10022;</span> Operational Standards
             </span>
-            <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#E4EEF0] md:text-4xl">
+            <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
               How We Work
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 border-t border-l border-[#16232A]/15 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {coreValues.map((val, index) => (
               <div
                 key={val.no}
-                className="flex flex-col justify-between border-r border-b border-[#16232A]/15 bg-white p-8"
+                className="flex flex-col justify-between rounded-3xl border border-white/15 bg-[#141016] p-7 transition-colors duration-200 hover:border-[#F5D033]/60"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 <div>
-                  <span className="mb-6 block border-b border-[#16232A]/15 pb-3 text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
+                  <span className="mb-6 block border-b border-white/10 pb-3 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
                     [ {val.no} ]
                   </span>
-                  <h3 className="mb-3 text-lg font-medium tracking-[-0.01em] text-[#16232A]">
+                  <h3 className="font-display-condensed mb-3 text-2xl font-normal tracking-wide text-white">
                     {val.title}
                   </h3>
-                  <p className="mb-6 text-sm leading-relaxed text-[#16232A]">
+                  <p className="mb-6 text-sm leading-relaxed text-[#B5B0B8]">
                     {val.desc}
                   </p>
                 </div>
-                <div className="aspect-[16/10] w-full overflow-hidden bg-neutral-200">
+                <div className="aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1B171E]">
                   <img
                     src={val.img}
                     alt={val.title}
@@ -379,45 +382,45 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 5. WHAT SETS US APART & WHO WE SERVE */}
-      <section className="border-b border-[#16232A]/15 bg-[#E4EEF0]">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
             data-aos="fade-up"
           >
             <div>
-              <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
+              <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
                 Differentiation
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
+              <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
                 Why Clients Choose Staxx-HyperKids
               </h2>
             </div>
           </div>
 
           <div
-            className="grid grid-cols-1 border-t border-l border-[#16232A]/15 bg-white md:grid-cols-3"
+            className="grid grid-cols-1 gap-8 md:grid-cols-3"
             data-aos="fade-up"
           >
             {advantagePoints.map((point, index) => (
               <div
                 key={point.no}
-                className="flex flex-col justify-between border-r border-b border-[#16232A]/15 p-8 md:p-10"
+                className="flex flex-col justify-between rounded-3xl border border-white/15 bg-[#141016] p-8 transition-colors duration-200 hover:border-[#F5D033]/60 md:p-9"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 <div>
-                  <span className="mb-4 block text-[10px] tracking-[0.14em] text-neutral-400 uppercase">
+                  <span className="mb-4 inline-block rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold tracking-[0.14em] text-[#F5D033] uppercase">
                     {point.no}
                   </span>
-                  <h3 className="mb-3 text-xl font-normal tracking-[-0.01em] text-[#16232A]">
+                  <h3 className="font-display-condensed mb-3 text-2xl font-normal tracking-wide text-white">
                     {point.title}
                   </h3>
-                  <p className="mb-6 text-sm leading-relaxed text-[#16232A]">
+                  <p className="mb-6 text-sm leading-relaxed text-[#C7C3C9]">
                     {point.desc}
                   </p>
                 </div>
-                <div className="aspect-[16/10] w-full overflow-hidden bg-neutral-200">
+                <div className="aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1B171E]">
                   <img
                     src={point.img}
                     alt={point.title}
@@ -430,17 +433,17 @@ export default function About({ onNavigate }) {
 
           {/* Target Clients & Sectors Strip */}
           <div
-            className="mt-12 border border-[#16232A]/15 p-8 md:p-10"
+            className="mt-12 rounded-3xl border border-white/15 bg-[#141016] p-8 md:p-10"
             data-aos="fade-up"
           >
-            <span className="mb-4 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
-              Clients &amp; Sectors We Serve
+            <span className="mb-5 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+              <span>&#10022;</span> Clients &amp; Sectors We Serve
             </span>
             <div className="flex flex-wrap gap-3">
               {clientSectors.map((sector) => (
                 <span
                   key={sector}
-                  className="border border-[#16232A]/20 px-4 py-2 text-xs tracking-[0.06em] text-[#16232A]"
+                  className="rounded-full border border-white/15 bg-[#1A161D] px-4 py-2 text-xs font-medium tracking-[0.06em] text-white/90"
                 >
                   {sector}
                 </span>
@@ -451,21 +454,21 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 6. CO-FOUNDERS */}
-      <section className="border-b border-[#16232A]/15 bg-[#E4EEF0]">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
           <div
             className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"
             data-aos="fade-up"
           >
             <div>
-              <span className="mb-3 block text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
+              <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
                 Founding Leadership
               </span>
-              <h2 className="text-3xl font-normal tracking-[-0.02em] leading-[1.15] text-[#16232A] md:text-4xl">
+              <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
                 Meet the Co-Founders
               </h2>
             </div>
-            <p className="text-sm text-neutral-500 md:text-base">
+            <p className="text-sm text-[#9E9A9F] md:text-base">
               Complementary leadership across technical production and creative styling.
             </p>
           </div>
@@ -474,31 +477,31 @@ export default function About({ onNavigate }) {
             {founders.map((founder, index) => (
               <article
                 key={founder.name}
-                className="group border border-[#16232A]/15 bg-white"
+                className="group overflow-hidden rounded-3xl border border-white/15 bg-[#141016] transition-all duration-200 hover:border-[#F5D033]/70"
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
-                <div className="flex items-center justify-between border-b border-[#16232A]/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                  <span>0{index + 1}</span>
+                <div className="flex items-center justify-between border-b border-white/10 px-6 py-3.5 text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
+                  <span className="font-bold text-[#F5D033]">0{index + 1}</span>
                   <span>{founder.role}</span>
                 </div>
 
-                <div className="aspect-[16/11] w-full overflow-hidden bg-neutral-200">
+                <div className="aspect-[16/11] w-full overflow-hidden bg-[#1B171E]">
                   <img
                     src={founder.img}
                     alt={`${founder.name} ${founder.role} at Staxx-HyperKids`}
-                    className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
+                    className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                   />
                 </div>
 
-                <div className="border-t border-[#16232A]/15 bg-white p-6 md:p-8">
-                  <h3 className="text-2xl font-normal tracking-[-0.01em] text-[#16232A]">
+                <div className="border-t border-white/10 bg-[#141016] p-6 md:p-8">
+                  <h3 className="font-display-condensed text-3xl font-normal tracking-wide text-white">
                     {founder.name}
                   </h3>
-                  <p className="mt-1 mb-4 text-[11px] font-medium tracking-[0.12em] text-neutral-500 uppercase">
+                  <p className="mt-1 mb-4 text-[11px] font-semibold tracking-[0.14em] text-[#F5D033] uppercase">
                     {founder.role}
                   </p>
-                  <p className="text-sm leading-relaxed text-[#16232A] md:text-base">
+                  <p className="text-sm leading-relaxed text-[#C7C3C9] md:text-base">
                     {founder.bio}
                   </p>
                 </div>
@@ -509,19 +512,19 @@ export default function About({ onNavigate }) {
       </section>
 
       {/* 7. BOTTOM CTA */}
-      <section className="bg-[#FF5B04] text-[#E4EEF0]">
+      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
         <div
-          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end"
+          className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end"
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-[#16232A] uppercase font-bold">
-              Start Planning
+            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+              Start Planning <span className="text-[#D4A800]">&#10022;</span>
             </span>
-            <h3 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
+            <h3 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Ready to plan your next event?
             </h3>
-            <p className="text-base leading-relaxed text-[#16232A]">
+            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               Reach out to our team at Commerce House, Nairobi to check date
               availability and request an itemized quote for AV, d&eacute;cor,
               kiddie parties, or equipment hire across Kenya.
@@ -532,16 +535,22 @@ export default function About({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              Request an Event Quote &rarr;
+              <span>Request an Event Quote &rarr;</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                &rarr;
+              </span>
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              Contact Our Team
+              <span>Contact Our Team</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                &rarr;
+              </span>
             </a>
           </div>
         </div>

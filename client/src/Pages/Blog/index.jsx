@@ -7,7 +7,6 @@ import Exhibition from '../../assets/exhibition.jpg';
 import Ruracio from '../../assets/ruracio.jpg';
 import Tentsetup from '../../assets/tentsetup.jpg';
 
-
 export default function Blog({ onNavigate }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activePost, setActivePost] = useState(null);
@@ -131,24 +130,33 @@ export default function Blog({ onNavigate }) {
       : blogPosts.filter((post) => post.category === selectedCategory);
 
   return (
-    <div className="bg-white pt-20 font-sans text-[#16232A] antialiased md:pt-24">
+    <div className="min-h-screen bg-[#0D0A0E] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        .font-display-condensed {
+          font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+        }
+      `}</style>
+
       {/* 1. HERO HEADER */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[#16232A]/15 pb-4 text-[11px] tracking-[0.14em] text-neutral-500 uppercase">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
             <span>Staxx-HyperKids Journal</span>
-            <span>
-              Event Production Guides &bull; AV &amp; Styling &bull; Kenya Venues
+            <span className="inline-flex items-center gap-2">
+              <span className="text-[#F5D033]">&#10022;</span> Event Production Guides &bull; AV &amp; Styling &bull; Kenya Venues
             </span>
           </div>
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="text-4xl font-normal tracking-[-0.03em] leading-[1.06] text-[#16232A] sm:text-6xl lg:text-[4.5rem]">
+            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Production Insights <br />
-              <span className="text-neutral-500">&amp; Event Guides</span>
+              <span className="text-white/65">&amp; Event Guides</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-[#16232A] md:text-lg lg:border-l lg:border-[#16232A]/15 lg:pl-10">
+            <p className="rounded-2xl border border-white/10 bg-[#151117] p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Practical field notes from our AV engineers, spatial stylists, and
               operations team&mdash;covering corporate technical riders,
               weddings &amp; Ruracio logistics, rainy-season marquees, brand
@@ -159,13 +167,13 @@ export default function Blog({ onNavigate }) {
       </section>
 
       {/* 2. CATEGORY FILTER STRIP */}
-      <section className="border-b border-[#16232A]/15 bg-white">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <span className="text-[11px] font-medium tracking-[0.14em] text-neutral-500 uppercase">
-            Browse Topics ({filteredPosts.length})
+      <section className="border-b border-white/15 bg-[#141016]">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8">
+          <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
+            <span>&#10022;</span> Browse Topics ({filteredPosts.length})
           </span>
 
-          <div className="flex flex-wrap gap-6 md:gap-8">
+          <div className="flex flex-wrap gap-2.5">
             {[
               'All',
               'Corporate & AV Production',
@@ -180,10 +188,10 @@ export default function Blog({ onNavigate }) {
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer border-b pb-1 text-xs tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer rounded-full px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
-                      ? 'border-[#16232A] font-medium text-[#16232A]'
-                      : 'border-transparent text-neutral-400 hover:text-[#16232A]'
+                      ? 'bg-[#F5D033] text-[#0D0A0E]'
+                      : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white hover:text-white'
                   }`}
                 >
                   {cat}
@@ -195,63 +203,68 @@ export default function Blog({ onNavigate }) {
       </section>
 
       {/* 3. BLOG POSTS GRID */}
-      <section className="border-b border-[#16232A]/15 bg-white">
+      <section className="border-b border-white/10 bg-[#0D0A0E]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
                 onClick={() => setActivePost(post)}
-                className="group flex cursor-pointer flex-col justify-between border border-[#16232A]/15 bg-white transition-colors duration-200 hover:bg-white"
+                className="group flex cursor-pointer flex-col justify-between overflow-hidden rounded-3xl border border-white/15 bg-[#141016] transition-all duration-200 hover:border-[#F5D033]/70"
               >
                 <div>
                   {/* Top Index & Category Plate */}
-                  <div className="flex items-center justify-between gap-3 border-b border-[#16232A]/15 px-6 py-3 text-[10px] tracking-[0.14em] text-neutral-500 uppercase">
-                    <span className="shrink-0 font-medium text-[#16232A]">
+                  <div className="flex items-center justify-between gap-3 border-b border-white/10 px-6 py-4 text-[10px] tracking-[0.16em] uppercase">
+                    <span className="shrink-0 font-bold text-[#F5D033]">
                       Issue {post.id}
                     </span>
-                    <span className="truncate">{post.category}</span>
+                    <span className="truncate rounded-full bg-white/10 px-3 py-1 font-medium text-white/85">
+                      {post.category}
+                    </span>
                   </div>
 
                   {/* Image Frame */}
-                  <div className="aspect-[16/11] w-full overflow-hidden border-b border-[#16232A]/15 bg-neutral-200">
+                  <div className="aspect-[16/10] w-full overflow-hidden border-b border-white/10 bg-[#1B171E]">
                     <img
                       src={post.img}
                       alt={post.title}
-                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-103 group-hover:grayscale-0"
+                      className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                     />
                   </div>
 
                   {/* Content Body */}
                   <div className="p-6 md:p-8">
-                    <div className="mb-3 flex items-center gap-2 text-[11px] tracking-[0.12em] text-neutral-400 uppercase">
+                    <div className="mb-3 flex items-center gap-2 text-[11px] font-medium tracking-[0.14em] text-[#9E9A9F] uppercase">
                       <span>{post.date}</span>
-                      <span>&bull;</span>
+                      <span className="text-[#F5D033]">&bull;</span>
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h2 className="mb-3 text-xl font-normal tracking-[-0.015em] leading-snug text-[#16232A] transition-opacity duration-200 group-hover:opacity-70">
+                    <h2 className="font-display-condensed mb-3 text-2xl font-normal leading-[1.08] tracking-wide text-white transition-colors duration-200 group-hover:text-[#F5D033]">
                       {post.title}
                     </h2>
 
-                    <p className="text-sm leading-relaxed text-[#16232A]">
+                    <p className="text-sm leading-relaxed text-[#C7C3C9]">
                       {post.excerpt}
                     </p>
                   </div>
                 </div>
 
                 {/* Card Footer Trigger */}
-                <div className="border-t border-[#16232A]/15 bg-white px-6 py-4 md:px-8">
+                <div className="flex items-center justify-between border-t border-white/10 bg-[#18141B] px-6 py-4 md:px-8">
                   <button
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
                       setActivePost(post);
                     }}
-                    className="cursor-pointer bg-transparent text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase transition-opacity group-hover:opacity-65"
+                    className="cursor-pointer bg-transparent text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors group-hover:text-[#F5D033]"
                   >
                     Read Full Guide &rarr;
                   </button>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:bg-[#F5D033]">
+                    &rarr;
+                  </span>
                 </div>
               </article>
             ))}
@@ -266,16 +279,16 @@ export default function Blog({ onNavigate }) {
           aria-modal="true"
           aria-label={activePost.title}
           onClick={() => setActivePost(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[#075056]/85 p-4 backdrop-blur-xs md:p-10"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm md:p-10"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden border border-[#16232A]/20 bg-white text-[#16232A]"
+            className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-3xl border border-white/20 bg-[#141016] text-white shadow-2xl"
           >
             {/* Top Modal Bar */}
-            <div className="flex items-center justify-between border-b border-[#16232A]/15 bg-white px-6 py-4 text-[11px] tracking-[0.14em] uppercase">
-              <div className="flex flex-wrap items-center gap-2 text-neutral-500">
-                <strong className="font-medium text-[#16232A]">
+            <div className="flex items-center justify-between border-b border-white/15 bg-[#18141B] px-6 py-4 text-[11px] tracking-[0.16em] uppercase">
+              <div className="flex flex-wrap items-center gap-2 text-[#9E9A9F]">
+                <strong className="font-bold text-[#F5D033]">
                   {activePost.category}
                 </strong>
                 <span>&bull;</span>
@@ -287,7 +300,7 @@ export default function Blog({ onNavigate }) {
               <button
                 type="button"
                 onClick={() => setActivePost(null)}
-                className="cursor-pointer bg-transparent py-1 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase transition-opacity hover:opacity-55"
+                className="cursor-pointer rounded-full border border-white/20 bg-white/10 px-3.5 py-1 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors hover:border-[#F5D033] hover:bg-[#F5D033] hover:text-[#0D0A0E]"
               >
                 Close &times;
               </button>
@@ -295,7 +308,7 @@ export default function Blog({ onNavigate }) {
 
             {/* Scrollable Article Content */}
             <div className="overflow-y-auto">
-              <div className="aspect-[16/8] w-full overflow-hidden border-b border-[#16232A]/15 bg-neutral-200">
+              <div className="aspect-[16/8] w-full overflow-hidden border-b border-white/15 bg-[#1B171E]">
                 <img
                   src={activePost.img}
                   alt={activePost.title}
@@ -303,12 +316,12 @@ export default function Blog({ onNavigate }) {
                 />
               </div>
 
-              <div className="space-y-6 bg-white p-6 md:p-10">
-                <h3 className="text-2xl font-normal tracking-[-0.02em] leading-snug text-[#16232A] md:text-3xl">
+              <div className="space-y-6 bg-[#141016] p-6 md:p-10">
+                <h3 className="font-display-condensed text-3xl font-normal leading-[1.04] tracking-wide text-white md:text-4xl">
                   {activePost.title}
                 </h3>
 
-                <div className="space-y-4 text-base leading-relaxed text-[#16232A]">
+                <div className="space-y-4 text-sm leading-relaxed text-[#C7C3C9] md:text-base">
                   {activePost.content.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}
@@ -317,18 +330,21 @@ export default function Blog({ onNavigate }) {
             </div>
 
             {/* Bottom Modal Action Bar */}
-            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#16232A]/15 bg-white px-6 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/15 bg-[#18141B] px-6 py-4">
               <a
                 href="/booking"
                 onClick={(e) => handleLinkClick(e, '/booking')}
-                className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+                className="group inline-flex items-center gap-3 rounded-full bg-white py-2 pr-2 pl-5 text-xs font-bold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
               >
-                Plan This Event With Staxx &rarr;
+                <span>Plan This Event With Staxx &rarr;</span>
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                  &rarr;
+                </span>
               </a>
               <a
                 href="/event-equipment-supplies"
                 onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+                className="rounded-full border border-white/25 bg-transparent px-5 py-2.5 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-colors duration-200 hover:border-white hover:bg-white/10"
               >
                 Browse Equipment Catalog
               </a>
@@ -338,16 +354,16 @@ export default function Blog({ onNavigate }) {
       )}
 
       {/* 4. BOTTOM CTA */}
-      <section className="bg-[#075056] text-[#E4EEF0]">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 px-6 py-20 md:px-10 md:py-28 lg:flex-row lg:items-end">
+      <section className="bg-[#0D0A0E] px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 rounded-3xl bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <span className="mb-4 block text-[11px] tracking-[0.14em] text-neutral-400 uppercase">
-              Need Production Guidance?
+            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
+              Need Production Guidance? <span className="text-[#D4A800]">&#10022;</span>
             </span>
-            <h2 className="mb-5 text-3xl font-normal tracking-[-0.02em] leading-[1.12] md:text-5xl">
+            <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Planning a Corporate Event, Wedding, or Celebration?
             </h2>
-            <p className="text-base leading-relaxed text-neutral-300">
+            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               Speak directly with our AV engineers and spatial stylists at
               Commerce House, Nairobi for venue assessments, technical riders,
               and itemized KES proposals across six Kenyan counties.
@@ -358,17 +374,23 @@ export default function Blog({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="border border-[#E4EEF0] bg-white px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#16232A] uppercase no-underline transition-colors duration-200 hover:bg-transparent hover:text-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0D0A0E] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              Request an Event Quote &rarr;
+              <span>Request an Event Quote &rarr;</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#0D0A0E]">
+                &rarr;
+              </span>
             </a>
             <a
               href="https://wa.me/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#E4EEF0]/30 bg-transparent px-7 py-4 text-xs font-medium tracking-[0.14em] text-[#E4EEF0] uppercase no-underline transition-colors duration-200 hover:border-[#E4EEF0]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              Chat on WhatsApp
+              <span>Chat on WhatsApp</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0D0A0E] text-xs text-white">
+                &rarr;
+              </span>
             </a>
           </div>
         </div>
