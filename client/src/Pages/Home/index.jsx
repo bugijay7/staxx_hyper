@@ -202,13 +202,13 @@ export default function Home({ onNavigate }) {
                 Kenya.
               </p>
 
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-1">
                 <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
                   className="group inline-flex items-center gap-3  bg-white py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] md:text-[11px]"
                 >
-                  <span>Request a Quote</span>
+                  <span>Get a Quote</span>
                   <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
                     &rarr;
                   </span>
@@ -218,7 +218,7 @@ export default function Home({ onNavigate }) {
                   onClick={(e) => handleLinkClick(e, '/events')}
                   className="group inline-flex items-center gap-3  border border-white/25 bg-transparent py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-white uppercase no-underline transition-colors duration-200 hover:border-white hover:bg-white/10 md:text-[11px]"
                 >
-                  <span>Supplies Catalog</span>
+                  <span>event Supplies</span>
                   <span className="flex h-6 w-6 items-center justify-center  bg-white/15 text-xs text-white">
                     &rarr;
                   </span>
@@ -333,9 +333,7 @@ export default function Home({ onNavigate }) {
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <div>
-            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-              Integrated Capabilities
-            </span>
+            
             <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
               Event production, styling &amp; equipment hire—one team.
             </h2>
