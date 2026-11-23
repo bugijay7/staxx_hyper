@@ -193,7 +193,7 @@ export default function EventInspo({ onNavigate }) {
                       onClick={(e) => handleLinkClick(e, '/booking')}
                       className="group/btn inline-flex items-center gap-3 bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
                     >
-                      <span>Get a quote &rarr;</span>
+                      <span>Get a free quote &rarr;</span>
                       <span className="flex h-6 w-6 items-center justify-center bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5">
                         &rarr;
                       </span>
@@ -244,7 +244,8 @@ export default function EventInspo({ onNavigate }) {
               We Tailor Every Setup to Your Specific Requirements
             </h2>
             <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
-             Whether you're planning a wedding, traditional ceremony, church event or corporate function, our team brings together the technical production, décor and equipment to make your event come together beautifully.
+             Whether you're planning a wedding, traditional ceremony, church event or corporate function,
+              our team brings together the technical production, décor and equipment to make your event come together beautifully.
             </p>
           </div>
 
