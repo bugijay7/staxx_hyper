@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import heroImg from '../../assets/hero.jpg';
 import pastelImg from '../../assets/pastel.jpg';
 import confettiImg from '../../assets/confetti.jpg';
@@ -89,6 +89,16 @@ export default function Home({ onNavigate }) {
     },
   ];
 
+  useEffect(() => {
+    if (!heroSlides.length) return;
+
+    const interval = setInterval(() => {
+      setActiveHeroSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 1000); 
+
+    return () => clearInterval(interval);
+  }, [heroSlides.length]);
+
   const packages = [
     {
       name: 'Essential Corporate / Event Package',
@@ -165,6 +175,9 @@ export default function Home({ onNavigate }) {
       ? galleryImages
       : galleryImages.filter((item) => item.category === activeTab);
 
+  const safeSlideIndex = heroSlides.length ? activeHeroSlide % heroSlides.length : 0;
+  const currentSlide = heroSlides[safeSlideIndex];
+
   return (
     <div className="min-h-screen bg-[#0F2A2A] pt-20 font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E] md:pt-24">
       <style>{`
@@ -195,7 +208,7 @@ export default function Home({ onNavigate }) {
               </h1>
             </div>
 
-            <div className="flex flex-col justify-between gap-6   bg-transparentp-6 p-4 lg:p-7">
+            <div className="flex flex-col justify-between gap-6 bg-transparent p-4 lg:p-7">
               <p className="text-xs leading-relaxed text-[#B5B0B8] md:text-sm">
                 Staxx-HyperKids provides audiovisual production, event d&eacute;cor,
                 children&rsquo;s parties, and equipment hire in Nairobi and across
@@ -206,20 +219,20 @@ export default function Home({ onNavigate }) {
                 <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
-                  className="group inline-flex items-center gap-3  bg-white py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] md:text-[11px]"
+                  className="group inline-flex items-center gap-3 bg-white py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] md:text-[11px]"
                 >
                   <span>Get a Quote</span>
-                  <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
+                  <span className="flex h-6 w-6 items-center justify-center bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
                     &rarr;
                   </span>
                 </a>
                 <a
                   href="/event-equipment-supplies"
                   onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-                  className="group inline-flex items-center gap-3  border border-white/25 bg-transparent py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-white uppercase no-underline transition-colors duration-200 hover:border-white hover:bg-white/10 md:text-[11px]"
+                  className="group inline-flex items-center gap-3 border border-white/25 bg-transparent py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-white uppercase no-underline transition-colors duration-200 hover:border-white hover:bg-white/10 md:text-[11px]"
                 >
                   <span>event Supplies</span>
-                  <span className="flex h-6 w-6 items-center justify-center  bg-white/15 text-xs text-white">
+                  <span className="flex h-6 w-6 items-center justify-center bg-white/15 text-xs text-white">
                     &rarr;
                   </span>
                 </a>
@@ -229,71 +242,60 @@ export default function Home({ onNavigate }) {
 
           {/* Featured event image carousel */}
           <div
-            className="group relative aspect-[16/9] max-h-[280px] w-full overflow-hidden  border border-white/10 bg-[#18141A] md:max-h-[380px]"
+            className="group relative aspect-[16/9] max-h-[280px] w-full overflow-hidden border border-white/10 bg-[#18141A] md:max-h-[380px]"
             role="region"
             aria-roledescription="carousel"
             aria-label="Staxx-HyperKids event services"
           >
-            <img
-              key={heroSlides[activeHeroSlide].image}
-              src={heroSlides[activeHeroSlide].image}
-              alt={heroSlides[activeHeroSlide].alt}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0A0E]/90 via-[#0D0A0E]/25 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 flex flex-col gap-5 p-5 text-white sm:flex-row sm:items-end sm:justify-between sm:p-8 md:p-10">
-              <div aria-live="polite" aria-atomic="true">
-                <span className="mb-2 inline-flex items-center gap-2  bg-black/50 px-3 py-1 text-[10px] font-medium tracking-[0.18em] text-[#F5D033] uppercase backdrop-blur-sm">
-                  {String(activeHeroSlide + 1).padStart(2, '0')} /{' '}
-                  {String(heroSlides.length).padStart(2, '0')}
-                </span>
-                <h2 className="font-display-condensed text-2xl font-normal tracking-wide text-white sm:text-4xl md:text-5xl">
-                  {heroSlides[activeHeroSlide].title}
-                </h2>
-                <p className="mt-1 text-xs text-white/80 sm:text-sm">
-                  {heroSlides[activeHeroSlide].detail}
-                </p>
-              </div>
+            {currentSlide && (
+              <>
+                {heroSlides.map((slide, index) => {
+                  const isActive = safeSlideIndex === index;
+                  return (
+                    <img
+                      key={`${slide.title}-${index}`}
+                      src={slide.image}
+                      alt={slide.alt}
+                      className={`absolute inset-0 h-full w-full object-cover transition-[opacity,transform] duration-75 ease-out will-change-[opacity,transform] ${
+                        isActive
+                          ? 'scale-100 opacity-100'
+                          : 'pointer-events-none scale-105 opacity-0'
+                      }`}
+                    />
+                  );
+                })}
 
-              <div className="flex items-center gap-2 self-end sm:self-auto">
-                {heroSlides.map((slide, index) => (
-                  <button
-                    key={slide.title}
-                    type="button"
-                    onClick={() => setActiveHeroSlide(index)}
-                    aria-label={`Show slide ${index + 1}: ${slide.title}`}
-                    aria-current={activeHeroSlide === index ? 'true' : undefined}
-                    className={`h-2.5  transition-all ${
-                      activeHeroSlide === index
-                        ? 'w-7 bg-[#F5D033]'
-                        : 'w-2.5 bg-white/45 hover:bg-white'
-                    }`}
+                {/* Editorial vignette + amber accent glow */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0A0E]/95 via-[#0D0A0E]/30 to-transparent" />
+                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
+
+                <div className="absolute inset-x-0 bottom-0 flex flex-col gap-5 p-5 text-white sm:flex-row sm:items-end sm:justify-between sm:p-8 md:p-10">
+                  <div>
+                    <span className="mb-2 inline-flex items-center gap-2 border border-[#F5D033]/30 bg-black/60 px-3 py-1 text-[10px] font-medium tracking-[0.18em] text-[#F5D033] uppercase backdrop-blur-sm">
+                      <span className="h-1.5 w-1.5 bg-[#F5D033]" />
+                      {String(safeSlideIndex + 1).padStart(2, '0')} /{' '}
+                      {String(heroSlides.length).padStart(2, '0')}
+                    </span>
+                    <h2 className="font-display-condensed text-2xl font-normal tracking-wide text-white transition-transform duration-75 ease-out sm:text-4xl md:text-5xl">
+                      {currentSlide.title}
+                    </h2>
+                    <p className="mt-1 text-xs text-white/80 sm:text-sm">
+                      {currentSlide.detail}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Live frame indicator bar along the bottom edge */}
+                <div className="absolute inset-x-0 bottom-0 h-[2px] bg-white/10">
+                  <div
+                    className="h-full bg-[#F5D033] transition-all duration-75 ease-out"
+                    style={{
+                      width: `${((safeSlideIndex + 1) / heroSlides.length) * 100}%`,
+                    }}
                   />
-                ))}
-                <button
-                  type="button"
-                  onClick={() =>
-                    setActiveHeroSlide(
-                      (activeHeroSlide - 1 + heroSlides.length) % heroSlides.length,
-                    )
-                  }
-                  aria-label="Show previous image"
-                  className="ml-2 flex h-10 w-10 items-center justify-center  border border-white/30 bg-black/40 text-base text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#0D0A0E]"
-                >
-                  &larr;
-                </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    setActiveHeroSlide((activeHeroSlide + 1) % heroSlides.length)
-                  }
-                  aria-label="Show next image"
-                  className="flex h-10 w-10 items-center justify-center  border border-white/30 bg-black/40 text-base text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#0D0A0E]"
-                >
-                  &rarr;
-                </button>
-              </div>
-            </div>
+                </div>
+              </>
+            )}
           </div>
 
           {/* Bottom Trust / Spec Bar */}
@@ -333,7 +335,6 @@ export default function Home({ onNavigate }) {
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <div>
-            
             <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
               Event production, styling &amp; equipment hire—one team.
             </h2>
@@ -341,7 +342,7 @@ export default function Home({ onNavigate }) {
 
           <div className="flex flex-col justify-between gap-12 lg:border-l lg:border-white/10 lg:pl-12">
             <p className="text-sm leading-relaxed text-[#C7C3C9] md:text-base">
-              Founded by Bryan Karanja and Dan Njuguna, Staxx-HyperKids provides
+              Founded by <span className="font-bold text-amber-600">Bryan Karanja</span> and <span className="font-bold text-amber-600">Dan Njuguna</span>, Staxx-HyperKids provides
               audiovisual production, event styling, and equipment hire for
               corporate events, product launches, weddings, and festivals. Our
               Nairobi-based team handles planning, setup, and event-day production.
@@ -382,11 +383,8 @@ export default function Home({ onNavigate }) {
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 max-w-2xl">
-            <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-              Production Workflow
-            </span>
             <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
-              From event plan to live production. <span className="text-[#F5D033]">&#10022;</span>
+              From <span className="text-[#F5D033]"> event </span>planning to live production.
             </h2>
           </div>
 
@@ -414,7 +412,7 @@ export default function Home({ onNavigate }) {
                   idx > 0 ? 'md:border-l md:border-white/10 md:pl-8' : ''
                 }`}
               >
-                <span className="inline-block w-fit  border border-white/15 bg-[#161218] px-3 py-1 text-[10px] font-medium tracking-[0.16em] text-[#F5D033] uppercase">
+                <span className="inline-block w-fit border border-white/15 bg-[#161218] px-3 py-1 text-[10px] font-medium tracking-[0.16em] text-[#F5D033] uppercase">
                   {s.step}
                 </span>
                 <div>
@@ -429,8 +427,8 @@ export default function Home({ onNavigate }) {
             ))}
 
             {/* Visual Quote Card */}
-            <div className="flex flex-col justify-between gap-4  border border-white/10 bg-transparentp-4 md:ml-4">
-              <div className="aspect-[4/3] w-full overflow-hidden  bg-neutral-900">
+            <div className="flex flex-col justify-between gap-4 border border-white/10 bg-transparent p-4 md:ml-4">
+              <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-900">
                 <img
                   src={pastelImg}
                   alt="Staxx Events technical production and stage setup in Nairobi"
@@ -444,10 +442,10 @@ export default function Home({ onNavigate }) {
                 <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
-                  className="inline-flex shrink-0 items-center gap-2  bg-white py-1 pr-1 pl-3 text-[10px] font-semibold tracking-[0.12em] text-[#0D0A0E] uppercase no-underline transition-transform hover:scale-105"
+                  className="inline-flex shrink-0 items-center gap-2 bg-white py-1 pr-1 pl-3 text-[10px] font-semibold tracking-[0.12em] text-[#0D0A0E] uppercase no-underline transition-transform hover:scale-105"
                 >
                   <span>Request a Quote</span>
-                  <span className="flex h-5 w-5 items-center justify-center  bg-[#0F2A2A] text-[10px] text-white">
+                  <span className="flex h-5 w-5 items-center justify-center bg-[#0F2A2A] text-[10px] text-white">
                     &rarr;
                   </span>
                 </a>
@@ -462,14 +460,11 @@ export default function Home({ onNavigate }) {
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 flex flex-col justify-between gap-6 border-b border-white/15 pb-8 md:flex-row md:items-end">
             <div>
-              <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-                Production Tiers
-              </span>
               <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
                 Structured Event Packages
               </h2>
             </div>
-            <p className="max-w-md text-sm leading-relaxed text-[#B5B0B8]">
+            <p className="max-w-md text-sm leading-relaxed text-amber-600">
               Event production packages for corporate functions, weddings,
               institutional events, and festivals.
             </p>
@@ -479,7 +474,7 @@ export default function Home({ onNavigate }) {
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
-                className={`flex flex-col justify-between  border p-8 transition-colors duration-200 ${
+                className={`flex flex-col justify-between border p-8 transition-colors duration-200 ${
                   pkg.featured
                     ? 'border-[#F5D033]/70 bg-[#17131A]'
                     : 'border-white/15 bg-[#120E14]'
@@ -492,7 +487,7 @@ export default function Home({ onNavigate }) {
                         {pkg.name}
                       </h3>
                       {pkg.featured && (
-                        <span className="shrink-0  bg-[#F5D033] px-3 py-1 text-[10px] font-bold tracking-[0.14em] text-[#0D0A0E] uppercase">
+                        <span className="shrink-0 bg-[#F5D033] px-3 py-1 text-[10px] font-bold tracking-[0.14em] text-[#0D0A0E] uppercase">
                           Most Booked
                         </span>
                       )}
@@ -514,7 +509,7 @@ export default function Home({ onNavigate }) {
                   <ul className="mb-10 flex flex-col gap-3.5 text-sm text-[#D1CDD3]">
                     {pkg.features.map((feat) => (
                       <li key={feat} className="flex items-start gap-3">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0  bg-[#F5D033]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-[#F5D033]" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -524,7 +519,7 @@ export default function Home({ onNavigate }) {
                 <a
                   href="/booking"
                   onClick={(e) => handleLinkClick(e, '/booking')}
-                  className={`group flex w-full items-center justify-between  py-2 pr-2 pl-6 text-xs font-semibold tracking-[0.14em] uppercase no-underline transition-all duration-200 ${
+                  className={`group flex w-full items-center justify-between py-2 pr-2 pl-6 text-xs font-semibold tracking-[0.14em] uppercase no-underline transition-all duration-200 ${
                     pkg.featured
                       ? 'bg-white text-[#0D0A0E] hover:bg-[#F5D033]'
                       : 'border border-white/25 bg-transparent text-white hover:border-white hover:bg-white hover:text-[#0D0A0E]'
@@ -532,7 +527,7 @@ export default function Home({ onNavigate }) {
                 >
                   <span>Enquire About Package</span>
                   <span
-                    className={`flex h-7 w-7 items-center justify-center  text-xs transition-transform duration-200 group-hover:translate-x-0.5 ${
+                    className={`flex h-7 w-7 items-center justify-center text-xs transition-transform duration-200 group-hover:translate-x-0.5 ${
                       pkg.featured
                         ? 'bg-[#0F2A2A] text-white'
                         : 'bg-white text-[#0D0A0E]'
@@ -552,9 +547,6 @@ export default function Home({ onNavigate }) {
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 flex flex-col justify-between gap-6 border-b border-white/15 pb-8 sm:flex-row sm:items-end">
             <div>
-              <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-                Rental Catalog
-              </span>
               <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
                 Event Equipment &amp; Supplies
               </h2>
@@ -563,10 +555,10 @@ export default function Home({ onNavigate }) {
             <a
               href="/event-equipment-supplies"
               onClick={(e) => handleLinkClick(e, '/event-equipment-supplies')}
-              className="group inline-flex items-center gap-3 self-start  bg-white py-1.5 pr-1.5 pl-4 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform hover:scale-[1.02] sm:self-auto"
+              className="group inline-flex items-center gap-3 self-start bg-white py-1.5 pr-1.5 pl-4 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform hover:scale-[1.02] sm:self-auto"
             >
               <span>View Equipment Catalog →</span>
-              <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
+              <span className="flex h-6 w-6 items-center justify-center bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>
@@ -580,7 +572,7 @@ export default function Home({ onNavigate }) {
                 onClick={(e) => handleLinkClick(e, cat.path)}
                 className="group flex flex-col text-inherit no-underline"
               >
-                <div className="mb-4 aspect-[4/3] w-full overflow-hidden  border border-white/10 bg-[#1A161C]">
+                <div className="mb-4 aspect-[4/3] w-full overflow-hidden border border-white/10 bg-[#1A161C]">
                   <img
                     src={cat.img}
                     alt={cat.title}
@@ -604,21 +596,18 @@ export default function Home({ onNavigate }) {
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-12 flex flex-col justify-between gap-8 border-b border-white/15 pb-8 lg:flex-row lg:items-end">
             <div>
-              <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-                Portfolio &amp; Productions
-              </span>
               <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
                 Recent Projects &amp; Installations
               </h2>
             </div>
 
             {/* Minimal Editorial Filter Tabs */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {[
                 { id: 'all', label: 'All Projects' },
-                { id: 'corporate', label: 'Corporate & AV' },
-                { id: 'celebrations', label: 'Weddings & Styling' },
-                { id: 'equipment', label: 'Equipment & Tents' },
+                { id: 'corporate', label: 'AudioVisual' },
+                { id: 'celebrations', label: 'Celebrations' },
+                { id: 'equipment', label: 'Equipments' },
               ].map((tab) => {
                 const isSelected = activeTab === tab.id;
                 return (
@@ -627,7 +616,7 @@ export default function Home({ onNavigate }) {
                     type="button"
                     onClick={() => setActiveTab(tab.id)}
                     aria-pressed={isSelected}
-                    className={`cursor-pointer  px-4 py-1.5 text-xs font-medium tracking-[0.14em] uppercase transition-all duration-200 ${
+                    className={`cursor-pointer px-4 py-1.5 text-[10px] font-medium tracking-[0.14em] uppercase transition-all duration-200 ${
                       isSelected
                         ? 'bg-white text-[#0D0A0E]'
                         : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white/40 hover:text-white'
@@ -643,7 +632,7 @@ export default function Home({ onNavigate }) {
           <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {filteredGallery.map((item) => (
               <div key={item.title} className="group">
-                <div className="mb-4 aspect-[4/3] w-full overflow-hidden  border border-white/10 bg-[#1A161C]">
+                <div className="mb-4 aspect-[4/3] w-full overflow-hidden border border-white/10 bg-[#1A161C]">
                   <img
                     src={item.url}
                     alt={item.title}
@@ -654,7 +643,7 @@ export default function Home({ onNavigate }) {
                   <h3 className="text-base font-medium text-white">
                     {item.title}
                   </h3>
-                  <span className="shrink-0  bg-white/10 px-2.5 py-0.5 text-[10px] tracking-[0.14em] text-[#F5D033] uppercase">
+                  <span className="shrink-0 bg-white/10 px-2.5 py-0.5 text-[10px] tracking-[0.14em] text-[#F5D033] uppercase">
                     {item.tag}
                   </span>
                 </div>
@@ -666,10 +655,10 @@ export default function Home({ onNavigate }) {
             <a
               href="/gallery"
               onClick={(e) => handleLinkClick(e, '/gallery')}
-              className="group inline-flex items-center gap-3  bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3 bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
               <span>Explore Full Gallery →</span>
-              <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
+              <span className="flex h-6 w-6 items-center justify-center bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>
@@ -681,44 +670,41 @@ export default function Home({ onNavigate }) {
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14">
-            <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-              Client Feedback
-            </span>
             <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
               What corporate clients &amp; event planners say
             </h2>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <blockquote className="flex flex-col justify-between gap-8  border border-white/15 bg-[#141016] p-8 md:p-10">
-              <p className="text-base font-normal leading-relaxed text-white/90 md:text-lg">
+            <blockquote className="flex flex-col justify-between gap-8 border border-white/15 bg-[#141016] p-8 md:p-10">
+              <p className="text-xs font-normal leading-relaxed text-white/90 md:text-lg">
                 “Staxx-HyperKids managed our corporate annual gala at Serena
                 Hotel. Their sound engineering, LED screens, and stage lighting
                 were world-class. Having AV and d&eacute;cor handled by one
                 coordinated team eliminated all vendor stress.”
               </p>
               <footer className="border-t border-white/10 pt-5 text-xs tracking-[0.06em] text-[#9E9A9F]">
-                <strong className="block font-semibold tracking-[0.14em] text-white uppercase">
+                <strong className="block font-semibold tracking-[0.14em] text-teal-500 uppercase">
                   Brenda Akinyi
                 </strong>
-                <span className="mt-1 block">
+                <span className="mt-1 block text-amber-600">
                   Corporate Events Manager &bull; Nairobi Business Awards
                 </span>
               </footer>
             </blockquote>
 
-            <blockquote className="flex flex-col justify-between gap-8  border border-white/15 bg-[#141016] p-8 md:p-10">
-              <p className="text-base font-normal leading-relaxed text-white/90 md:text-lg">
+            <blockquote className="flex flex-col justify-between gap-8 border border-white/15 bg-[#141016] p-8 md:p-10">
+              <p className="text-xs font-normal leading-relaxed text-white md:text-lg">
                 “We hired clear-span marquees, flooring, and audiovisual gear for
                 our institution&rsquo;s graduation ceremony. Their technical crew
                 arrived on schedule, tested all power lines, and maintained
                 immaculate professional standards throughout the day.”
               </p>
               <footer className="border-t border-white/10 pt-5 text-xs tracking-[0.06em] text-[#9E9A9F]">
-                <strong className="block font-semibold tracking-[0.14em] text-white uppercase">
+                <strong className="block font-semibold tracking-[0.14em] text-teal-500 uppercase">
                   Dr. James Kiprop
                 </strong>
-                <span className="mt-1 block">
+                <span className="mt-1 block text-amber-600">
                   Institutional Registrar &bull; Nakuru County
                 </span>
               </footer>
@@ -729,7 +715,7 @@ export default function Home({ onNavigate }) {
 
       {/* 8. FINAL CALL TO ACTION */}
       <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
               Start Planning <span className="text-[#D4A800]">&#10022;</span>
@@ -747,20 +733,20 @@ export default function Home({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3 bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
               <span>Request an Event Quote</span>
-              <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
+              <span className="flex h-7 w-7 items-center justify-center bg-white text-xs text-[#0D0A0E]">
                 &rarr;
               </span>
             </a>
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+              className="group inline-flex items-center gap-3 border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
               <span>Contact Our Team</span>
-              <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
+              <span className="flex h-7 w-7 items-center justify-center bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>

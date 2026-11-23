@@ -1,5 +1,7 @@
 import React from 'react';
 
+import heroImg from '../../assets/hero.jpg';
+
 import Childrenparty from '../../assets/childrenparty.jpg';
 import Concerts from '../../assets/concerts.jpg';
 import Corporate from '../../assets/corporate.jpg';
@@ -28,7 +30,7 @@ export default function EventsWeDo({ onNavigate }) {
     },
     {
       id: '02',
-      name: 'Weddings & Engagements',
+      name: 'Weddings & Engagement Celebrations',
       description:
         'Thoughtfully produced celebrations for every chapter of your love story.',
       examples:
@@ -37,7 +39,7 @@ export default function EventsWeDo({ onNavigate }) {
     },
     {
       id: '03',
-      name: 'Birthdays & Private Celebrations',
+      name: 'Birthdays and Private Celebrations',
       description:
         'Personal celebrations styled around your people, your milestones and your vision.',
       examples:
@@ -46,9 +48,9 @@ export default function EventsWeDo({ onNavigate }) {
     },
     {
       id: '04',
-      name: "Children's Parties & Events",
+      name: "Children's Parties and Events",
       description:
-        'Playful, colourful experiences that make special days unforgettable for younger guests.',
+        'Playful, colourful experiences that make your children\'s special days unforgettable.',
       examples:
         "Kids' birthdays · Themed parties · School fun days · Family fun days · Children's entertainment",
       img: Childrenparty,
@@ -64,7 +66,7 @@ export default function EventsWeDo({ onNavigate }) {
     },
     {
       id: '06',
-      name: 'Church & Religious Events',
+      name: 'Church Functions and Ministry Events',
       description:
         'Well-coordinated gatherings supported by dependable production and technical solutions.',
       examples:
@@ -129,23 +131,29 @@ export default function EventsWeDo({ onNavigate }) {
         }
       `}</style>
 
+      
       {/* 1. HERO HEADER */}
-      <section className="border-b border-white/10 bg-[#0F2A2A]">
-        <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-            <span>Staxx Hyper Events</span>
-            <span className="inline-flex items-center gap-2">
-              <span className="text-[#F5D033]">&#10022;</span> Events Across Kenya · Planning · Production · Experiences
-            </span>
-          </div>
+      <section className="relative h-[70vh] overflow-hidden border-b border-white/10 bg-[#0F2A2A]">
+        {/* Background Image */}
+        <img
+          src={heroImg}
+          alt="Event staging and lighting production"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
+        />
 
-          <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
+        {/* Editorial Gradient & Brand Teal Overlay for Text Contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F2A2A]/25 via-[#0F2A2A]/80 to-[#0F2A2A]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F2A2A]/10 via-transparent to-[#0D0A0E]/10" />
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 pt-12 pb-16 md:px-10 md:pt-16 md:pb-24">
+          <div className="grid grid-cols-1 items-end gap-20 ">
+            <h1 className="font-display-condensed text-7xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Events <br />
-              <span className="text-white/65">We Do</span>
+              <span className="text-[#F5D033]"> the  Staxx-Hyper  </span> way
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className="border border-white/15 bg-[#0F2A2A]/60 p-6 text-xs md:text-sm leading-relaxed text-[#E2DFE4] backdrop-blur-md lg:p-7">
               From corporate conferences and product launches to weddings,
               concerts and private celebrations, we bring people together
               through creative planning, event styling and professional
@@ -159,10 +167,10 @@ export default function EventsWeDo({ onNavigate }) {
       <section className="border-b border-white/15 bg-[#141016]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8">
           <span className="inline-flex shrink-0 items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
-            <span>&#10022;</span> One Partner. Every Occasion.
+             One Partner. Every Occasion.
           </span>
 
-          <p className="max-w-2xl text-xs leading-relaxed text-[#C7C3C9] md:text-right md:text-sm">
+          <p className="max-w-2xl text-[10px] md:text-xs leading-relaxed text-[#C7C3C9] md:text-right md:text-sm">
             Whatever the occasion, we help bring it to life with event
             coordination, audiovisual production, décor, entertainment and
             equipment solutions.
@@ -175,18 +183,15 @@ export default function EventsWeDo({ onNavigate }) {
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 flex flex-col justify-between gap-8 border-b border-white/15 pb-8 md:flex-row md:items-end">
             <div>
-              <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-                08 Event Categories
-              </span>
+              
 
               <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
-                What Are You Celebrating? <span className="text-[#F5D033]">&#10022;</span>
+                What Are You Celebrating? 
               </h2>
             </div>
 
             <p className="max-w-md text-sm leading-relaxed text-[#B5B0B8] md:text-right">
-              Explore the occasions we cater for. Each event is shaped around
-              your audience, objectives, style and requirements.
+              Discover the events we cater for. From planning to setup, we bring your ideas to life with the right style, equipment and attention to detail.
             </p>
           </div>
 
@@ -226,7 +231,7 @@ export default function EventsWeDo({ onNavigate }) {
                   {event.description}
                 </p>
 
-                <p className="mt-auto border-t border-white/10 pt-4 text-xs leading-relaxed text-[#9E9A9F]">
+                <p className="mt-auto border-t border-white/10 pt-4 text-xs leading-relaxed text-amber-600">
                   {event.examples}
                 </p>
               </article>
@@ -240,9 +245,7 @@ export default function EventsWeDo({ onNavigate }) {
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 flex flex-col justify-between gap-6 border-b border-white/15 pb-8 md:flex-row md:items-end">
             <div>
-              <span className="mb-3 block text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-                From Concept to Execution
-              </span>
+              
 
               <h2 className="font-display-condensed text-4xl font-normal leading-[0.98] text-white md:text-5xl">
                 Everything Your Event Needs
@@ -281,18 +284,16 @@ export default function EventsWeDo({ onNavigate }) {
       <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
-              Let's Make It Happen <span className="text-[#D4A800]">&#10022;</span>
-            </span>
+            
 
             <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Planning Something Special?
             </h2>
 
             <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
-              Tell us what you have in mind. Whether it is a corporate
-              gathering, wedding, concert or private celebration, we can help
-              shape the right event solution for your needs and budget.
+             Have an event coming up? Tell us what you're planning, and let's work
+             together to bring your ideas to life. We're here to make the process
+             easy and your event one to remember.
             </p>
           </div>
 

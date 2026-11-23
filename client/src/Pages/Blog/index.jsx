@@ -156,7 +156,7 @@ export default function Blog({ onNavigate }) {
               <span className="text-white/65">&amp; Event Guides</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Practical field notes from our AV engineers, spatial stylists, and
               operations team&mdash;covering corporate technical riders,
               weddings &amp; Ruracio logistics, rainy-season marquees, brand

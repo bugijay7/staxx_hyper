@@ -142,7 +142,7 @@ export default function ProductEnquiry({ onNavigate, preselectedProduct }) {
               <span className="text-white/65">Hire Enquiry</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Select the instruments, screens, lighting rigs, marquees, or
               furniture you need. Submit your brief to check stock availability
               and receive a formal KES quotation across six counties.

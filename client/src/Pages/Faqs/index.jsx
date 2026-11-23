@@ -115,7 +115,7 @@ export default function Faqs({ onNavigate }) {
               <span className="text-white/65">Questions</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Everything you need to know about booking kids&apos; party setups,
               hiring commercial inflatables, M-Pesa deposits, power backup, and
               rainy-day plans across Kenya.

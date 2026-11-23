@@ -19,66 +19,62 @@ export default function EventInspo({ onNavigate }) {
   const inspoWorlds = [
     {
       id: '01',
-      title: 'Modern Ruracio & Traditional Dowry',
-      tagline: 'Warm terracotta, Kikuyu/Kalenjin/Luo cultural draping & family seating',
-      ageRange: 'Traditional Ceremonies • Family',
-      palette: ['#B91C1C', '#D97706', '#166534', '#FEF3C7'],
+      title: 'Traditional Ceremonies & celebrations',
+      tagline: 'Beautiful cultural touches, family seating & welcoming reception setups',
+      ageRange: 'Ruracio • Engagements • Family Celebrations',
       img: Ruracio,
       description:
-        'An authentic yet polished celebration honoring Kenyan matrimonial traditions. Styled with rich African fabric accents, comfortable family tents, structured wooden dais for elders, clear-span marquees, and traditional cooking and reception gear tailored for homesteads across Kiambu, Murang’a, Nakuru, Machakos, and Kajiado.',
+        'Celebrate important family milestones with a warm and well-organised setup. From traditional ruracio ceremonies and dowry celebrations to family gatherings, we bring together elegant tents, comfortable seating, decorative touches and sound equipment to create a welcoming atmosphere.',
       highlights: [
-        'Clear-Span Marquee Tents & Weatherproof Sidewalls',
-        'Elders’ Dais & Family Banquet Seating Arrangements',
-        'Traditional Kitenge/Ankara Table Runners & Floral Styling',
-        'Public Address Sound System for Speeches & MCs',
+        'Tents, Canopies & Weather Protection',
+        'Guest Seating & Family Reception Arrangements',
+        'Decorative Table Settings & Floral Styling',
+        'Sound Systems for Speeches, Music & Entertainment',
       ],
     },
     {
       id: '02',
-      title: 'Nairobi Corporate Gala & AGM',
-      tagline: 'Executive stage lighting, P3 LED screens & crystal-clear sound',
-      ageRange: 'Corporate, Banking & Enterprise',
-      palette: ['#18181B', '#2563EB', '#38BDF8', '#E4E4E7'],
+      title: 'Corporate Events and  Conferences',
+      tagline: 'Professional staging, clear sound & well-coordinated event setups',
+      ageRange: 'Corporate • Conferences • Business Events',
       img: Corporategala,
       description:
-        'Tailored for Annual General Meetings, corporate dinners, and product launches at KICC, Serena, Villa Rosa Kempinski, or office ballrooms. Features professional line-array sound systems, P3 indoor LED video walls, stage wash lighting, and branded media backdrops.',
+        'Create a professional setting for business meetings, conferences, workshops, product launches, staff celebrations and corporate dinners. We provide the staging, audiovisual equipment, lighting, seating and event essentials needed to deliver a smooth and organised experience.',
       highlights: [
-        'P3 Indoor LED Video Walls & Live Presentation Switchers',
-        'Distributed Line-Array Speakers & Wireless Mic Packages',
-        'Modular Staging with Carpeting & Branded Lecterns',
-        'Standby Power Generator & Dedicated AV Engineers',
+        'Professional Stage & Presentation Setups',
+        'Sound Systems, Microphones & PA Equipment',
+        'LED Screens, Projectors & Display Equipment',
+        'Event Lighting, Backdrops & Technical Support',
       ],
     },
     {
       id: '03',
-      title: 'Garden Wedding & Twilight Reception',
-      tagline: 'White Chiavari chairs, fairy-light canopies & romantic floral arches',
-      ageRange: 'Weddings & Anniversary Celebrations',
-      palette: ['#F472B6', '#FDE047', '#FFFFFF', '#15803D'],
+      title: 'Weddings & Engagement Celebrations',
+      tagline: 'Elegant décor, beautiful seating & memorable reception settings',
+      ageRange: 'Weddings • Engagements • Anniversaries',
       img: Gardenwedding,
       description:
-        'Designed for lush green lawns in Karen, Runda, Loresho, or Naivasha. Features golden structural arches, cascading floral canopies, white Chiavari chairs, round banquet tables with clean linen, and romantic fairy-light ceiling installations for evening romance.',
+        'Make your special day memorable with a beautifully arranged celebration. Whether it is a traditional wedding, white wedding, garden ceremony or reception, we help bring your vision together with stylish décor, elegant seating, tents, floral arrangements and entertainment equipment.',
       highlights: [
-        'Luxury Marquees & Transparent Roof Canopies',
-        'Gold & White Chiavari Chairs with Banquet Tables',
-        'Fairy-Light Ceiling Draping & Ambient Uplighting',
-        'Live Band Sound Rig & Acoustic Stage Setup',
+        'Wedding Tents & Reception Setups',
+        'Elegant Chairs, Tables & Table Settings',
+        'Floral Arrangements, Backdrops & Decorative Styling',
+        'Sound, Stage & Ambient Lighting',
       ],
     },
     {
       id: '04',
-      title: 'Estate Kids Birthday Party',
-      tagline: 'Sanitized bouncy castles, themed balloon garlands & sweet treat carts',
-      ageRange: 'Children’s Birthdays & Family Fun Days',
-      palette: ['#EC4899', '#3B82F6', '#10B981', '#F59E0B'],
+      title: 'Birthday Parties & Family Celebrations',
+      tagline: 'Fun decorations, colourful setups & entertainment for everyone',
+      ageRange: 'Birthdays • Family Parties • Celebrations',
       img: Childrenparty,
       description:
-        'A stress-free, vibrant celebration for children in estate gardens or clubhouse lawns. Includes commercial sanitized inflatables, organic balloon garlands, sailboard photo backdrops, face painting, and popcorn or cotton candy machines.',
+        'Bring people together for birthdays, graduation parties, baby showers, family fun days and other special occasions. From colourful decorations and photo backdrops to party furniture, entertainment equipment and catering accessories, we help create enjoyable celebrations for guests of all ages.',
       highlights: [
-        'Sanitized Commercial Bouncy Castles & Soft Play Areas',
-        'Custom Sailboard Backdrops & Organic Balloon Garlands',
-        'Popcorn & Cotton Candy Concession Machines with Attendants',
-        'Child-Height Tables, Chairs & Interactive Party Hosts',
+        'Party Tents, Chairs & Tables',
+        'Balloon Decorations & Photo Backdrops',
+        'Bouncy Castles & Entertainment Equipment',
+        'Popcorn Machines & Party Accessories',
       ],
     },
   ];
@@ -97,20 +93,13 @@ export default function EventInspo({ onNavigate }) {
       {/* 1. HERO HEADER */}
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-            <span>Staxx-HyperKids &bull; Kenyan Event Themes</span>
-            <span className="inline-flex items-center gap-2">
-              <span className="text-[#F5D033]">&#10022;</span> Ruracio &bull; Corporate Galas &bull; Weddings &bull; Kids Parties
-            </span>
-          </div>
-
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
             <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
               Relatable Kenyan <br />
               <span className="text-white/65">Event Themes</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className="border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Explore four practical, culturally resonant event setups designed
               specifically for traditional Ruracios, Nairobi corporate AGMs,
               garden weddings, and estate children&rsquo;s parties across Kenya.
@@ -122,10 +111,10 @@ export default function EventInspo({ onNavigate }) {
       {/* 2. EDITORIAL STRIP */}
       <section className="border-b border-white/15 bg-[#141016]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8">
-          <span className="inline-flex shrink-0 items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
-            <span>&#10022;</span> Tailored to Your Venue &amp; Budget
+          <span className="inline-flex shrink-0 items-center gap-2 text-[8px] font-bold tracking-[0.16em] text-[#F5D033] uppercase md:text-[10px]">
+            Tailored to Your Venue &amp; Budget
           </span>
-          <p className="max-w-2xl text-xs leading-relaxed text-[#C7C3C9] md:text-right md:text-sm">
+          <p className="max-w-2xl text-right text-xs leading-relaxed text-[#C7C3C9] md:text-sm">
             Every theme is backed by our full equipment hire and on-site setup
             teams based in Nairobi, serving Kiambu, Nakuru, Machakos,
             Murang&rsquo;a, and Kajiado.
@@ -144,7 +133,7 @@ export default function EventInspo({ onNavigate }) {
                 key={inspo.id}
                 className="group grid grid-cols-1 items-start gap-12 py-16 md:py-24 lg:grid-cols-[1.15fr_1fr] lg:gap-16"
               >
-                {/* Left Column: Details, Highlights & Palette */}
+                {/* Left Column: Details, Highlights & Actions */}
                 <div className="flex flex-col justify-between">
                   <div>
                     <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-white/15 pb-4 text-[11px] tracking-[0.16em] uppercase">
@@ -153,7 +142,7 @@ export default function EventInspo({ onNavigate }) {
                           Theme {inspo.id}
                         </strong>
                       </span>
-                      <span className=" border border-white/15 bg-transparentpx-3.5 py-1 text-[10px] font-medium text-white/90">
+                      <span className="border border-white/15 bg-transparent px-3.5 py-1 text-[10px] font-medium text-white/90">
                         {inspo.ageRange}
                       </span>
                     </div>
@@ -179,61 +168,41 @@ export default function EventInspo({ onNavigate }) {
                     <ul className="grid grid-cols-1 gap-3 text-sm text-[#D1CDD3] sm:grid-cols-2">
                       {inspo.highlights.map((item) => (
                         <li key={item} className="flex items-start gap-2.5">
-                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0  bg-[#F5D033]" />
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-[#F5D033]" />
                           <span className="leading-snug">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Palette & Actions */}
-                  <div className="flex flex-col justify-between gap-6 border-t border-white/15 pt-6 sm:flex-row sm:items-center">
-                    <div className="flex items-center gap-3">
-                      <span className="text-[11px] tracking-[0.16em] text-[#9E9A9F] uppercase">
-                        Palette
+                  {/* Actions */}
+                  <div className="flex flex-wrap items-center justify-end gap-4 border-t border-white/15 pt-6">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setSelectedInspo(isTipOpen ? null : inspo.id)
+                      }
+                      aria-expanded={isTipOpen}
+                      className="cursor-pointer border border-white/25 bg-transparent px-4 py-2 text-xs font-medium tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:bg-white/10"
+                    >
+                      {isTipOpen ? 'Hide Planner Tip' : 'Planner Tip'}
+                    </button>
+
+                    <a
+                      href="/booking"
+                      onClick={(e) => handleLinkClick(e, '/booking')}
+                      className="group/btn inline-flex items-center gap-3 bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+                    >
+                      <span>Get a quote &rarr;</span>
+                      <span className="flex h-6 w-6 items-center justify-center bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5">
+                        &rarr;
                       </span>
-                      <div className="flex items-center gap-2">
-                        {inspo.palette.map((color) => (
-                          <span
-                            key={color}
-                            title={color}
-                            style={{ backgroundColor: color }}
-                            className="h-5 w-5  border border-white/30"
-                          >
-                            <span className="sr-only">{color}</span>
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex flex-wrap items-center gap-4">
-                      <button
-                        type="button"
-                        onClick={() =>
-                          setSelectedInspo(isTipOpen ? null : inspo.id)
-                        }
-                        aria-expanded={isTipOpen}
-                        className="cursor-pointer  border border-white/25 bg-transparent px-4 py-2 text-xs font-medium tracking-[0.14em] text-white uppercase transition-colors hover:border-white hover:bg-white/10"
-                      >
-                        {isTipOpen ? 'Hide Planner Tip' : 'Planner Tip'}
-                      </button>
-
-                      <a
-                        href="/booking"
-                        onClick={(e) => handleLinkClick(e, '/booking')}
-                        className="group/btn inline-flex items-center gap-3  bg-white py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
-                      >
-                        <span>Book This Theme &rarr;</span>
-                        <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover/btn:translate-x-0.5">
-                          &rarr;
-                        </span>
-                      </a>
-                    </div>
+                    </a>
                   </div>
 
                   {/* Expandable Planner Note */}
                   {isTipOpen && (
-                    <div className="mt-6  border border-[#F5D033]/40 bg-transparentp-5 text-sm leading-relaxed text-[#D1CDD3]">
+                    <div className="mt-6 border border-[#F5D033]/40 bg-transparent p-5 text-sm leading-relaxed text-[#D1CDD3]">
                       <strong className="mb-1.5 flex items-center gap-2 text-xs font-semibold tracking-[0.12em] text-[#F5D033] uppercase">
                         <span>&#10022;</span> Staxx-HyperKids Setup Advice
                       </strong>
@@ -247,7 +216,7 @@ export default function EventInspo({ onNavigate }) {
 
                 {/* Right Column: Theme Plate */}
                 <div className="lg:border-l lg:border-white/10 lg:pl-14">
-                  <div className="aspect-[16/11] w-full overflow-hidden  border border-white/10 bg-[#1A161C]">
+                  <div className="aspect-[16/11] w-full overflow-hidden border border-white/10 bg-[#1A161C]">
                     <img
                       src={inspo.img}
                       alt={inspo.title}
@@ -256,9 +225,6 @@ export default function EventInspo({ onNavigate }) {
                   </div>
                   <div className="mt-4 flex items-center justify-between border-t border-white/15 pt-3 text-[10px] tracking-[0.16em] text-[#9E9A9F] uppercase">
                     <span>Theme {inspo.id} / Kenyan Setup Showcase</span>
-                    <span className="font-mono text-[10px] text-white/60">
-                      {inspo.palette.join(' · ')}
-                    </span>
                   </div>
                 </div>
               </div>
@@ -269,18 +235,16 @@ export default function EventInspo({ onNavigate }) {
 
       {/* 4. BOTTOM CUSTOM THEME CTA */}
       <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10 bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
-              Have a Custom Event Vision? <span className="text-[#D4A800]">&#10022;</span>
+              Have a Custom Event Vision? 
             </span>
             <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               We Tailor Every Setup to Your Specific Requirements
             </h2>
             <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
-              Whether you are planning a countryside wedding in Kiambu, a church
-              convention in Machakos, or a corporate product launch in Nairobi—our
-              team handles the technical production, d&eacute;cor, and logistics.
+             Whether you're planning a wedding, traditional ceremony, church event or corporate function, our team brings together the technical production, décor and equipment to make your event come together beautifully.
             </p>
           </div>
 
@@ -288,20 +252,20 @@ export default function EventInspo({ onNavigate }) {
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3 bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
               <span>Request a Custom Quote &rarr;</span>
-              <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
+              <span className="flex h-7 w-7 items-center justify-center bg-white text-xs text-[#0D0A0E]">
                 &rarr;
               </span>
             </a>
             <a
               href="/party-packages"
               onClick={(e) => handleLinkClick(e, '/party-packages')}
-              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+              className="group inline-flex items-center gap-3 border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
               <span>Explore KES Packages</span>
-              <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
+              <span className="flex h-7 w-7 items-center justify-center bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
             </a>

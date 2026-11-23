@@ -155,7 +155,7 @@ export default function ProductCategories({ onNavigate }) {
               <span className="text-white/65">Product Categories</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Browse our six core rental and production divisions—from concert
               grand pianos, band backlines, and P3 LED walls to clear-span
               marquees, event furniture, and sanitized kiddie play units.

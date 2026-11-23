@@ -132,7 +132,7 @@ export default function Testimonials({ onNavigate }) {
               <span className="text-white/65">&amp; Success Stories</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Read feedback from corporate leaders, wedding planners, school
               administrators, estate committees, and families who trusted
               Staxx-HyperKids with their AV production, d&eacute;cor, and event

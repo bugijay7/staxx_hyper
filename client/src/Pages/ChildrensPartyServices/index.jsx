@@ -147,7 +147,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
               <span className="text-white/65">Services</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               From commercial bouncy castles and custom piñatas to face painting
               and full-scale themed decor, explore everything we bring to make
               your child&apos;s celebration effortless and unforgettable.

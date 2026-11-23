@@ -196,7 +196,7 @@ export default function Gallery({ onNavigate }) {
               <span className="text-white/65">&amp; Portfolio Archive</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Explore our full-spectrum event production archive across
               corporate conferences, traditional weddings &amp; Ruracio, private
               milestones, kids&apos; parties, concerts, church conventions,

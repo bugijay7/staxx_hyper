@@ -248,7 +248,7 @@ export default function About({ onNavigate }) {
               </p>
 
               {/* Editorial Pull-Quote */}
-              <blockquote className="relative z-10 my-8  border-l-4 border-[#F5D033] bg-transparentpy-4 pl-6 pr-5">
+              <blockquote className="relative z-10 my-8  border-l-4 border-[#F5D033] bg-transparent py-4 pl-6 pr-5">
                 <p className="text-base font-medium italic leading-relaxed text-white md:text-lg">
                   &ldquo;One coordinated provider delivering seamless setup,
                   consistent quality control, and practical on-site execution.&rdquo;

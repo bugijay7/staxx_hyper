@@ -156,12 +156,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
           className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24"
           data-aos="fade-down"
         >
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-            <span>Staxx-HyperKids Rental Inventory</span>
-            <span className="inline-flex items-center gap-2">
-              <span className="text-[#F5D033]">&#10022;</span> Commerce House, Nairobi &bull; Kenya-Wide Delivery
-            </span>
-          </div>
+          
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
             <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
@@ -169,7 +164,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
               <span className="text-white/65">Supplies Catalog</span>
             </h1>
 
-            <p className=" border border-white/10 bg-transparentp-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
+            <p className=" border border-white/10 bg-transparent p-6 text-sm leading-relaxed text-[#C7C3C9] lg:p-7">
               Explore our professional rental inventory including grand
               pianos, band gear, indoor LED video walls, moving head lighting, stages,
               clear-span marquees, and event furniture across six counties.
@@ -196,7 +191,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
           </div>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap gap-2.5">
+          <div className="flex flex-wrap gap-1">
             {categories.map((cat) => {
               const isSelected = selectedCategory === cat;
               return (
@@ -205,7 +200,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer  px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer  px-2 md:px-4 py-1 md:py-2 text-[10px] md:text-xs font-semibold tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
                       ? 'bg-[#F5D033] text-[#0D0A0E]'
                       : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white hover:text-white'
@@ -222,12 +217,7 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
       {/* 3. PRODUCT CATALOG GRID */}
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-            <span className="inline-flex items-center gap-2">
-              <span className="text-[#F5D033]">&#10022;</span> Showing {filteredInventory.length} Available Items
-            </span>
-            <span>Click any item for full specs &amp; booking</span>
-          </div>
+          
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
             {filteredInventory.map((item, index) => (
@@ -323,13 +313,11 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
           data-aos="fade-up"
         >
           <div className="max-w-2xl">
-            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
-              Custom Riders &amp; Packages <span className="text-[#D4A800]">&#10022;</span>
-            </span>
+            
             <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
-              Need a Custom Technical Rider or Multiple Equipment Bundles?
+              Need a Custom Technical Setup or Multiple Equipment Bundles?
             </h2>
-            <p className="text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
+            <p className="text-xs md:text-sm leading-relaxed text-[#0D0A0E]/80 md:text-base">
               Speak directly with our AV engineers and logistics coordinators at
               Commerce House, Nairobi. We provide full delivery, professional setup,
               and standby technicians across six Kenyan counties.
@@ -340,9 +328,9 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
             <a
               href="/booking"
               onClick={(e) => handleLinkClick(e, '/booking')}
-              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-[10px] md:text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.02]"
             >
-              <span>Request Equipment Quotation &rarr;</span>
+              <span>Get an setup Quote&rarr;</span>
               <span className="flex h-7 w-7 items-center justify-center  bg-white text-xs text-[#0D0A0E]">
                 &rarr;
               </span>
@@ -350,9 +338,9 @@ export default function EventEquipmentSupplies({ onNavigate, selectedCategoryPro
             <a
               href="/contact"
               onClick={(e) => handleLinkClick(e, '/contact')}
-              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+              className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-[10px] md:text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              <span>Contact Our Engineers</span>
+              <span>Contact a technician</span>
               <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
