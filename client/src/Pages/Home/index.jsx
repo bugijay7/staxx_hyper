@@ -542,6 +542,22 @@ const handleTouchEnd = () => {
         </div>
       </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
       {/* 4. PACKAGES & PRODUCTION TIERS */}
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-28">
@@ -632,6 +648,31 @@ const handleTouchEnd = () => {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* 5. EQUIPMENT & SUPPLIES CATALOG PREVIEW */}
 <section className="overflow-hidden border-b border-white/10 bg-[#0F2A2A]">

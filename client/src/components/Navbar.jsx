@@ -10,7 +10,7 @@ const primaryNavPages = [
       { title: 'Events Portfolio', path: '/party-packages' },
       { title: 'Event Themes', path: '/party-themes' },
       { title: 'Event Gallery', path: '/gallery' },
-      { title: 'Event Setup', path: '/booking' },
+      { title: 'Event Setup', path: '/event-setup' },
       { title: "Events for Children", path: '/childrens-party-services' },
     ],
   },
@@ -103,24 +103,17 @@ export default function Navbar({ currentPage, onNavigate }) {
         </a>
 
         <div className="flex items-center gap-4 md:gap-6">
-          <a
-            href="/booking"
-            onClick={(e) => handleNavigation(e, '/booking')}
-            className="group hidden items-center gap-2.5  bg-white py-1.5 pr-1.5 pl-4 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033] md:inline-flex"
-          >
-            <span>Book Now</span>
-            <span className="flex h-6 w-6 items-center justify-center  bg-[#0F2A2A] text-xs text-white transition-transform duration-200 group-hover:translate-x-0.5">
-              &rarr;
-            </span>
-          </a>
           <button
             type="button"
+            aria-label="Open menu"
             aria-expanded={isDrawerOpen}
             aria-controls="staxx-nav-drawer"
             onClick={() => setIsDrawerOpen(true)}
-            className="cursor-pointer  border border-white/20 bg-[#141016] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors duration-200 hover:border-[#F5D033] hover:text-[#F5D033]"
+            className="flex cursor-pointer flex-col items-center justify-center gap-1.5 border border-white/20 bg-transparent px-3.5 py-2.5 text-white transition-colors duration-200 hover:border-[#F5D033] hover:text-[#F5D033]"
           >
-            Menu
+            <span className="block h-0.5 w-5 bg-current" />
+            <span className="block h-0.5 w-5 bg-current" />
+            <span className="block h-0.5 w-5 bg-current" />
           </button>
         </div>
       </header>
@@ -156,7 +149,7 @@ export default function Navbar({ currentPage, onNavigate }) {
             type="button"
             aria-label="Close navigation"
             onClick={() => setIsDrawerOpen(false)}
-            className="cursor-pointer  border border-white/20 bg-[#141016] px-4 py-2 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors duration-200 hover:border-[#F5D033] hover:bg-[#F5D033] hover:text-[#0D0A0E]"
+            className="cursor-pointer  border border-white/20 bg-transparent px-4 py-2 text-xs font-semibold tracking-[0.14em] text-white uppercase transition-colors duration-200 hover:border-[#F5D033] hover:bg-[#F5D033] hover:text-[#0D0A0E]"
           >
             Close &times;
           </button>

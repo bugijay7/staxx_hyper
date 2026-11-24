@@ -189,13 +189,10 @@ export default function Contact({ onNavigate }) {
         {/* 1. OVERSIZED EDITORIAL HERO HEADING */}
         <header className="mb-16 border-b border-white/10 pb-12 md:mb-24">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-            <span>Staxx Hyper Kids Events</span>
-            <span className="inline-flex items-center gap-2">
-              <span className="text-[#F5D033]">&#10022;</span> Westlands, Nairobi &bull; Direct Enquiries
-            </span>
+            
           </div>
           <h1 className="font-display-condensed text-[14vw] font-normal leading-[0.9] text-white sm:text-7xl md:text-[7.5rem] lg:text-[9.5rem]">
-            Contact us <span className="text-[#F5D033]">&#10022;</span>
+            Contact us 
           </h1>
           <p className="mt-8 max-w-xl font-mono text-xs leading-relaxed text-[#C7C3C9] md:text-[13px]">
             A unified events, audiovisual production,
@@ -255,7 +252,7 @@ export default function Contact({ onNavigate }) {
             {/* Instant Chat & Full Booking Links */}
             <div className="space-y-4  border border-white/15 bg-[#141016] p-7">
               <p className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-[#F5D033] uppercase">
-                <span>&#10022;</span> Prefer Instant Chat?
+                Prefer Instant Chat?
               </p>
               <p className="max-w-xs text-[11px] leading-relaxed text-[#C7C3C9]">
                 Skip the email forms and talk immediately with our Nairobi
@@ -517,7 +514,7 @@ export default function Contact({ onNavigate }) {
             {/* Service Zones Column */}
             <div className="space-y-4 md:col-span-4">
               <p className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-[#F5D033] uppercase">
-                <span>&#10022;</span> Where We Operate
+                Where We Operate
               </p>
               <p className="text-[11px] leading-relaxed text-[#C7C3C9]">
                 Full-service delivery, professional setup, and post-party
@@ -536,7 +533,7 @@ export default function Contact({ onNavigate }) {
             {/* Social Channels Columns */}
             <div className="md:col-span-8">
               <p className="mb-6 inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-[#F5D033] uppercase">
-                <span>&#10022;</span> Connect With Us Online
+                 Connect With Us Online
               </p>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {socialLinks.map((soc) => (

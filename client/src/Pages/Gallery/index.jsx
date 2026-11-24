@@ -209,7 +209,7 @@ export default function Gallery({ onNavigate }) {
       {/* 2. FILTER STRIP */}
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-8 md:px-10 md:py-10">
-          <span className="text-[11px] font-semibold tracking-[0.16em] text-[#9E9A9F] uppercase">
+          <span className="text-[10px] font-semibold tracking-[0.16em] text-[#9E9A9F] uppercase">
             Filter by Event Sector ({filteredItems.length})
           </span>
 
@@ -222,7 +222,7 @@ export default function Gallery({ onNavigate }) {
                   type="button"
                   onClick={() => setActiveFilter(cat)}
                   aria-pressed={isSelected}
-                  className={`cursor-pointer  px-4 py-1.5 text-xs font-medium tracking-[0.14em] uppercase transition-all duration-200 ${
+                  className={`cursor-pointer  px-4 py-1.5 text-[7px] md:text-[10px] font-medium tracking-[0.14em] uppercase transition-all duration-200 ${
                     isSelected
                       ? 'bg-white text-[#0D0A0E]'
                       : 'border border-white/15 bg-transparent text-[#9E9A9F] hover:border-white/40 hover:text-white'
@@ -355,9 +355,7 @@ export default function Gallery({ onNavigate }) {
       <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
-              Planning an Event Across Any Sector? <span className="text-[#D4A800]">&#10022;</span>
-            </span>
+            
             <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Let&apos;s Produce Your Next Landmark Occasion
             </h2>

@@ -9,6 +9,7 @@ import PartyThemes from './Pages/PartyThemes'
 import EventEquipmentSupplies from './Pages/EventEquipmentSupplies'
 import ProductCategories from './Pages/ProductCategories'
 import IndividualProduct from './Pages/IndividualProduct'
+import EventSetup from './Pages/EventSetup'
 import Gallery from './Pages/Gallery'
 import Testimonials from './Pages/Testimonials'
 import Contact from './Pages/Contact'
@@ -23,6 +24,7 @@ const pages = [
   { title: "Children's Party Services", path: '/childrens-party-services' },
   { title: 'Party Packages', path: '/party-packages' },
   { title: 'Party Themes', path: '/party-themes' },
+  { title: 'Event Setup', path: '/event-setup' },
   { title: 'Event Equipment & Supplies', path: '/event-equipment-supplies' },
   { title: 'Product Categories', path: '/products' },
   { title: 'Individual Product Pages', path: '/products/sample-product' },
@@ -41,6 +43,7 @@ const pageComponents = {
   '/childrens-party-services': ChildrensPartyServices,
   '/party-packages': PartyPackages,
   '/party-themes': PartyThemes,
+  '/event-setup': EventSetup,
   '/event-equipment-supplies': EventEquipmentSupplies,
   '/products': ProductCategories,
   '/products/sample-product': IndividualProduct,

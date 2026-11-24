@@ -134,12 +134,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
       {/* 1. HERO HEADER */}
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-            <span>Staxx Hyper Kids Events</span>
-            <span className="inline-flex items-center gap-2">
-              <span className="text-[#F5D033]">&#10022;</span> 12 Signature Services
-            </span>
-          </div>
+          
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
             <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
@@ -160,7 +155,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
       <section className="border-b border-white/15 bg-[#141016]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-4 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8">
           <span className="inline-flex shrink-0 items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
-            <span>&#10022;</span> Mix, Match &amp; Customize
+            Mix, Match &amp; Customize
           </span>
           <p className="max-w-2xl text-xs leading-relaxed text-[#C7C3C9] md:text-right md:text-sm">
             Book any service standalone or bundle multiple attractions into a
@@ -254,9 +249,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
       <section className="bg-[#0F2A2A] px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-10  bg-[#EDEDED] px-8 py-14 text-[#0D0A0E] md:px-14 md:py-20 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <span className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
-              Ready to Celebrate? <span className="text-[#D4A800]">&#10022;</span>
-            </span>
+            s
             <h2 className="font-display-condensed mb-5 text-4xl font-normal leading-[0.96] text-[#0D0A0E] md:text-6xl">
               Build Your Custom Party Lineup
             </h2>
@@ -282,7 +275,7 @@ export default function ChildrensPartyServices({ onNavigate }) {
               onClick={(e) => handleLinkClick(e, '/party-packages')}
               className="group inline-flex items-center gap-3  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
             >
-              <span>View All-In-One Packages</span>
+              <span>View other Events</span>
               <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
                 &rarr;
               </span>
