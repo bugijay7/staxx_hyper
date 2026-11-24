@@ -137,9 +137,9 @@ export default function Contact({ onNavigate }) {
   const socialLinks = [
     {
       platform: 'WhatsApp Chat',
-      handle: '+254 722 580 012',
+      handle: '+254 780 979 777',
       desc: 'Instant replies for bookings & rush setups',
-      href: 'https://wa.me/254722580012',
+      href: 'https://wa.me/254780979777',
       badge: 'Fastest Response',
     },
     {
@@ -227,10 +227,10 @@ export default function Contact({ onNavigate }) {
                 +254 (0) 780 979 777
               </a>
               <a
-                href="tel:+254722580012"
+                href="tel:+254780979777"
                 className="block text-sm text-white no-underline transition-colors hover:text-[#F5D033]"
               >
-                +254 (0) 722 580 012
+                +254 (0) 780 979 777
               </a>
               <p className="text-[11px] text-[#9E9A9F]">
                 Mon &ndash; Sun: 8:00 AM &ndash; 8:00 PM EAT
@@ -260,7 +260,7 @@ export default function Contact({ onNavigate }) {
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <a
-                  href="https://wa.me/254722580012"
+                  href="https://wa.me/254780979777"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-3  bg-white py-2 pr-2 pl-5 font-sans text-[11px] font-bold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"

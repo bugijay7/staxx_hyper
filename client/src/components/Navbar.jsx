@@ -211,7 +211,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                               onClick={(e) => handleNavigation(e, child.path)}
                               className="inline-flex items-center gap-2 text-sm font-medium text-[#C7C3C9] no-underline transition-colors hover:text-[#F5D033]"
                             >
-                              <span className="text-[#F5D033]">&#10022;</span>
+                              
                               <span>{child.title}</span>
                             </a>
                           </li>

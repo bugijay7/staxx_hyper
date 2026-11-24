@@ -549,7 +549,7 @@ export default function Booking({ onNavigate }) {
                     <div className="border border-red-400/50 bg-red-950/40 p-4 text-xs leading-relaxed text-red-200">
                       We couldn&apos;t submit your booking enquiry right now.
                       Please try again or message our dispatch team directly on
-                      WhatsApp (+254 722 580 012).
+                      WhatsApp (+254 780 979 777).
                     </div>
                   )}
 
@@ -663,7 +663,7 @@ export default function Booking({ onNavigate }) {
                 </p>
                 <div className="space-y-3 pt-2">
                   <a
-                    href="https://wa.me/254722580012"
+                    href="https://wa.me/254780979777"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex w-full items-center justify-between bg-[#0F2A2A] py-2 pr-2 pl-5 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform hover:scale-[1.02]"
