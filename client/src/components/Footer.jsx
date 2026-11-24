@@ -39,17 +39,22 @@ export default function Footer({ onNavigate }) {
       heading: 'Social & Dispatch',
       links: [
         {
-          label: 'WhatsApp (+254 712 345 678)',
-          href: 'https://wa.me/254712345678',
+          label: 'WhatsApp (+254 702 443 418)',
+          href: 'https://wa.me/254702443418',
           external: true,
         },
         {
-          label: 'Instagram (@staxxhyperevents)',
+          label: 'Instagram (@staxxhyperkids)',
           href: 'https://www.instagram.com/staxxhyperkids/',
           external: true,
         },
         {
-          label: 'LinkedIn (@staxxhyperevents)',
+          label: 'TikTok (@staxxhyperkids)',
+          href: 'https://www.tiktok.com/@staxxhyperkids?lang=en',
+          external: true,
+        },
+        {
+          label: 'LinkedIn (Staxx-HyperKids)',
           href: 'https://www.linkedin.com/in/staxx-hyperkids-316a04451/',
           external: true,
         },
@@ -66,8 +71,30 @@ export default function Footer({ onNavigate }) {
     <footer className="border-t border-white/15 bg-[#0F2A2A] font-sans text-white antialiased selection:bg-[#F5D033] selection:text-[#0D0A0E]">
       {/* 1. TOP ARCHITECTURAL DISPATCH BAR */}
       <div className="border-b border-white/10">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-8 px-6 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-          <div className="max-w-xl"></div>
+        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-6 md:flex-row md:items-center md:px-10">
+          <span className="text-[11px] tracking-[0.14em] text-[#9E9A9F] uppercase">
+            Commerce House, Nairobi &bull; Serving 6 Kenyan Counties
+          </span>
+
+          <div className="flex flex-wrap items-center gap-5 text-[11px] tracking-[0.14em] uppercase">
+            <a
+              href="https://www.tiktok.com/@staxxhyperkids?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#F5D033] no-underline transition-opacity hover:opacity-80"
+            >
+              Follow Setups on TikTok ↗
+            </a>
+            <span className="text-white/20">&bull;</span>
+            <a
+              href="https://wa.me/254702443418"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white no-underline transition-colors hover:text-[#F5D033]"
+            >
+              WhatsApp Dispatch ↗
+            </a>
+          </div>
         </div>
       </div>
 
@@ -90,9 +117,9 @@ export default function Footer({ onNavigate }) {
                   />
                 </a>
                 <p className="max-w-sm text-xs leading-relaxed text-[#9E9A9F] md:text-sm">
-                  Full-service birthday production, custom 3D backdrops,
-                  sanitized commercial inflatables, and kids&apos; entertainment
-                  delivered on schedule.
+                  Integrated event production, commercial AV, clear-span
+                  marquees, spatial styling, and kids&apos; party setups across
+                  Nairobi, Kiambu, Nakuru, Machakos, Murang&apos;a, and Kajiado.
                 </p>
               </div>
             </div>
@@ -144,20 +171,20 @@ export default function Footer({ onNavigate }) {
       <div className="bg-[#0F2A2A]">
         <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-4 px-6 py-6 text-[11px] tracking-[0.14em] text-[#9E9A9F] uppercase sm:flex-row sm:items-center md:px-10">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <span>&copy; 2026 Staxx Hyper Kids Events</span>
+            <span>&copy; 2026 Staxx-HyperKids Events</span>
             <span className="hidden text-white/25 sm:inline">&bull;</span>
             <span>All Rights Reserved</span>
             <span className="hidden text-white/25 md:inline">&bull;</span>
-            <span className="hidden md:inline">Nairobi, Kenya</span>
+            <span className="hidden md:inline">Commerce House, Nairobi</span>
           </div>
 
           <button
             type="button"
             onClick={scrollToTop}
-            className="group inline-flex cursor-pointer items-center gap-3  bg-white py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
+            className="group inline-flex cursor-pointer items-center gap-3 bg-white py-1.5 pr-1.5 pl-4 text-[10px] font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase transition-transform duration-200 hover:scale-[1.02] hover:bg-[#F5D033]"
           >
             <span>Back to Top &uarr;</span>
-            <span className="flex h-5 w-5 items-center justify-center  bg-[#0F2A2A] text-[10px] text-white">
+            <span className="flex h-5 w-5 items-center justify-center bg-[#0F2A2A] text-[10px] text-white">
               &uarr;
             </span>
           </button>

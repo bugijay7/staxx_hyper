@@ -144,17 +144,24 @@ export default function Contact({ onNavigate }) {
     },
     {
       platform: 'Instagram',
-      handle: '@staxxhyper.events',
+      handle: '@staxxhyperkids',
       desc: 'Explore daily setup reels & theme inspiration',
       href: 'https://www.instagram.com/staxxhyperkids/',
       badge: 'Visual Gallery',
+    },
+    {
+      platform: 'TikTok',
+      handle: '@staxxhyperkids',
+      desc: 'Behind-the-scenes staging, sound tests & event setups',
+      href: 'https://www.tiktok.com/@staxxhyperkids?lang=en',
+      badge: 'Video Reels',
     },
     {
       platform: 'LinkedIn',
       handle: '@staxxhyperevents',
       desc: 'Professional event production & AV services',
       href: 'https://www.linkedin.com/in/staxx-hyperkids-316a04451/',
-      badge: 'Video Reels',
+      badge: 'Corporate & AV',
     },
     {
       platform: 'Facebook',
