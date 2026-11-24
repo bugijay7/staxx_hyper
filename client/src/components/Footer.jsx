@@ -44,18 +44,18 @@ export default function Footer({ onNavigate }) {
           external: true,
         },
         {
-          label: 'Instagram (@staxxhyper.events)',
-          href: 'https://instagram.com',
+          label: 'Instagram (@staxxhyperevents)',
+          href: 'https://www.instagram.com/staxxhyperkids/',
           external: true,
         },
         {
-          label: 'TikTok (@staxxevents.kids)',
-          href: 'https://tiktok.com',
+          label: 'LinkedIn (@staxxhyperevents)',
+          href: 'https://www.linkedin.com/in/staxx-hyperkids-316a04451/',
           external: true,
         },
         {
           label: 'Facebook Community',
-          href: 'https://facebook.com',
+          href: 'https://www.facebook.com/profile.php?id=61596901230157',
           external: true,
         },
       ],
