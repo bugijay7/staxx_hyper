@@ -12,65 +12,78 @@ export default function Faqs({ onNavigate }) {
     }
   };
 
-  const faqs = [
-    {
-      id: '01',
-      category: 'Booking & Payments',
-      question: 'How far in advance should I book my child’s birthday party?',
-      answer:
-        'We recommend booking at least 2 to 3 weeks in advance—especially for peak weekend dates in April, August, and December school holidays. However, if you are planning a last-minute celebration, reach out via WhatsApp and we will check same-week availability for our equipment and setup crews.',
-    },
-    {
-      id: '02',
-      category: 'Booking & Payments',
-      question: 'How do payments and deposits work in Kenya Shillings (KES)?',
-      answer:
-        'Once we confirm your date, venue, and itemized KES quote, a 40% deposit secures your booking slot and reserves your custom theme props and inflatables. The remaining 60% balance is payable 48 hours before the event or upon full setup completion on site via M-Pesa Till/Paybill or bank transfer.',
-    },
-    {
-      id: '03',
-      category: 'Delivery & Setup',
-      question: 'Which areas do you deliver and set up in?',
-      answer:
-        'Standard delivery, setup, and post-party pack-down are included across Nairobi and surrounding suburbs—including Karen, Runda, Lavington, Kilimani, Kileleshwa, Westlands, Muthaiga, Lang’ata, Syokimau, Ruaka, and Kiambu Road. We also travel to Naivasha, Machakos, Thika, and Mombasa for large bookings with a modest transport allowance.',
-    },
-    {
-      id: '04',
-      category: 'Delivery & Setup',
-      question: 'How early does your team arrive before the party starts?',
-      answer:
-        'Our setup crew arrives 2 to 3 hours prior to your guest arrival time (for example, by 8:30 AM for an 11:00 AM party). This gives us plenty of time to anchor and sanitize bouncy castles, assemble 3D backdrops, style balloon garlands, and test concession machines before the first child walks in.',
-    },
-    {
-      id: '05',
-      category: 'Safety & Equipment',
-      question: 'Are your bouncy castles and soft play arenas sanitized and supervised?',
-      answer:
-        'Yes—100%. Every inflatable and soft play block is thoroughly washed and disinfected with child-safe, non-toxic sanitizers before and after each event. All commercial bouncy castles and obstacle courses also come with a trained Staxx safety attendant to monitor capacity and keep play safe.',
-    },
-    {
-      id: '06',
-      category: 'Safety & Equipment',
-      question: 'What happens if there is a power outage or no electricity at our park venue?',
-      answer:
-        'Bouncy castle blowers and popcorn/cotton candy machines require continuous power. If you are hosting at a public park like Karura Forest or an estate lawn without sockets, we can supply a quiet, fuel-ready standby generator as an affordable add-on so the fun never stops.',
-    },
-    {
-      id: '07',
-      category: 'Weather & Customizations',
-      question: 'What if it rains on the day of our outdoor garden party?',
-      answer:
-        'We know Nairobi weather can be unpredictable during the March–May and November rains! You can add waterproof marquee tents to any outdoor booking, relocate the setup indoors into a living room or estate clubhouse, or reschedule your date once at zero penalty with 24 hours’ notice.',
-    },
-    {
-      id: '08',
-      category: 'Weather & Customizations',
-      question: 'Can we mix and match items or customize a package to fit our budget?',
-      answer:
-        'Absolutely. While our 5 KES packages cover most party sizes, you can book single items—such as just a bouncy castle, a custom piñata, face painting, or kids’ Chiavari chairs—or swap inclusions to match your exact guest count and budget.',
-    },
-  ];
-
+ const faqs = [
+  {
+    id: '01',
+    category: 'Bookings & Payments',
+    question: 'How far in advance should I make a booking?',
+    answer:
+      'We recommend booking as early as possible to allow enough time for planning, coordination and preparation. The ideal lead time depends on the scale and requirements of your event. However, you can still reach out for last-minute enquiries, and our team will advise on availability.',
+  },
+  {
+    id: '02',
+    category: 'Bookings & Payments',
+    question: 'How do your booking and payment arrangements work?',
+    answer:
+      'Once we understand your event requirements, we provide a quotation outlining the services, equipment and associated costs. A deposit is required to confirm your booking, with the remaining balance payable according to the agreed payment schedule. We accept M-Pesa and bank transfers.',
+  },
+  {
+    id: '03',
+    category: 'Services & Planning',
+    question: 'What types of events and occasions do you cater for?',
+    answer:
+      'We provide event solutions for a wide range of occasions, including corporate functions, private celebrations, weddings, social gatherings, church events, school functions, launches and community events. Our services can be tailored to suit the nature and scale of each occasion.',
+  },
+  {
+    id: '04',
+    category: 'Services & Planning',
+    question: 'Can I hire individual services or request a complete event setup?',
+    answer:
+      'Absolutely. You can engage us for individual services such as audiovisual production, event equipment hire or décor and styling. Alternatively, we can bring different elements together to deliver a coordinated event setup based on your needs.',
+  },
+  {
+    id: '05',
+    category: 'Equipment & Production',
+    question: 'What event equipment and production services do you offer?',
+    answer:
+      'Our offerings include audiovisual equipment, sound systems, lighting, staging, event structures, décor elements and other event essentials. Availability depends on your requirements, event size and technical specifications.',
+  },
+  {
+    id: '06',
+    category: 'Equipment & Production',
+    question: 'Do you handle delivery, installation and dismantling?',
+    answer:
+      'Yes. Depending on the services and equipment booked, our team can coordinate transportation, installation, technical setup and dismantling after the event. These arrangements are discussed and included in your quotation.',
+  },
+  {
+    id: '07',
+    category: 'Locations & Logistics',
+    question: 'Which locations do you serve?',
+    answer:
+      'We are based in Nairobi and serve clients across Nairobi and surrounding areas. We can also accommodate events in other parts of Kenya, depending on the project scope, logistics and availability. Transport and related arrangements are outlined in your quotation.',
+  },
+  {
+    id: '08',
+    category: 'Locations & Logistics',
+    question: 'Can you work with our preferred venue or event planner?',
+    answer:
+      'Certainly. We can work alongside venue management, event planners, coordinators and other service providers to ensure everything comes together smoothly. We are happy to collaborate with your existing team or help coordinate the elements within our scope.',
+  },
+  {
+    id: '09',
+    category: 'Customisation & Support',
+    question: 'Can your services be customised to fit our budget?',
+    answer:
+      'Yes. Every event has different requirements, priorities and budgets. We work with you to identify suitable services, equipment and setup options that align with your plans. You can select individual items or combine services into a customised package.',
+  },
+  {
+    id: '10',
+    category: 'Customisation & Support',
+    question: 'What happens if our event plans or requirements change?',
+    answer:
+      'We understand that event plans can evolve. If you need to adjust your booking, contact our team as early as possible. We will review the requested changes and advise on availability, scheduling and any additional costs that may apply.',
+  },
+];
   const categories = [
     'All',
     'Booking & Payments',
@@ -102,12 +115,7 @@ export default function Faqs({ onNavigate }) {
       {/* 1. HERO HEADER */}
       <section className="border-b border-white/10 bg-[#0F2A2A]">
         <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 md:px-10 md:pt-12 md:pb-24">
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-4 text-[11px] font-medium tracking-[0.16em] text-[#9E9A9F] uppercase">
-            <span>Staxx Hyper Kids Events</span>
-            <span className="inline-flex items-center gap-2">
-              <span className="text-[#F5D033]">&#10022;</span> Help Center &bull; Booking, Safety &amp; Logistics
-            </span>
-          </div>
+          
 
           <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
             <h1 className="font-display-condensed text-4xl font-normal leading-[0.94] text-white sm:text-6xl lg:text-[5.25rem]">
