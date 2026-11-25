@@ -279,7 +279,7 @@ export default function Faqs({ onNavigate }) {
                 </p>
                 <div className="space-y-3 pt-2">
                   <a
-                    href="https://wa.me/"
+                    href="https://wa.me/254780979777"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex w-full items-center justify-between  bg-[#0F2A2A] py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-white uppercase no-underline transition-transform duration-200 hover:scale-[1.01]"
@@ -290,15 +290,14 @@ export default function Faqs({ onNavigate }) {
                     </span>
                   </a>
                   <a
-                    href="/booking"
-                    onClick={(e) => handleLinkClick(e, '/booking')}
-                    className="group flex w-full items-center justify-between  border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
-                  >
-                    <span>Submit Booking Enquiry &rarr;</span>
-                    <span className="flex h-7 w-7 items-center justify-center  bg-[#0F2A2A] text-xs text-white">
-                      &rarr;
-                    </span>
-                  </a>
+  href="tel:+254780979777"
+  className="group flex w-full items-center justify-between border border-[#0D0A0E]/30 bg-white py-2.5 pr-2.5 pl-6 text-xs font-semibold tracking-[0.14em] text-[#0D0A0E] uppercase no-underline transition-colors duration-200 hover:border-[#0D0A0E]"
+>
+  <span>Call Us Directly</span>
+  <span className="flex h-7 w-7 items-center justify-center bg-[#0F2A2A] text-xs text-white">
+    &rarr;
+  </span>
+</a>
                 </div>
               </div>
             </div>
