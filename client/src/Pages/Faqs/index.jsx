@@ -136,7 +136,7 @@ export default function Faqs({ onNavigate }) {
       <section className="border-b border-white/15 bg-[#141016]">
         <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-6 py-7 md:flex-row md:items-center md:px-10 md:py-8">
           <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
-            <span>&#10022;</span> Filter by Topic ({filteredFaqs.length})
+             Filter by Topic ({filteredFaqs.length})
           </span>
 
           <div className="flex flex-wrap gap-2.5">
@@ -230,7 +230,7 @@ export default function Faqs({ onNavigate }) {
               <div className="space-y-6  border border-white/15 bg-[#141016] p-8">
                 <div className="border-b border-white/10 pb-4">
                   <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#F5D033] uppercase">
-                    <span>&#10022;</span> [ Quick Facts ]
+                     [ Quick Facts ]
                   </span>
                 </div>
 
@@ -267,7 +267,7 @@ export default function Faqs({ onNavigate }) {
               {/* Direct Support Card */}
               <div className="space-y-5  bg-[#EDEDED] p-8 text-[#0D0A0E]">
                 <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.16em] text-[#0D0A0E]/70 uppercase">
-                  [ Still Have a Question? ] <span className="text-[#D4A800]">&#10022;</span>
+                  [ Still Have a Question? ] 
                 </span>
                 <h3 className="font-display-condensed text-3xl font-normal leading-[1.02] text-[#0D0A0E]">
                   Speak Directly With Our Nairobi Event Team
